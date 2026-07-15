@@ -9,6 +9,7 @@ import { exportProgress, importProgress, progressRepository } from './repositori
 import { gradingService } from './services/keywordGrader'
 import { createLocalId } from './services/id'
 import { useTrainingStore } from './features/training/trainingStore'
+import { QuestionDetails } from './components/QuestionDetails'
 
 type Filter = { years: number[]; cases: string[]; unanswered: boolean; review: boolean; count: number }
 const initialFilter: Filter = { years: [], cases: [], unanswered: false, review: false, count: 10 }
@@ -106,7 +107,10 @@ function TrainingPage({ settings, onSaved }: { settings: AppSettings; onSaved: (
   const secondsLeft = Math.max(0, settings.timerSeconds - Math.floor((now - store.startedAt) / 1000))
   if (store.result) return <ResultView question={question} rating={rating} setRating={setRating} review={review} setReview={setReview} onNext={saveAndNext} />
   return <div className="training-page"><div className="training-header"><button className="icon-btn" aria-label="演習を終了" onClick={() => navigate('/')}><ChevronLeft /></button><span>{store.index + 1} / {store.queue.length}</span>{settings.timerEnabled ? <span className={secondsLeft < 30 ? 'timer danger' : 'timer'}><Clock3 /> {Math.floor(secondsLeft / 60)}:{String(secondsLeft % 60).padStart(2, '0')}</span> : <span />}</div><div className="progress"><i style={{ width: `${((store.index + 1) / store.queue.length) * 100}%` }} /></div>
-    <div className="question-card"><p className="question-meta"><span>{question.year}</span><span>事例 {question.case}</span><span>{question.questionNo}</span></p><p className="eyebrow">題意要約</p><h1>{question.questionSummary}</h1><p className="prompt">この設問で押さえるべき切り口と「果」は？</p></div>
+    <div className="question-card">
+      <p className="question-meta"><span>{question.year}年度</span><span>事例 {question.case}</span><span>{question.questionNo}</span></p>
+      <QuestionDetails question={question} />
+    </div>
     <div className="answer-area"><TagInput label="切り口" placeholder="例：組織構造" value={cut} setValue={setCut} tags={store.inputCuts} onSubmit={(e) => submitTag(e, 'cut')} onRemove={store.removeCut} /><TagInput label="果キーワード" placeholder="例：権限委譲" value={keyword} setValue={setKeyword} tags={store.inputKeywords} onSubmit={(e) => submitTag(e, 'keyword')} onRemove={store.removeKeyword} />
       <div className="training-actions"><button className="btn btn-ghost" onClick={() => { store.addKeyword('わからない'); grade() }}>わからない</button><button className="btn btn-primary" onClick={grade}>答え合わせ</button></div></div>
   </div>
@@ -117,8 +121,9 @@ function TagInput({ label, placeholder, value, setValue, tags, onSubmit, onRemov
 function ResultView({ question, rating, setRating, review, setReview, onNext }: { question: Question; rating: 0 | 1 | 2 | 3; setRating: (v: 0 | 1 | 2 | 3) => void; review: boolean; setReview: (v: boolean) => void; onNext: () => void }) {
   const { inputCuts, inputKeywords, result, index, queue } = useTrainingStore(); if (!result) return null
   return <div className="page result-page"><div className="score-hero"><p className="eyebrow">RESULT</p><div className="score"><strong>{result.totalScore}</strong><span>/ 100</span></div><p>{result.totalScore >= 70 ? 'いい型です。再現できる形にしましょう。' : '伸びしろを、次の一問につなげよう。'}</p><div className="score-bars"><ScoreBar label="果" value={result.keywordScore} max={60} /><ScoreBar label="切り口" value={result.cutScore} max={25} /><ScoreBar label="効果" value={result.effectScore} max={15} /></div></div>
+    <section className="result-question"><p className="question-meta"><span>{question.year}年度</span><span>事例 {question.case}</span><span>{question.questionNo}</span></p><QuestionDetails question={question} compact /></section>
     <Compare title="切り口" mine={inputCuts} expected={question.cuts} matched={result.matchedCuts.map((m) => m.expected)} /><Compare title="果キーワード" mine={inputKeywords} expected={question.fruitKeywords} matched={result.matchedKeywords.map((m) => m.expected)} />
-    <section className="model-answer"><p className="eyebrow">MMC 模範解答</p><p>{question.modelAnswer}</p>{question.sourcePages && <small>出典：{question.sourcePages}</small>}</section>
+    <section className="model-answer"><p className="eyebrow">MMC 模範解答</p><p>{question.modelAnswer}</p>{question.sourcePages && <small>出典：{question.sourcePages}{question.answerSource ? `（${question.answerSource}）` : ''}</small>}</section>
     <section className="rating"><h2>自分の手応え</h2><div className="rating-grid">{(['題意を外した', '領域は近い', '主な果が一部一致', '題意・主要果が一致'] as const).map((label, i) => <button key={label} className={rating === i ? 'active' : ''} onClick={() => setRating(i as 0 | 1 | 2 | 3)}><strong>{i}</strong><span>{label}</span></button>)}</div></section>
     <label className="review-toggle"><input type="checkbox" checked={review} onChange={(e) => setReview(e.target.checked)} /><RefreshCw /><span><strong>復習対象にする</strong><small>あとで「要復習」から取り組めます</small></span></label>
     <button className="btn btn-primary wide" onClick={() => void onNext()}>{index + 1 < queue.length ? '次の問題へ' : 'セッションを終了'}</button>

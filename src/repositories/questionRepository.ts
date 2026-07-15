@@ -3,7 +3,26 @@ import type { Question, RawQuestion } from '../domain/question'
 
 interface QuestionData { metadata: { record_count: number }; records: RawQuestion[] }
 
-const mapQuestion = (raw: RawQuestion): Question => ({ id: raw.id, year: raw.year, case: raw.case, questionNo: raw.question_no, questionSummary: raw.question_summary, modelAnswer: raw.model_answer, fruitKeywords: raw.fruit_keywords, cuts: raw.cuts, status: raw.status, sourcePages: raw.source_pages, version: raw.version })
+export const mapQuestion = (raw: RawQuestion): Question => ({
+  id: raw.id,
+  year: raw.year,
+  case: raw.case,
+  questionNo: raw.question_no,
+  questionText: raw.question_text ?? '',
+  questionSummary: raw.question_summary,
+  mmcTheme: Array.isArray(raw.mmc_theme) ? raw.mmc_theme : [],
+  themeStatus: raw.theme_status ?? 'unverified',
+  themeSourcePages: raw.theme_source_pages,
+  questionStatus: raw.question_status ?? (raw.question_text ? 'verified' : 'unverified'),
+  questionSourcePages: raw.question_source_pages,
+  modelAnswer: raw.model_answer,
+  fruitKeywords: raw.fruit_keywords,
+  cuts: raw.cuts,
+  status: raw.status,
+  sourcePages: raw.source_pages,
+  answerSource: raw.answer_source,
+  version: raw.version,
+})
 
 export interface QuestionRepository {
   initialize(): Promise<void>

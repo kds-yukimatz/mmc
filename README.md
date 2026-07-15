@@ -1,10 +1,12 @@
 # 果トレ
 
-中小企業診断士2次試験のMMCメソッドに基づき、題意要約から「切り口」と「果キーワード」を想起する個人学習PWAです。問題・履歴・設定はすべて端末内に保存され、インターネット接続がない環境でも利用できます。
+中小企業診断士2次試験のMMCメソッドに基づき、本試験の設問文とMMC解説に明記された題意から「切り口」と「果キーワード」を想起する個人学習PWAです。問題・履歴・設定はすべて端末内に保存され、インターネット接続がない環境でも利用できます。
 
 ## 主な機能
 
 - 2023〜2025年度、事例I〜IVの48問を収録
+- 本試験の設問文全文と、MMC解説に明記された題意を出題時に表示
+- 字数制約を強調し、複数のMMC題意をタグで表示
 - 年度・事例・未回答・要復習・出題数による絞り込み
 - タグ形式の切り口／果キーワード入力
 - 表記正規化・部分一致・同義語辞書を使った100点満点の採点
@@ -21,7 +23,7 @@
 
 ## セットアップ
 
-Node.js 20以降を用意し、プロジェクト直下で次を実行します。
+Node.js 22.13以降を用意し、プロジェクト直下で次を実行します。
 
 ```bash
 npm install
@@ -42,52 +44,29 @@ npm run build
 
 ## GitHub Pagesへの公開
 
-1. このフォルダーをGitHubリポジトリへpushします。
+1. GitHub Desktopで変更内容を確認し、コミットして **Push origin** を実行します。
 2. リポジトリの **Settings → Pages** を開き、Sourceを **GitHub Actions** にします。
-3. 以下のワークフローを `.github/workflows/deploy.yml` として追加します。
+3. **Actions** の「Deploy 果トレ to GitHub Pages」が緑のチェックになるまで待ちます。
+4. `https://kds-yukimatz.github.io/mmc/` を開きます。以前の画面が残る場合は、ブラウザを再読み込みするか、ホーム画面のPWAを一度終了して開き直します。
 
-```yaml
-name: Deploy to GitHub Pages
-on:
-  push:
-    branches: [main]
-  workflow_dispatch:
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-concurrency:
-  group: pages
-  cancel-in-progress: true
-jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: npm
-      - run: npm ci
-      - run: npm run build
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist
-      - id: deployment
-        uses: actions/deploy-pages@v4
-```
+公開処理は同梱の `.github/workflows/deploy.yml` が行います。Node.js 22とpnpm 11で依存関係を復元し、テスト済みの本番ビルドをGitHub Pagesへ配置します。
 
 `vite.config.ts` は相対パスでビルドする設定のため、リポジトリ名にかかわらず配信できます。履歴は各端末のIndexedDBに保存されるため、公開しても他人と共有されません。
 
 ## 問題データの更新
 
-`public/data/kahotore_mmc_base_v1.json` を同じ構造のJSONで置き換えます。各レコードの `id` は不変にし、内容を更新した場合は `version` を上げてください。次回起動時に問題テーブルが更新され、既存の学習履歴は保持されます。
+`public/data/kahotore_mmc_base_v1.json` を同じ構造のJSONで置き換えます。既存レコードを更新するときは `id` を変えないでください。アプリは起動時に `questions` だけをID単位で更新し、`trainingResults` と `settings` は保持します。PWAは問題JSONをネットワーク優先で確認し、オフライン時は前回のキャッシュを利用します。
 
-主要項目は `id`, `year`, `case`, `question_no`, `question_summary`, `model_answer`, `fruit_keywords`, `cuts`, `status`, `version` です。
+今回追加した主要項目は次のとおりです。
+
+- `question_text`: 本試験問題PDFの設問文全文
+- `mmc_theme`: MMC解説に明記された題意の配列
+- `theme_status`: MMC題意の確認状態
+- `theme_source_pages`: MMC解説の参照ページ
+- `question_status`: 設問文の確認状態
+- `question_source_pages`: 本試験問題の参照ページ
+
+既存の `question_summary`, `model_answer`, `fruit_keywords`, `cuts` などはそのまま維持します。JSONではsnake_case、アプリ内部ではcamelCaseへ変換します。問題データ更新後は `npm run test` と `npm run build` を実行し、48件の件数と分割設問の対応を確認してください。
 
 ## 学習履歴のバックアップ
 
@@ -115,11 +94,13 @@ jobs:
 
 - AIによる意味採点と採点理由
 - SM-2等を使った間隔反復と「今日の復習」スケジュール
-- 因キーワード、設問全文、複数模範解答
+- 因キーワード、複数模範解答
 - 分野別の弱点分析、CSV出力
 - Firebase等による暗号化された端末間同期
 - 問題編集UIとデータ検証ツール
 
 ## データについて
 
-初期データは `mmc/kahotore_mmc_base_v1.json` を使用しています。設問は全文ではなく題意要約で、模範解答はOCR・目視補正された学習用データです。
+設問文は2023〜2025年度の中小企業診断士第2次試験問題PDFと正誤表を参照し、設問番号・条件・字数制約を目視確認しています。`mmc_theme` は提供された「MMC本試3年解答帖（組織・流通・生産・財務）」の記載を使用し、推測や言い換えはしていません。`question_summary` は従来どおり題意要約として残しています。
+
+抽出結果の全件一覧は `outputs/data-extraction-results.md`、未確認項目は `outputs/unverified-items.md` に記録しています。

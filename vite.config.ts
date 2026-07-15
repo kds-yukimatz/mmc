@@ -15,8 +15,11 @@ export default defineConfig({
         runtimeCaching: [
           {
             urlPattern: /\/data\/kahotore_mmc_base_v1\.json$/,
-            handler: 'CacheFirst',
-            options: { cacheName: 'kahotore-question-data' },
+            handler: 'NetworkFirst',
+            options: {
+              cacheName: 'kahotore-question-data-v2',
+              networkTimeoutSeconds: 4,
+            },
           },
         ],
       },

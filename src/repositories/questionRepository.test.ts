@@ -35,6 +35,7 @@ const rawQuestion: RawQuestion = {
   question_no: 'Q3',
   question_text: '設問文',
   question_summary: '題意要約',
+  answer_target: '強み',
   mmc_theme: ['オペレーション（組織）'],
   theme_status: 'verified',
   theme_source_pages: '組織 p5',
@@ -58,6 +59,7 @@ describe('問題データ更新', () => {
   it('snake_caseをアプリ内部のcamelCaseへ変換する', () => {
     expect(mapQuestion(rawQuestion)).toMatchObject({
       questionText: '設問文',
+      answerTarget: '強み',
       mmcTheme: ['オペレーション（組織）'],
       themeStatus: 'verified',
       themeSourcePages: '組織 p5',

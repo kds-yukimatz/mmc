@@ -10,6 +10,7 @@ export const mapQuestion = (raw: RawQuestion): Question => ({
   questionNo: raw.question_no,
   questionText: raw.question_text ?? '',
   questionSummary: raw.question_summary,
+  answerTarget: raw.answer_target,
   mmcTheme: Array.isArray(raw.mmc_theme) ? raw.mmc_theme : [],
   themeStatus: raw.theme_status ?? 'unverified',
   themeSourcePages: raw.theme_source_pages,

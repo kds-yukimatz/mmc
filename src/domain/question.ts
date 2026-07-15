@@ -7,6 +7,7 @@ export interface Question {
   questionNo: string
   questionText: string
   questionSummary: string
+  answerTarget?: string
   mmcTheme: string[]
   themeStatus: 'verified' | 'unverified'
   themeSourcePages?: string
@@ -28,6 +29,7 @@ export interface RawQuestion {
   question_no: string
   question_text?: string
   question_summary: string
+  answer_target?: string
   mmc_theme?: string[]
   theme_status?: 'verified' | 'unverified'
   theme_source_pages?: string

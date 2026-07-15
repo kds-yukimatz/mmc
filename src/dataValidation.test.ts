@@ -34,6 +34,15 @@ describe('問題データ', () => {
     expect(byId.get('2024-I-Q4-2')?.question_text).toContain('（設問2）')
   })
 
+  it('複数解答を求める設問はレコードごとの今回のお題を持つ', () => {
+    expect(byId.get('2025-I-Q1-S')?.answer_target).toBe('強み')
+    expect(byId.get('2025-I-Q1-W')?.answer_target).toBe('弱み')
+    expect(byId.get('2025-I-Q1-O')?.answer_target).toBe('機会')
+    expect(byId.get('2025-I-Q1-T')?.answer_target).toBe('脅威')
+    expect(byId.get('2025-III-Q2-1')?.answer_target).toBe('課題・改善策①（製造時間短縮）')
+    expect(byId.get('2025-III-Q2-2')?.answer_target).toBe('課題・改善策②（クレーム低減）')
+  })
+
   it('設問番号・題意・設問の出典ページがすべて記録されている', () => {
     expect(records.every((record) => record.question_no && record.theme_source_pages && record.question_source_pages)).toBe(true)
   })

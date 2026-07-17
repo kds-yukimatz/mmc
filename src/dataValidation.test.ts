@@ -78,4 +78,30 @@ describe('問題データ', () => {
     expect(weakness?.model_answer).toContain('新規事業に消極的な組織体制')
     expect(weakness?.fruit_keywords).toEqual(['収益性の低下', '新規事業に消極的な組織体制'])
   })
+
+  it.each([
+    ['2023-I-Q1-W', ['仕入調達力不足', '顧客開拓力不足']],
+    ['2024-I-Q1-W', ['受注管理力不足', '新規開拓力不足']],
+    ['2024-II-Q1-W', ['情報発信力不足', 'オンライン販促力不足']],
+    ['2025-III-Q1-W', ['製造管理力不足', '技術承継体制の不足']],
+  ])('%s は改善策ではなく弱みの解答要素を果キーワードにする', (id, expectedKeywords) => {
+    expect(byId.get(id)?.fruit_keywords).toEqual(expectedKeywords)
+  })
+
+  it('弱みを問うレコードには改善策の語尾を果キーワードとして混在させない', () => {
+    const weaknesses = records.filter((record) => record.answer_target === '弱み')
+
+    expect(weaknesses).not.toHaveLength(0)
+    expect(weaknesses.flatMap((record) => record.fruit_keywords)).not.toEqual(
+      expect.arrayContaining([expect.stringMatching(/強化|改善|拡大|導入|推進/)]),
+    )
+  })
+
+  it('2025年度事例Ⅱ第1問は自社の現状を改善策ではなく事実として保持する', () => {
+    const analysis = byId.get('2025-II-Q1')
+    expect(analysis?.fruit_keywords).toContain('WEBサイト未活用')
+    expect(analysis?.fruit_keywords).toContain('販促力不足')
+    expect(analysis?.fruit_keywords).toContain('顧客流出')
+    expect(analysis?.fruit_keywords).not.toContain('WEB販促強化')
+  })
 })

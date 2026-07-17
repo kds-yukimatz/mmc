@@ -5,6 +5,9 @@ export interface Question {
   year: number
   case: CaseType
   questionNo: string
+  groupId: string
+  subQuestionNo?: string
+  answerUnitLabel: string
   questionText: string
   questionSummary: string
   answerTarget?: string
@@ -19,6 +22,9 @@ export interface Question {
   status: string
   sourcePages?: string
   answerSource?: string
+  answerStatus: 'verified' | 'unverified'
+  answerSourcePages?: string
+  legacyIds?: string[]
   version: string
 }
 
@@ -27,6 +33,9 @@ export interface RawQuestion {
   year: number
   case: CaseType
   question_no: string
+  group_id?: string
+  sub_question_no?: string
+  answer_unit_label?: string
   question_text?: string
   question_summary: string
   answer_target?: string
@@ -41,5 +50,8 @@ export interface RawQuestion {
   status: string
   source_pages?: string
   answer_source?: string
+  answer_status?: 'verified' | 'unverified'
+  answer_source_pages?: string
+  legacy_ids?: string[]
   version: string
 }

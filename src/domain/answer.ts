@@ -11,6 +11,10 @@ export interface TrainingResult {
   selfRating: 0 | 1 | 2 | 3
   elapsedSeconds?: number
   needsReview: boolean
+  /** 分割前の設問に紐付く履歴。新しい各設問には複製しない。 */
+  legacyQuestionId?: string
+  legacyGroupId?: string
+  isLegacy?: boolean
 }
 
 export interface AppSettings {

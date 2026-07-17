@@ -12,6 +12,7 @@ export class KahotoreDatabase extends Dexie {
   constructor() {
     super('kahotore')
     this.version(1).stores({ questions: 'id, year, case, version', trainingResults: 'id, questionId, answeredAt, selfRating, needsReview', settings: 'id' })
+    this.version(2).stores({ questions: 'id, year, case, groupId, version', trainingResults: 'id, questionId, legacyGroupId, answeredAt, selfRating, needsReview', settings: 'id' })
   }
 }
 

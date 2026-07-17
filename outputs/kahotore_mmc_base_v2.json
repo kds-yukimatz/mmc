@@ -1,0 +1,1858 @@
+{
+  "metadata": {
+    "title": "果トレ 正解基礎データ",
+    "scope": "MMC本試3年解答帖 2023-2025",
+    "created": "2026-07-13",
+    "record_count": 51,
+    "notes": [
+      "2023-2025年度の本試験問題PDFとMMC本試3年解答帖を正本として回答欄単位へ監査したデータ。",
+      "設問文・MMC題意・模範解答の出典ページを別項目で保持する。",
+      "分割前IDの学習履歴はmigration_map.jsonに従い、1対多の場合は親group_idの旧記録として保存する。"
+    ],
+    "version": "2.0",
+    "audited_at": "2026-07-17"
+  },
+  "records": [
+    {
+      "id": "2023-I-Q1-S",
+      "year": 2023,
+      "case": "I",
+      "question_no": "Q1-S",
+      "question_summary": "強み",
+      "model_answer": "こしの強い蕎麦の商品力や、現経営者のリーダーシップがある。",
+      "fruit_keywords": [
+        "商品力",
+        "リーダーシップ"
+      ],
+      "cuts": [
+        "強み"
+      ],
+      "status": "verified",
+      "source_pages": "組織 p39",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第1問（配点20点）\n統合前のA社における①強みと②弱みについて、それぞれ30字以内で述べよ。",
+      "mmc_theme": [
+        "SWOT分析（強み・弱み）"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "組織 p39",
+      "question_status": "verified",
+      "question_source_pages": "R5 事例Ⅰ p4",
+      "answer_target": "強み",
+      "group_id": "2023-I-Q1",
+      "sub_question_no": "第1問（強み）",
+      "answer_unit_label": "強み",
+      "answer_status": "verified",
+      "answer_source_pages": "組織 p39"
+    },
+    {
+      "id": "2023-I-Q1-W",
+      "year": 2023,
+      "case": "I",
+      "question_no": "Q1-W",
+      "question_summary": "弱み",
+      "model_answer": "材料高騰に対応する仕入調達力不足や、顧客開拓力不足がある。",
+      "fruit_keywords": [
+        "仕入調達力強化",
+        "顧客開拓力"
+      ],
+      "cuts": [
+        "弱み"
+      ],
+      "status": "verified",
+      "source_pages": "組織 p39",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第1問（配点20点）\n統合前のA社における①強みと②弱みについて、それぞれ30字以内で述べよ。",
+      "mmc_theme": [
+        "SWOT分析（強み・弱み）"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "組織 p39",
+      "question_status": "verified",
+      "question_source_pages": "R5 事例Ⅰ p4",
+      "answer_target": "弱み",
+      "group_id": "2023-I-Q1",
+      "sub_question_no": "第1問（弱み）",
+      "answer_unit_label": "弱み",
+      "answer_status": "verified",
+      "answer_source_pages": "組織 p39"
+    },
+    {
+      "id": "2023-I-Q2",
+      "year": 2023,
+      "case": "I",
+      "question_no": "Q2",
+      "question_summary": "経営方針転換",
+      "model_answer": "現経営者は、これまでの総花的なメニューに対して、そばに集中したメニュー展開による差別化を行った。狙いは、高品質な商品提供による競争優位性の確保や、オペレーション効率改善による接客サービスの強化がある。",
+      "fruit_keywords": [
+        "集中戦略",
+        "差別化",
+        "高品質",
+        "競争優位",
+        "オペレーション改善",
+        "接客強化"
+      ],
+      "cuts": [
+        "経営戦略",
+        "業務改善"
+      ],
+      "status": "verified",
+      "source_pages": "組織 p39",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第2問（配点20点）\nA社の現経営者は、先代経営者と比べてどのような戦略上の差別化を行ってきたか、かつその狙いは何か。100字以内で述べよ。",
+      "mmc_theme": [
+        "差別化戦略"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "組織 p40",
+      "question_status": "verified",
+      "question_source_pages": "R5 事例Ⅰ p4",
+      "group_id": "2023-I-Q2",
+      "sub_question_no": "",
+      "answer_unit_label": "経営方針転換",
+      "answer_status": "verified",
+      "answer_source_pages": "組織 p39"
+    },
+    {
+      "id": "2023-I-Q3",
+      "year": 2023,
+      "case": "I",
+      "question_no": "Q3",
+      "question_summary": "統合後の人事施策",
+      "model_answer": "A社経営者は、①離職防止のためのシフト等柔軟な勤務体制の整備や、②従業員の希望に応じた担当配置、③X社の水準を意識した評価・報酬制度の策定、④接客サービス力強化のための教育訓練の実施、等に留意する。",
+      "fruit_keywords": [
+        "柔軟勤務",
+        "適正配置",
+        "評価報酬制度",
+        "教育訓練",
+        "離職防止"
+      ],
+      "cuts": [
+        "人事",
+        "定着",
+        "育成"
+      ],
+      "status": "verified",
+      "source_pages": "組織 p39",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第3問（配点20点）\nA社経営者は、経営統合に先立って、X社のどのような点に留意するべきか。100字以内で助言せよ。",
+      "mmc_theme": [
+        "人事"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "組織 p41",
+      "question_status": "verified",
+      "question_source_pages": "R5 事例Ⅰ p4",
+      "group_id": "2023-I-Q3",
+      "sub_question_no": "",
+      "answer_unit_label": "統合後の人事施策",
+      "answer_status": "verified",
+      "answer_source_pages": "組織 p39"
+    },
+    {
+      "id": "2023-I-Q4-1",
+      "year": 2023,
+      "case": "I",
+      "question_no": "Q4-1",
+      "question_summary": "組織統合策",
+      "model_answer": "A社は、①経営統合の不安解消のための全社会議などコミュニケーションの強化や、②全社の目指す方向性を共有するための専門部署の設置、等により組織統合を進めていく。",
+      "fruit_keywords": [
+        "全社会議",
+        "コミュニケーション強化",
+        "方向性共有",
+        "専門部署"
+      ],
+      "cuts": [
+        "組織統合"
+      ],
+      "status": "verified",
+      "source_pages": "組織 p39",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第4問（配点40点）\nA社とX社の経営統合過程のマネジメントについて、以下の設問に答えよ。\n（設問1）\nどのように組織の統合を進めていくべきか。80字以内で助言せよ。",
+      "mmc_theme": [
+        "組織構造"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "組織 p42",
+      "question_status": "verified",
+      "question_source_pages": "R5 事例Ⅰ p4",
+      "group_id": "2023-I-Q4",
+      "sub_question_no": "設問1",
+      "answer_unit_label": "組織統合策",
+      "answer_status": "verified",
+      "answer_source_pages": "組織 p39"
+    },
+    {
+      "id": "2023-I-Q4-2",
+      "year": 2023,
+      "case": "I",
+      "question_no": "Q4-2",
+      "question_summary": "統合後の事業展開",
+      "model_answer": "A社は、①グルメアプリを活用し、地域の食べ歩きを目的とした外国人や若者などの新市場を開拓し、②地元産の高品質な原材料を活用したオリジナルメニューを取り揃え、競合飲食店と差別化を図り事業展開していく。",
+      "fruit_keywords": [
+        "グルメアプリ",
+        "新市場開拓",
+        "地元素材",
+        "オリジナルメニュー",
+        "差別化"
+      ],
+      "cuts": [
+        "市場開拓",
+        "商品戦略"
+      ],
+      "status": "verified",
+      "source_pages": "組織 p39",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第4問（配点40点）\nA社とX社の経営統合過程のマネジメントについて、以下の設問に答えよ。\n（設問2）\n今後、どのような事業を展開していくべきか。競争戦略や成長戦略の観点から100字以内で助言せよ。",
+      "mmc_theme": [
+        "事業展開"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "組織 p43",
+      "question_status": "verified",
+      "question_source_pages": "R5 事例Ⅰ p4",
+      "group_id": "2023-I-Q4",
+      "sub_question_no": "設問2",
+      "answer_unit_label": "統合後の事業展開",
+      "answer_status": "verified",
+      "answer_source_pages": "組織 p39"
+    },
+    {
+      "id": "2023-II-Q1",
+      "year": 2023,
+      "case": "II",
+      "question_no": "Q1",
+      "question_summary": "3C分析",
+      "model_answer": "B社は、①顧客面で、公立小中学校や少年野球チームを主要顧客とし、新たに女子の軟式野球の需要増加がある。②競合面で、大型スポーツ用品量販店の出店で価格競争が激化している。③自社面で、子供の体格に応じた提案力や野球用品の加工技術・仕入力がある一方、ホームページを活用した販促力不足で事業展開が停滞している。",
+      "fruit_keywords": [
+        "女子野球需要",
+        "価格競争",
+        "提案力",
+        "加工技術",
+        "仕入力",
+        "WEB販促"
+      ],
+      "cuts": [
+        "3C"
+      ],
+      "status": "verified",
+      "source_pages": "流通 p37",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第1問（配点30点）\nB社の現状について、3C（Customer：顧客、Competitor：競合、Company：自社）分析の観点から150字以内で述べよ。",
+      "mmc_theme": [
+        "経営環境分析（３Ｃ・ＳＷＯＴ）"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "流通 p37",
+      "question_status": "verified",
+      "question_source_pages": "R5 事例Ⅱ p5",
+      "group_id": "2023-II-Q1",
+      "sub_question_no": "",
+      "answer_unit_label": "3C分析",
+      "answer_status": "verified",
+      "answer_source_pages": "流通 p37"
+    },
+    {
+      "id": "2023-II-Q2",
+      "year": 2023,
+      "case": "II",
+      "question_no": "Q2",
+      "question_summary": "サービス施策",
+      "model_answer": "B社は、保護者の金銭的負担を減らしたいニーズを考慮し、①子供の成長に応じてユニフォームのサイズ変更可能なレンタルサービス、②良いバットを手軽に利用できるサブスクリプションサービス、等で金銭負担を抑える。",
+      "fruit_keywords": [
+        "レンタル",
+        "サブスクリプション",
+        "金銭負担軽減"
+      ],
+      "cuts": [
+        "サービス",
+        "価格"
+      ],
+      "status": "verified",
+      "source_pages": "流通 p37",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第2問（配点20点）\n低学年から野球を始めた子どもは、成長やより良い用品への願望によって、ユニフォーム、バット、グラブ、スパイクといった野球用品を何度か買い替えることになるため、金銭的負担を減らしたいという保護者のニーズが存在する。\nB社は、こうしたニーズにどのような販売方法で対応すべきか、プライシングの新しい流れを考慮して、100字以内で助言せよ（ただし、割賦販売による取得は除く）。",
+      "mmc_theme": [
+        "サービス戦略（価格戦略）"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "流通 p38",
+      "question_status": "verified",
+      "question_source_pages": "R5 事例Ⅱ p5",
+      "group_id": "2023-II-Q2",
+      "sub_question_no": "",
+      "answer_unit_label": "サービス施策",
+      "answer_status": "verified",
+      "answer_source_pages": "流通 p37"
+    },
+    {
+      "id": "2023-II-Q3",
+      "year": 2023,
+      "case": "II",
+      "question_no": "Q3",
+      "question_summary": "コミュニティ活性化",
+      "model_answer": "B社は、①販促面で、店頭POPによるチーム活動の掲載やSNSによるチームメンバー募集の発信、②イベント面で、女子向け野球用品の相談会や刺繍入りユニフォームの試着会の実施などでメンバーの獲得に協力する。",
+      "fruit_keywords": [
+        "店頭POP",
+        "SNS",
+        "相談会",
+        "試着会",
+        "コミュニティ支援"
+      ],
+      "cuts": [
+        "プロモーション",
+        "イベント"
+      ],
+      "status": "verified",
+      "source_pages": "流通 p37",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第3問（配点20点）\n女子の軟式野球チームはメンバーの獲得に苦しんでいる。B社はメンバーの増員のために協力することになった。そのためにB社が取るべきプロモーションやイベントについて、100字以内で助言せよ。",
+      "mmc_theme": [
+        "プロモーション戦略",
+        "イベント戦略"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "流通 p39",
+      "question_status": "verified",
+      "question_source_pages": "R5 事例Ⅱ p5",
+      "group_id": "2023-II-Q3",
+      "sub_question_no": "",
+      "answer_unit_label": "コミュニティ活性化",
+      "answer_status": "verified",
+      "answer_source_pages": "流通 p37"
+    },
+    {
+      "id": "2023-II-Q4",
+      "year": 2023,
+      "case": "II",
+      "question_no": "Q4",
+      "question_summary": "デジタル活用",
+      "model_answer": "B社は、少年野球チームの監督に対して、①専門性の高い野球用品等の品揃え情報の発信などHPの充実、②保護者からの相談や要望等の保護者ニーズの収集にSNSを活用、③次期3代目社長のICTのノウハウを活用し、チームデータの一元管理が可能なアプリ提供等の対応で双方の関係性を強化し長期的な売上向上を狙う。",
+      "fruit_keywords": [
+        "HP充実",
+        "SNSニーズ収集",
+        "アプリ提供",
+        "データ一元管理",
+        "関係性強化"
+      ],
+      "cuts": [
+        "情報販促",
+        "CRM"
+      ],
+      "status": "verified",
+      "source_pages": "流通 p37",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第4問（配点30点）\nB社社長は、長期的な売上げを高めるために、ホームページ、SNS、スマートフォンアプリの開発などによるオンライン・コミュニケーションを活用し、関係性の強化を図ろうと考えている。誰にどのような対応をとるべきか、150字以内で助言せよ。",
+      "mmc_theme": [
+        "ターゲット",
+        "コミュニケーション戦略（情報販促）"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "流通 p40",
+      "question_status": "verified",
+      "question_source_pages": "R5 事例Ⅱ p5",
+      "group_id": "2023-II-Q4",
+      "sub_question_no": "",
+      "answer_unit_label": "デジタル活用",
+      "answer_status": "verified",
+      "answer_source_pages": "流通 p37"
+    },
+    {
+      "id": "2023-III-Q1",
+      "year": 2023,
+      "case": "III",
+      "question_no": "Q1",
+      "question_summary": "強み",
+      "model_answer": "①多品種少量の受託製造に応える生産体制、②料理人経験のある従業員の調理技術である。",
+      "fruit_keywords": [
+        "多品種少量",
+        "受託生産",
+        "調理技術"
+      ],
+      "cuts": [
+        "強み"
+      ],
+      "status": "verified",
+      "source_pages": "生産 p39",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第1問（配点10点）\nC社の生産面の強みを2つ40字以内で述べよ。",
+      "mmc_theme": [
+        "SWOT分析（強み）"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "生産 p39",
+      "question_status": "verified",
+      "question_source_pages": "R5 事例Ⅲ p4",
+      "group_id": "2023-III-Q1",
+      "sub_question_no": "",
+      "answer_unit_label": "強み",
+      "answer_status": "verified",
+      "answer_source_pages": "生産 p39"
+    },
+    {
+      "id": "2023-III-Q2",
+      "year": 2023,
+      "case": "III",
+      "question_no": "Q2",
+      "question_summary": "標準化施策",
+      "model_answer": "対応策は、①販売先料理長からの指示が口頭のみのため、レシピの書面管理による標準化・規格化、②工場管理者からの生産指示や加工方法の指導が直接のため、製造指図書を用いた作業指示と加工指導、等である。",
+      "fruit_keywords": [
+        "レシピ書面化",
+        "標準化",
+        "規格化",
+        "製造指図書",
+        "作業指示"
+      ],
+      "cuts": [
+        "標準化",
+        "作業管理"
+      ],
+      "status": "verified",
+      "source_pages": "生産 p39",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第2問（配点20点）\nC社の製造部では、コロナ禍で受注量が減少した2020年以降の工場稼働の低下による出勤日数調整の影響で、高齢のパート従業員も退職し、最近の増加する受注量の対応に苦慮している。生産面でどのような対応策が必要なのか、100字以内で述べよ。",
+      "mmc_theme": [
+        "オペレーション（作業管理）"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "生産 p40",
+      "question_status": "verified",
+      "question_source_pages": "R5 事例Ⅲ p4",
+      "group_id": "2023-III-Q2",
+      "sub_question_no": "",
+      "answer_unit_label": "標準化施策",
+      "answer_status": "verified",
+      "answer_source_pages": "生産 p39"
+    },
+    {
+      "id": "2023-III-Q3",
+      "year": 2023,
+      "case": "III",
+      "question_no": "Q3",
+      "question_summary": "発注・在庫管理",
+      "model_answer": "対応策は、①担当者の経験に依存した発注のため、発注基準の明確化、②材料の在庫削減と廃棄の低減のため、先入れ先出しの徹底と入出庫記録の整備、③食材等の納品は月度生産計画に基づくため、生産計画立案の日次化と発注数量の見直し、等である。",
+      "fruit_keywords": [
+        "発注基準",
+        "先入先出",
+        "入出庫記録",
+        "生産計画日次化",
+        "発注数量見直し"
+      ],
+      "cuts": [
+        "資材管理",
+        "生産計画"
+      ],
+      "status": "verified",
+      "source_pages": "生産 p39",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第3問（配点20点）\nC社では、最近の材料価格高騰の影響が大きく、付加価値が高い製品を販売しているものの、収益性の低下が生じている。どのような対応策が必要なのか、120字以内で述べよ。",
+      "mmc_theme": [
+        "オペレーション（資材管理）"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "生産 p41",
+      "question_status": "verified",
+      "question_source_pages": "R5 事例Ⅲ p4",
+      "group_id": "2023-III-Q3",
+      "sub_question_no": "",
+      "answer_unit_label": "発注・在庫管理",
+      "answer_status": "verified",
+      "answer_source_pages": "生産 p39"
+    },
+    {
+      "id": "2023-III-Q4",
+      "year": 2023,
+      "case": "III",
+      "question_no": "Q4",
+      "question_summary": "企画開発力強化",
+      "model_answer": "C社は、①過去のレシピが未整理のため、レシピのライブラリー化、②各取引先との企画会議の定期開催で顧客ニーズの収集などでデータベース整備、③開発ノウハウが不足するため、製品開発に向けた社内研修など企画開発力の強化、等で企画開発を進める。",
+      "fruit_keywords": [
+        "レシピライブラリー",
+        "顧客ニーズ収集",
+        "データベース",
+        "社内研修",
+        "企画開発力"
+      ],
+      "cuts": [
+        "製品開発",
+        "情報管理",
+        "人材育成"
+      ],
+      "status": "verified",
+      "source_pages": "生産 p39",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第4問（配点20点）\nC社社長は受注量が低迷した数年前から、既存の販売先との関係を一層密接にするとともに、他のホテルや旅館への販路拡大を図るため、自社企画製品の製造販売を実現したいと思っていた。また、食品スーパーX社との新規事業でも総菜の商品企画が必要となっている。創業から受託品の製造に特化してきたC社は、どのように製品の企画開発を進めるべきなのか、120字以内で述べよ。",
+      "mmc_theme": [
+        "企業戦略"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "生産 p42",
+      "question_status": "verified",
+      "question_source_pages": "R5 事例Ⅲ p4",
+      "group_id": "2023-III-Q4",
+      "sub_question_no": "",
+      "answer_unit_label": "企画開発力強化",
+      "answer_status": "verified",
+      "answer_source_pages": "生産 p39"
+    },
+    {
+      "id": "2023-III-Q5",
+      "year": 2023,
+      "case": "III",
+      "question_no": "Q5",
+      "question_summary": "新規事業の妥当性と留意点",
+      "model_answer": "構想は妥当性があると考える。理由は、多品種少量の受託製造のノウハウが活用でき、今後の自社企画製品の製造販売の実現につなげられる。留意点は、①納品数量が納期の2日前に確定するため、生産計画立案の日次化、②新規採用者が中心のため、パートリーダーによるOJTなど生産体制の強化、等である。",
+      "fruit_keywords": [
+        "構想妥当",
+        "ノウハウ活用",
+        "生産計画日次化",
+        "OJT",
+        "生産体制強化"
+      ],
+      "cuts": [
+        "新規事業",
+        "生産計画",
+        "育成"
+      ],
+      "status": "verified",
+      "source_pages": "生産 p39",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第5問（配点30点）\n食品スーパーX社と共同で行っている総菜製品の新規事業について、C社社長は現在の生産能力では対応が難しいと考えており、工場敷地内に工場を増築し、専用生産設備を導入し、新規採用者を中心とした生産体制の構築を目指そうとしている。このC社社長の構想について、その妥当性とその理由、またその際の留意点をどのように助言するか、140字以内で述べよ。",
+      "mmc_theme": [
+        "事業戦略"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "生産 p43",
+      "question_status": "verified",
+      "question_source_pages": "R5 事例Ⅲ p4",
+      "group_id": "2023-III-Q5",
+      "sub_question_no": "",
+      "answer_unit_label": "新規事業の妥当性と留意点",
+      "answer_status": "verified",
+      "answer_source_pages": "生産 p39"
+    },
+    {
+      "id": "2023-IV-Q1-1",
+      "year": 2023,
+      "case": "IV",
+      "question_no": "第1問",
+      "question_summary": "2期間比較による財務指標の選定・計算",
+      "model_answer": "①売上高営業利益率 11.59（％）\n②固定資産回転率 23.04（回）\n③当座比率 311.97（％）\n※当座比率317.98（％）も正解。",
+      "fruit_keywords": [
+        "売上高営業利益率",
+        "11.59％",
+        "固定資産回転率",
+        "23.04回",
+        "当座比率",
+        "311.97％"
+      ],
+      "cuts": [
+        "収益性",
+        "効率性",
+        "安全性"
+      ],
+      "status": "verified",
+      "source_pages": "財務 p51",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第1問（配点20点）\n（設問1）\nD社の2期間の財務諸表を用いて経営分析を行い、令和3年度と比較して悪化したと考えられる財務指標を2つ（①②）、改善したと考えられる財務指標を1つ（③）取り上げ、それぞれについて、名称を⒜欄に、令和4年度の財務指標の値を⒝欄に記入せよ。解答に当たっては、⒝欄の値は小数点第3位を四捨五入して、小数点第2位まで表示すること。また、⒝欄のカッコ内に単位を明記すること。",
+      "mmc_theme": [
+        "経営比率分析"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "財務 p50",
+      "question_status": "verified",
+      "question_source_pages": "R5 事例Ⅳ p3",
+      "group_id": "2023-IV-Q1",
+      "sub_question_no": "設問1",
+      "answer_unit_label": "財務指標（悪化2つ・改善1つ）",
+      "answer_status": "verified",
+      "answer_source_pages": "財務 p51",
+      "legacy_ids": [
+        "2023-IV-Q1"
+      ]
+    },
+    {
+      "id": "2023-IV-Q1-2",
+      "year": 2023,
+      "case": "IV",
+      "question_no": "第1問",
+      "question_summary": "悪化した財務指標の原因",
+      "model_answer": "原因は、①同業他社との競争激化による販売低迷、②輸送コスト高騰による原材料仕入原価の上昇、③将来成長を見込んだ人件費の未削減、など売上低下・販管費高止まりがある。",
+      "fruit_keywords": [
+        "同業他社との競争激化",
+        "販売低迷",
+        "輸送コスト高騰",
+        "原材料仕入原価の上昇",
+        "将来成長を見込んだ人件費の未削減",
+        "売上低下",
+        "販管費高止まり"
+      ],
+      "cuts": [
+        "収益性悪化要因",
+        "効率性悪化要因"
+      ],
+      "status": "verified",
+      "source_pages": "財務 p51",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第1問（配点20点）\n（設問2）\n設問1で解答した悪化したと考えられる2つの財務指標のうちの1つを取り上げ、悪化した原因を80字以内で述べよ。",
+      "mmc_theme": [
+        "経営比率分析"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "財務 p50",
+      "question_status": "verified",
+      "question_source_pages": "R5 事例Ⅳ p3",
+      "group_id": "2023-IV-Q1",
+      "sub_question_no": "設問2",
+      "answer_unit_label": "悪化原因",
+      "answer_status": "verified",
+      "answer_source_pages": "財務 p51",
+      "legacy_ids": [
+        "2023-IV-Q1"
+      ]
+    },
+    {
+      "id": "2023-IV-Q2-2-1",
+      "year": 2023,
+      "case": "IV",
+      "question_no": "第2問",
+      "question_summary": "X製品の販売継続可否",
+      "model_answer": "X製品の販売を中止すべきで「ない」。貢献利益が黒字で共通費を回収できるため。",
+      "fruit_keywords": [
+        "販売中止しない",
+        "貢献利益が黒字",
+        "共通費を回収"
+      ],
+      "cuts": [
+        "関連原価",
+        "意思決定会計"
+      ],
+      "status": "verified",
+      "source_pages": "財務 p51",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第2問（配点30点）\n（設問2）（1）\nD社のサプリメントの製品系列では、W製品、X製品、Y製品の3種類の製品を扱っている。各製品別の損益状況を損益計算書の形式で示すと、次のとおりである。ここで、この3製品のうち、X製品は営業利益が赤字に陥っているので、その販売を中止すべきかどうか検討している。\n製品別損益計算書（単位：万円）\n売上高：W製品80,000、X製品100,000、Y製品10,000、合計190,000\n変動費：W製品56,000、X製品80,000、Y製品6,000、合計142,000\n限界利益：W製品24,000、X製品20,000、Y製品4,000、合計48,000\n個別固定費：W製品10,000、X製品15,000、Y製品1,500、合計26,500\n共通費：W製品8,000、X製品10,000、Y製品1,000、合計19,000\n固定費計：W製品18,000、X製品25,000、Y製品2,500、合計45,500\n営業利益：W製品6,000、X製品△5,000、Y製品1,500、合計2,500\nX製品の販売を中止してもX製品に代わる有利な取り扱い製品はないが、その場合にはX製品の販売によるX製品の個別固定費の80％が回避可能であるとともに、X製品と部分的に重複した効能を有するY製品に一部の需要が移動すると予想される。\n(1)需要の移動がないとき、X製品の販売を中止すべきか否かについて、カッコ内の「ある」か「ない」に○を付して答えるとともに、20字以内で理由を説明せよ。",
+      "mmc_theme": [
+        "ＣＶＰ分析"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "財務 p50",
+      "question_status": "verified",
+      "question_source_pages": "R5 事例Ⅳ p4-5・正誤表",
+      "group_id": "2023-IV-Q2",
+      "sub_question_no": "設問2（1）",
+      "answer_unit_label": "販売継続可否",
+      "answer_status": "verified",
+      "answer_source_pages": "財務 p51",
+      "legacy_ids": [
+        "2023-IV-Q2"
+      ]
+    },
+    {
+      "id": "2024-I-Q1-S",
+      "year": 2024,
+      "case": "I",
+      "question_no": "Q1-S",
+      "question_summary": "強み",
+      "model_answer": "自社倉庫保有による流通加工力や温度・湿度の管理力がある。",
+      "fruit_keywords": [
+        "流通加工力",
+        "温湿度管理",
+        "自社倉庫"
+      ],
+      "cuts": [
+        "強み"
+      ],
+      "status": "verified",
+      "source_pages": "組織 p20",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第1問（配点20点）\nA社の2000年当時における(a)強みと(b)弱みについて、それぞれ30字以内で答えよ。",
+      "mmc_theme": [
+        "SWOT分析"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "組織 p21",
+      "question_status": "verified",
+      "question_source_pages": "R6 事例Ⅰ p4",
+      "answer_target": "強み",
+      "group_id": "2024-I-Q1",
+      "sub_question_no": "第1問（強み）",
+      "answer_unit_label": "強み",
+      "answer_status": "verified",
+      "answer_source_pages": "組織 p20"
+    },
+    {
+      "id": "2024-I-Q1-W",
+      "year": 2024,
+      "case": "I",
+      "question_no": "Q1-W",
+      "question_summary": "弱み",
+      "model_answer": "非効率な受注管理など受注管理力不足や新規開拓力不足がある。",
+      "fruit_keywords": [
+        "受注管理力強化",
+        "新規開拓力"
+      ],
+      "cuts": [
+        "弱み"
+      ],
+      "status": "verified",
+      "source_pages": "組織 p20",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第1問（配点20点）\nA社の2000年当時における(a)強みと(b)弱みについて、それぞれ30字以内で答えよ。",
+      "mmc_theme": [
+        "SWOT分析"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "組織 p21",
+      "question_status": "verified",
+      "question_source_pages": "R6 事例Ⅰ p4",
+      "answer_target": "弱み",
+      "group_id": "2024-I-Q1",
+      "sub_question_no": "第1問（弱み）",
+      "answer_unit_label": "弱み",
+      "answer_status": "verified",
+      "answer_source_pages": "組織 p20"
+    },
+    {
+      "id": "2024-I-Q2",
+      "year": 2024,
+      "case": "I",
+      "question_no": "Q2",
+      "question_summary": "プロジェクトチーム編成の理由・狙い",
+      "model_answer": "理由は、首都圏での物流需要に対し、新市場開拓を迅速に行う機動的な組織を構築するためである。狙いは、①長女の大手物流企業での物流企画等の経験活用や、②事業承継を見据えた統率力ある後継者育成、等がある。",
+      "fruit_keywords": [
+        "機動的組織",
+        "経験活用",
+        "後継者育成",
+        "新市場開拓"
+      ],
+      "cuts": [
+        "プロジェクト組織",
+        "事業承継"
+      ],
+      "status": "verified",
+      "source_pages": "組織 p20",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第2問（配点20点）\nなぜ、A社は、首都圏の市場を開拓するためにプロジェクトチームを組織したのか。また、長女（後の2代目）をプロジェクトリーダーに任命した狙いは何か。100字以内で答えよ。",
+      "mmc_theme": [
+        "知識（理由・狙い）"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "組織 p21",
+      "question_status": "verified",
+      "question_source_pages": "R6 事例Ⅰ p4",
+      "group_id": "2024-I-Q2",
+      "sub_question_no": "",
+      "answer_unit_label": "プロジェクトチーム編成の理由・狙い",
+      "answer_status": "verified",
+      "answer_source_pages": "組織 p20"
+    },
+    {
+      "id": "2024-I-Q3",
+      "year": 2024,
+      "case": "I",
+      "question_no": "Q3",
+      "question_summary": "案件を持ちかけた理由",
+      "model_answer": "Z社は、円滑な県内進出に向け、①A社の地元密着型の高い質のある輸送サービス力、②A社の物流システムや情報システムの構築力、③各店舗の適正在庫管理や機動的な商品補充、等を期待しA社に案件を持ち掛けた。",
+      "fruit_keywords": [
+        "地元密着",
+        "輸送サービス",
+        "情報システム構築",
+        "在庫管理",
+        "商品補充"
+      ],
+      "cuts": [
+        "強み活用",
+        "顧客期待"
+      ],
+      "status": "verified",
+      "source_pages": "組織 p20",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第3問（配点20点）\nなぜ、Z社はA社に案件を持ちかけたのか。100字以内で答えよ。",
+      "mmc_theme": [
+        "知識（理由）"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "組織 p21",
+      "question_status": "verified",
+      "question_source_pages": "R6 事例Ⅰ p4",
+      "group_id": "2024-I-Q3",
+      "sub_question_no": "",
+      "answer_unit_label": "案件を持ちかけた理由",
+      "answer_status": "verified",
+      "answer_source_pages": "組織 p20"
+    },
+    {
+      "id": "2024-I-Q4-1",
+      "year": 2024,
+      "case": "I",
+      "question_no": "Q4-1",
+      "question_summary": "配置転換の狙い",
+      "model_answer": "狙いは、①県内・首都圏事業部間の連携や、県内事業部での長男による情報システムの対応推進、②年功序列的体質の脱却を目指した成果主義的組織体制の構築、等である。",
+      "fruit_keywords": [
+        "事業部間連携",
+        "情報システム対応",
+        "年功序列脱却",
+        "成果主義"
+      ],
+      "cuts": [
+        "組織統合",
+        "配置転換"
+      ],
+      "status": "verified",
+      "source_pages": "組織 p20",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第4問（配点40点）\n今後、A社が3PL事業者となるための事業展開について、以下の設問に答えよ。\n（設問1）\n2024年の創業経営者の助言による配置転換の狙いは何か。80字以内で答えよ。",
+      "mmc_theme": [
+        "組織構造"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "組織 p21",
+      "question_status": "verified",
+      "question_source_pages": "R6 事例Ⅰ p5",
+      "group_id": "2024-I-Q4",
+      "sub_question_no": "設問1",
+      "answer_unit_label": "配置転換の狙い",
+      "answer_status": "verified",
+      "answer_source_pages": "組織 p20"
+    },
+    {
+      "id": "2024-I-Q4-2",
+      "year": 2024,
+      "case": "I",
+      "question_no": "Q4-2",
+      "question_summary": "取引関係強化施策",
+      "model_answer": "施策は、①組織面で、事業部間連携を強化するための全社会議の実施や県内事業部における情報システム部の新規設置、②人事面で、成果主義的評価・報酬の導入や、人手不足に対応するための新規採用の強化、等である。",
+      "fruit_keywords": [
+        "全社会議",
+        "事業部間連携",
+        "情報システム部",
+        "成果主義",
+        "新規採用"
+      ],
+      "cuts": [
+        "組織",
+        "人事"
+      ],
+      "status": "verified",
+      "source_pages": "組織 p21",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第4問（配点40点）\n今後、A社が3PL事業者となるための事業展開について、以下の設問に答えよ。\n（設問2）\nA社がZ社との取引関係を強化していくために必要な施策を、100字以内で助言せよ。",
+      "mmc_theme": [
+        "組織構造",
+        "人的資源管理"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "組織 p21",
+      "question_status": "verified",
+      "question_source_pages": "R6 事例Ⅰ p5",
+      "group_id": "2024-I-Q4",
+      "sub_question_no": "設問2",
+      "answer_unit_label": "取引関係強化施策",
+      "answer_status": "verified",
+      "answer_source_pages": "組織 p21"
+    },
+    {
+      "id": "2024-II-Q1-O",
+      "year": 2024,
+      "case": "II",
+      "question_no": "Q1-O",
+      "question_summary": "SWOT機会",
+      "model_answer": "クリエイター志望者の増加や、コロナ禍で家庭に関心を向ける若者と外国人の増加がある。",
+      "fruit_keywords": [
+        "クリエイター増加",
+        "若者需要",
+        "外国人需要"
+      ],
+      "cuts": [
+        "機会"
+      ],
+      "status": "verified",
+      "source_pages": "流通 p20",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第1問（配点20点）\nB社の現状について、SWOT分析をせよ。各要素について①～④の解答欄にそれぞれ40字以内で説明すること。",
+      "mmc_theme": [
+        "SWOT分析"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "流通 p20",
+      "question_status": "verified",
+      "question_source_pages": "R6 事例Ⅱ p3",
+      "answer_target": "機会",
+      "group_id": "2024-II-Q1",
+      "sub_question_no": "第1問（機会）",
+      "answer_unit_label": "機会",
+      "answer_status": "verified",
+      "answer_source_pages": "流通 p20"
+    },
+    {
+      "id": "2024-II-Q1-S",
+      "year": 2024,
+      "case": "II",
+      "question_no": "Q1-S",
+      "question_summary": "SWOT強み",
+      "model_answer": "ファッション業界で培った3代目の企画力とセンスや、自社店舗による直接販売がある。",
+      "fruit_keywords": [
+        "企画力",
+        "センス",
+        "直接販売"
+      ],
+      "cuts": [
+        "強み"
+      ],
+      "status": "verified",
+      "source_pages": "流通 p20",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第1問（配点20点）\nB社の現状について、SWOT分析をせよ。各要素について①～④の解答欄にそれぞれ40字以内で説明すること。",
+      "mmc_theme": [
+        "SWOT分析"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "流通 p20",
+      "question_status": "verified",
+      "question_source_pages": "R6 事例Ⅱ p3",
+      "answer_target": "強み",
+      "group_id": "2024-II-Q1",
+      "sub_question_no": "第1問（強み）",
+      "answer_unit_label": "強み",
+      "answer_status": "verified",
+      "answer_source_pages": "流通 p20"
+    },
+    {
+      "id": "2024-II-Q1-T",
+      "year": 2024,
+      "case": "II",
+      "question_no": "Q1-T",
+      "question_summary": "SWOT脅威",
+      "model_answer": "高齢化に伴う陶磁器の買い替え需要の減少や、安価な海外陶磁器の流入で競争が激化する。",
+      "fruit_keywords": [
+        "買替需要減少",
+        "海外製品流入",
+        "競争激化"
+      ],
+      "cuts": [
+        "脅威"
+      ],
+      "status": "verified",
+      "source_pages": "流通 p20",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第1問（配点20点）\nB社の現状について、SWOT分析をせよ。各要素について①～④の解答欄にそれぞれ40字以内で説明すること。",
+      "mmc_theme": [
+        "SWOT分析"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "流通 p20",
+      "question_status": "verified",
+      "question_source_pages": "R6 事例Ⅱ p3",
+      "answer_target": "脅威",
+      "group_id": "2024-II-Q1",
+      "sub_question_no": "第1問（脅威）",
+      "answer_unit_label": "脅威",
+      "answer_status": "verified",
+      "answer_source_pages": "流通 p20"
+    },
+    {
+      "id": "2024-II-Q1-W",
+      "year": 2024,
+      "case": "II",
+      "question_no": "Q1-W",
+      "question_summary": "SWOT弱み",
+      "model_answer": "X焼に関する情報発信力不足やホームページ等のオンラインによる販促力が不足している。",
+      "fruit_keywords": [
+        "情報発信力強化",
+        "オンライン販促"
+      ],
+      "cuts": [
+        "弱み"
+      ],
+      "status": "verified",
+      "source_pages": "流通 p20",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第1問（配点20点）\nB社の現状について、SWOT分析をせよ。各要素について①～④の解答欄にそれぞれ40字以内で説明すること。",
+      "mmc_theme": [
+        "SWOT分析"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "流通 p20",
+      "question_status": "verified",
+      "question_source_pages": "R6 事例Ⅱ p3",
+      "answer_target": "弱み",
+      "group_id": "2024-II-Q1",
+      "sub_question_no": "第1問（弱み）",
+      "answer_unit_label": "弱み",
+      "answer_status": "verified",
+      "answer_source_pages": "流通 p20"
+    },
+    {
+      "id": "2024-II-Q2",
+      "year": 2024,
+      "case": "II",
+      "question_no": "Q2",
+      "question_summary": "ふるさと納税返礼品施策",
+      "model_answer": "B社は、①地元デザイナーズホテルで使用している食器や、地元の発酵調味料と陶磁器の郷土料理セットの返礼品で観念価値を訴求、②X焼の魅力を活かした盛り付け体験教室の返礼品で感覚価値を訴求しファンを増やす。",
+      "fruit_keywords": [
+        "返礼品",
+        "観念価値",
+        "感覚価値",
+        "体験価値",
+        "ファン化"
+      ],
+      "cuts": [
+        "サービス",
+        "プロモーション"
+      ],
+      "status": "verified",
+      "source_pages": "流通 p20",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第2問（配点30点）\nX市は、ふるさと納税の返礼品としてX焼を活用したいと考えている。現在でも市の返礼品の中にX焼はあるが、全国の返礼品の中で埋もれている状態にある。\n3代目は、X市から「返礼品の中でもっと目立ち、市とX焼のファンを増やすような返礼品の企画を考えてほしい」と依頼を受けた。ブランド価値構造のうち、消費者にもたらす感覚価値と観念価値を意識して、返礼品の企画を100字以内で提案せよ。",
+      "mmc_theme": [
+        "品揃え戦略"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "流通 p20",
+      "question_status": "verified",
+      "question_source_pages": "R6 事例Ⅱ p4",
+      "group_id": "2024-II-Q2",
+      "sub_question_no": "",
+      "answer_unit_label": "ふるさと納税返礼品施策",
+      "answer_status": "verified",
+      "answer_source_pages": "流通 p20"
+    },
+    {
+      "id": "2024-II-Q3",
+      "year": 2024,
+      "case": "II",
+      "question_no": "Q3",
+      "question_summary": "新サービス提案",
+      "model_answer": "B社は、①様々な陶磁器へのニーズに対して季節毎の陶磁器のレンタル事業、②食器の収納スペース不足に対して保管サービス事業、③陶磁器を捨てられないニーズに対して陶磁器の買い取り事業などでニーズを充足する。",
+      "fruit_keywords": [
+        "レンタル",
+        "保管サービス",
+        "買い取り",
+        "ニーズ充足"
+      ],
+      "cuts": [
+        "サービス戦略"
+      ],
+      "status": "verified",
+      "source_pages": "流通 p20",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第3問（配点30点）\nX焼には窯元それぞれの魅力があるため、3代目は、消費者がいろいろな窯元の陶磁器を手にとれる機会をつくりたいと思っている。しかし、陶磁器祭りで接客をしていると、「あれもこれも欲しいが、家にはもうたくさんの食器がある。収納スペースがないし、今あるものも捨てられない」と購入をためらう食器愛好家の声をよく耳にする。\n3代目は、自社や窯元の事業機会拡大を図る一方、こうした食器愛好家のニーズを充足する新規事業を手がけたいと考えている。どのような事業内容にすべきか、100字以内で提案せよ。",
+      "mmc_theme": [
+        "新規事業の戦略"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "流通 p20",
+      "question_status": "verified",
+      "question_source_pages": "R6 事例Ⅱ p4",
+      "group_id": "2024-II-Q3",
+      "sub_question_no": "",
+      "answer_unit_label": "新サービス提案",
+      "answer_status": "verified",
+      "answer_source_pages": "流通 p20"
+    },
+    {
+      "id": "2025-I-Q1-O",
+      "year": 2025,
+      "case": "I",
+      "question_no": "Q1-O",
+      "question_summary": "新規事業進出時の機会",
+      "model_answer": "子育て世代を中心とした自然素材や木育への関心の高まりがある。",
+      "fruit_keywords": [
+        "自然素材需要",
+        "木育需要",
+        "子育て世代"
+      ],
+      "cuts": [
+        "機会"
+      ],
+      "status": "verified",
+      "source_pages": "組織 p4",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第1問（配点20点）\n木製知育玩具の新規事業に進出した際のA社の現状について、SWOT分析のそれぞれの観点から、30字以内で述べよ。",
+      "mmc_theme": [
+        "経営環境分析（SWOT）"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "組織 p5",
+      "question_status": "verified",
+      "question_source_pages": "R7 事例Ⅰ p4",
+      "answer_target": "機会",
+      "group_id": "2025-I-Q1",
+      "sub_question_no": "第1問（機会）",
+      "answer_unit_label": "機会",
+      "answer_status": "verified",
+      "answer_source_pages": "組織 p4"
+    },
+    {
+      "id": "2025-I-Q1-S",
+      "year": 2025,
+      "case": "I",
+      "question_no": "Q1-S",
+      "question_summary": "新規事業進出時の強み",
+      "model_answer": "内装材製造で培った加工技術や、林業家等との良好な関係性がある。",
+      "fruit_keywords": [
+        "加工技術",
+        "関係性",
+        "調達ネットワーク"
+      ],
+      "cuts": [
+        "強み"
+      ],
+      "status": "verified",
+      "source_pages": "組織 p4",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第1問（配点20点）\n木製知育玩具の新規事業に進出した際のA社の現状について、SWOT分析のそれぞれの観点から、30字以内で述べよ。",
+      "mmc_theme": [
+        "経営環境分析（SWOT）"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "組織 p5",
+      "question_status": "verified",
+      "question_source_pages": "R7 事例Ⅰ p4",
+      "answer_target": "強み",
+      "group_id": "2025-I-Q1",
+      "sub_question_no": "第1問（強み）",
+      "answer_unit_label": "強み",
+      "answer_status": "verified",
+      "answer_source_pages": "組織 p4"
+    },
+    {
+      "id": "2025-I-Q1-T",
+      "year": 2025,
+      "case": "I",
+      "question_no": "Q1-T",
+      "question_summary": "新規事業進出時の脅威",
+      "model_answer": "内装材市場の企業間の競争激化や公共案件の不安定性がある。",
+      "fruit_keywords": [
+        "競争激化",
+        "公共案件不安定"
+      ],
+      "cuts": [
+        "脅威"
+      ],
+      "status": "verified",
+      "source_pages": "組織 p4",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第1問（配点20点）\n木製知育玩具の新規事業に進出した際のA社の現状について、SWOT分析のそれぞれの観点から、30字以内で述べよ。",
+      "mmc_theme": [
+        "経営環境分析（SWOT）"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "組織 p5",
+      "question_status": "verified",
+      "question_source_pages": "R7 事例Ⅰ p4",
+      "answer_target": "脅威",
+      "group_id": "2025-I-Q1",
+      "sub_question_no": "第1問（脅威）",
+      "answer_unit_label": "脅威",
+      "answer_status": "verified",
+      "answer_source_pages": "組織 p4"
+    },
+    {
+      "id": "2025-I-Q1-W",
+      "year": 2025,
+      "case": "I",
+      "question_no": "Q1-W",
+      "question_summary": "新規事業進出時の弱み",
+      "model_answer": "内装材事業の収益性の低下や、新規事業に消極的な組織体制がある。",
+      "fruit_keywords": [
+        "収益性改善",
+        "組織変革",
+        "新規事業推進"
+      ],
+      "cuts": [
+        "弱み"
+      ],
+      "status": "verified",
+      "source_pages": "組織 p4",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第1問（配点20点）\n木製知育玩具の新規事業に進出した際のA社の現状について、SWOT分析のそれぞれの観点から、30字以内で述べよ。",
+      "mmc_theme": [
+        "経営環境分析（SWOT）"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "組織 p5",
+      "question_status": "verified",
+      "question_source_pages": "R7 事例Ⅰ p4",
+      "answer_target": "弱み",
+      "group_id": "2025-I-Q1",
+      "sub_question_no": "第1問（弱み）",
+      "answer_unit_label": "弱み",
+      "answer_status": "verified",
+      "answer_source_pages": "組織 p4"
+    },
+    {
+      "id": "2025-I-Q2",
+      "year": 2025,
+      "case": "I",
+      "question_no": "Q2",
+      "question_summary": "新規事業の市場開拓策",
+      "model_answer": "A社は、20～40代の子育て家庭を対象とし、①直営店やアンテナショップのみならず、ECサイト出店での販路拡大や、②SNSを活用した木育の情報発信や子育てイベントでの出店等の取り組みをした。また、地元大学との知育玩具の教育効果に関する共同研究や、県からのPR協力、等の工夫により製品に触れる機会を拡大した。",
+      "fruit_keywords": [
+        "ターゲット明確化",
+        "EC販路拡大",
+        "SNS情報発信",
+        "イベント出店",
+        "大学共同研究",
+        "行政PR"
+      ],
+      "cuts": [
+        "市場開拓",
+        "販路",
+        "プロモーション",
+        "連携"
+      ],
+      "status": "verified",
+      "source_pages": "組織 p4",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第2問（配点30点）\nA社が木製知育玩具の新規事業を展開する際に、顧客との接点を作るために行った取り組みや工夫について、150字以内で説明せよ。",
+      "mmc_theme": [
+        "事業戦略"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "組織 p5",
+      "question_status": "verified",
+      "question_source_pages": "R7 事例Ⅰ p4",
+      "group_id": "2025-I-Q2",
+      "sub_question_no": "",
+      "answer_unit_label": "新規事業の市場開拓策",
+      "answer_status": "verified",
+      "answer_source_pages": "組織 p4"
+    },
+    {
+      "id": "2025-I-Q3",
+      "year": 2025,
+      "case": "I",
+      "question_no": "Q3",
+      "question_summary": "適切な組織構造",
+      "model_answer": "A社は、事業部制組織体制を採用する。理由は、①事業毎の売上・利益責任の明確化や、②知育玩具事業部員への新市場開拓のための権限委譲、等で効果的な経営資源の分配や子息に続く次世代リーダーの育成を図るため。",
+      "fruit_keywords": [
+        "事業部制",
+        "利益責任明確化",
+        "権限委譲",
+        "経営資源配分",
+        "次世代リーダー育成"
+      ],
+      "cuts": [
+        "組織構造",
+        "権限",
+        "人材育成"
+      ],
+      "status": "verified",
+      "source_pages": "組織 p4",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第3問（配点20点）\nA社社長は、木製知育玩具の新規事業を成長させていくに当たって、全社的な組織改革を検討している。それに対して、採用すべき組織体制とその理由に関して100字以内で助言せよ。",
+      "mmc_theme": [
+        "オペレーション（組織）"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "組織 p5",
+      "question_status": "verified",
+      "question_source_pages": "R7 事例Ⅰ p4",
+      "group_id": "2025-I-Q3",
+      "sub_question_no": "",
+      "answer_unit_label": "適切な組織構造",
+      "answer_status": "verified",
+      "answer_source_pages": "組織 p4"
+    },
+    {
+      "id": "2025-I-Q4",
+      "year": 2025,
+      "case": "I",
+      "question_no": "Q4",
+      "question_summary": "組織文化・人材施策",
+      "model_answer": "A社は、経営理念を木材と触れ合うことで心を育む「木育」重視のものへと再定義する。社内では、①社員のスキルや希望に応じた適正配置や、地元大学からの採用強化、②知育玩具の知見を深める外部研修を実施し、社外では、同県や県内保育園等との木育に関するイベントの定期開催、等により理解の浸透を図っていく。",
+      "fruit_keywords": [
+        "経営理念再定義",
+        "適正配置",
+        "採用強化",
+        "外部研修",
+        "社外イベント",
+        "理念浸透"
+      ],
+      "cuts": [
+        "経営理念",
+        "配置",
+        "採用",
+        "育成",
+        "浸透"
+      ],
+      "status": "verified",
+      "source_pages": "組織 p5",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第4問（配点30点）\nA社は、木製知育玩具の新規事業を拡大させるに当たり、自社の創業以来の企業理念をどのようなものへと再定義したり、それを関係者に浸透させたりすればよいのか。150字以内で助言せよ。",
+      "mmc_theme": [
+        "オペレーション（人事）",
+        "経営理念"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "組織 p5",
+      "question_status": "verified",
+      "question_source_pages": "R7 事例Ⅰ p4",
+      "group_id": "2025-I-Q4",
+      "sub_question_no": "",
+      "answer_unit_label": "組織文化・人材施策",
+      "answer_status": "verified",
+      "answer_source_pages": "組織 p5"
+    },
+    {
+      "id": "2025-II-Q1",
+      "year": 2025,
+      "case": "II",
+      "question_no": "Q1",
+      "question_summary": "3C分析",
+      "model_answer": "B社は、①顧客面で、アスリートが中心で本格的な施術を求める顧客や近郊運動部の学生・大学が増加傾向、②競合面で、保険診療を適用する接骨院や独自技術を持つ整体院の参入で競争激化、③自社面で、スタッフの高度な施術力や社長のコミュニケーション力がある一方、WEBサイトの未活用で販促力が不足し顧客が流出している。",
+      "fruit_keywords": [
+        "顧客増加",
+        "競争激化",
+        "高度な施術力",
+        "コミュニケーション力",
+        "WEB販促強化"
+      ],
+      "cuts": [
+        "3C",
+        "顧客",
+        "競合",
+        "自社"
+      ],
+      "status": "verified",
+      "source_pages": "流通 p4",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第1問（配点15点）\nB社の現状について、3C分析の観点から150字以内で述べよ。",
+      "mmc_theme": [
+        "経営環境分析（３Ｃ）"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "流通 p4",
+      "question_status": "verified",
+      "question_source_pages": "R7 事例Ⅱ p3",
+      "group_id": "2025-II-Q1",
+      "sub_question_no": "",
+      "answer_unit_label": "3C分析",
+      "answer_status": "verified",
+      "answer_source_pages": "流通 p4"
+    },
+    {
+      "id": "2025-II-Q2",
+      "year": 2025,
+      "case": "II",
+      "question_no": "Q2",
+      "question_summary": "価格戦略",
+      "model_answer": "B社は、①運動部の学生に対して、9時から18時を割安な料金設定、②本格的な施術を受けたい顧客に対して、18時から21時を高価格帯の料金設定で空き時間解消と混雑緩和を狙うダイナミックプライシング制度を導入する。",
+      "fruit_keywords": [
+        "セグメント別価格",
+        "ダイナミックプライシング",
+        "空き時間解消",
+        "混雑緩和"
+      ],
+      "cuts": [
+        "価格戦略"
+      ],
+      "status": "verified",
+      "source_pages": "流通 p4",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第2問（配点25点）\nB社の営業時間は、平日9時から21時までである。このうち、顧客が施術を受ける時間は18時から21時までに集中していて、混雑時間と空き時間ができている。B社は、この問題を、ターゲット層を意識した価格戦略によって解決したいと考えている。どのように対応すべきか、100字以内で助言せよ。",
+      "mmc_theme": [
+        "価格戦略"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "流通 p4",
+      "question_status": "verified",
+      "question_source_pages": "R7 事例Ⅱ p3",
+      "group_id": "2025-II-Q2",
+      "sub_question_no": "",
+      "answer_unit_label": "価格戦略",
+      "answer_status": "verified",
+      "answer_source_pages": "流通 p4"
+    },
+    {
+      "id": "2025-II-Q3",
+      "year": 2025,
+      "case": "II",
+      "question_no": "Q3",
+      "question_summary": "顧客情報の蓄積と活用",
+      "model_answer": "B社は、コミュニケーション力やスポーツ競技別の専門性・施術力を活かし、①ケガに伴う心の痛みなどコンディショニングに関する情報、②競技特有のケガなど身体に関する情報を蓄積する。活用方法は、①心のしこりを揉みほぐす相談サービス、②競技別に合わせた身体ケアサービスの提供で愛顧を高め長期的関係性を構築する。",
+      "fruit_keywords": [
+        "顧客情報蓄積",
+        "競技別情報",
+        "相談サービス",
+        "身体ケアサービス",
+        "関係性構築"
+      ],
+      "cuts": [
+        "情報活用",
+        "サービス",
+        "関係性マーケティング"
+      ],
+      "status": "verified",
+      "source_pages": "流通 p4",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第3問（配点30点）\nB社は現在、顧客の氏名、年齢、連絡先、受けた施術コースのみを登録している。今後、顧客に寄り添い、長期的な関係性を構築するために、B社の強みを活かして、どのような顧客情報を新たに蓄積し、どのように活用すべきか、150字以内で助言せよ。",
+      "mmc_theme": [
+        "プロモーション戦略"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "流通 p4",
+      "question_status": "verified",
+      "question_source_pages": "R7 事例Ⅱ p3",
+      "group_id": "2025-II-Q3",
+      "sub_question_no": "",
+      "answer_unit_label": "顧客情報の蓄積と活用",
+      "answer_status": "verified",
+      "answer_source_pages": "流通 p4"
+    },
+    {
+      "id": "2025-II-Q4",
+      "year": 2025,
+      "case": "II",
+      "question_no": "Q4",
+      "question_summary": "WEB活用による新規開拓",
+      "model_answer": "B社は、①テーピング知識やストレッチ方法などのセルフケア動画、②B社を利用している有名トップアスリートからのメッセージ動画、③強豪運動部の選手や監督のインタビュー動画を掲載し、部学生の新規開拓を図る。",
+      "fruit_keywords": [
+        "セルフケア動画",
+        "著名人メッセージ",
+        "インタビュー動画",
+        "新規顧客開拓"
+      ],
+      "cuts": [
+        "情報発信",
+        "コンテンツマーケティング"
+      ],
+      "status": "verified",
+      "source_pages": "流通 p4",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第4問（配点30点）\nコンディショニング不良に悩む、未来のアスリートを目指す中高や大学の部活生をさらに呼び込むために、B社社長はWebサイトに動画を掲載しようと考えている。どのような内容の動画にすべきか、100字以内で助言せよ。",
+      "mmc_theme": [
+        "情報販促"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "流通 p4",
+      "question_status": "verified",
+      "question_source_pages": "R7 事例Ⅱ p3",
+      "group_id": "2025-II-Q4",
+      "sub_question_no": "",
+      "answer_unit_label": "WEB活用による新規開拓",
+      "answer_status": "verified",
+      "answer_source_pages": "流通 p4"
+    },
+    {
+      "id": "2025-III-Q1-S",
+      "year": 2025,
+      "case": "III",
+      "question_no": "Q1-S",
+      "question_summary": "強み",
+      "model_answer": "強みは、①顧客から高評価の高品質製品を製造する技術力、②X社との関係性構築による安定的な原料紙の調達力、等がある。",
+      "fruit_keywords": [
+        "高品質製造技術",
+        "安定調達",
+        "取引関係"
+      ],
+      "cuts": [
+        "強み"
+      ],
+      "status": "verified",
+      "source_pages": "生産 p4",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第1問（配点20点）\nC社の(a)強みと(b)弱みについて、それぞれ60字以内で述べよ。",
+      "mmc_theme": [
+        "SWOT分析"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "生産 p4",
+      "question_status": "verified",
+      "question_source_pages": "R7 事例Ⅲ p4",
+      "answer_target": "強み",
+      "group_id": "2025-III-Q1",
+      "sub_question_no": "第1問（強み）",
+      "answer_unit_label": "強み",
+      "answer_status": "verified",
+      "answer_source_pages": "生産 p4"
+    },
+    {
+      "id": "2025-III-Q1-W",
+      "year": 2025,
+      "case": "III",
+      "question_no": "Q1-W",
+      "question_summary": "弱み",
+      "model_answer": "弱みは、①残業発生や原料紙不足を招く、製造管理力不足、②作業精度のバラツキを招く、技術承継体制の不足、等がある。",
+      "fruit_keywords": [
+        "製造管理力強化",
+        "技術承継",
+        "作業標準化"
+      ],
+      "cuts": [
+        "弱み"
+      ],
+      "status": "verified",
+      "source_pages": "生産 p4",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第1問（配点20点）\nC社の(a)強みと(b)弱みについて、それぞれ60字以内で述べよ。",
+      "mmc_theme": [
+        "SWOT分析"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "生産 p4",
+      "question_status": "verified",
+      "question_source_pages": "R7 事例Ⅲ p4",
+      "answer_target": "弱み",
+      "group_id": "2025-III-Q1",
+      "sub_question_no": "第1問（弱み）",
+      "answer_unit_label": "弱み",
+      "answer_status": "verified",
+      "answer_source_pages": "生産 p4"
+    },
+    {
+      "id": "2025-III-Q2-1",
+      "year": 2025,
+      "case": "III",
+      "question_no": "Q2-1",
+      "question_summary": "製造時間短縮",
+      "model_answer": "課題は製造時間短縮である。対策は、①原料紙セット作業内容のマニュアル化、②セット作業の外段取り化、等である。",
+      "fruit_keywords": [
+        "マニュアル化",
+        "外段取り化",
+        "製造時間短縮"
+      ],
+      "cuts": [
+        "工程改善",
+        "作業改善"
+      ],
+      "status": "verified",
+      "source_pages": "生産 p4",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第2問（配点30点）\nC社経営者は、収益性強化のため製造に関してのコストダウンに取り組む方針である。そのために特に重要と思われる課題を2つあげ、各課題に対しての改善策とともにそれぞれ60字以内で述べよ。",
+      "mmc_theme": [
+        "オペレーション（作業管理・資材管理）"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "生産 p4",
+      "question_status": "verified",
+      "question_source_pages": "R7 事例Ⅲ p4",
+      "answer_target": "課題・改善策①（製造時間短縮）",
+      "group_id": "2025-III-Q2",
+      "sub_question_no": "設問1",
+      "answer_unit_label": "課題・改善策①（製造時間短縮）",
+      "answer_status": "verified",
+      "answer_source_pages": "生産 p4"
+    },
+    {
+      "id": "2025-III-Q2-2",
+      "year": 2025,
+      "case": "III",
+      "question_no": "Q2-2",
+      "question_summary": "クレーム低減",
+      "model_answer": "課題はクレームの低減である。対策は、①計画的なOJT導入による技能承継の推進、②品質維持にむけたQCサークル活動、等である。",
+      "fruit_keywords": [
+        "計画的OJT",
+        "技能承継",
+        "QCサークル",
+        "品質維持"
+      ],
+      "cuts": [
+        "品質管理",
+        "人材育成"
+      ],
+      "status": "verified",
+      "source_pages": "生産 p4",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第2問（配点30点）\nC社経営者は、収益性強化のため製造に関してのコストダウンに取り組む方針である。そのために特に重要と思われる課題を2つあげ、各課題に対しての改善策とともにそれぞれ60字以内で述べよ。",
+      "mmc_theme": [
+        "オペレーション（作業管理・資材管理）"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "生産 p4",
+      "question_status": "verified",
+      "question_source_pages": "R7 事例Ⅲ p4",
+      "answer_target": "課題・改善策②（クレーム低減）",
+      "group_id": "2025-III-Q2",
+      "sub_question_no": "設問2",
+      "answer_unit_label": "課題・改善策②（クレーム低減）",
+      "answer_status": "verified",
+      "answer_source_pages": "生産 p4"
+    },
+    {
+      "id": "2025-III-Q3",
+      "year": 2025,
+      "case": "III",
+      "question_no": "Q3",
+      "question_summary": "生産計画・資材管理改善",
+      "model_answer": "C社は、①柔軟な変更対応のため、週次から日次への製造計画の短サイクル化、②メモによる作業指示をあらため、製造指図書の活用、③原料紙不足防止のため、発注担当者の設置と発注基準の明確化、等を実施する。",
+      "fruit_keywords": [
+        "計画短サイクル化",
+        "製造指図書",
+        "発注担当者設置",
+        "発注基準明確化"
+      ],
+      "cuts": [
+        "生産計画",
+        "作業指示",
+        "資材管理"
+      ],
+      "status": "verified",
+      "source_pages": "生産 p4",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第3問（配点20点）\nC社では、繰り返し受注頻度の多い一部製品の在庫を保有して見込み生産を行うか検討してきたが、経営者は経営上のリスクに鑑み、製品在庫をもたず納期に対応できる工程管理の改善を進めることとした。それを実現するために必要な対応策について、100字以内で助言せよ。",
+      "mmc_theme": [
+        "オペレーション（生産計画・生産実施）"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "生産 p4",
+      "question_status": "verified",
+      "question_source_pages": "R7 事例Ⅲ p4",
+      "group_id": "2025-III-Q3",
+      "sub_question_no": "",
+      "answer_unit_label": "生産計画・資材管理改善",
+      "answer_status": "verified",
+      "answer_source_pages": "生産 p4"
+    },
+    {
+      "id": "2025-III-Q4",
+      "year": 2025,
+      "case": "III",
+      "question_no": "Q4",
+      "question_summary": "新規事業への対応",
+      "model_answer": "C社は、①新規事業の品質基準の正確な把握のための情報収集や、新規顧客開拓にむけた営業体制の強化、②製品品質を向上し顧客の求める品質基準を満たすため、マイスター制の導入やベテラン作業者による技能研修などによる技能承継体制の強化、等に取り組む。",
+      "fruit_keywords": [
+        "品質基準把握",
+        "情報収集",
+        "営業体制強化",
+        "マイスター制",
+        "ベテラン研修",
+        "技能承継"
+      ],
+      "cuts": [
+        "新規事業",
+        "品質",
+        "営業",
+        "人材育成"
+      ],
+      "status": "verified",
+      "source_pages": "生産 p4",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第4問（配点30点）\nC社では、新事業展開として食品用や医療用の紙パイプ製品への参入を検討している。それを実現するために必要な社内の取り組みについて、120字以内で助言せよ。",
+      "mmc_theme": [
+        "事業戦略"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "生産 p4",
+      "question_status": "verified",
+      "question_source_pages": "R7 事例Ⅲ p4",
+      "group_id": "2025-III-Q4",
+      "sub_question_no": "",
+      "answer_unit_label": "新規事業への対応",
+      "answer_status": "verified",
+      "answer_source_pages": "生産 p4"
+    },
+    {
+      "id": "2025-IV-Q1-1",
+      "year": 2025,
+      "case": "IV",
+      "question_no": "第1問",
+      "question_summary": "同業他社比較による財務指標の選定・計算",
+      "model_answer": "①自己資本比率 82.13（％）\n②売上高総利益率 35.85（％）\n③有形固定資産回転率 1.85（回）",
+      "fruit_keywords": [
+        "自己資本比率",
+        "82.13％",
+        "売上高総利益率",
+        "35.85％",
+        "有形固定資産回転率",
+        "1.85回"
+      ],
+      "cuts": [
+        "安全性",
+        "収益性",
+        "効率性"
+      ],
+      "status": "verified",
+      "source_pages": "財務 p2",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第1問（配点25点）\n（設問1）\nD社と同業他社の財務諸表を用いて経営分析を行い、同業他社と比較してD社が優れていると考えられる財務指標を1つ、D社が劣っていると考えられる財務指標を2つ取り上げ、それぞれについて、名称を⒜欄に、その値を⒝欄に記入せよ。なお、優れていると考えられる指標を①の欄に、劣っていると考えられる指標を②、③の欄に記入し、⒝欄の値については、小数第3位を四捨五入し、小数第2位まで表示すること。また、単位をカッコ内に明記すること。",
+      "mmc_theme": [
+        "経営比率分析"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "財務 p5",
+      "question_status": "verified",
+      "question_source_pages": "R7 事例Ⅳ p3",
+      "group_id": "2025-IV-Q1",
+      "sub_question_no": "設問1",
+      "answer_unit_label": "財務指標（優れている1つ・劣っている2つ）",
+      "answer_status": "verified",
+      "answer_source_pages": "財務 p2",
+      "legacy_ids": [
+        "2025-IV-Q1"
+      ]
+    },
+    {
+      "id": "2025-IV-Q1-2",
+      "year": 2025,
+      "case": "IV",
+      "question_no": "第1問",
+      "question_summary": "財務指標から読む戦略上の違いと要因",
+      "model_answer": "要因は、①高価格仏壇で差別化を図るものの、競争激化による売上低下や原材料高騰での低収益性、②海外向け商品製造の機械設備や直営店舗などの資産の低い効率性等がある。",
+      "fruit_keywords": [
+        "高価格仏壇",
+        "差別化",
+        "競争激化による売上低下",
+        "原材料高騰",
+        "低収益性",
+        "海外向け商品製造の機械設備",
+        "直営店舗",
+        "資産の低い効率性"
+      ],
+      "cuts": [
+        "事業戦略",
+        "収益性",
+        "効率性"
+      ],
+      "status": "verified",
+      "source_pages": "財務 p6",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第1問（配点25点）\n（設問2）\nD社が同業他社と比べて劣っている点について、財務指標から読み取れる経営戦略上の違いを指摘しながら、その要因を80字以内で述べよ。",
+      "mmc_theme": [
+        "経営比率分析"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "財務 p5",
+      "question_status": "verified",
+      "question_source_pages": "R7 事例Ⅳ p3",
+      "group_id": "2025-IV-Q1",
+      "sub_question_no": "設問2",
+      "answer_unit_label": "戦略上の違いと要因",
+      "answer_status": "verified",
+      "answer_source_pages": "財務 p6",
+      "legacy_ids": [
+        "2025-IV-Q1"
+      ]
+    },
+    {
+      "id": "2025-IV-Q4-1",
+      "year": 2025,
+      "case": "IV",
+      "question_no": "第4問",
+      "question_summary": "生産ライン増設の資金調達",
+      "model_answer": "D社は、自己資本比率が高く長期安全性が高いため、①支払利息による節税効果が得られる長期借入金や、②調達コストが不要な内部留保の活用、などの資金調達が望ましい。",
+      "fruit_keywords": [
+        "自己資本比率が高い",
+        "長期安全性が高い",
+        "支払利息による節税効果",
+        "長期借入金",
+        "調達コストが不要",
+        "内部留保の活用"
+      ],
+      "cuts": [
+        "財務状況",
+        "資金調達"
+      ],
+      "status": "verified",
+      "source_pages": "財務 p3",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第4問（配点20点）\n（設問1）\nD社は、海外向け製品の生産ライン増設に対する資金調達手段について検討している。D社がとるべき資金調達手段について、D社の財務状況を踏まえながら、その理由とともに80字以内で助言せよ。",
+      "mmc_theme": [
+        "資金調達",
+        "デリバティブによる財務リスク管理"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "財務 p5",
+      "question_status": "verified",
+      "question_source_pages": "R7 事例Ⅳ p7",
+      "group_id": "2025-IV-Q4",
+      "sub_question_no": "設問1",
+      "answer_unit_label": "資金調達",
+      "answer_status": "verified",
+      "answer_source_pages": "財務 p3",
+      "legacy_ids": [
+        "2025-IV-Q4"
+      ]
+    },
+    {
+      "id": "2025-IV-Q4-2",
+      "year": 2025,
+      "case": "IV",
+      "question_no": "第4問",
+      "question_summary": "EU販売時の財務リスク対処",
+      "model_answer": "財務リスクは、為替リスクである。対処は、①ユーロ建て為替予約、②プットオプション等を活用し、為替の変動リスクを回避する。",
+      "fruit_keywords": [
+        "為替リスク",
+        "ユーロ建て為替予約",
+        "プットオプション",
+        "為替の変動リスクを回避"
+      ],
+      "cuts": [
+        "財務リスク管理",
+        "デリバティブ"
+      ],
+      "status": "verified",
+      "source_pages": "財務 p3",
+      "answer_source": "MMC本試3年解答帖",
+      "version": "2.0",
+      "question_text": "第4問（配点20点）\n（設問2）\nD社が新商品をEU諸国に向けて販売する場合に直面する財務的リスクを挙げるとともに、そのリスクに対する具体的な対処について60字以内で述べよ。",
+      "mmc_theme": [
+        "資金調達",
+        "デリバティブによる財務リスク管理"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "財務 p5",
+      "question_status": "verified",
+      "question_source_pages": "R7 事例Ⅳ p7",
+      "group_id": "2025-IV-Q4",
+      "sub_question_no": "設問2",
+      "answer_unit_label": "財務リスクと対処",
+      "answer_status": "verified",
+      "answer_source_pages": "財務 p3",
+      "legacy_ids": [
+        "2025-IV-Q4"
+      ]
+    }
+  ]
+}

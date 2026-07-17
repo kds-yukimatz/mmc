@@ -22,8 +22,8 @@ export function QuestionDetails({ question, compact = false }: { question: Quest
       )}
       {question.questionSourcePages && <small>本試験問題：{question.questionSourcePages}</small>}
     </div>
-    {question.answerTarget && (
-      <p className="answer-target"><span>今回のお題：</span><strong>{question.answerTarget}</strong></p>
+    {question.answerUnitLabel && (
+      <p className="answer-target"><span>今回の回答対象：</span><strong>{question.answerUnitLabel}</strong></p>
     )}
     <div className="theme-section">
       <p className="detail-label">MMC題意</p>

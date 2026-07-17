@@ -14,7 +14,7 @@ export default defineConfig({
         globPatterns: ['**/*.{js,css,html,ico,png,json}'],
         runtimeCaching: [
           {
-            urlPattern: /\/data\/kahotore_mmc_base_v1\.json$/,
+            urlPattern: /\/data\/kahotore_mmc_base_v2\.json$/,
             handler: 'NetworkFirst',
             options: {
               cacheName: 'kahotore-question-data-v2',

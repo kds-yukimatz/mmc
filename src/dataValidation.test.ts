@@ -71,4 +71,11 @@ describe('問題データ', () => {
     expect(cause?.fruit_keywords).not.toContain('効率性')
     expect(cause?.fruit_keywords).not.toContain('安全性')
   })
+
+  it('2025年度事例Ⅰ第1問の弱みは改善策ではなく弱みそのものを果キーワードにする', () => {
+    const weakness = byId.get('2025-I-Q1-W')
+    expect(weakness?.model_answer).toContain('収益性の低下')
+    expect(weakness?.model_answer).toContain('新規事業に消極的な組織体制')
+    expect(weakness?.fruit_keywords).toEqual(['収益性の低下', '新規事業に消極的な組織体制'])
+  })
 })

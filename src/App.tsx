@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState, type FormEvent, type ReactNode } from 'react'
 import { NavLink, Route, Routes, useLocation, useNavigate } from 'react-router-dom'
-import { BookOpen, BrainCircuit, ChevronLeft, CircleCheck, Clock3, Download, History, Home, List, Moon, RefreshCw, RotateCcw, Settings, Sparkles, Sun, Target, Upload } from 'lucide-react'
+import { BookOpen, BrainCircuit, ChevronLeft, CircleCheck, Clock3, Download, History, Home, LibraryBig, List, Moon, RefreshCw, RotateCcw, Settings, Sparkles, Sun, Target, Upload } from 'lucide-react'
 import type { AppSettings, TrainingResult } from './domain/answer'
 import type { Question } from './domain/question'
 import { defaultSettings } from './db/indexedDb'
@@ -11,6 +11,7 @@ import { createLocalId } from './services/id'
 import { useTrainingStore } from './features/training/trainingStore'
 import { QuestionDetails } from './components/QuestionDetails'
 import { QuestionListPage } from './features/question-list/QuestionListPage'
+import { KeywordDictionaryPage } from './features/keyword-dictionary/KeywordDictionaryPage'
 
 type Filter = { years: number[]; cases: string[]; unanswered: boolean; review: boolean; count: number }
 const initialFilter: Filter = { years: [], cases: [], unanswered: false, review: false, count: 10 }
@@ -44,6 +45,7 @@ function App() {
       <Route path="/setup" element={<SetupPage questions={questions} results={results} />} />
       <Route path="/training" element={<TrainingPage settings={settings} onSaved={refresh} />} />
       <Route path="/overview" element={<QuestionListPage questions={questions} />} />
+      <Route path="/dictionary" element={<KeywordDictionaryPage questions={questions} />} />
       <Route path="/history" element={<HistoryPage questions={questions} results={results} />} />
       <Route path="/settings" element={<SettingsPage settings={settings} setSettings={setSettings} onImported={refresh} onCleared={refresh} />} />
     </Routes>
@@ -72,7 +74,7 @@ function HomePage({ questions, results }: { questions: Question[]; results: Trai
     <section className="stats-grid"><Stat value={stats.unanswered} label="未回答" /><Stat value={stats.review} label="要復習" accent /><Stat value={stats.learned} label="学習済み" /></section>
     <button className="start-card" onClick={randomStart}><span className="start-icon"><Sparkles /></span><span><strong>ランダム演習を始める</strong><small>全{questions.length}問から10問を出題</small></span><span className="arrow">→</span></button>
     <h2 className="section-title">目的から選ぶ</h2>
-    <div className="action-grid"><Action icon={<Clock3 />} title="年度別演習" desc="本試験の流れで" onClick={() => navigate('/setup')} /><Action icon={<BookOpen />} title="設問と果の一覧" desc="年度全体を記憶" onClick={() => navigate('/overview')} /><Action icon={<RotateCcw />} title="要復習" desc={`${stats.review}問をもう一度`} onClick={() => navigate('/setup?review=1')} /><Action icon={<Target />} title="条件を指定" desc="細かく絞り込む" onClick={() => navigate('/setup')} /></div>
+    <div className="action-grid"><Action icon={<Clock3 />} title="年度別演習" desc="本試験の流れで" onClick={() => navigate('/setup')} /><Action icon={<BookOpen />} title="設問と果の一覧" desc="年度全体を記憶" onClick={() => navigate('/overview')} /><Action icon={<LibraryBig />} title="果キーワード辞典" desc="頻出語を横断確認" onClick={() => navigate('/dictionary')} /><Action icon={<RotateCcw />} title="要復習" desc={`${stats.review}問をもう一度`} onClick={() => navigate('/setup?review=1')} /><Action icon={<Target />} title="条件を指定" desc="細かく絞り込む" onClick={() => navigate('/setup')} /></div>
   </div>
 }
 

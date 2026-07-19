@@ -1,8 +1,11 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { BookOpenCheck, ChevronDown, Eye, EyeOff } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import { QuestionDetails } from '../../components/QuestionDetails'
 import type { CaseType, Question } from '../../domain/question'
 import { caseOrder, getOverviewQuestions } from './questionList'
+import { getNextLearningTarget, resolveLearningTarget } from './learningSequence'
+import { QuestionListFooterNavigation } from './QuestionListFooterNavigation'
 
 const selectionKey = 'kahotore-overview-selection'
 
@@ -26,13 +29,34 @@ export function QuestionListPage({ questions }: { questions: Question[] }) {
   const [caseType, setCaseType] = useState<CaseType>(() => caseOrder.includes(saved.caseType as CaseType) ? saved.caseType! : 'I')
   const [revealedKeywords, setRevealedKeywords] = useState<Set<string>>(() => new Set())
   const [revealedAnswers, setRevealedAnswers] = useState<Set<string>>(() => new Set())
+  const [shouldScrollToList, setShouldScrollToList] = useState(false)
+  const listTopRef = useRef<HTMLDivElement>(null)
   const visibleQuestions = useMemo(() => getOverviewQuestions(questions, year, caseType), [questions, year, caseType])
+  const nextTarget = useMemo(() => getNextLearningTarget(questions, { year, caseType }), [questions, year, caseType])
 
   useEffect(() => {
     localStorage.setItem(selectionKey, JSON.stringify({ year, caseType }))
+  }, [year, caseType])
+
+  useEffect(() => {
+    if (!shouldScrollToList) return
+    const frame = window.requestAnimationFrame(() => {
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      listTopRef.current?.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' })
+      setShouldScrollToList(false)
+    })
+    return () => window.cancelAnimationFrame(frame)
+  }, [year, caseType, shouldScrollToList])
+
+  const handleSelectionChange = useCallback((requested: { year?: number; caseType?: CaseType }) => {
+    const target = resolveLearningTarget(questions, { year: requested.year ?? year, caseType: requested.caseType ?? caseType })
+    if (!target || (target.year === year && target.caseType === caseType)) return
     setRevealedKeywords(new Set())
     setRevealedAnswers(new Set())
-  }, [year, caseType])
+    setYear(target.year)
+    setCaseType(target.caseType)
+    setShouldScrollToList(true)
+  }, [questions, year, caseType])
 
   const toggleKeywords = (id: string) => {
     setRevealedKeywords((current) => {
@@ -75,11 +99,12 @@ export function QuestionListPage({ questions }: { questions: Question[] }) {
       <p className="eyebrow">YEAR OVERVIEW</p>
       <h1>設問と果の一覧</h1>
       <p>設問から果を思い出し、必要なときだけ文章化まで確認できます。</p>
+      <Link className="overview-dictionary-link" to="/dictionary">果キーワード辞典・頻出ランキングを見る →</Link>
     </div>
 
     <section className="overview-controls" aria-label="表示する年度と事例">
-      <label><span>年度</span><select value={year} onChange={(event) => setYear(Number(event.target.value))}>{years.map((item) => <option key={item} value={item}>{item}年度</option>)}</select></label>
-      <label><span>事例</span><select value={caseType} onChange={(event) => setCaseType(event.target.value as CaseType)}>{caseOrder.map((item) => <option key={item} value={item}>事例 {item}</option>)}</select></label>
+      <label><span>年度</span><select value={year} onChange={(event) => handleSelectionChange({ year: Number(event.target.value) })}>{years.map((item) => <option key={item} value={item}>{item}年度</option>)}</select></label>
+      <label><span>事例</span><select value={caseType} onChange={(event) => handleSelectionChange({ caseType: event.target.value as CaseType })}>{caseOrder.map((item) => <option key={item} value={item}>事例 {item}</option>)}</select></label>
     </section>
 
     <div className="overview-toolbar">
@@ -87,7 +112,7 @@ export function QuestionListPage({ questions }: { questions: Question[] }) {
       <div><button onClick={showAllKeywords}><Eye />すべて表示</button><button onClick={hideAll}><EyeOff />すべて隠す</button></div>
     </div>
 
-    <div className="overview-list">
+    <div className="overview-list" ref={listTopRef}>
       {visibleQuestions.map((question) => {
         const keywordsOpen = revealedKeywords.has(question.id)
         const answerOpen = revealedAnswers.has(question.id)
@@ -117,6 +142,6 @@ export function QuestionListPage({ questions }: { questions: Question[] }) {
       })}
       {!visibleQuestions.length && <div className="empty-inline"><BookOpenCheck /><p>この年度・事例の設問はありません</p></div>}
     </div>
+    <QuestionListFooterNavigation current={{ year, caseType }} years={years} next={nextTarget} onSelect={(target) => handleSelectionChange(target)} />
   </div>
 }
-

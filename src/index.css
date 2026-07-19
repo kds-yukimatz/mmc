@@ -229,6 +229,59 @@ button:focus-visible,input:focus-visible { outline:3px solid #4d9eef; outline-of
 .dark .answer-reveal-button { color:#ffbd8c; }
 .overview-model-answer { margin:0 17px 17px; }
 .overview-model-answer > p:first-child { margin:0; line-height:1.9; font-family:"Yu Mincho",serif; font-size:15px; white-space:pre-wrap; }
+.overview-footer-navigation { margin-top:24px; padding:22px 17px calc(25px + env(safe-area-inset-bottom)); border:1px solid var(--line); border-radius:18px; background:var(--paper); }
+.overview-footer-navigation > h2 { margin:0; font-family:"Yu Mincho",serif; font-size:22px; }
+.overview-current-target { margin:14px 0 22px; padding:13px; display:grid; gap:3px; border-radius:12px; color:#8c3b09; background:var(--orange-soft); }
+.dark .overview-current-target { color:#ffd8ba; }
+.overview-current-target span { font-size:10px; font-weight:800; }
+.overview-current-target strong { font-size:16px; }
+.overview-footer-selector { margin-top:19px; }
+.overview-footer-selector h3 { margin:0 0 9px; font-size:13px; }
+.overview-year-buttons { display:flex; gap:7px; flex-wrap:wrap; }
+.overview-case-buttons { display:grid; grid-template-columns:1fr 1fr; gap:7px; }
+.overview-year-buttons button,.overview-case-buttons button { min-height:48px; padding:8px 11px; display:flex; align-items:center; justify-content:center; gap:5px; border:1px solid var(--line); border-radius:11px; color:var(--ink); background:var(--paper); font-size:13px; font-weight:800; }
+.overview-year-buttons button { min-width:76px; }
+.overview-year-buttons button svg,.overview-case-buttons button svg { width:15px; color:var(--orange); }
+.overview-year-buttons button small,.overview-case-buttons button small { font-size:9px; color:inherit; }
+.overview-year-buttons button.active,.overview-case-buttons button.active { border:2px solid var(--orange); color:#8c3b09; background:var(--orange-soft); opacity:1; }
+.dark .overview-year-buttons button.active,.dark .overview-case-buttons button.active { color:#ffd8ba; }
+.overview-year-buttons button:disabled,.overview-case-buttons button:disabled { cursor:default; }
+.overview-next-button { width:100%; min-height:54px; margin-top:24px; padding:11px 14px; display:flex; align-items:center; justify-content:space-between; gap:10px; border:0; border-radius:13px; color:#fff; background:var(--navy); font-size:14px; font-weight:900; text-align:left; }
+.overview-next-button svg { width:20px; flex:0 0 auto; color:var(--orange); }
+.overview-complete { margin:24px 0 0; padding:15px; border:1px dashed #d39a70; border-radius:13px; color:var(--muted); background:var(--orange-soft); text-align:center; font-size:13px; font-weight:800; }
+.overview-dictionary-link { display:inline-flex; margin-top:14px; color:#a84f17; font-size:12px; font-weight:900; text-decoration:none; }
+.dark .overview-dictionary-link { color:#ffbd8c; }
+
+.dictionary-tabs { display:grid; grid-template-columns:1fr 1fr; gap:7px; margin:20px 0 13px; padding:5px; border:1px solid var(--line); border-radius:14px; background:var(--paper); }
+.dictionary-tabs button { min-height:45px; display:flex; align-items:center; justify-content:center; gap:7px; border:0; border-radius:10px; color:var(--muted); background:transparent; font-size:12px; font-weight:900; }
+.dictionary-tabs button svg { width:18px; }
+.dictionary-tabs button.active { color:#8c3b09; background:var(--orange-soft); }
+.dark .dictionary-tabs button.active { color:#ffd8ba; }
+.dictionary-case-filter { display:flex; gap:7px; overflow:auto; margin:0 -22px 16px; padding:2px 22px 5px; }
+.dictionary-case-filter button { min-height:38px; padding:7px 12px; flex:0 0 auto; border:1px solid var(--line); border-radius:999px; color:var(--muted); background:var(--paper); font-size:12px; font-weight:800; }
+.dictionary-case-filter button.active { border-color:var(--orange); color:#a84f17; background:var(--orange-soft); }
+.dark .dictionary-case-filter button.active { color:#ffbd8c; }
+.dictionary-search { min-height:52px; display:flex; align-items:center; gap:10px; padding:0 14px; border:1px solid var(--line); border-radius:13px; color:var(--muted); background:var(--paper); }
+.dictionary-search:focus-within { outline:3px solid rgba(239,125,50,.24); outline-offset:2px; }
+.dictionary-search svg { width:20px; flex:0 0 auto; }
+.dictionary-search input { min-width:0; width:100%; height:48px; border:0; outline:0; color:var(--ink); background:transparent; font-size:16px; }
+.dictionary-count { margin:14px 0 10px; color:var(--muted); font-size:12px; font-weight:700; }
+.dictionary-list { display:grid; gap:9px; }
+.dictionary-card { border:1px solid var(--line); border-radius:15px; background:var(--paper); overflow:hidden; }
+.dictionary-card header { min-height:57px; padding:13px 15px; display:flex; align-items:center; justify-content:space-between; gap:12px; border-bottom:1px solid var(--line); }
+.dictionary-card h2 { margin:0; font-size:16px; overflow-wrap:anywhere; }
+.dictionary-card header span,.ranking-count { flex:0 0 auto; padding:5px 9px; border-radius:999px; color:#a84f17; background:var(--orange-soft); font-size:11px; font-weight:900; }
+.dark .dictionary-card header span,.dark .ranking-count { color:#ffbd8c; }
+.dictionary-card ul { margin:0; padding:11px 15px 13px 33px; }
+.dictionary-card li { margin:6px 0; color:var(--muted); font-size:12px; line-height:1.55; }
+.dictionary-card li::marker { color:var(--orange); }
+.ranking-list { display:grid; gap:8px; margin:0; padding:0; list-style:none; counter-reset:none; }
+.ranking-list li { min-height:61px; padding:10px 13px; display:grid; grid-template-columns:32px 1fr auto; align-items:center; gap:10px; border:1px solid var(--line); border-radius:14px; background:var(--paper); }
+.ranking-list strong { font-size:15px; overflow-wrap:anywhere; }
+.rank { width:27px; height:27px; display:grid; place-items:center; border-radius:50%; color:var(--muted); background:#ece9e1; font-size:12px; font-weight:900; }
+.dark .rank { background:#28384a; }
+.rank.top { color:#8c3b09; background:#f8cf9d; }
+.dark .rank.top { color:#271504; }
 
 @media (min-width:640px) { .page { padding-left:36px; padding-right:36px; } .hero { padding-top:35px; } .action-grid { grid-template-columns:repeat(4,1fr); } .setup-footer { margin-left:-36px; margin-right:-36px; padding-left:36px; padding-right:36px; } .result-page { max-width:620px; margin:auto; } }
 @media (prefers-reduced-motion: reduce) { *,*::before,*::after { scroll-behavior:auto !important; transition:none !important; } }

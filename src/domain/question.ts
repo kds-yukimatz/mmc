@@ -25,6 +25,11 @@ export interface Question {
   answerStatus: 'verified' | 'unverified'
   answerSourcePages?: string
   legacyIds?: string[]
+  privateImport?: boolean
+  materialCode?: string
+  materialLabel?: string
+  sourceFile?: string
+  sourcePage?: number
   version: string
 }
 
@@ -53,5 +58,14 @@ export interface RawQuestion {
   answer_status?: 'verified' | 'unverified'
   answer_source_pages?: string
   legacy_ids?: string[]
+  private_import?: boolean
+  material_code?: string
+  material_label?: string
+  source_file?: string
+  source_page?: number
   version: string
+}
+
+export function isQuestionEligibleForTraining(question: Question): boolean {
+  return !question.privateImport || question.answerStatus === 'verified'
 }

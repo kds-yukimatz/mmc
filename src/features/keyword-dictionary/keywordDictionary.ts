@@ -8,6 +8,8 @@ export interface KeywordOccurrence {
   questionNo: string
   subQuestionNo?: string
   answerUnitLabel: string
+  privateImport: boolean
+  verified: boolean
 }
 
 export interface FruitKeywordEntry {
@@ -60,6 +62,8 @@ export function buildFruitKeywordDictionary(questions: Question[]): FruitKeyword
         questionNo: question.questionNo,
         subQuestionNo: question.subQuestionNo,
         answerUnitLabel: question.answerUnitLabel,
+        privateImport: question.privateImport ?? false,
+        verified: question.answerStatus === 'verified',
       })
       entries.set(keyword, entry)
     }

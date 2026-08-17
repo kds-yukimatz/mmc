@@ -2,6 +2,11 @@ import type { CaseType, Question } from '../../domain/question'
 
 export const caseOrder: CaseType[] = ['I', 'II', 'III', 'IV']
 
+export function formatLearningPeriod(year: number, compact = false) {
+  if (year === 2026) return 'MMC答練'
+  return compact ? String(year) : `${year}年度`
+}
+
 const swotOrder: Record<string, number> = { S: 1, W: 2, O: 3, T: 4 }
 
 function questionOrder(question: Question) {

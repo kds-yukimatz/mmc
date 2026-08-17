@@ -3,7 +3,7 @@ import { BookOpenCheck, ChevronDown, Eye, EyeOff } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { QuestionDetails } from '../../components/QuestionDetails'
 import type { CaseType, Question } from '../../domain/question'
-import { caseOrder, getOverviewQuestions } from './questionList'
+import { caseOrder, formatLearningPeriod, getOverviewQuestions } from './questionList'
 import { getNextLearningTarget, resolveLearningTarget } from './learningSequence'
 import { QuestionListFooterNavigation } from './QuestionListFooterNavigation'
 
@@ -103,7 +103,7 @@ export function QuestionListPage({ questions }: { questions: Question[] }) {
     </div>
 
     <section className="overview-controls" aria-label="表示する年度と事例">
-      <label><span>年度</span><select value={year} onChange={(event) => handleSelectionChange({ year: Number(event.target.value) })}>{years.map((item) => <option key={item} value={item}>{item}年度</option>)}</select></label>
+      <label><span>年度</span><select value={year} onChange={(event) => handleSelectionChange({ year: Number(event.target.value) })}>{years.map((item) => <option key={item} value={item}>{formatLearningPeriod(item)}</option>)}</select></label>
       <label><span>事例</span><select value={caseType} onChange={(event) => handleSelectionChange({ caseType: event.target.value as CaseType })}>{caseOrder.map((item) => <option key={item} value={item}>事例 {item}</option>)}</select></label>
     </section>
 

@@ -1,11 +1,17 @@
 import { describe, expect, it } from 'vitest'
 import type { Question } from '../../domain/question'
-import { getOverviewQuestions } from './questionList'
+import { formatLearningPeriod, getOverviewQuestions } from './questionList'
 import { getLearningSequence, getNextLearningTarget, resolveLearningTarget } from './learningSequence'
 
 const question = (id: string, year = 2025, caseType: Question['case'] = 'I') => ({ id, year, case: caseType }) as Question
 
 describe('年度別一覧の並び順', () => {
+  it('2026年度の個人教材をMMC答練と表示する', () => {
+    expect(formatLearningPeriod(2026)).toBe('MMC答練')
+    expect(formatLearningPeriod(2025)).toBe('2025年度')
+    expect(formatLearningPeriod(2025, true)).toBe('2025')
+  })
+
   it('年度と事例で絞り込み、本試験の順序で並べる', () => {
     const result = getOverviewQuestions([
       question('2025-I-Q2'), question('2025-I-Q1-T'), question('2024-I-Q1-S', 2024),

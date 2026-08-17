@@ -1,6 +1,6 @@
 import { Check, ChevronRight } from 'lucide-react'
 import type { CaseType } from '../../domain/question'
-import { caseOrder } from './questionList'
+import { caseOrder, formatLearningPeriod } from './questionList'
 import type { LearningTarget } from './learningSequence'
 
 interface Props {
@@ -16,7 +16,7 @@ export function QuestionListFooterNavigation({ current, years, next, onSelect }:
   return <section className="overview-footer-navigation" aria-label="次の設問一覧へ移動">
     <p className="eyebrow">NEXT OVERVIEW</p>
     <h2>ここまで確認しました</h2>
-    <p className="overview-current-target"><span>現在表示中</span><strong>{current.year}年度 {caseLabel[current.caseType]}</strong></p>
+    <p className="overview-current-target"><span>現在表示中</span><strong>{formatLearningPeriod(current.year)} {caseLabel[current.caseType]}</strong></p>
 
     <div className="overview-footer-selector">
       <h3>年度を変更</h3>
@@ -24,7 +24,7 @@ export function QuestionListFooterNavigation({ current, years, next, onSelect }:
         {years.map((year) => {
           const active = year === current.year
           return <button key={year} type="button" className={active ? 'active' : ''} aria-pressed={active} disabled={active} onClick={() => onSelect({ year, caseType: current.caseType })}>
-            {active && <Check />}{year}{active && <small>表示中</small>}
+            {active && <Check />}{formatLearningPeriod(year, true)}{active && <small>表示中</small>}
           </button>
         })}
       </div>
@@ -42,6 +42,6 @@ export function QuestionListFooterNavigation({ current, years, next, onSelect }:
       </div>
     </div>
 
-    {next ? <button className="overview-next-button" type="button" onClick={() => onSelect(next)}><span>次へ：{next.year}年度 {caseLabel[next.caseType]}</span><ChevronRight /></button> : <p className="overview-complete">全事例の確認が完了しました</p>}
+    {next ? <button className="overview-next-button" type="button" onClick={() => onSelect(next)}><span>次へ：{formatLearningPeriod(next.year)} {caseLabel[next.caseType]}</span><ChevronRight /></button> : <p className="overview-complete">全事例の確認が完了しました</p>}
   </section>
 }

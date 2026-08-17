@@ -14,9 +14,10 @@ const caseFilters: { value: CaseFilter; label: string }[] = [
   { value: 'IV', label: '事例Ⅳ' },
 ]
 
-function occurrenceLabel(question: { year: number; caseType: CaseType; questionNo: string; subQuestionNo?: string; answerUnitLabel: string }) {
+function occurrenceLabel(question: { year: number; caseType: CaseType; questionNo: string; subQuestionNo?: string; answerUnitLabel: string; privateImport: boolean; verified: boolean }) {
   const detail = question.subQuestionNo && question.subQuestionNo !== question.questionNo ? ` ${question.subQuestionNo}` : ''
-  return `${question.year}年度 事例${question.caseType} ${question.questionNo}${detail}（${question.answerUnitLabel}）`
+  const source = question.privateImport ? `・個人用OCR${question.verified ? '確認済み' : '未確認'}` : ''
+  return `${question.year}年度 事例${question.caseType} ${question.questionNo}${detail}（${question.answerUnitLabel}${source}）`
 }
 
 export function KeywordDictionaryPage({ questions }: { questions: Question[] }) {

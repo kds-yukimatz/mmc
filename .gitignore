@@ -7,3 +7,6 @@ coverage
 tmp/
 work/
 *.tsbuildinfo
+.test_node_modules/
+private-data/
+public/data/private-*

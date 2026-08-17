@@ -44,6 +44,11 @@ export const mapQuestion = (raw: RawQuestion): Question => ({
   answerStatus: raw.answer_status ?? 'unverified',
   answerSourcePages: raw.answer_source_pages ?? raw.source_pages,
   legacyIds: raw.legacy_ids,
+  privateImport: raw.private_import ?? false,
+  materialCode: raw.material_code,
+  materialLabel: raw.material_label,
+  sourceFile: raw.source_file,
+  sourcePage: raw.source_page,
   version: raw.version,
 })
 
@@ -65,7 +70,9 @@ class DexieQuestionRepository implements QuestionRepository {
       if (changedResults.length) await db.trainingResults.bulkPut(changedResults)
       await db.questions.bulkPut(questions)
       const ids = new Set(questions.map((question) => question.id))
-      const obsolete = (await db.questions.toArray()).filter((question) => !ids.has(question.id)).map((question) => question.id)
+      const obsolete = (await db.questions.toArray())
+        .filter((question) => !question.privateImport && !ids.has(question.id))
+        .map((question) => question.id)
       if (obsolete.length) await db.questions.bulkDelete(obsolete)
     })
   }

@@ -2,9 +2,10 @@ import { useEffect, useMemo, useRef, useState, type FormEvent, type ReactNode } 
 import { NavLink, Route, Routes, useLocation, useNavigate } from 'react-router-dom'
 import { BookOpen, BrainCircuit, ChevronLeft, CircleCheck, Clock3, Download, History, Home, LibraryBig, List, Moon, RefreshCw, RotateCcw, Settings, Sparkles, Sun, Target, Upload } from 'lucide-react'
 import type { AppSettings, TrainingResult } from './domain/answer'
-import type { Question } from './domain/question'
+import { isQuestionEligibleForTraining, type Question } from './domain/question'
 import { defaultSettings } from './db/indexedDb'
 import { questionRepository } from './repositories/questionRepository'
+import { importPrivateQuestions, removePrivateQuestions } from './repositories/privateQuestionImportRepository'
 import { exportProgress, importProgress, progressRepository } from './repositories/progressRepository'
 import { gradingService } from './services/keywordGrader'
 import { createLocalId } from './services/id'
@@ -23,7 +24,11 @@ function App() {
   const [ready, setReady] = useState(false)
   const [error, setError] = useState('')
 
-  const refresh = async () => setResults(await progressRepository.getResults())
+  const refresh = async () => {
+    const [loadedQuestions, loadedResults] = await Promise.all([questionRepository.getAll(), progressRepository.getResults()])
+    setQuestions(loadedQuestions)
+    setResults(loadedResults)
+  }
   useEffect(() => {
     void (async () => {
       try {
@@ -47,7 +52,7 @@ function App() {
       <Route path="/overview" element={<QuestionListPage questions={questions} />} />
       <Route path="/dictionary" element={<KeywordDictionaryPage questions={questions} />} />
       <Route path="/history" element={<HistoryPage questions={questions} results={results} />} />
-      <Route path="/settings" element={<SettingsPage settings={settings} setSettings={setSettings} onImported={refresh} onCleared={refresh} />} />
+      <Route path="/settings" element={<SettingsPage settings={settings} setSettings={setSettings} questionCount={questions.length} onImported={refresh} onCleared={refresh} />} />
     </Routes>
   </AppShell>
 }
@@ -66,13 +71,14 @@ function NavItem({ to, icon, label }: { to: string; icon: ReactNode; label: stri
 
 function HomePage({ questions, results }: { questions: Question[]; results: TrainingResult[] }) {
   const navigate = useNavigate()
+  const trainingQuestions = questions.filter(isQuestionEligibleForTraining)
   const latest = new Map<string, TrainingResult>(); results.forEach((r) => { if (!latest.has(r.questionId)) latest.set(r.questionId, r) })
   const stats = { unanswered: questions.length - latest.size, review: [...latest.values()].filter((r) => r.needsReview || r.selfRating < 2).length, learned: latest.size, today: [...latest.values()].filter((r) => (r.needsReview || r.selfRating < 2) && new Date(r.answeredAt).toDateString() !== new Date().toDateString()).length }
-  const randomStart = () => { const shuffled = [...questions].sort(() => Math.random() - .5); useTrainingStore.getState().start(shuffled.slice(0, 10)); navigate('/training') }
+  const randomStart = () => { const shuffled = [...trainingQuestions].sort(() => Math.random() - .5); useTrainingStore.getState().start(shuffled.slice(0, 10)); navigate('/training') }
   return <div className="page home-page">
     <section className="hero"><div><p className="eyebrow">MMC ANSWER TRAINING</p><h1>答えを覚えず、<br /><em>思考の型</em>を鍛える。</h1><p>題意から「切り口」と「果」を素早く導く、1問3分の答案トレーニング。</p></div><div className="today-ring"><span>{stats.today}</span><small>今日の復習</small></div></section>
     <section className="stats-grid"><Stat value={stats.unanswered} label="未回答" /><Stat value={stats.review} label="要復習" accent /><Stat value={stats.learned} label="学習済み" /></section>
-    <button className="start-card" onClick={randomStart}><span className="start-icon"><Sparkles /></span><span><strong>ランダム演習を始める</strong><small>全{questions.length}問から10問を出題</small></span><span className="arrow">→</span></button>
+    <button className="start-card" onClick={randomStart}><span className="start-icon"><Sparkles /></span><span><strong>ランダム演習を始める</strong><small>確認済み{trainingQuestions.length}問から10問を出題</small></span><span className="arrow">→</span></button>
     <h2 className="section-title">目的から選ぶ</h2>
     <div className="action-grid"><Action icon={<Clock3 />} title="年度別演習" desc="本試験の流れで" onClick={() => navigate('/setup')} /><Action icon={<BookOpen />} title="設問と果の一覧" desc="年度全体を記憶" onClick={() => navigate('/overview')} /><Action icon={<LibraryBig />} title="果キーワード辞典" desc="頻出語を横断確認" onClick={() => navigate('/dictionary')} /><Action icon={<RotateCcw />} title="要復習" desc={`${stats.review}問をもう一度`} onClick={() => navigate('/setup?review=1')} /><Action icon={<Target />} title="条件を指定" desc="細かく絞り込む" onClick={() => navigate('/setup')} /></div>
   </div>
@@ -84,9 +90,10 @@ function Action({ icon, title, desc, onClick }: { icon: ReactNode; title: string
 function SetupPage({ questions, results }: { questions: Question[]; results: TrainingResult[] }) {
   const navigate = useNavigate(); const reviewParam = new URLSearchParams(useLocation().search).has('review')
   const [filter, setFilter] = useState<Filter>({ ...initialFilter, review: reviewParam })
-  const years = [...new Set(questions.map((q) => q.year))].sort((a, b) => b - a)
+  const trainingQuestions = questions.filter(isQuestionEligibleForTraining)
+  const years = [...new Set(trainingQuestions.map((q) => q.year))].sort((a, b) => b - a)
   const answered = new Set(results.map((r) => r.questionId)); const reviewIds = new Set(results.filter((r) => r.needsReview || r.selfRating < 2).map((r) => r.questionId))
-  const matches = questions.filter((q) => (!filter.years.length || filter.years.includes(q.year)) && (!filter.cases.length || filter.cases.includes(q.case)) && (!filter.unanswered || !answered.has(q.id)) && (!filter.review || reviewIds.has(q.id)))
+  const matches = trainingQuestions.filter((q) => (!filter.years.length || filter.years.includes(q.year)) && (!filter.cases.length || filter.cases.includes(q.case)) && (!filter.unanswered || !answered.has(q.id)) && (!filter.review || reviewIds.has(q.id)))
   const toggle = <T,>(list: T[], value: T) => list.includes(value) ? list.filter((item) => item !== value) : [...list, value]
   const start = () => { useTrainingStore.getState().start([...matches].sort(() => Math.random() - .5).slice(0, filter.count)); navigate('/training') }
   return <div className="page setup-page"><div className="page-heading"><p className="eyebrow">SESSION SETUP</p><h1>出題条件</h1><p>今日の集中テーマを決めましょう。</p></div>
@@ -144,15 +151,18 @@ function HistoryPage({ questions, results }: { questions: Question[]; results: T
   </div>
 }
 
-function SettingsPage({ settings, setSettings, onImported, onCleared }: { settings: AppSettings; setSettings: (s: AppSettings) => void; onImported: () => Promise<void>; onCleared: () => Promise<void> }) {
-  const fileRef = useRef<HTMLInputElement>(null); const update = (patch: Partial<AppSettings>) => { const next = { ...settings, ...patch }; setSettings(next); void progressRepository.saveSettings(next) }
+function SettingsPage({ settings, setSettings, questionCount, onImported, onCleared }: { settings: AppSettings; setSettings: (s: AppSettings) => void; questionCount: number; onImported: () => Promise<void>; onCleared: () => Promise<void> }) {
+  const fileRef = useRef<HTMLInputElement>(null); const materialFileRef = useRef<HTMLInputElement>(null); const update = (patch: Partial<AppSettings>) => { const next = { ...settings, ...patch }; setSettings(next); void progressRepository.saveSettings(next) }
   const download = async () => { const blob = await exportProgress(); const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href = url; a.download = `kahotore-backup-${new Date().toISOString().slice(0, 10)}.json`; a.click(); URL.revokeObjectURL(url) }
   const upload = async (file?: File) => { if (!file) return; try { await importProgress(file); await onImported(); alert('学習履歴を読み込みました') } catch (error) { alert(error instanceof Error ? error.message : '読み込みに失敗しました') } }
+  const uploadMaterial = async (file?: File) => { if (!file) return; try { const count = await importPrivateQuestions(file); await onImported(); alert(`個人用MMC教材を${count}件読み込みました`) } catch (error) { alert(error instanceof Error ? error.message : '教材の読み込みに失敗しました') } finally { if (materialFileRef.current) materialFileRef.current.value = '' } }
+  const clearMaterials = async () => { if (!confirm('端末に読み込んだ個人用MMC教材を削除しますか？学習履歴は残ります。')) return; const count = await removePrivateQuestions(); await onImported(); alert(`${count}件の個人用教材を削除しました`) }
   const clear = async () => { if (!confirm('すべての学習履歴を削除しますか？この操作は元に戻せません。')) return; await progressRepository.clear(); await onCleared() }
   return <div className="page"><div className="page-heading"><p className="eyebrow">PREFERENCES</p><h1>設定</h1><p>自分の学習スタイルに合わせます。</p></div>
     <section className="settings-card"><h2>演習</h2><SettingRow icon={<Clock3 />} title="制限時間" desc="問題ごとに残り時間を表示"><Switch checked={settings.timerEnabled} onChange={(v) => update({ timerEnabled: v })} /></SettingRow>{settings.timerEnabled && <label className="number-setting"><span>制限時間（秒）</span><input type="number" min="30" max="1800" step="30" value={settings.timerSeconds} onChange={(e) => update({ timerSeconds: Number(e.target.value) })} /></label>}<SettingRow icon={<BrainCircuit />} title="同義語判定" desc="表記揺れや言い換えを一致判定"><Switch checked={settings.synonymsEnabled} onChange={(v) => update({ synonymsEnabled: v })} /></SettingRow><SettingRow icon={settings.darkMode ? <Moon /> : <Sun />} title="ダークモード" desc="暗い場所でも目にやさしく"><Switch checked={settings.darkMode} onChange={(v) => update({ darkMode: v })} /></SettingRow></section>
     <section className="settings-card"><h2>バックアップ</h2><button className="setting-button" onClick={() => void download()}><Download /><span><strong>履歴をエクスポート</strong><small>JSONファイルとして保存</small></span></button><button className="setting-button" onClick={() => fileRef.current?.click()}><Upload /><span><strong>履歴をインポート</strong><small>バックアップから復元・統合</small></span></button><input ref={fileRef} hidden type="file" accept="application/json" onChange={(e) => void upload(e.target.files?.[0])} /></section>
-    <button className="danger-button" onClick={() => void clear()}>全履歴を削除</button><p className="version">果トレ MVP v0.1.0 ・ 問題データ 51件</p>
+    <section className="settings-card"><h2>個人用MMC教材</h2><p>OCR抽出した未確認データは一覧・辞典だけに追加され、確認するまで採点には使われません。</p><button className="setting-button" onClick={() => materialFileRef.current?.click()}><Upload /><span><strong>教材JSONを読み込む</strong><small>題意・切り口・果キーワード・模範解答をこの端末だけに保存</small></span></button><input ref={materialFileRef} hidden type="file" accept="application/json" onChange={(e) => void uploadMaterial(e.target.files?.[0])} /><button className="setting-button" onClick={() => void clearMaterials()}><RotateCcw /><span><strong>個人用教材を削除</strong><small>標準問題と学習履歴は残します</small></span></button></section>
+    <button className="danger-button" onClick={() => void clear()}>全履歴を削除</button><p className="version">果トレ MVP v0.1.0 ・ 問題データ {questionCount}件</p>
   </div>
 }
 function SettingRow({ icon, title, desc, children }: { icon: ReactNode; title: string; desc: string; children: ReactNode }) { return <div className="setting-row"><span className="setting-icon">{icon}</span><span><strong>{title}</strong><small>{desc}</small></span>{children}</div> }

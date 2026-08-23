@@ -13,6 +13,11 @@ import { useTrainingStore } from './features/training/trainingStore'
 import { QuestionDetails } from './components/QuestionDetails'
 import { QuestionListPage } from './features/question-list/QuestionListPage'
 import { KeywordDictionaryPage } from './features/keyword-dictionary/KeywordDictionaryPage'
+import type { AssociationRecord, TrainingMode } from './domain/association'
+import { buildAssociationRecords } from './features/association/associationDictionary'
+import { useAssociationTrainingStore } from './features/association/associationTrainingStore'
+import { AssociationTrainingPage } from './features/association/AssociationTrainingPage'
+import { AssociationListPage } from './features/association/AssociationListPage'
 
 type Filter = { years: number[]; cases: string[]; unanswered: boolean; review: boolean; count: number }
 const initialFilter: Filter = { years: [], cases: [], unanswered: false, review: false, count: 10 }
@@ -23,6 +28,7 @@ function App() {
   const [settings, setSettings] = useState<AppSettings>(defaultSettings)
   const [ready, setReady] = useState(false)
   const [error, setError] = useState('')
+  const associationRecords = useMemo(() => buildAssociationRecords(questions), [questions])
 
   const refresh = async () => {
     const [loadedQuestions, loadedResults] = await Promise.all([questionRepository.getAll(), progressRepository.getResults()])
@@ -47,11 +53,13 @@ function App() {
   return <AppShell settings={settings} setSettings={setSettings}>
     <Routes>
       <Route path="/" element={<HomePage questions={questions} results={results} />} />
-      <Route path="/setup" element={<SetupPage questions={questions} results={results} />} />
+      <Route path="/setup" element={<SetupPage questions={questions} associations={associationRecords} results={results} />} />
       <Route path="/training" element={<TrainingPage settings={settings} onSaved={refresh} />} />
+      <Route path="/association-training" element={<AssociationTrainingPage settings={settings} onSaved={refresh} />} />
       <Route path="/overview" element={<QuestionListPage questions={questions} />} />
+      <Route path="/overview/associations" element={<AssociationListPage records={associationRecords} />} />
       <Route path="/dictionary" element={<KeywordDictionaryPage questions={questions} />} />
-      <Route path="/history" element={<HistoryPage questions={questions} results={results} />} />
+      <Route path="/history" element={<HistoryPage questions={questions} associations={associationRecords} results={results} />} />
       <Route path="/settings" element={<SettingsPage settings={settings} setSettings={setSettings} questionCount={questions.length} onImported={refresh} onCleared={refresh} />} />
     </Routes>
   </AppShell>
@@ -59,7 +67,7 @@ function App() {
 
 function AppShell({ children, settings, setSettings }: { children: ReactNode; settings: AppSettings; setSettings: (s: AppSettings) => void }) {
   const location = useLocation()
-  const hideNav = location.pathname === '/training'
+  const hideNav = location.pathname === '/training' || location.pathname === '/association-training'
   return <div className="app-shell">
     <header className="topbar"><NavLink to="/" className="brand"><span className="brand-mark small">果</span><span>果トレ</span></NavLink><button className="icon-btn" aria-label="配色を切り替える" onClick={() => { const next = { ...settings, darkMode: !settings.darkMode }; setSettings(next); void progressRepository.saveSettings(next) }}>{settings.darkMode ? <Sun /> : <Moon />}</button></header>
     <main className={hideNav ? 'main training-main' : 'main'}>{children}</main>
@@ -72,36 +80,50 @@ function NavItem({ to, icon, label }: { to: string; icon: ReactNode; label: stri
 function HomePage({ questions, results }: { questions: Question[]; results: TrainingResult[] }) {
   const navigate = useNavigate()
   const trainingQuestions = questions.filter(isQuestionEligibleForTraining)
-  const latest = new Map<string, TrainingResult>(); results.forEach((r) => { if (!latest.has(r.questionId)) latest.set(r.questionId, r) })
-  const stats = { unanswered: questions.length - latest.size, review: [...latest.values()].filter((r) => r.needsReview || r.selfRating < 2).length, learned: latest.size, today: [...latest.values()].filter((r) => (r.needsReview || r.selfRating < 2) && new Date(r.answeredAt).toDateString() !== new Date().toDateString()).length }
+  const questionIds = new Set(trainingQuestions.map((question) => question.id))
+  const latest = new Map<string, TrainingResult>(); results.forEach((r) => { if (questionIds.has(r.questionId) && !latest.has(r.questionId)) latest.set(r.questionId, r) })
+  const stats = { unanswered: trainingQuestions.length - latest.size, review: [...latest.values()].filter((r) => r.needsReview || r.selfRating < 2).length, learned: latest.size, today: [...latest.values()].filter((r) => (r.needsReview || r.selfRating < 2) && new Date(r.answeredAt).toDateString() !== new Date().toDateString()).length }
   const randomStart = () => { const shuffled = [...trainingQuestions].sort(() => Math.random() - .5); useTrainingStore.getState().start(shuffled.slice(0, 10)); navigate('/training') }
   return <div className="page home-page">
     <section className="hero"><div><p className="eyebrow">MMC ANSWER TRAINING</p><h1>答えを覚えず、<br /><em>思考の型</em>を鍛える。</h1><p>題意から「切り口」と「果」を素早く導く、1問3分の答案トレーニング。</p></div><div className="today-ring"><span>{stats.today}</span><small>今日の復習</small></div></section>
     <section className="stats-grid"><Stat value={stats.unanswered} label="未回答" /><Stat value={stats.review} label="要復習" accent /><Stat value={stats.learned} label="学習済み" /></section>
     <button className="start-card" onClick={randomStart}><span className="start-icon"><Sparkles /></span><span><strong>ランダム演習を始める</strong><small>確認済み{trainingQuestions.length}問から10問を出題</small></span><span className="arrow">→</span></button>
     <h2 className="section-title">目的から選ぶ</h2>
-    <div className="action-grid"><Action icon={<Clock3 />} title="年度別演習" desc="本試験の流れで" onClick={() => navigate('/setup')} /><Action icon={<BookOpen />} title="設問と果の一覧" desc="年度全体を記憶" onClick={() => navigate('/overview')} /><Action icon={<LibraryBig />} title="果キーワード辞典" desc="頻出語を横断確認" onClick={() => navigate('/dictionary')} /><Action icon={<RotateCcw />} title="要復習" desc={`${stats.review}問をもう一度`} onClick={() => navigate('/setup?review=1')} /><Action icon={<Target />} title="条件を指定" desc="細かく絞り込む" onClick={() => navigate('/setup')} /></div>
+    <div className="action-grid"><Action icon={<BrainCircuit />} title="題意トレ" desc="トリガーから棚へ" onClick={() => navigate('/setup?mode=theme')} /><Action icon={<Sparkles />} title="棚から果トレ" desc="棚から果を想起" onClick={() => navigate('/setup?mode=fruit')} /><Action icon={<Clock3 />} title="年度別演習" desc="本試験の流れで" onClick={() => navigate('/setup')} /><Action icon={<BookOpen />} title="設問と果の一覧" desc="年度全体を記憶" onClick={() => navigate('/overview')} /><Action icon={<LibraryBig />} title="題意・果の辞典" desc="検索経路を確認" onClick={() => navigate('/overview/associations')} /><Action icon={<RotateCcw />} title="要復習" desc={`${stats.review}問をもう一度`} onClick={() => navigate('/setup?review=1')} /><Action icon={<Target />} title="条件を指定" desc="細かく絞り込む" onClick={() => navigate('/setup')} /></div>
   </div>
 }
 
 function Stat({ value, label, accent }: { value: number; label: string; accent?: boolean }) { return <div className={accent ? 'stat accent' : 'stat'}><strong>{value}</strong><span>{label}</span></div> }
 function Action({ icon, title, desc, onClick }: { icon: ReactNode; title: string; desc: string; onClick: () => void }) { return <button className="action-card" onClick={onClick}><span>{icon}</span><strong>{title}</strong><small>{desc}</small></button> }
 
-function SetupPage({ questions, results }: { questions: Question[]; results: TrainingResult[] }) {
-  const navigate = useNavigate(); const reviewParam = new URLSearchParams(useLocation().search).has('review')
+function SetupPage({ questions, associations, results }: { questions: Question[]; associations: AssociationRecord[]; results: TrainingResult[] }) {
+  const navigate = useNavigate(); const params = new URLSearchParams(useLocation().search); const reviewParam = params.has('review')
+  const initialMode = (['theme', 'fruit'].includes(params.get('mode') ?? '') ? params.get('mode') : 'question') as TrainingMode
+  const [mode, setMode] = useState<TrainingMode>(initialMode)
   const [filter, setFilter] = useState<Filter>({ ...initialFilter, review: reviewParam })
   const trainingQuestions = questions.filter(isQuestionEligibleForTraining)
-  const years = [...new Set(trainingQuestions.map((q) => q.year))].sort((a, b) => b - a)
+  const years = [...new Set((mode === 'question' ? trainingQuestions : associations).map((item) => item.year))].sort((a, b) => b - a)
   const answered = new Set(results.map((r) => r.questionId)); const reviewIds = new Set(results.filter((r) => r.needsReview || r.selfRating < 2).map((r) => r.questionId))
-  const matches = trainingQuestions.filter((q) => (!filter.years.length || filter.years.includes(q.year)) && (!filter.cases.length || filter.cases.includes(q.case)) && (!filter.unanswered || !answered.has(q.id)) && (!filter.review || reviewIds.has(q.id)))
+  const questionMatches = trainingQuestions.filter((q) => (!filter.years.length || filter.years.includes(q.year)) && (!filter.cases.length || filter.cases.includes(q.case)) && (!filter.unanswered || !answered.has(q.id)) && (!filter.review || reviewIds.has(q.id)))
+  const associationMatches = associations.filter((record) => {
+    const resultId = `association-${record.id}-${mode}`
+    return (!filter.years.length || filter.years.includes(record.year)) && (!filter.cases.length || filter.cases.includes(record.case)) && (!filter.unanswered || !answered.has(resultId)) && (!filter.review || reviewIds.has(resultId))
+  })
+  const matchCount = mode === 'question' ? questionMatches.length : associationMatches.length
   const toggle = <T,>(list: T[], value: T) => list.includes(value) ? list.filter((item) => item !== value) : [...list, value]
-  const start = () => { useTrainingStore.getState().start([...matches].sort(() => Math.random() - .5).slice(0, filter.count)); navigate('/training') }
+  const changeMode = (nextMode: TrainingMode) => { setMode(nextMode); setFilter({ ...filter, years: [], cases: [] }) }
+  const start = () => {
+    if (mode === 'question') { useTrainingStore.getState().start([...questionMatches].sort(() => Math.random() - .5).slice(0, filter.count)); navigate('/training'); return }
+    useAssociationTrainingStore.getState().start([...associationMatches].sort(() => Math.random() - .5).slice(0, filter.count), mode)
+    navigate('/association-training')
+  }
   return <div className="page setup-page"><div className="page-heading"><p className="eyebrow">SESSION SETUP</p><h1>出題条件</h1><p>今日の集中テーマを決めましょう。</p></div>
+    <FilterGroup title="トレーニング"><div className="training-mode-grid"><Chip active={mode === 'question'} onClick={() => changeMode('question')}>本試一問一答</Chip><Chip active={mode === 'theme'} onClick={() => changeMode('theme')}>題意トレ</Chip><Chip active={mode === 'fruit'} onClick={() => changeMode('fruit')}>棚から果トレ</Chip></div><p className="mode-description">{mode === 'question' ? '本試験の設問文から切り口と果を答えます。' : mode === 'theme' ? '題意・与件のトリガーから、開くべき棚を答えます。' : '題意の棚から、使える果キーワードを答えます。'}</p></FilterGroup>
     <FilterGroup title="年度">{years.map((year) => <Chip key={year} active={filter.years.includes(year)} onClick={() => setFilter({ ...filter, years: toggle(filter.years, year) })}>{year}年度</Chip>)}</FilterGroup>
-    <FilterGroup title="事例">{(['I', 'II', 'III', 'IV'] as const).map((c) => <Chip key={c} active={filter.cases.includes(c)} onClick={() => setFilter({ ...filter, cases: toggle(filter.cases, c) })}>事例 {c}</Chip>)}</FilterGroup>
+    <FilterGroup title="事例">{(mode === 'question' ? ['I', 'II', 'III', 'IV'] : ['I', 'II', 'III']).map((c) => <Chip key={c} active={filter.cases.includes(c)} onClick={() => setFilter({ ...filter, cases: toggle(filter.cases, c) })}>事例 {c}</Chip>)}</FilterGroup>
     <FilterGroup title="学習状況"><Chip active={filter.unanswered} onClick={() => setFilter({ ...filter, unanswered: !filter.unanswered, review: false })}>未回答のみ</Chip><Chip active={filter.review} onClick={() => setFilter({ ...filter, review: !filter.review, unanswered: false })}>要復習のみ</Chip></FilterGroup>
     <FilterGroup title="出題数">{[5, 10, 20].map((count) => <Chip key={count} active={filter.count === count} onClick={() => setFilter({ ...filter, count })}>{count}問</Chip>)}</FilterGroup>
-    <div className="setup-footer"><span><strong>{Math.min(matches.length, filter.count)}</strong>問を出題</span><button className="btn btn-primary" disabled={!matches.length} onClick={start}>演習を始める</button></div>
+    <div className="setup-footer"><span><strong>{Math.min(matchCount, filter.count)}</strong>問を出題</span><button className="btn btn-primary" disabled={!matchCount} onClick={start}>演習を始める</button></div>
   </div>
 }
 function FilterGroup({ title, children }: { title: string; children: ReactNode }) { return <section className="filter-group"><h2>{title}</h2><div className="chips">{children}</div></section> }
@@ -143,11 +165,14 @@ function ResultView({ question, rating, setRating, review, setReview, onNext }: 
 function ScoreBar({ label, value, max }: { label: string; value: number; max: number }) { return <div><span>{label}</span><i><b style={{ width: `${(value / max) * 100}%` }} /></i><strong>{value}/{max}</strong></div> }
 function Compare({ title, mine, expected, matched }: { title: string; mine: string[]; expected: string[]; matched: string[] }) { return <section className="compare"><h2>{title}</h2><div><p>あなたの回答</p><div className="tag-list static">{mine.length ? mine.map((v) => <span key={v}>{v}</span>) : <small>入力なし</small>}</div></div><div><p>登録済みの正解</p><div className="tag-list static expected">{expected.map((v) => <span key={v} className={matched.includes(v) ? 'match' : 'miss'}>{matched.includes(v) ? '✓ ' : '— '}{v}</span>)}</div></div></section> }
 
-function HistoryPage({ questions, results }: { questions: Question[]; results: TrainingResult[] }) {
+function HistoryPage({ questions, associations, results }: { questions: Question[]; associations: AssociationRecord[]; results: TrainingResult[] }) {
   const [caseFilter, setCaseFilter] = useState('all'); const questionMap = useMemo(() => new Map(questions.map((q) => [q.id, q])), [questions])
-  const visible = results.filter((result) => caseFilter === 'all' || questionMap.get(result.questionId)?.case === caseFilter || result.legacyGroupId?.split('-')[1] === caseFilter)
+  const associationCaseMap = useMemo(() => new Map<string, string>(associations.flatMap((record) =>
+    (['theme', 'fruit'] as const).map((mode) => [`association-${record.id}-${mode}`, record.case] as const),
+  )), [associations])
+  const visible = results.filter((result) => caseFilter === 'all' || questionMap.get(result.questionId)?.case === caseFilter || associationCaseMap.get(result.questionId) === caseFilter || result.legacyGroupId?.split('-')[1] === caseFilter)
   return <div className="page"><div className="page-heading"><p className="eyebrow">LEARNING LOG</p><h1>学習履歴</h1><p>{results.length}回の答案思考を記録しています。</p></div><div className="chips compact"><Chip active={caseFilter === 'all'} onClick={() => setCaseFilter('all')}>すべて</Chip>{['I', 'II', 'III', 'IV'].map((c) => <Chip key={c} active={caseFilter === c} onClick={() => setCaseFilter(c)}>事例 {c}</Chip>)}</div>
-    <div className="history-list">{visible.length ? visible.map((result) => { const q = questionMap.get(result.questionId); const legacy = result.isLegacy ? '（旧記録）' : ''; return <article key={result.id}><div className="history-date">{new Date(result.answeredAt).toLocaleDateString('ja-JP', { month: 'short', day: 'numeric' })}<small>{new Date(result.answeredAt).toLocaleTimeString('ja-JP', { hour: '2-digit', minute: '2-digit' })}</small></div><div><p>{q ? `${q.year} 事例${q.case} ${q.questionNo}${q.subQuestionNo ? ` ${q.subQuestionNo}` : ''}` : `${result.legacyGroupId ?? result.questionId}${legacy}`}</p><strong>{q?.questionSummary ?? (result.isLegacy ? '分割前の学習記録' : '問題')}</strong><small>自己評価 {result.selfRating} {result.needsReview && '・要復習'}</small></div><div className={result.totalScore >= 70 ? 'history-score good' : 'history-score'}>{result.totalScore}<small>点</small></div></article> }) : <div className="empty-inline"><History /><p>条件に合う履歴はありません</p></div>}</div>
+    <div className="history-list">{visible.length ? visible.map((result) => { const q = questionMap.get(result.questionId); const legacy = result.isLegacy ? '（旧記録）' : ''; const associationLabel = result.trainingMode === 'theme' ? '題意トレ' : result.trainingMode === 'fruit' ? '果トレ' : ''; return <article key={result.id}><div className="history-date">{new Date(result.answeredAt).toLocaleDateString('ja-JP', { month: 'short', day: 'numeric' })}<small>{new Date(result.answeredAt).toLocaleTimeString('ja-JP', { hour: '2-digit', minute: '2-digit' })}</small></div><div><p>{associationLabel || (q ? `${q.year} 事例${q.case} ${q.questionNo}${q.subQuestionNo ? ` ${q.subQuestionNo}` : ''}` : `${result.legacyGroupId ?? result.questionId}${legacy}`)}</p><strong>{result.promptLabel ?? q?.questionSummary ?? (result.isLegacy ? '分割前の学習記録' : '問題')}</strong><small>自己評価 {result.selfRating} {result.needsReview && '・要復習'}</small></div><div className={result.totalScore >= 70 ? 'history-score good' : 'history-score'}>{result.totalScore}<small>点</small></div></article> }) : <div className="empty-inline"><History /><p>条件に合う履歴はありません</p></div>}</div>
   </div>
 }
 

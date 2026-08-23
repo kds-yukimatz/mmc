@@ -1,0 +1,64 @@
+{
+  "metadata": {
+    "title": "果トレ 題意トリガー辞書",
+    "version": "1.0",
+    "created": "2026-08-23",
+    "scope": "既存MMC本試3年データとMMC 2026強化答練 Cs411/Cs412/Cs421/Cs422/Cs431/Cs432",
+    "notes": [
+      "強化答練由来レコードは解答・解説に明示された内容のみを収録する。",
+      "一般知識によるトリガー、棚、果キーワードの補完は行わない。"
+    ]
+  },
+  "shelves": {
+    "I": ["SWOT・強み", "経営戦略", "組織構造", "人的資源管理", "新事業・事業展開"],
+    "II": ["SWOT・3C", "ターゲット", "情報発信", "製品・品揃え", "サービス", "プロモーション", "関係性マーケティング", "協業"],
+    "III": ["強み", "設計", "生産管理", "品質管理", "情報管理", "営業", "技能承継", "外注"]
+  },
+  "records": [
+    {"id":"Cs411-Q1","year":2026,"case":"I","trigger":"技術領域の拡大・強化／他社に先駆けた技術開発／新工場の加工設備","shelf":"SWOT・強み","fruit_keywords":["リーダーシップ","技術開発力","高付加価値製品の製造能力"],"source":"MMC 26-Cs411 p2","source_type":"強化答練"},
+    {"id":"Cs411-Q2-1","year":2026,"case":"I","trigger":"営業部と開発部・製造部との連携不足","shelf":"組織構造","fruit_keywords":["定期会議","部門間連携強化"],"source":"MMC 26-Cs411 p2","source_type":"強化答練"},
+    {"id":"Cs411-Q2-2","year":2026,"case":"I","trigger":"年功序列型給与への若手社員の不満","shelf":"人的資源管理","fruit_keywords":["技能の適正評価","成果主義的報酬"],"source":"MMC 26-Cs411 p2","source_type":"強化答練"},
+    {"id":"Cs411-Q3","year":2026,"case":"I","trigger":"企業買収で期待できる可能性","shelf":"経営戦略","fruit_keywords":["技術力強化","高い利益率の確保","顧客依存リスクの分散"],"source":"MMC 26-Cs411 p2","source_type":"強化答練"},
+    {"id":"Cs411-Q4","year":2026,"case":"I","trigger":"買収後の人事面の留意点","shelf":"人的資源管理","fruit_keywords":["適正配置","公平・公正な評価制度","社内研修の定期実施"],"source":"MMC 26-Cs411 p2","source_type":"強化答練"},
+
+    {"id":"Cs412-Q1","year":2026,"case":"I","trigger":"顧客要望の収集／専門人材の中途採用","shelf":"SWOT・強み","fruit_keywords":["情報収集力","技術力"],"source":"MMC 26-Cs412 p2","source_type":"強化答練"},
+    {"id":"Cs412-Q2","year":2026,"case":"I","trigger":"共同事業に向けた技術活用・人材・情報共有の不足","shelf":"新事業・事業展開","fruit_keywords":["技術の活用","人材確保","情報共有体制の構築"],"source":"MMC 26-Cs412 p2","source_type":"強化答練"},
+    {"id":"Cs412-Q3","year":2026,"case":"I","trigger":"下請事業と自社製品展開の違い","shelf":"経営戦略","fruit_keywords":["安定売上","経営リスク低減","販路開拓","製品開発","取引先分散"],"source":"MMC 26-Cs412 p2","source_type":"強化答練"},
+    {"id":"Cs412-Q4","year":2026,"case":"I","trigger":"多様な技能を持つ社員の有効活用とモラール向上","shelf":"人的資源管理","fruit_keywords":["適正配置","目標管理","成果主義的報酬"],"source":"MMC 26-Cs412 p2","source_type":"強化答練"},
+    {"id":"Cs412-Q5","year":2026,"case":"I","trigger":"複数事業の利益責任・収益強化・情報共有","shelf":"新事業・事業展開","fruit_keywords":["事業部制組織","権限委譲","定期会議","情報共有"],"source":"MMC 26-Cs412 p2","source_type":"強化答練"},
+
+    {"id":"Cs421-Q2-1","year":2026,"case":"II","trigger":"急なキャンセルで空きが生じた枠","shelf":"情報発信","fruit_keywords":["予約情報","空き枠情報"],"source":"MMC 26-Cs421 p2・p4","source_type":"強化答練"},
+    {"id":"Cs421-Q2-2","year":2026,"case":"II","trigger":"生成AI関連のリスキリング講座","shelf":"情報発信","fruit_keywords":["新レッスン情報"],"source":"MMC 26-Cs421 p2・p4","source_type":"強化答練"},
+    {"id":"Cs421-Q2-3","year":2026,"case":"II","trigger":"プログラミングの習熟度やレッスンの復習","shelf":"情報発信","fruit_keywords":["学習情報","習熟度情報","復習情報"],"source":"MMC 26-Cs421 p2・p4","source_type":"強化答練"},
+    {"id":"Cs421-Q3","year":2026,"case":"II","trigger":"講師や生徒との交流促進","shelf":"サービス","fruit_keywords":["ペアプログラミングサービス","相談サービス","レッスンの振替サービス"],"source":"MMC 26-Cs421 p2・p5","source_type":"強化答練"},
+    {"id":"Cs421-Q4","year":2026,"case":"II","trigger":"愛顧向上と地域のファン化につながる企画","shelf":"プロモーション","fruit_keywords":["カンファレンス参加会","エンジニアとの交流会","競技型イベントの見学会"],"source":"MMC 26-Cs421 p2","source_type":"強化答練"},
+
+    {"id":"Cs422-Q1","year":2026,"case":"II","trigger":"チョコレート事業の現状をSWOTで整理","shelf":"SWOT・3C","fruit_keywords":["製法技術力","商品力","情報発信不足","品揃え不足","需要増加","競争激化"],"source":"MMC 26-Cs422 p2・p4","source_type":"強化答練"},
+    {"id":"Cs422-Q2","year":2026,"case":"II","trigger":"40～50代女性への掲載情報","shelf":"ターゲット","fruit_keywords":["店内情報","メニュー情報","利用シーン情報"],"source":"MMC 26-Cs422 p2","source_type":"強化答練"},
+    {"id":"Cs422-Q3-1","year":2026,"case":"II","trigger":"販売点数を高める品揃え","shelf":"製品・品揃え","fruit_keywords":["新商品","新フレーバー"],"source":"MMC 26-Cs422 p2","source_type":"強化答練"},
+    {"id":"Cs422-Q3-2","year":2026,"case":"II","trigger":"購入単価を高める品揃え","shelf":"製品・品揃え","fruit_keywords":["希少品"],"source":"MMC 26-Cs422 p2","source_type":"強化答練"},
+    {"id":"Cs422-Q3-3","year":2026,"case":"II","trigger":"購入点数を高める品揃え","shelf":"製品・品揃え","fruit_keywords":["セット商品"],"source":"MMC 26-Cs422 p2","source_type":"強化答練"},
+    {"id":"Cs422-Q4-1","year":2026,"case":"II","trigger":"地元事業者と連携した観光客向け事業","shelf":"協業","fruit_keywords":["地元事業者との連携","果物狩り事業"],"source":"MMC 26-Cs422 p3","source_type":"強化答練"},
+    {"id":"Cs422-Q4-2","year":2026,"case":"II","trigger":"商品訴求・親近感・参加意識を高める企画","shelf":"プロモーション","fruit_keywords":["見学ツアー","チョコレート作り教室","ファンとの座談会"],"source":"MMC 26-Cs422 p3","source_type":"強化答練"},
+    {"id":"Cs422-Q4-3","year":2026,"case":"II","trigger":"ファン参加で愛顧を高め関係性を強化","shelf":"関係性マーケティング","fruit_keywords":["新商品開発への参加","愛顧向上","関係性強化"],"source":"MMC 26-Cs422 p3","source_type":"強化答練"},
+
+    {"id":"Cs431-Q1","year":2026,"case":"III","trigger":"開発面と生産面で評価される点","shelf":"強み","fruit_keywords":["製品開発力","一貫生産体制"],"source":"MMC 26-Cs431 p2","source_type":"強化答練"},
+    {"id":"Cs431-Q2-1","year":2026,"case":"III","trigger":"部品削減","shelf":"設計","fruit_keywords":["VE","設計効率化"],"source":"MMC 26-Cs431 p2","source_type":"強化答練"},
+    {"id":"Cs431-Q2-2","year":2026,"case":"III","trigger":"形状簡易化","shelf":"設計","fruit_keywords":["DR","設計効率化"],"source":"MMC 26-Cs431 p2","source_type":"強化答練"},
+    {"id":"Cs431-Q2-3","year":2026,"case":"III","trigger":"組立工程の段取り作業","shelf":"生産管理","fruit_keywords":["外段取り化","業務効率化"],"source":"MMC 26-Cs431 p2","source_type":"強化答練"},
+    {"id":"Cs431-Q2-4","year":2026,"case":"III","trigger":"手戻り率の低減と改善活動","shelf":"品質管理","fruit_keywords":["QCサークル活動","業務効率化"],"source":"MMC 26-Cs431 p2","source_type":"強化答練"},
+    {"id":"Cs431-Q3","year":2026,"case":"III","trigger":"設計から製造までの情報共有","shelf":"情報管理","fruit_keywords":["発注情報","設計情報","生産計画情報","社内ネットワーク","共有データベース","一元管理"],"source":"MMC 26-Cs431 p2","source_type":"強化答練"},
+    {"id":"Cs431-Q4-1","year":2026,"case":"III","trigger":"営業部員の技術的提案力不足","shelf":"営業","fruit_keywords":["技術研修","提案力強化","新規顧客開拓体制の強化"],"source":"MMC 26-Cs431 p2","source_type":"強化答練"},
+    {"id":"Cs431-Q4-2","year":2026,"case":"III","trigger":"熟練技能の承継","shelf":"技能承継","fruit_keywords":["マニュアル化","計画的OJT","技術承継体制の強化"],"source":"MMC 26-Cs431 p2","source_type":"強化答練"},
+
+    {"id":"Cs432-Q2-1","year":2026,"case":"III","trigger":"見込生産の欠品・需要の見込み違い","shelf":"生産管理","fruit_keywords":["精度の高い需要予測","適正在庫","適正な生産調整"],"source":"MMC 26-Cs432 p2・p5","source_type":"強化答練"},
+    {"id":"Cs432-Q2-2","year":2026,"case":"III","trigger":"受注生産の納期遅延","shelf":"生産管理","fruit_keywords":["日次生産計画","生産計画の短サイクル化","進捗管理"],"source":"MMC 26-Cs432 p2・p5","source_type":"強化答練"},
+    {"id":"Cs432-Q3","year":2026,"case":"III","trigger":"受動的な営業スタイルから能動的な営業へ","shelf":"営業","fruit_keywords":["製品カタログの充実","技術者の同行営業","技術的提案"],"source":"MMC 26-Cs432 p2・p6","source_type":"強化答練"},
+    {"id":"Cs432-Q4-1","year":2026,"case":"III","trigger":"作業方法のばらつき","shelf":"品質管理","fruit_keywords":["作業標準化","マニュアル化"],"source":"MMC 26-Cs432 p2・p7","source_type":"強化答練"},
+    {"id":"Cs432-Q4-2","year":2026,"case":"III","trigger":"ネジの締め付け忘れなどの単純ミス","shelf":"品質管理","fruit_keywords":["ポカヨケ"],"source":"MMC 26-Cs432 p2・p7","source_type":"強化答練"},
+    {"id":"Cs432-Q4-3","year":2026,"case":"III","trigger":"作業ミスや対策の共有不足","shelf":"品質管理","fruit_keywords":["QCサークル活動","小集団活動"],"source":"MMC 26-Cs432 p2・p7","source_type":"強化答練"},
+    {"id":"Cs432-Q4-4","year":2026,"case":"III","trigger":"若手作業員の技能不足","shelf":"技能承継","fruit_keywords":["技能教育","OJT"],"source":"MMC 26-Cs432 p2・p7","source_type":"強化答練"},
+    {"id":"Cs432-Q5-1","year":2026,"case":"III","trigger":"多様化・個性化ニーズへの開発・生産対応","shelf":"生産管理","fruit_keywords":["多種少量生産体制"],"source":"MMC 26-Cs432 p8","source_type":"強化答練"},
+    {"id":"Cs432-Q5-2","year":2026,"case":"III","trigger":"繁忙期の外注能力不足","shelf":"外注","fruit_keywords":["新たな外注先の開拓"],"source":"MMC 26-Cs432 p8","source_type":"強化答練"}
+  ]
+}

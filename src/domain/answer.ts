@@ -15,6 +15,8 @@ export interface TrainingResult {
   legacyQuestionId?: string
   legacyGroupId?: string
   isLegacy?: boolean
+  trainingMode?: 'question' | 'theme' | 'fruit'
+  promptLabel?: string
 }
 
 export interface AppSettings {

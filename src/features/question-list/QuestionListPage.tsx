@@ -100,6 +100,7 @@ export function QuestionListPage({ questions }: { questions: Question[] }) {
       <h1>設問と果の一覧</h1>
       <p>設問から果を思い出し、必要なときだけ文章化まで確認できます。</p>
       <Link className="overview-dictionary-link" to="/dictionary">果キーワード辞典・頻出ランキングを見る →</Link>
+      <Link className="overview-dictionary-link" to="/overview/associations">題意・トリガー・棚・果・出典の一覧を見る →</Link>
     </div>
 
     <section className="overview-controls" aria-label="表示する年度と事例">

@@ -1,4 +1,5 @@
 import payload from '../../../public/data/kahotore_trigger_dictionary_v1.json'
+import weaknessPractice from '../../../public/data/kahotore_weakness_practice_v1.json'
 import type { AssociationRecord, TriggerDictionaryPayload } from '../../domain/association'
 import type { Question } from '../../domain/question'
 import { isEquivalent } from '../../services/synonymNormalizer'
@@ -15,6 +16,20 @@ export const reinforcementRecords: AssociationRecord[] = dictionary.records.map(
   fruitKeywords: record.fruit_keywords,
   source: record.source,
   sourceType: record.source_type,
+}))
+
+export const weaknessPracticeRecords: AssociationRecord[] = weaknessPractice.records.map((record) => ({
+  id: record.id,
+  year: record.year,
+  case: record.case as AssociationRecord['case'],
+  trigger: 'cause' in record ? (record.cause ?? record.purpose ?? '') : ('purpose' in record ? record.purpose ?? '' : ''),
+  shelf: record.shelf,
+  fruitKeywords: record.fruit_keywords,
+  source: record.source,
+  sourceType: '演習メモ',
+  cause: 'cause' in record ? record.cause : undefined,
+  purpose: 'purpose' in record ? record.purpose : undefined,
+  weaknessTags: record.weakness_tags,
 }))
 
 export function resolveShelf(question: Question): string | undefined {
@@ -69,7 +84,7 @@ export function buildAssociationRecords(questions: Question[]): AssociationRecor
       sourceType: '本試3年',
     }]
   })
-  return [...reinforcementRecords, ...baseRecords]
+  return [...reinforcementRecords, ...weaknessPracticeRecords, ...baseRecords]
 }
 
 export function gradeAssociation(expected: string[], actual: string[], useSynonyms = true) {
@@ -81,4 +96,9 @@ export function gradeAssociation(expected: string[], actual: string[], useSynony
     missed: expected.filter((item) => !matched.includes(item)),
     score: expected.length ? Math.round((matched.length / expected.length) * 100) : 0,
   }
+}
+
+export function gradeCandidates(expected: string[], actual: string[], useSynonyms = true) {
+  const result = gradeAssociation(expected, actual, useSynonyms)
+  return { ...result, score: result.matched.length ? 100 : 0 }
 }

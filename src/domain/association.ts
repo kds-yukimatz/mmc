@@ -1,6 +1,6 @@
 import type { CaseType } from './question'
 
-export type TrainingMode = 'question' | 'theme' | 'fruit'
+export type TrainingMode = 'question' | 'theme' | 'fruit' | 'cause' | 'purpose'
 
 export interface AssociationRecord {
   id: string
@@ -10,7 +10,10 @@ export interface AssociationRecord {
   shelf: string
   fruitKeywords: string[]
   source: string
-  sourceType: '本試3年' | '強化答練'
+  sourceType: '本試3年' | '強化答練' | '演習メモ'
+  cause?: string
+  purpose?: string
+  weaknessTags?: string[]
 }
 
 export interface TriggerDictionaryPayload {

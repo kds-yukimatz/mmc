@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import payload from '../../../public/data/kahotore_trigger_dictionary_v1.json'
-import { gradeAssociation, reinforcementRecords, shelves } from './associationDictionary'
+import { gradeAssociation, gradeCandidates, reinforcementRecords, shelves, weaknessPracticeRecords } from './associationDictionary'
 
 describe('題意トリガー辞書', () => {
   it('指定された事例別の棚を保持する', () => {
@@ -31,5 +31,11 @@ describe('題意トリガー辞書', () => {
   it('既存の同義語判定を題意トレにも流用する', () => {
     expect(gradeAssociation(['技能承継'], ['技術承継']).score).toBe(100)
     expect(gradeAssociation(['人的資源管理'], ['人事']).score).toBe(100)
+  })
+
+  it('因・目的の問題は候補の一つが合えば正解になり、演習メモの出典を表示できる', () => {
+    expect(gradeCandidates(['安全在庫設定', '発注点設定'], ['安全在庫']).score).toBe(100)
+    expect(gradeCandidates(['安全在庫設定', '発注点設定'], ['納期短縮']).score).toBe(0)
+    expect(weaknessPracticeRecords.find((record) => record.id === 'memo-III-procurement')?.sourceType).toBe('演習メモ')
   })
 })

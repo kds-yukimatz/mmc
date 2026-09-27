@@ -15,8 +15,17 @@ export interface TrainingResult {
   legacyQuestionId?: string
   legacyGroupId?: string
   isLegacy?: boolean
-  trainingMode?: 'question' | 'theme' | 'fruit'
+  trainingMode?: 'question' | 'theme' | 'fruit' | 'cause' | 'purpose'
   promptLabel?: string
+  correct?: boolean
+  struggleReasons?: Array<'slow' | 'fruit-missing' | 'theme-uncertain'>
+  weaknessTags?: string[]
+  streak?: number
+}
+
+export interface WeaknessProfile {
+  id: string
+  tags: string[]
 }
 
 export interface AppSettings {

@@ -1,0 +1,12 @@
+{
+  "metadata": { "title": "今回の弱点演習メモ", "version": "1.0", "scope": "ユーザーが提示した因・目的と果候補" },
+  "records": [
+    { "id": "memo-III-procurement", "year": 2026, "case": "III", "cause": "部品の調達に1か月かかり、欠品時に生産停止リスクがある。", "shelf": "生産管理", "fruit_keywords": ["発注点設定", "安全在庫設定", "発注時期適正化", "資材管理強化", "早期発注"], "weakness_tags": ["資材管理", "材料在庫", "発注点", "安全在庫", "納期管理"], "source": "今回の演習メモ（ユーザー提示）" },
+    { "id": "memo-I-collaboration", "year": 2026, "case": "I", "cause": "部門間で情報共有が不足している。", "purpose": "部門間連携を強化したい。", "shelf": "組織構造", "fruit_keywords": ["部門横断会議", "定例会議", "プロジェクトチーム", "情報共有体制構築"], "weakness_tags": ["部門間連携", "組織構造"], "source": "今回の演習メモ（ユーザー提示）" },
+    { "id": "memo-I-knowledge", "year": 2026, "case": "I", "cause": "技術・ノウハウが個人に属人化している。", "purpose": "技術・知識を共有したい。", "shelf": "人的資源管理", "fruit_keywords": ["OJT", "研修", "勉強会", "マニュアル化", "DB化", "技能承継"], "weakness_tags": ["技術蓄積", "技術共有", "技能承継", "教育訓練"], "source": "今回の演習メモ（ユーザー提示）" },
+    { "id": "memo-I-new-business", "year": 2026, "case": "I", "purpose": "新規事業を迅速に推進したい。", "shelf": "新事業・事業展開", "fruit_keywords": ["専門部署", "プロジェクトチーム", "権限委譲"], "weakness_tags": ["組織構造", "権限委譲", "意思決定"], "source": "今回の演習メモ（ユーザー提示）" },
+    { "id": "memo-III-product-stock", "year": 2026, "case": "III", "cause": "製品在庫で欠品や過剰在庫が生じている。", "shelf": "生産管理", "fruit_keywords": ["需要予測", "生産計画", "適正在庫", "欠品・過剰在庫防止"], "weakness_tags": ["製品在庫", "生産計画"], "source": "今回の演習メモ（ユーザー提示）" },
+    { "id": "memo-III-material-stock", "year": 2026, "case": "III", "cause": "材料・部品在庫の発注量や発注時期が適切でない。", "shelf": "生産管理", "fruit_keywords": ["発注点", "安全在庫", "発注量・発注時期適正化", "資材管理"], "weakness_tags": ["資材管理", "材料在庫", "発注点", "安全在庫"], "source": "今回の演習メモ（ユーザー提示）" },
+    { "id": "memo-II-ad-channel", "year": 2026, "case": "II", "cause": "ネット広告経由の在庫問い合わせが多数ある。", "shelf": "プロモーション", "fruit_keywords": ["ネット広告の販促チャネルとしての有効性"], "weakness_tags": ["販促チャネル", "題意判断"], "source": "今回の演習メモ（ユーザー提示）" }
+  ]
+}

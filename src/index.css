@@ -257,6 +257,24 @@ button:focus-visible,input:focus-visible { outline:3px solid #4d9eef; outline-of
 .training-mode-grid .chip { justify-content:center; padding:8px; white-space:normal; text-align:center; }
 .mode-description { margin:12px 0 0; color:var(--muted); font-size:12px; line-height:1.7; }
 
+.dashboard-card { margin:22px 0; padding:18px; border:1px solid var(--line); border-radius:16px; background:var(--paper); }
+.dashboard-card h2 { margin:0 0 15px; font-size:18px; }
+.dashboard-card h3 { margin:19px 0 8px; font-size:13px; }
+.dashboard-card p { margin:0; color:var(--muted); font-size:12px; line-height:1.7; overflow-wrap:anywhere; }
+.dashboard-metrics,.dashboard-rates { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
+.dashboard-metrics span,.dashboard-rates span { min-width:0; padding:10px; border-radius:10px; background:var(--orange-soft); font-size:11px; overflow-wrap:anywhere; }
+.dashboard-metrics strong,.dashboard-rates strong { display:block; margin-top:4px; font-size:18px; color:var(--orange); }
+.weakness-feedback h3 { margin:18px 0 9px; font-size:13px; }
+.weakness-reasons { display:grid; gap:9px; margin-top:16px; }
+.weakness-reasons label { min-height:44px; display:flex; align-items:center; gap:9px; font-size:13px; }
+.weakness-reasons input { width:19px; height:19px; accent-color:var(--orange); }
+.weakness-tags { max-height:220px; overflow:auto; }
+.weakness-tags .chip { min-height:40px; padding:7px 10px; font-size:11px; }
+.weakness-add-tag { display:flex; gap:8px; margin-top:12px; }
+.weakness-add-tag input { min-width:0; flex:1; padding:0 11px; border:1px solid var(--line); border-radius:10px; color:var(--ink); background:var(--paper); font-size:16px; }
+.weakness-add-tag .btn { min-height:44px; }
+@media (max-width:420px) { .training-mode-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .dashboard-metrics,.dashboard-rates { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+
 .association-prompt { min-height:300px; padding:34px 22px; color:#fff; background:var(--navy); }
 .association-prompt > p:nth-of-type(3) { margin:34px 0 10px; color:#aeb8c4; font-size:13px; font-weight:800; }
 .association-prompt h1 { margin:0; font-family:"Yu Mincho",serif; font-size:clamp(25px,7vw,38px); line-height:1.55; overflow-wrap:anywhere; }

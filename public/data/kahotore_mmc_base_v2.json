@@ -7,10 +7,11 @@
     "notes": [
       "2023-2025年度の本試験問題PDFとMMC本試3年解答帖を正本として回答欄単位へ監査したデータ。",
       "設問文・MMC題意・模範解答の出典ページを別項目で保持する。",
-      "分割前IDの学習履歴はmigration_map.jsonに従い、1対多の場合は親group_idの旧記録として保存する。"
+      "分割前IDの学習履歴はmigration_map.jsonに従い、1対多の場合は親group_idの旧記録として保存する。",
+      "business_contextは業種・事業概要、frameworkは思考枠組み、cutsは採点単位ごとの答案の切り口を表す。"
     ],
-    "version": "2.0",
-    "audited_at": "2026-07-17"
+    "version": "2.1",
+    "audited_at": "2026-09-28"
   },
   "records": [
     {
@@ -44,7 +45,9 @@
       "sub_question_no": "第1問（強み）",
       "answer_unit_label": "強み",
       "answer_status": "verified",
-      "answer_source_pages": "組織 p39"
+      "answer_source_pages": "組織 p39",
+      "business_context": "地域でそば店を営む企業。飲食店の経営と店舗運営を行う。",
+      "framework": "SWOT"
     },
     {
       "id": "2023-I-Q1-W",
@@ -77,7 +80,9 @@
       "sub_question_no": "第1問（弱み）",
       "answer_unit_label": "弱み",
       "answer_status": "verified",
-      "answer_source_pages": "組織 p39"
+      "answer_source_pages": "組織 p39",
+      "business_context": "地域でそば店を営む企業。飲食店の経営と店舗運営を行う。",
+      "framework": "SWOT"
     },
     {
       "id": "2023-I-Q2",
@@ -114,7 +119,8 @@
       "sub_question_no": "",
       "answer_unit_label": "経営方針転換",
       "answer_status": "verified",
-      "answer_source_pages": "組織 p39"
+      "answer_source_pages": "組織 p39",
+      "business_context": "地域でそば店を営む企業。飲食店の経営と店舗運営を行う。"
     },
     {
       "id": "2023-I-Q3",
@@ -151,7 +157,8 @@
       "sub_question_no": "",
       "answer_unit_label": "統合後の人事施策",
       "answer_status": "verified",
-      "answer_source_pages": "組織 p39"
+      "answer_source_pages": "組織 p39",
+      "business_context": "地域でそば店を営む企業。飲食店の経営と店舗運営を行う。"
     },
     {
       "id": "2023-I-Q4-1",
@@ -167,7 +174,8 @@
         "専門部署"
       ],
       "cuts": [
-        "組織統合"
+        "コミュニケーション",
+        "組織体制"
       ],
       "status": "verified",
       "source_pages": "組織 p39",
@@ -185,7 +193,8 @@
       "sub_question_no": "設問1",
       "answer_unit_label": "組織統合策",
       "answer_status": "verified",
-      "answer_source_pages": "組織 p39"
+      "answer_source_pages": "組織 p39",
+      "business_context": "地域でそば店を営む企業。飲食店の経営と店舗運営を行う。"
     },
     {
       "id": "2023-I-Q4-2",
@@ -221,7 +230,8 @@
       "sub_question_no": "設問2",
       "answer_unit_label": "統合後の事業展開",
       "answer_status": "verified",
-      "answer_source_pages": "組織 p39"
+      "answer_source_pages": "組織 p39",
+      "business_context": "地域でそば店を営む企業。飲食店の経営と店舗運営を行う。"
     },
     {
       "id": "2023-II-Q1",
@@ -236,10 +246,12 @@
         "提案力",
         "加工技術",
         "仕入力",
-        "WEB販促"
+        "WEB販促力不足"
       ],
       "cuts": [
-        "3C"
+        "顧客",
+        "競合",
+        "自社"
       ],
       "status": "verified",
       "source_pages": "流通 p37",
@@ -257,7 +269,9 @@
       "sub_question_no": "",
       "answer_unit_label": "3C分析",
       "answer_status": "verified",
-      "answer_source_pages": "流通 p37"
+      "answer_source_pages": "流通 p37",
+      "business_context": "地域密着型スポーツ用品店。野球用品を専門的に取り扱う。",
+      "framework": "3C"
     },
     {
       "id": "2023-II-Q2",
@@ -291,7 +305,8 @@
       "sub_question_no": "",
       "answer_unit_label": "サービス施策",
       "answer_status": "verified",
-      "answer_source_pages": "流通 p37"
+      "answer_source_pages": "流通 p37",
+      "business_context": "地域密着型スポーツ用品店。野球用品を専門的に取り扱う。"
     },
     {
       "id": "2023-II-Q3",
@@ -328,7 +343,8 @@
       "sub_question_no": "",
       "answer_unit_label": "コミュニティ活性化",
       "answer_status": "verified",
-      "answer_source_pages": "流通 p37"
+      "answer_source_pages": "流通 p37",
+      "business_context": "地域密着型スポーツ用品店。野球用品を専門的に取り扱う。"
     },
     {
       "id": "2023-II-Q4",
@@ -365,7 +381,8 @@
       "sub_question_no": "",
       "answer_unit_label": "デジタル活用",
       "answer_status": "verified",
-      "answer_source_pages": "流通 p37"
+      "answer_source_pages": "流通 p37",
+      "business_context": "地域密着型スポーツ用品店。野球用品を専門的に取り扱う。"
     },
     {
       "id": "2023-III-Q1",
@@ -380,7 +397,8 @@
         "調理技術"
       ],
       "cuts": [
-        "強み"
+        "生産体制",
+        "人的資源"
       ],
       "status": "verified",
       "source_pages": "生産 p39",
@@ -398,7 +416,9 @@
       "sub_question_no": "",
       "answer_unit_label": "強み",
       "answer_status": "verified",
-      "answer_source_pages": "生産 p39"
+      "answer_source_pages": "生産 p39",
+      "business_context": "飲食店向けの食品を受託製造する企業。工場で製造し、取引先へ納品する。",
+      "framework": "SWOT"
     },
     {
       "id": "2023-III-Q2",
@@ -434,7 +454,8 @@
       "sub_question_no": "",
       "answer_unit_label": "標準化施策",
       "answer_status": "verified",
-      "answer_source_pages": "生産 p39"
+      "answer_source_pages": "生産 p39",
+      "business_context": "飲食店向けの食品を受託製造する企業。工場で製造し、取引先へ納品する。"
     },
     {
       "id": "2023-III-Q3",
@@ -470,7 +491,8 @@
       "sub_question_no": "",
       "answer_unit_label": "発注・在庫管理",
       "answer_status": "verified",
-      "answer_source_pages": "生産 p39"
+      "answer_source_pages": "生産 p39",
+      "business_context": "飲食店向けの食品を受託製造する企業。工場で製造し、取引先へ納品する。"
     },
     {
       "id": "2023-III-Q4",
@@ -507,7 +529,8 @@
       "sub_question_no": "",
       "answer_unit_label": "企画開発力強化",
       "answer_status": "verified",
-      "answer_source_pages": "生産 p39"
+      "answer_source_pages": "生産 p39",
+      "business_context": "飲食店向けの食品を受託製造する企業。工場で製造し、取引先へ納品する。"
     },
     {
       "id": "2023-III-Q5",
@@ -544,7 +567,8 @@
       "sub_question_no": "",
       "answer_unit_label": "新規事業の妥当性と留意点",
       "answer_status": "verified",
-      "answer_source_pages": "生産 p39"
+      "answer_source_pages": "生産 p39",
+      "business_context": "飲食店向けの食品を受託製造する企業。工場で製造し、取引先へ納品する。"
     },
     {
       "id": "2023-IV-Q1-1",
@@ -585,7 +609,8 @@
       "answer_source_pages": "財務 p51",
       "legacy_ids": [
         "2023-IV-Q1"
-      ]
+      ],
+      "business_context": "サプリメントを含む複数の製品を扱う企業。製品別の販売と経営管理を行う。"
     },
     {
       "id": "2023-IV-Q1-2",
@@ -626,7 +651,8 @@
       "answer_source_pages": "財務 p51",
       "legacy_ids": [
         "2023-IV-Q1"
-      ]
+      ],
+      "business_context": "サプリメントを含む複数の製品を扱う企業。製品別の販売と経営管理を行う。"
     },
     {
       "id": "2023-IV-Q2-2-1",
@@ -663,7 +689,8 @@
       "answer_source_pages": "財務 p51",
       "legacy_ids": [
         "2023-IV-Q2"
-      ]
+      ],
+      "business_context": "サプリメントを含む複数の製品を扱う企業。製品別の販売と経営管理を行う。"
     },
     {
       "id": "2024-I-Q1-S",
@@ -697,7 +724,9 @@
       "sub_question_no": "第1問（強み）",
       "answer_unit_label": "強み",
       "answer_status": "verified",
-      "answer_source_pages": "組織 p20"
+      "answer_source_pages": "組織 p20",
+      "business_context": "倉庫を活用した物流サービスを提供する企業。保管や流通加工を手掛ける。",
+      "framework": "SWOT"
     },
     {
       "id": "2024-I-Q1-W",
@@ -730,7 +759,9 @@
       "sub_question_no": "第1問（弱み）",
       "answer_unit_label": "弱み",
       "answer_status": "verified",
-      "answer_source_pages": "組織 p20"
+      "answer_source_pages": "組織 p20",
+      "business_context": "倉庫を活用した物流サービスを提供する企業。保管や流通加工を手掛ける。",
+      "framework": "SWOT"
     },
     {
       "id": "2024-I-Q2",
@@ -765,7 +796,8 @@
       "sub_question_no": "",
       "answer_unit_label": "プロジェクトチーム編成の理由・狙い",
       "answer_status": "verified",
-      "answer_source_pages": "組織 p20"
+      "answer_source_pages": "組織 p20",
+      "business_context": "倉庫を活用した物流サービスを提供する企業。保管や流通加工を手掛ける。"
     },
     {
       "id": "2024-I-Q3",
@@ -801,7 +833,8 @@
       "sub_question_no": "",
       "answer_unit_label": "案件を持ちかけた理由",
       "answer_status": "verified",
-      "answer_source_pages": "組織 p20"
+      "answer_source_pages": "組織 p20",
+      "business_context": "倉庫を活用した物流サービスを提供する企業。保管や流通加工を手掛ける。"
     },
     {
       "id": "2024-I-Q4-1",
@@ -836,7 +869,8 @@
       "sub_question_no": "設問1",
       "answer_unit_label": "配置転換の狙い",
       "answer_status": "verified",
-      "answer_source_pages": "組織 p20"
+      "answer_source_pages": "組織 p20",
+      "business_context": "倉庫を活用した物流サービスを提供する企業。保管や流通加工を手掛ける。"
     },
     {
       "id": "2024-I-Q4-2",
@@ -873,7 +907,9 @@
       "sub_question_no": "設問2",
       "answer_unit_label": "取引関係強化施策",
       "answer_status": "verified",
-      "answer_source_pages": "組織 p21"
+      "answer_source_pages": "組織 p21",
+      "business_context": "倉庫を活用した物流サービスを提供する企業。保管や流通加工を手掛ける。",
+      "framework": "組織・人事"
     },
     {
       "id": "2024-II-Q1-O",
@@ -907,7 +943,9 @@
       "sub_question_no": "第1問（機会）",
       "answer_unit_label": "機会",
       "answer_status": "verified",
-      "answer_source_pages": "流通 p20"
+      "answer_source_pages": "流通 p20",
+      "business_context": "陶磁器を扱う企業。自社店舗で食器などを販売する。",
+      "framework": "SWOT"
     },
     {
       "id": "2024-II-Q1-S",
@@ -941,7 +979,9 @@
       "sub_question_no": "第1問（強み）",
       "answer_unit_label": "強み",
       "answer_status": "verified",
-      "answer_source_pages": "流通 p20"
+      "answer_source_pages": "流通 p20",
+      "business_context": "陶磁器を扱う企業。自社店舗で食器などを販売する。",
+      "framework": "SWOT"
     },
     {
       "id": "2024-II-Q1-T",
@@ -975,7 +1015,9 @@
       "sub_question_no": "第1問（脅威）",
       "answer_unit_label": "脅威",
       "answer_status": "verified",
-      "answer_source_pages": "流通 p20"
+      "answer_source_pages": "流通 p20",
+      "business_context": "陶磁器を扱う企業。自社店舗で食器などを販売する。",
+      "framework": "SWOT"
     },
     {
       "id": "2024-II-Q1-W",
@@ -1008,7 +1050,9 @@
       "sub_question_no": "第1問（弱み）",
       "answer_unit_label": "弱み",
       "answer_status": "verified",
-      "answer_source_pages": "流通 p20"
+      "answer_source_pages": "流通 p20",
+      "business_context": "陶磁器を扱う企業。自社店舗で食器などを販売する。",
+      "framework": "SWOT"
     },
     {
       "id": "2024-II-Q2",
@@ -1044,7 +1088,8 @@
       "sub_question_no": "",
       "answer_unit_label": "ふるさと納税返礼品施策",
       "answer_status": "verified",
-      "answer_source_pages": "流通 p20"
+      "answer_source_pages": "流通 p20",
+      "business_context": "陶磁器を扱う企業。自社店舗で食器などを販売する。"
     },
     {
       "id": "2024-II-Q3",
@@ -1060,7 +1105,9 @@
         "ニーズ充足"
       ],
       "cuts": [
-        "サービス戦略"
+        "利用",
+        "保管",
+        "手放し方"
       ],
       "status": "verified",
       "source_pages": "流通 p20",
@@ -1078,7 +1125,8 @@
       "sub_question_no": "",
       "answer_unit_label": "新サービス提案",
       "answer_status": "verified",
-      "answer_source_pages": "流通 p20"
+      "answer_source_pages": "流通 p20",
+      "business_context": "陶磁器を扱う企業。自社店舗で食器などを販売する。"
     },
     {
       "id": "2025-I-Q1-O",
@@ -1112,7 +1160,9 @@
       "sub_question_no": "第1問（機会）",
       "answer_unit_label": "機会",
       "answer_status": "verified",
-      "answer_source_pages": "組織 p4"
+      "answer_source_pages": "組織 p4",
+      "business_context": "木材を使った内装材を製造する企業。木製知育玩具にも事業を広げている。",
+      "framework": "SWOT"
     },
     {
       "id": "2025-I-Q1-S",
@@ -1146,7 +1196,9 @@
       "sub_question_no": "第1問（強み）",
       "answer_unit_label": "強み",
       "answer_status": "verified",
-      "answer_source_pages": "組織 p4"
+      "answer_source_pages": "組織 p4",
+      "business_context": "木材を使った内装材を製造する企業。木製知育玩具にも事業を広げている。",
+      "framework": "SWOT"
     },
     {
       "id": "2025-I-Q1-T",
@@ -1179,7 +1231,9 @@
       "sub_question_no": "第1問（脅威）",
       "answer_unit_label": "脅威",
       "answer_status": "verified",
-      "answer_source_pages": "組織 p4"
+      "answer_source_pages": "組織 p4",
+      "business_context": "木材を使った内装材を製造する企業。木製知育玩具にも事業を広げている。",
+      "framework": "SWOT"
     },
     {
       "id": "2025-I-Q1-W",
@@ -1212,7 +1266,9 @@
       "sub_question_no": "第1問（弱み）",
       "answer_unit_label": "弱み",
       "answer_status": "verified",
-      "answer_source_pages": "組織 p4"
+      "answer_source_pages": "組織 p4",
+      "business_context": "木材を使った内装材を製造する企業。木製知育玩具にも事業を広げている。",
+      "framework": "SWOT"
     },
     {
       "id": "2025-I-Q2",
@@ -1251,7 +1307,8 @@
       "sub_question_no": "",
       "answer_unit_label": "新規事業の市場開拓策",
       "answer_status": "verified",
-      "answer_source_pages": "組織 p4"
+      "answer_source_pages": "組織 p4",
+      "business_context": "木材を使った内装材を製造する企業。木製知育玩具にも事業を広げている。"
     },
     {
       "id": "2025-I-Q3",
@@ -1288,7 +1345,8 @@
       "sub_question_no": "",
       "answer_unit_label": "適切な組織構造",
       "answer_status": "verified",
-      "answer_source_pages": "組織 p4"
+      "answer_source_pages": "組織 p4",
+      "business_context": "木材を使った内装材を製造する企業。木製知育玩具にも事業を広げている。"
     },
     {
       "id": "2025-I-Q4",
@@ -1329,7 +1387,8 @@
       "sub_question_no": "",
       "answer_unit_label": "組織文化・人材施策",
       "answer_status": "verified",
-      "answer_source_pages": "組織 p5"
+      "answer_source_pages": "組織 p5",
+      "business_context": "木材を使った内装材を製造する企業。木製知育玩具にも事業を広げている。"
     },
     {
       "id": "2025-II-Q1",
@@ -1348,7 +1407,6 @@
         "顧客流出"
       ],
       "cuts": [
-        "3C",
         "顧客",
         "競合",
         "自社"
@@ -1369,7 +1427,9 @@
       "sub_question_no": "",
       "answer_unit_label": "3C分析",
       "answer_status": "verified",
-      "answer_source_pages": "流通 p4"
+      "answer_source_pages": "流通 p4",
+      "business_context": "スポーツに取り組む人向けの施術サービスを提供する企業。",
+      "framework": "3C"
     },
     {
       "id": "2025-II-Q2",
@@ -1385,7 +1445,8 @@
         "混雑緩和"
       ],
       "cuts": [
-        "価格戦略"
+        "日中の顧客",
+        "夜間の顧客"
       ],
       "status": "verified",
       "source_pages": "流通 p4",
@@ -1403,7 +1464,8 @@
       "sub_question_no": "",
       "answer_unit_label": "価格戦略",
       "answer_status": "verified",
-      "answer_source_pages": "流通 p4"
+      "answer_source_pages": "流通 p4",
+      "business_context": "スポーツに取り組む人向けの施術サービスを提供する企業。"
     },
     {
       "id": "2025-II-Q3",
@@ -1440,7 +1502,8 @@
       "sub_question_no": "",
       "answer_unit_label": "顧客情報の蓄積と活用",
       "answer_status": "verified",
-      "answer_source_pages": "流通 p4"
+      "answer_source_pages": "流通 p4",
+      "business_context": "スポーツに取り組む人向けの施術サービスを提供する企業。"
     },
     {
       "id": "2025-II-Q4",
@@ -1475,7 +1538,8 @@
       "sub_question_no": "",
       "answer_unit_label": "WEB活用による新規開拓",
       "answer_status": "verified",
-      "answer_source_pages": "流通 p4"
+      "answer_source_pages": "流通 p4",
+      "business_context": "スポーツに取り組む人向けの施術サービスを提供する企業。"
     },
     {
       "id": "2025-III-Q1-S",
@@ -1509,7 +1573,9 @@
       "sub_question_no": "第1問（強み）",
       "answer_unit_label": "強み",
       "answer_status": "verified",
-      "answer_source_pages": "生産 p4"
+      "answer_source_pages": "生産 p4",
+      "business_context": "原料紙を加工する製造業。顧客向けの紙製品を生産する。",
+      "framework": "SWOT"
     },
     {
       "id": "2025-III-Q1-W",
@@ -1542,7 +1608,9 @@
       "sub_question_no": "第1問（弱み）",
       "answer_unit_label": "弱み",
       "answer_status": "verified",
-      "answer_source_pages": "生産 p4"
+      "answer_source_pages": "生産 p4",
+      "business_context": "原料紙を加工する製造業。顧客向けの紙製品を生産する。",
+      "framework": "SWOT"
     },
     {
       "id": "2025-III-Q2-1",
@@ -1577,7 +1645,8 @@
       "sub_question_no": "設問1",
       "answer_unit_label": "課題・改善策①（製造時間短縮）",
       "answer_status": "verified",
-      "answer_source_pages": "生産 p4"
+      "answer_source_pages": "生産 p4",
+      "business_context": "原料紙を加工する製造業。顧客向けの紙製品を生産する。"
     },
     {
       "id": "2025-III-Q2-2",
@@ -1613,7 +1682,8 @@
       "sub_question_no": "設問2",
       "answer_unit_label": "課題・改善策②（クレーム低減）",
       "answer_status": "verified",
-      "answer_source_pages": "生産 p4"
+      "answer_source_pages": "生産 p4",
+      "business_context": "原料紙を加工する製造業。顧客向けの紙製品を生産する。"
     },
     {
       "id": "2025-III-Q3",
@@ -1649,7 +1719,8 @@
       "sub_question_no": "",
       "answer_unit_label": "生産計画・資材管理改善",
       "answer_status": "verified",
-      "answer_source_pages": "生産 p4"
+      "answer_source_pages": "生産 p4",
+      "business_context": "原料紙を加工する製造業。顧客向けの紙製品を生産する。"
     },
     {
       "id": "2025-III-Q4",
@@ -1688,7 +1759,8 @@
       "sub_question_no": "",
       "answer_unit_label": "新規事業への対応",
       "answer_status": "verified",
-      "answer_source_pages": "生産 p4"
+      "answer_source_pages": "生産 p4",
+      "business_context": "原料紙を加工する製造業。顧客向けの紙製品を生産する。"
     },
     {
       "id": "2025-IV-Q1-1",
@@ -1729,7 +1801,8 @@
       "answer_source_pages": "財務 p2",
       "legacy_ids": [
         "2025-IV-Q1"
-      ]
+      ],
+      "business_context": "仏壇などの製造・販売を行う企業。国内外向けの製品を扱う。"
     },
     {
       "id": "2025-IV-Q1-2",
@@ -1772,7 +1845,8 @@
       "answer_source_pages": "財務 p6",
       "legacy_ids": [
         "2025-IV-Q1"
-      ]
+      ],
+      "business_context": "仏壇などの製造・販売を行う企業。国内外向けの製品を扱う。"
     },
     {
       "id": "2025-IV-Q4-1",
@@ -1813,7 +1887,8 @@
       "answer_source_pages": "財務 p3",
       "legacy_ids": [
         "2025-IV-Q4"
-      ]
+      ],
+      "business_context": "仏壇などの製造・販売を行う企業。国内外向けの製品を扱う。"
     },
     {
       "id": "2025-IV-Q4-2",
@@ -1852,7 +1927,8 @@
       "answer_source_pages": "財務 p3",
       "legacy_ids": [
         "2025-IV-Q4"
-      ]
+      ],
+      "business_context": "仏壇などの製造・販売を行う企業。国内外向けの製品を扱う。"
     }
   ]
 }

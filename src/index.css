@@ -85,6 +85,12 @@ button:focus-visible,input:focus-visible { outline:3px solid #4d9eef; outline-of
 .question-meta { margin:0 0 20px; display:flex; gap:8px; flex-wrap:wrap; }
 .question-meta span { padding:5px 9px; border:1px solid #3c4a5a; border-radius:6px; color:#cbd2da; font-size:11px; }
 .question-details { display:grid; gap:22px; }
+.question-details.prompt-only { gap:14px; }
+.business-context p:last-child { margin:0; font-size:14px; line-height:1.6; }
+.summary-section { padding-top:14px; border-top:1px solid #354354; }
+.summary-section strong { display:block; font-size:19px; line-height:1.5; }
+.summary-section small { margin-top:5px; }
+.overview-card .summary-section { border-color:var(--line); }
 .question-section,.theme-section { min-width:0; }
 .question-section { padding-top:18px; border-top:1px solid #354354; }
 .detail-label { margin:0 0 11px; color:#ffad71; font-size:12px; font-weight:900; letter-spacing:.08em; }
@@ -99,6 +105,10 @@ button:focus-visible,input:focus-visible { outline:3px solid #4d9eef; outline-of
 .theme-tags span.unverified { border-style:dashed; color:#d4dae1; background:transparent; }
 .unverified-text { margin:0; color:#d4dae1; font-size:14px; }
 .answer-area { padding:25px 22px 35px; }
+.step-label { margin:0 0 18px; color:var(--ink); font-size:14px; font-weight:800; }
+.entered-cuts { display:flex; align-items:center; flex-wrap:wrap; gap:7px; margin-bottom:20px; font-size:12px; }
+.entered-cuts span { color:var(--muted); }
+.entered-cuts button { margin-left:auto; border:0; color:var(--orange); background:transparent; font-weight:800; }
 .tag-field { margin-bottom:22px; }
 .tag-field label { display:block; margin-bottom:9px; font-size:14px; font-weight:800; }
 .tag-field form { display:flex; gap:7px; }
@@ -108,6 +118,7 @@ button:focus-visible,input:focus-visible { outline:3px solid #4d9eef; outline-of
 .tag-list button,.tag-list span { padding:7px 10px; border:0; border-radius:8px; color:#a84f17; background:var(--orange-soft); font-size:12px; font-weight:700; }
 .tag-list button span { padding:0 0 0 6px; }
 .training-actions { display:grid; grid-template-columns:1fr 2fr; gap:9px; padding-top:8px; }
+.training-actions.single { grid-template-columns:1fr; }
 .score-hero { margin:-26px -22px 22px; padding:30px 22px; color:#fff; background:var(--navy); text-align:center; }
 .score { display:flex; justify-content:center; align-items:baseline; }
 .score strong { font-family:"Yu Mincho",serif; font-size:70px; line-height:1; }

@@ -29,6 +29,8 @@ export const mapQuestion = (raw: RawQuestion): Question => ({
   answerUnitLabel: raw.answer_unit_label ?? raw.answer_target ?? raw.question_summary,
   questionText: raw.question_text ?? '',
   questionSummary: raw.question_summary,
+  businessContext: raw.business_context,
+  framework: raw.framework,
   answerTarget: raw.answer_target,
   mmcTheme: Array.isArray(raw.mmc_theme) ? raw.mmc_theme : [],
   themeStatus: raw.theme_status ?? 'unverified',

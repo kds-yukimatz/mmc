@@ -5,6 +5,22 @@ const records = payload.records
 const byId = new Map(records.map((record) => [record.id, record]))
 
 describe('問題データ', () => {
+  it('R5事例Ⅱ第1問は企業概要・3Cの枠組み・3つの切り口を分離する', () => {
+    const analysis = byId.get('2023-II-Q1')
+    expect(analysis?.business_context).toContain('野球用品')
+    expect(analysis?.framework).toBe('3C')
+    expect(analysis?.cuts).toEqual(['顧客', '競合', '自社'])
+    expect(analysis?.cuts).not.toContain('3C')
+  })
+
+  it('全問題に業種概要を持ち、枠組みを切り口として採点しない', () => {
+    expect(records.every((record) => record.business_context?.trim())).toBe(true)
+    expect(records.every((record) => !record.framework || !record.cuts.includes(record.framework))).toBe(true)
+    expect(records.every((record) => record.fruit_keywords.every((keyword) => keyword.length < 4 || !record.business_context.includes(keyword)))).toBe(true)
+    expect(byId.get('2025-II-Q1')?.cuts).toEqual(['顧客', '競合', '自社'])
+    expect(byId.get('2024-I-Q4-2')?.framework).toBe('組織・人事')
+    expect(byId.get('2024-I-Q4-2')?.cuts).toEqual(['組織', '人事'])
+  })
   it('全51件に設問文と模範解答が入っている', () => {
     expect(records).toHaveLength(51)
     expect(records.every((record) => record.question_status === 'verified' && record.question_text.trim().length > 0)).toBe(true)

@@ -10,6 +10,8 @@ export interface Question {
   answerUnitLabel: string
   questionText: string
   questionSummary: string
+  businessContext?: string
+  framework?: string
   answerTarget?: string
   mmcTheme: string[]
   themeStatus: 'verified' | 'unverified'
@@ -43,6 +45,8 @@ export interface RawQuestion {
   answer_unit_label?: string
   question_text?: string
   question_summary: string
+  business_context?: string
+  framework?: string
   answer_target?: string
   mmc_theme?: string[]
   theme_status?: 'verified' | 'unverified'

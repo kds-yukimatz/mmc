@@ -1,12 +1,12 @@
 {
   "metadata": {
-    "version": "micro-seed-1",
+    "version": "micro-seed-2",
     "createdAt": "2026-10-04",
     "note": "汎用練習の教材種。因・問い・説明は設計者作成。MMC原文や原答案の引用ではない。出典は元語の根拠。頻度0は不重要を意味しない。",
     "mandatoryConceptCount": 31,
-    "conceptCount": 35,
-    "mappingCount": 35,
-    "cardCount": 82,
+    "conceptCount": 61,
+    "mappingCount": 70,
+    "cardCount": 152,
     "frequencyCorpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified",
     "frequencyDefinition": "異なるgroup_id数。未設定の場合id。資料内の原語または承認済みalias完全一致。",
     "adaptation": "実装ではSPECの型に合わせてfrequency.recordIdsを出典メタデータへ移してよい。数量と出典を保持する。"
@@ -762,6 +762,448 @@
       "mandatory": false,
       "mandatoryMappingId": null,
       "selectionReason": "使い分けの対照教材",
+      "priority": "B",
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-36",
+      "label": "売り切り型",
+      "evidenceAliases": [
+        "売り切り型"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "既存Bランク復習ストックを題意別に小問化する設計選定。資料内頻度とは別。",
+      "priority": "B",
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-37",
+      "label": "継続型",
+      "evidenceAliases": [
+        "継続型"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "既存Bランク復習ストックを題意別に小問化する設計選定。資料内頻度とは別。",
+      "priority": "B",
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-38",
+      "label": "専門知識を活用した提案販売力",
+      "evidenceAliases": [
+        "専門知識を活用した提案販売力"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "既存Bランク復習ストックを題意別に小問化する設計選定。資料内頻度とは別。",
+      "priority": "B",
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-39",
+      "label": "公平・公正な評価",
+      "evidenceAliases": [
+        "公平・公正な評価"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "既存Bランク復習ストックを題意別に小問化する設計選定。資料内頻度とは別。",
+      "priority": "B",
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-40",
+      "label": "既存経営資源の活用",
+      "evidenceAliases": [
+        "既存経営資源の活用"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "既存Bランク復習ストックを題意別に小問化する設計選定。資料内頻度とは別。",
+      "priority": "B",
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-41",
+      "label": "特定事業への依存脱却",
+      "evidenceAliases": [
+        "特定事業への依存脱却"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "既存Bランク復習ストックを題意別に小問化する設計選定。資料内頻度とは別。",
+      "priority": "B",
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-42",
+      "label": "経営リスク分散",
+      "evidenceAliases": [
+        "経営リスク分散"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "既存Bランク復習ストックを題意別に小問化する設計選定。資料内頻度とは別。",
+      "priority": "B",
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-43",
+      "label": "定期会議による情報共有",
+      "evidenceAliases": [
+        "定期会議による情報共有"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "既存Bランク復習ストックを題意別に小問化する設計選定。資料内頻度とは別。",
+      "priority": "B",
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-44",
+      "label": "販促不足",
+      "evidenceAliases": [
+        "販促不足"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "既存Bランク復習ストックを題意別に小問化する設計選定。資料内頻度とは別。",
+      "priority": "B",
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-45",
+      "label": "新規顧客開拓不足",
+      "evidenceAliases": [
+        "新規顧客開拓不足"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "既存Bランク復習ストックを題意別に小問化する設計選定。資料内頻度とは別。",
+      "priority": "B",
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-46",
+      "label": "HPによる情報発信",
+      "evidenceAliases": [
+        "HPによる情報発信"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "既存Bランク復習ストックを題意別に小問化する設計選定。資料内頻度とは別。",
+      "priority": "B",
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-47",
+      "label": "SNSによる共有",
+      "evidenceAliases": [
+        "SNSによる共有"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "既存Bランク復習ストックを題意別に小問化する設計選定。資料内頻度とは別。",
+      "priority": "B",
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-48",
+      "label": "高級品",
+      "evidenceAliases": [
+        "高級品"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "既存Bランク復習ストックを題意別に小問化する設計選定。資料内頻度とは別。",
+      "priority": "B",
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-49",
+      "label": "贈答品",
+      "evidenceAliases": [
+        "贈答品"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "既存Bランク復習ストックを題意別に小問化する設計選定。資料内頻度とは別。",
+      "priority": "B",
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-50",
+      "label": "オリジナル商品",
+      "evidenceAliases": [
+        "オリジナル商品"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "既存Bランク復習ストックを題意別に小問化する設計選定。資料内頻度とは別。",
+      "priority": "B",
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-51",
+      "label": "親子体験教室",
+      "evidenceAliases": [
+        "親子体験教室"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "既存Bランク復習ストックを題意別に小問化する設計選定。資料内頻度とは別。",
+      "priority": "B",
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-52",
+      "label": "定期開催",
+      "evidenceAliases": [
+        "定期開催"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "既存Bランク復習ストックを題意別に小問化する設計選定。資料内頻度とは別。",
+      "priority": "B",
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-53",
+      "label": "工場見学",
+      "evidenceAliases": [
+        "工場見学"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "既存Bランク復習ストックを題意別に小問化する設計選定。資料内頻度とは別。",
+      "priority": "B",
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-54",
+      "label": "かんばん方式",
+      "evidenceAliases": [
+        "かんばん方式"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "既存Bランク復習ストックを題意別に小問化する設計選定。資料内頻度とは別。",
+      "priority": "B",
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-55",
+      "label": "繰返注文情報の活用",
+      "evidenceAliases": [
+        "繰返注文情報の活用"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "既存Bランク復習ストックを題意別に小問化する設計選定。資料内頻度とは別。",
+      "priority": "B",
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-56",
+      "label": "生産ロットの適正化",
+      "evidenceAliases": [
+        "生産ロットの適正化"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "既存Bランク復習ストックを題意別に小問化する設計選定。資料内頻度とは別。",
+      "priority": "B",
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-57",
+      "label": "TPM",
+      "evidenceAliases": [
+        "TPM"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "既存Bランク復習ストックを題意別に小問化する設計選定。資料内頻度とは別。",
+      "priority": "B",
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-58",
+      "label": "ポカヨケ",
+      "evidenceAliases": [
+        "ポカヨケ"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "既存Bランク復習ストックを題意別に小問化する設計選定。資料内頻度とは別。",
+      "priority": "B",
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-59",
+      "label": "設備増強",
+      "evidenceAliases": [
+        "設備増強"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "既存Bランク復習ストックを題意別に小問化する設計選定。資料内頻度とは別。",
+      "priority": "B",
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-60",
+      "label": "設備改良",
+      "evidenceAliases": [
+        "設備改良"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "既存Bランク復習ストックを題意別に小問化する設計選定。資料内頻度とは別。",
+      "priority": "B",
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-61",
+      "label": "マイスター制度",
+      "evidenceAliases": [
+        "マイスター制度"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "既存Bランク復習ストックを題意別に小問化する設計選定。資料内頻度とは別。",
       "priority": "B",
       "frequency": {
         "groups": [],
@@ -2268,6 +2710,1483 @@
           ]
         }
       ]
+    },
+    {
+      "id": "map-36",
+      "conceptIds": [
+        "fruit-36",
+        "fruit-37"
+      ],
+      "case": "I",
+      "intent": "comparison",
+      "expectedCount": 2,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-36",
+          "accepted": [
+            "売り切り型"
+          ]
+        },
+        {
+          "conceptId": "fruit-37",
+          "accepted": [
+            "継続型"
+          ]
+        }
+      ],
+      "explanation": "購入後に接点が少ない商品と、相談・保守で継続的に来店する商品がある。この小問では「売り切り型・継続型」の接続を確認する。",
+      "source": {
+        "kind": "review_stock",
+        "refs": [
+          "src/data/reviewFruitStock.ts#stock-I-product-comparison"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-36-cue-1",
+          "prompt": "購入後の接点が短い商品と長く続く商品の違いを、同じ比較軸で答える。",
+          "hintChoices": [
+            "売り切り型・継続型",
+            "品質・価格など別の比較軸"
+          ]
+        },
+        {
+          "id": "map-36-cue-2",
+          "prompt": "購入後に相談や保守で接点が続く商品と、購入時で接点が終わる商品を対比する。",
+          "hintChoices": [
+            "売り切り型・継続型",
+            "品質・価格など別の比較軸"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-37",
+      "conceptIds": [
+        "fruit-38"
+      ],
+      "case": "I",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-38",
+          "accepted": [
+            "専門知識を活用した提案販売力"
+          ]
+        }
+      ],
+      "explanation": "専門知識を持つ従業員が、顧客の使い方に合う商品を勧められる。この小問では「専門知識を活用した提案販売力」の接続を確認する。",
+      "source": {
+        "kind": "review_stock",
+        "refs": [
+          "src/data/reviewFruitStock.ts#stock-I-consultative-sales"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-37-cue-1",
+          "prompt": "顧客の使い方に合う商品を、専門知識を生かして勧める強みは？",
+          "hintChoices": [
+            "専門知識を活用した提案販売力",
+            "適正配置"
+          ]
+        },
+        {
+          "id": "map-37-cue-2",
+          "prompt": "強みを、専門知識に基づく顧客対応からまとめる。顧客の使い方に合う商品を、専門知識を生かして勧める強みは。",
+          "hintChoices": [
+            "専門知識を活用した提案販売力",
+            "適正配置"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-38",
+      "conceptIds": [
+        "fruit-01"
+      ],
+      "case": "I",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-01",
+          "accepted": [
+            "適正配置"
+          ]
+        }
+      ],
+      "explanation": "従業員の希望や適性を生かして配置したい。この小問では「適正配置」の接続を確認する。",
+      "source": {
+        "kind": "review_stock",
+        "refs": [
+          "src/data/reviewFruitStock.ts#stock-I-placement"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-38-cue-1",
+          "prompt": "従業員の希望と能力を生かして人材を置く施策は？",
+          "hintChoices": [
+            "適正配置",
+            "柔軟な勤務形態"
+          ]
+        },
+        {
+          "id": "map-38-cue-2",
+          "prompt": "希望や能力を生かす人材配置。従業員の希望と能力を生かして人材を置く施策は。",
+          "hintChoices": [
+            "適正配置",
+            "柔軟な勤務形態"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-39",
+      "conceptIds": [
+        "fruit-07"
+      ],
+      "case": "I",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-07",
+          "accepted": [
+            "柔軟な勤務形態"
+          ]
+        }
+      ],
+      "explanation": "雇用形態を変えても働き続けやすい勤務制度にしたい。この小問では「柔軟な勤務形態」の接続を確認する。",
+      "source": {
+        "kind": "review_stock",
+        "refs": [
+          "src/data/reviewFruitStock.ts#stock-I-flexible-work"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-39-cue-1",
+          "prompt": "生活事情が変わっても働き続けやすくする勤務制度は？",
+          "hintChoices": [
+            "柔軟な勤務形態",
+            "適正配置"
+          ]
+        },
+        {
+          "id": "map-39-cue-2",
+          "prompt": "固定的な勤務時間が雇用形態の変更を妨げる。生活事情が変わっても働き続けやすくする勤務制度は。",
+          "hintChoices": [
+            "柔軟な勤務形態",
+            "適正配置"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-40",
+      "conceptIds": [
+        "fruit-03"
+      ],
+      "case": "I",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-03",
+          "accepted": [
+            "計画的OJT"
+          ]
+        }
+      ],
+      "explanation": "計画的な育成で必要な専門知識と技能を身に付けさせたい。この小問では「計画的OJT」の接続を確認する。",
+      "source": {
+        "kind": "review_stock",
+        "refs": [
+          "src/data/reviewFruitStock.ts#stock-I-development"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-40-cue-1",
+          "prompt": "現場内で育成水準をそろえるため、計画して行う指導法は？",
+          "hintChoices": [
+            "計画的OJT",
+            "適正配置"
+          ]
+        },
+        {
+          "id": "map-40-cue-2",
+          "prompt": "拠点ごとの育成水準を揃える。現場内で育成水準をそろえるため、計画して行う指導法は。",
+          "hintChoices": [
+            "計画的OJT",
+            "適正配置"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-41",
+      "conceptIds": [
+        "fruit-04"
+      ],
+      "case": "I",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-04",
+          "accepted": [
+            "外部研修"
+          ]
+        }
+      ],
+      "explanation": "計画的な育成で必要な専門知識と技能を身に付けさせたい。この小問では「外部研修」の接続を確認する。",
+      "source": {
+        "kind": "review_stock",
+        "refs": [
+          "src/data/reviewFruitStock.ts#stock-I-development"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-41-cue-1",
+          "prompt": "現場内指導を補い、社外の知識・技能を学ばせる施策は？",
+          "hintChoices": [
+            "外部研修",
+            "適正配置"
+          ]
+        },
+        {
+          "id": "map-41-cue-2",
+          "prompt": "拠点ごとの育成水準を揃える。現場内指導を補い、社外の知識・技能を学ばせる施策は。",
+          "hintChoices": [
+            "外部研修",
+            "適正配置"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-42",
+      "conceptIds": [
+        "fruit-39"
+      ],
+      "case": "I",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-39",
+          "accepted": [
+            "公平・公正な評価"
+          ]
+        }
+      ],
+      "explanation": "従業員が納得できる評価制度を整えたい。この小問では「公平・公正な評価」の接続を確認する。",
+      "source": {
+        "kind": "review_stock",
+        "refs": [
+          "src/data/reviewFruitStock.ts#stock-I-evaluation"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-42-cue-1",
+          "prompt": "従業員の納得感を高めるため、人事制度で整えるものは？",
+          "hintChoices": [
+            "公平・公正な評価",
+            "適正配置"
+          ]
+        },
+        {
+          "id": "map-42-cue-2",
+          "prompt": "人事制度の施策候補として公正な評価を挙げる。従業員の納得感を高めるため、人事制度で整えるものは。",
+          "hintChoices": [
+            "公平・公正な評価",
+            "適正配置"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-43",
+      "conceptIds": [
+        "fruit-40"
+      ],
+      "case": "I",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-40",
+          "accepted": [
+            "既存経営資源の活用"
+          ]
+        }
+      ],
+      "explanation": "既存能力を生かしながら事業全体のリスクを分散したい。この小問では「既存経営資源の活用」の接続を確認する。",
+      "source": {
+        "kind": "review_stock",
+        "refs": [
+          "src/data/reviewFruitStock.ts#stock-I-diversification"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-43-cue-1",
+          "prompt": "新しい事業でも既存の知識や人材を使う方針は？",
+          "hintChoices": [
+            "既存経営資源の活用",
+            "売り切り型"
+          ]
+        },
+        {
+          "id": "map-43-cue-2",
+          "prompt": "既存の能力を使い、変動の大きい事業への依存を減らす。新しい事業でも既存の知識や人材を使う方針は。",
+          "hintChoices": [
+            "既存経営資源の活用",
+            "売り切り型"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-44",
+      "conceptIds": [
+        "fruit-41"
+      ],
+      "case": "I",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-41",
+          "accepted": [
+            "特定事業への依存脱却"
+          ]
+        }
+      ],
+      "explanation": "既存能力を生かしながら事業全体のリスクを分散したい。この小問では「特定事業への依存脱却」の接続を確認する。",
+      "source": {
+        "kind": "review_stock",
+        "refs": [
+          "src/data/reviewFruitStock.ts#stock-I-diversification"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-44-cue-1",
+          "prompt": "主力事業の売上変動に経営全体が左右される状態を避ける方針は？",
+          "hintChoices": [
+            "特定事業への依存脱却",
+            "売り切り型"
+          ]
+        },
+        {
+          "id": "map-44-cue-2",
+          "prompt": "既存の能力を使い、変動の大きい事業への依存を減らす。主力事業の売上変動に経営全体が左右される状態を避ける方針は。",
+          "hintChoices": [
+            "特定事業への依存脱却",
+            "売り切り型"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-45",
+      "conceptIds": [
+        "fruit-42"
+      ],
+      "case": "I",
+      "intent": "benefit",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-42",
+          "accepted": [
+            "経営リスク分散"
+          ]
+        }
+      ],
+      "explanation": "既存能力を生かしながら事業全体のリスクを分散したい。この小問では「経営リスク分散」の接続を確認する。",
+      "source": {
+        "kind": "review_stock",
+        "refs": [
+          "src/data/reviewFruitStock.ts#stock-I-diversification"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-45-cue-1",
+          "prompt": "収益源を複数にし、単一事業の変動を和らげる狙いは？",
+          "hintChoices": [
+            "経営リスク分散",
+            "売り切り型"
+          ]
+        },
+        {
+          "id": "map-45-cue-2",
+          "prompt": "既存の能力を使い、変動の大きい事業への依存を減らす。収益源を複数にし、単一事業の変動を和らげる狙いは。",
+          "hintChoices": [
+            "経営リスク分散",
+            "売り切り型"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-46",
+      "conceptIds": [
+        "fruit-05"
+      ],
+      "case": "I",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-05",
+          "accepted": [
+            "事業部制"
+          ]
+        }
+      ],
+      "explanation": "異なる事業ごとに利益管理と意思決定を行えるようにしたい。この小問では「事業部制」の接続を確認する。",
+      "source": {
+        "kind": "review_stock",
+        "refs": [
+          "src/data/reviewFruitStock.ts#stock-I-division"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-46-cue-1",
+          "prompt": "事業ごとに意思決定と利益管理を担わせる組織形態は？",
+          "hintChoices": [
+            "事業部制",
+            "権限委譲"
+          ]
+        },
+        {
+          "id": "map-46-cue-2",
+          "prompt": "事業別の利益責任を明確にする組織。事業ごとに意思決定と利益管理を担わせる組織形態は。",
+          "hintChoices": [
+            "事業部制",
+            "権限委譲"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-47",
+      "conceptIds": [
+        "fruit-06"
+      ],
+      "case": "I",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-06",
+          "accepted": [
+            "利益責任の明確化"
+          ]
+        }
+      ],
+      "explanation": "異なる事業ごとに利益管理と意思決定を行えるようにしたい。この小問では「利益責任の明確化」の接続を確認する。",
+      "source": {
+        "kind": "review_stock",
+        "refs": [
+          "src/data/reviewFruitStock.ts#stock-I-division"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-47-cue-1",
+          "prompt": "事業別組織で各事業の採算を明らかにすることは？",
+          "hintChoices": [
+            "利益責任の明確化",
+            "権限委譲"
+          ]
+        },
+        {
+          "id": "map-47-cue-2",
+          "prompt": "事業別の利益責任を明確にする組織。事業別組織で各事業の採算を明らかにすることは。",
+          "hintChoices": [
+            "利益責任の明確化",
+            "権限委譲"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-48",
+      "conceptIds": [
+        "fruit-02"
+      ],
+      "case": "I",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-02",
+          "accepted": [
+            "権限委譲"
+          ]
+        }
+      ],
+      "explanation": "各拠点の機動性と拠点間の連携を高めたい。この小問では「権限委譲」の接続を確認する。",
+      "source": {
+        "kind": "review_stock",
+        "refs": [
+          "src/data/reviewFruitStock.ts#stock-I-delegation-sharing"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-48-cue-1",
+          "prompt": "経営者に集中した意思決定を現場へ移す施策は？",
+          "hintChoices": [
+            "権限委譲",
+            "事業部制"
+          ]
+        },
+        {
+          "id": "map-48-cue-2",
+          "prompt": "意思決定の集中と拠点間の情報共有不足。経営者に集中した意思決定を現場へ移す施策は。",
+          "hintChoices": [
+            "権限委譲",
+            "事業部制"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-49",
+      "conceptIds": [
+        "fruit-43"
+      ],
+      "case": "I",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-43",
+          "accepted": [
+            "定期会議による情報共有"
+          ]
+        }
+      ],
+      "explanation": "各拠点の機動性と拠点間の連携を高めたい。この小問では「定期会議による情報共有」の接続を確認する。",
+      "source": {
+        "kind": "review_stock",
+        "refs": [
+          "src/data/reviewFruitStock.ts#stock-I-delegation-sharing"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-49-cue-1",
+          "prompt": "拠点間で実績や方法を継続的に共有する場を設ける施策は？",
+          "hintChoices": [
+            "定期会議による情報共有",
+            "事業部制"
+          ]
+        },
+        {
+          "id": "map-49-cue-2",
+          "prompt": "意思決定の集中と拠点間の情報共有不足。拠点間で実績や方法を継続的に共有する場を設ける施策は。",
+          "hintChoices": [
+            "定期会議による情報共有",
+            "事業部制"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-50",
+      "conceptIds": [
+        "fruit-44"
+      ],
+      "case": "II",
+      "intent": "weakness",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-44",
+          "accepted": [
+            "販促不足"
+          ]
+        }
+      ],
+      "explanation": "基本的な店舗情報の掲載にとどまり、新規客を積極的に開拓していない。この小問では「販促不足」の接続を確認する。",
+      "source": {
+        "kind": "review_stock",
+        "refs": [
+          "src/data/reviewFruitStock.ts#stock-II-marketing-shortage"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-50-cue-1",
+          "prompt": "受け身の情報掲載にとどまり、販促が足りない弱みは？",
+          "hintChoices": [
+            "販促不足",
+            "別の施策"
+          ]
+        },
+        {
+          "id": "map-50-cue-2",
+          "prompt": "弱みを、受け身の販促と固定客依存からまとめる。受け身の情報掲載にとどまり、販促が足りない弱みは。",
+          "hintChoices": [
+            "販促不足",
+            "別の施策"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-51",
+      "conceptIds": [
+        "fruit-45"
+      ],
+      "case": "II",
+      "intent": "weakness",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-45",
+          "accepted": [
+            "新規顧客開拓不足"
+          ]
+        }
+      ],
+      "explanation": "基本的な店舗情報の掲載にとどまり、新規客を積極的に開拓していない。この小問では「新規顧客開拓不足」の接続を確認する。",
+      "source": {
+        "kind": "review_stock",
+        "refs": [
+          "src/data/reviewFruitStock.ts#stock-II-marketing-shortage"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-51-cue-1",
+          "prompt": "固定客に頼り、新しい顧客を積極的に増やしていない弱みは？",
+          "hintChoices": [
+            "新規顧客開拓不足",
+            "販促不足"
+          ]
+        },
+        {
+          "id": "map-51-cue-2",
+          "prompt": "弱みを、受け身の販促と固定客依存からまとめる。固定客に頼り、新しい顧客を積極的に増やしていない弱みは。",
+          "hintChoices": [
+            "新規顧客開拓不足",
+            "販促不足"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-52",
+      "conceptIds": [
+        "fruit-46"
+      ],
+      "case": "II",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-46",
+          "accepted": [
+            "HPによる情報発信"
+          ]
+        }
+      ],
+      "explanation": "商品理解を促し、顧客の活用方法や要望を共有・収集したい。この小問では「HPによる情報発信」の接続を確認する。",
+      "source": {
+        "kind": "review_stock",
+        "refs": [
+          "src/data/reviewFruitStock.ts#stock-II-online-communication"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-52-cue-1",
+          "prompt": "店舗や商品の情報を自社ウェブサイトから届ける施策は？",
+          "hintChoices": [
+            "HPによる情報発信",
+            "顧客ニーズ収集"
+          ]
+        },
+        {
+          "id": "map-52-cue-2",
+          "prompt": "既存顧客とのネット上の双方向コミュニケーション。店舗や商品の情報を自社ウェブサイトから届ける施策は。",
+          "hintChoices": [
+            "HPによる情報発信",
+            "顧客ニーズ収集"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-53",
+      "conceptIds": [
+        "fruit-47"
+      ],
+      "case": "II",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-47",
+          "accepted": [
+            "SNSによる共有"
+          ]
+        }
+      ],
+      "explanation": "商品理解を促し、顧客の活用方法や要望を共有・収集したい。この小問では「SNSによる共有」の接続を確認する。",
+      "source": {
+        "kind": "review_stock",
+        "refs": [
+          "src/data/reviewFruitStock.ts#stock-II-online-communication"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-53-cue-1",
+          "prompt": "既存顧客とネット上で情報をやり取りする媒体は？",
+          "hintChoices": [
+            "SNSによる共有",
+            "顧客ニーズ収集"
+          ]
+        },
+        {
+          "id": "map-53-cue-2",
+          "prompt": "既存顧客とのネット上の双方向コミュニケーション。既存顧客とネット上で情報をやり取りする媒体は。",
+          "hintChoices": [
+            "SNSによる共有",
+            "顧客ニーズ収集"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-54",
+      "conceptIds": [
+        "fruit-08"
+      ],
+      "case": "II",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-08",
+          "accepted": [
+            "顧客ニーズ収集"
+          ]
+        }
+      ],
+      "explanation": "商品理解を促し、顧客の活用方法や要望を共有・収集したい。この小問では「顧客ニーズ収集」の接続を確認する。",
+      "source": {
+        "kind": "review_stock",
+        "refs": [
+          "src/data/reviewFruitStock.ts#stock-II-online-communication"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-54-cue-1",
+          "prompt": "顧客の要望や活用上の課題を把握する活動は？",
+          "hintChoices": [
+            "顧客ニーズ収集",
+            "SNSによる情報発信"
+          ]
+        },
+        {
+          "id": "map-54-cue-2",
+          "prompt": "既存顧客とのネット上の双方向コミュニケーション。顧客の要望や活用上の課題を把握する活動は。",
+          "hintChoices": [
+            "顧客ニーズ収集",
+            "SNSによる情報発信"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-55",
+      "conceptIds": [
+        "fruit-48"
+      ],
+      "case": "II",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-48",
+          "accepted": [
+            "高級品"
+          ]
+        }
+      ],
+      "explanation": "品質重視・贈答需要など、顧客層別のニーズに対応して客単価を高めたい。この小問では「高級品」の接続を確認する。",
+      "source": {
+        "kind": "review_stock",
+        "refs": [
+          "src/data/reviewFruitStock.ts#stock-II-assortment"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-55-cue-1",
+          "prompt": "品質を重視する顧客層の需要に応える商品は？",
+          "hintChoices": [
+            "高級品",
+            "顧客ニーズ収集"
+          ]
+        },
+        {
+          "id": "map-55-cue-2",
+          "prompt": "顧客層に合わせた品揃えで客単価を高める。品質を重視する顧客層の需要に応える商品は。",
+          "hintChoices": [
+            "高級品",
+            "顧客ニーズ収集"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-56",
+      "conceptIds": [
+        "fruit-49"
+      ],
+      "case": "II",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-49",
+          "accepted": [
+            "贈答品"
+          ]
+        }
+      ],
+      "explanation": "品質重視・贈答需要など、顧客層別のニーズに対応して客単価を高めたい。この小問では「贈答品」の接続を確認する。",
+      "source": {
+        "kind": "review_stock",
+        "refs": [
+          "src/data/reviewFruitStock.ts#stock-II-assortment"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-56-cue-1",
+          "prompt": "贈り物としての需要に対応する商品展開は？",
+          "hintChoices": [
+            "贈答品",
+            "顧客ニーズ収集"
+          ]
+        },
+        {
+          "id": "map-56-cue-2",
+          "prompt": "顧客層に合わせた品揃えで客単価を高める。贈り物としての需要に対応する商品展開は。",
+          "hintChoices": [
+            "贈答品",
+            "顧客ニーズ収集"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-57",
+      "conceptIds": [
+        "fruit-50"
+      ],
+      "case": "II",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-50",
+          "accepted": [
+            "オリジナル商品"
+          ]
+        }
+      ],
+      "explanation": "品質重視・贈答需要など、顧客層別のニーズに対応して客単価を高めたい。この小問では「オリジナル商品」の接続を確認する。",
+      "source": {
+        "kind": "review_stock",
+        "refs": [
+          "src/data/reviewFruitStock.ts#stock-II-assortment"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-57-cue-1",
+          "prompt": "自店ならではの商品で品揃えを差別化する施策は？",
+          "hintChoices": [
+            "オリジナル商品",
+            "顧客ニーズ収集"
+          ]
+        },
+        {
+          "id": "map-57-cue-2",
+          "prompt": "顧客層に合わせた品揃えで客単価を高める。自店ならではの商品で品揃えを差別化する施策は。",
+          "hintChoices": [
+            "オリジナル商品",
+            "顧客ニーズ収集"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-58",
+      "conceptIds": [
+        "fruit-51"
+      ],
+      "case": "II",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-51",
+          "accepted": [
+            "親子体験教室"
+          ]
+        }
+      ],
+      "explanation": "家族で参加できる接点をつくり、関係性を強化して新規顧客を獲得したい。この小問では「親子体験教室」の接続を確認する。",
+      "source": {
+        "kind": "review_stock",
+        "refs": [
+          "src/data/reviewFruitStock.ts#stock-II-family-events"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-58-cue-1",
+          "prompt": "家族で参加し、商品や製造への理解を深める催しは？",
+          "hintChoices": [
+            "親子体験教室",
+            "顧客ニーズ収集"
+          ]
+        },
+        {
+          "id": "map-58-cue-2",
+          "prompt": "ファミリー層との関係を強化する参加・体験型イベント。家族で参加し、商品や製造への理解を深める催しは。",
+          "hintChoices": [
+            "親子体験教室",
+            "顧客ニーズ収集"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-59",
+      "conceptIds": [
+        "fruit-52"
+      ],
+      "case": "II",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-52",
+          "accepted": [
+            "定期開催"
+          ]
+        }
+      ],
+      "explanation": "家族で参加できる接点をつくり、関係性を強化して新規顧客を獲得したい。この小問では「定期開催」の接続を確認する。",
+      "source": {
+        "kind": "review_stock",
+        "refs": [
+          "src/data/reviewFruitStock.ts#stock-II-family-events"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-59-cue-1",
+          "prompt": "顧客との接点を一度で終わらせず継続させる開催方法は？",
+          "hintChoices": [
+            "定期開催",
+            "顧客ニーズ収集"
+          ]
+        },
+        {
+          "id": "map-59-cue-2",
+          "prompt": "ファミリー層との関係を強化する参加・体験型イベント。顧客との接点を一度で終わらせず継続させる開催方法は。",
+          "hintChoices": [
+            "定期開催",
+            "顧客ニーズ収集"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-60",
+      "conceptIds": [
+        "fruit-53"
+      ],
+      "case": "II",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-53",
+          "accepted": [
+            "工場見学"
+          ]
+        }
+      ],
+      "explanation": "家族で参加できる接点をつくり、関係性を強化して新規顧客を獲得したい。この小問では「工場見学」の接続を確認する。",
+      "source": {
+        "kind": "review_stock",
+        "refs": [
+          "src/data/reviewFruitStock.ts#stock-II-family-events"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-60-cue-1",
+          "prompt": "製造現場を見てもらい、商品への理解を促す催しは？",
+          "hintChoices": [
+            "工場見学",
+            "顧客ニーズ収集"
+          ]
+        },
+        {
+          "id": "map-60-cue-2",
+          "prompt": "ファミリー層との関係を強化する参加・体験型イベント。製造現場を見てもらい、商品への理解を促す催しは。",
+          "hintChoices": [
+            "工場見学",
+            "顧客ニーズ収集"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-61",
+      "conceptIds": [
+        "fruit-54"
+      ],
+      "case": "III",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-54",
+          "accepted": [
+            "かんばん方式"
+          ]
+        }
+      ],
+      "explanation": "後工程の必要量に合わせて生産指示を出し、仕掛品在庫を減らしたい。この小問では「かんばん方式」の接続を確認する。",
+      "source": {
+        "kind": "review_stock",
+        "refs": [
+          "src/data/reviewFruitStock.ts#stock-III-stock-flow"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-61-cue-1",
+          "prompt": "後工程の必要量に合わせて前工程へ生産を指示する方式は？",
+          "hintChoices": [
+            "かんばん方式",
+            "繰返注文情報の活用"
+          ]
+        },
+        {
+          "id": "map-61-cue-2",
+          "prompt": "工程間に仕掛品が滞留している。後工程の必要量に合わせて前工程へ生産を指示する方式は。",
+          "hintChoices": [
+            "かんばん方式",
+            "繰返注文情報の活用"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-62",
+      "conceptIds": [
+        "fruit-55"
+      ],
+      "case": "III",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-55",
+          "accepted": [
+            "繰返注文情報の活用"
+          ]
+        }
+      ],
+      "explanation": "受注情報に合わせて生産量を調整し、製品在庫を減らしたい。この小問では「繰返注文情報の活用」の接続を確認する。",
+      "source": {
+        "kind": "review_stock",
+        "refs": [
+          "src/data/reviewFruitStock.ts#stock-III-production-lot"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-62-cue-1",
+          "prompt": "過去から続く注文量の変化を生産判断に反映することは？",
+          "hintChoices": [
+            "繰返注文情報の活用",
+            "かんばん方式"
+          ]
+        },
+        {
+          "id": "map-62-cue-2",
+          "prompt": "過去の最大発注量を基準にした生産で製品在庫が過大になる。過去から続く注文量の変化を生産判断に反映することは。",
+          "hintChoices": [
+            "繰返注文情報の活用",
+            "かんばん方式"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-63",
+      "conceptIds": [
+        "fruit-56"
+      ],
+      "case": "III",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-56",
+          "accepted": [
+            "生産ロットの適正化"
+          ]
+        }
+      ],
+      "explanation": "受注情報に合わせて生産量を調整し、製品在庫を減らしたい。この小問では「生産ロットの適正化」の接続を確認する。",
+      "source": {
+        "kind": "review_stock",
+        "refs": [
+          "src/data/reviewFruitStock.ts#stock-III-production-lot"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-63-cue-1",
+          "prompt": "受注量に合わせ、過大な一括生産を抑えることは？",
+          "hintChoices": [
+            "生産ロットの適正化",
+            "かんばん方式"
+          ]
+        },
+        {
+          "id": "map-63-cue-2",
+          "prompt": "過去の最大発注量を基準にした生産で製品在庫が過大になる。受注量に合わせ、過大な一括生産を抑えることは。",
+          "hintChoices": [
+            "生産ロットの適正化",
+            "かんばん方式"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-64",
+      "conceptIds": [
+        "fruit-57"
+      ],
+      "case": "III",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-57",
+          "accepted": [
+            "TPM"
+          ]
+        }
+      ],
+      "explanation": "設備停止を未然に防ぎ、設備稼働率を高めたい。この小問では「TPM」の接続を確認する。",
+      "source": {
+        "kind": "review_stock",
+        "refs": [
+          "src/data/reviewFruitStock.ts#stock-III-preventive-maintenance"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-64-cue-1",
+          "prompt": "全員参加で設備の保全活動を進める考え方は？",
+          "hintChoices": [
+            "TPM",
+            "かんばん方式"
+          ]
+        },
+        {
+          "id": "map-64-cue-2",
+          "prompt": "保守不足でチョコ停や故障が発生する。全員参加で設備の保全活動を進める考え方は。",
+          "hintChoices": [
+            "TPM",
+            "かんばん方式"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-65",
+      "conceptIds": [
+        "fruit-58"
+      ],
+      "case": "III",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-58",
+          "accepted": [
+            "ポカヨケ"
+          ]
+        }
+      ],
+      "explanation": "単純ミスを防ぎ、設備停止を減らしたい。この小問では「ポカヨケ」の接続を確認する。",
+      "source": {
+        "kind": "review_stock",
+        "refs": [
+          "src/data/reviewFruitStock.ts#stock-III-mistake-prevention"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-65-cue-1",
+          "prompt": "工具・治具の取り付けなどで起きる単純ミスを防ぐ仕組みは？",
+          "hintChoices": [
+            "ポカヨケ",
+            "データ一元管理"
+          ]
+        },
+        {
+          "id": "map-65-cue-2",
+          "prompt": "工具・治具の取り付けミスで設備が停止する。工具・治具の取り付けなどで起きる単純ミスを防ぐ仕組みは。",
+          "hintChoices": [
+            "ポカヨケ",
+            "データ一元管理"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-66",
+      "conceptIds": [
+        "fruit-59"
+      ],
+      "case": "III",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-59",
+          "accepted": [
+            "設備増強"
+          ]
+        }
+      ],
+      "explanation": "設備面の制約を解消して生産対応力を高めたい。この小問では「設備増強」の接続を確認する。",
+      "source": {
+        "kind": "review_stock",
+        "refs": [
+          "src/data/reviewFruitStock.ts#stock-III-equipment-capacity"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-66-cue-1",
+          "prompt": "既存設備の能力不足を、設備の追加で補う施策は？",
+          "hintChoices": [
+            "設備増強",
+            "かんばん方式"
+          ]
+        },
+        {
+          "id": "map-66-cue-2",
+          "prompt": "老朽化した既存設備のやり繰りでは生産対応が難しい。既存設備の能力不足を、設備の追加で補う施策は。",
+          "hintChoices": [
+            "設備増強",
+            "かんばん方式"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-67",
+      "conceptIds": [
+        "fruit-60"
+      ],
+      "case": "III",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-60",
+          "accepted": [
+            "設備改良"
+          ]
+        }
+      ],
+      "explanation": "設備面の制約を解消して生産対応力を高めたい。この小問では「設備改良」の接続を確認する。",
+      "source": {
+        "kind": "review_stock",
+        "refs": [
+          "src/data/reviewFruitStock.ts#stock-III-equipment-capacity"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-67-cue-1",
+          "prompt": "設備自体に手を加えて生産上の制約を減らす施策は？",
+          "hintChoices": [
+            "設備改良",
+            "かんばん方式"
+          ]
+        },
+        {
+          "id": "map-67-cue-2",
+          "prompt": "老朽化した既存設備のやり繰りでは生産対応が難しい。設備自体に手を加えて生産上の制約を減らす施策は。",
+          "hintChoices": [
+            "設備改良",
+            "かんばん方式"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-68",
+      "conceptIds": [
+        "fruit-17"
+      ],
+      "case": "III",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-17",
+          "accepted": [
+            "作業標準化"
+          ]
+        }
+      ],
+      "explanation": "加工技術を整理して作業品質を安定させたい。この小問では「作業標準化」の接続を確認する。",
+      "source": {
+        "kind": "review_stock",
+        "refs": [
+          "src/data/reviewFruitStock.ts#stock-III-standardization"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-68-cue-1",
+          "prompt": "熟練者ごとに異なる加工手順を共通の手順へそろえることは？",
+          "hintChoices": [
+            "作業標準化",
+            "OJT"
+          ]
+        },
+        {
+          "id": "map-68-cue-2",
+          "prompt": "熟練工の個人スキルに依存した品質を安定させる。熟練者ごとに異なる加工手順を共通の手順へそろえることは。",
+          "hintChoices": [
+            "作業標準化",
+            "OJT"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-69",
+      "conceptIds": [
+        "fruit-18"
+      ],
+      "case": "III",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-18",
+          "accepted": [
+            "マニュアル化"
+          ]
+        }
+      ],
+      "explanation": "加工技術を整理して作業品質を安定させたい。この小問では「マニュアル化」の接続を確認する。",
+      "source": {
+        "kind": "review_stock",
+        "refs": [
+          "src/data/reviewFruitStock.ts#stock-III-standardization"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-69-cue-1",
+          "prompt": "決めた作業手順を文書にして誰もが参照できるようにすることは？",
+          "hintChoices": [
+            "マニュアル化",
+            "OJT"
+          ]
+        },
+        {
+          "id": "map-69-cue-2",
+          "prompt": "熟練工の個人スキルに依存した品質を安定させる。決めた作業手順を文書にして誰もが参照できるようにすることは。",
+          "hintChoices": [
+            "マニュアル化",
+            "OJT"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-70",
+      "conceptIds": [
+        "fruit-61"
+      ],
+      "case": "III",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-61",
+          "accepted": [
+            "マイスター制度"
+          ]
+        }
+      ],
+      "explanation": "熟練技能を若手・新規要員に計画的に引き継ぎたい。この小問では「マイスター制度」の接続を確認する。",
+      "source": {
+        "kind": "review_stock",
+        "refs": [
+          "src/data/reviewFruitStock.ts#stock-III-skill-training"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-70-cue-1",
+          "prompt": "熟練者の技能を認定・指導役と結び付けて継承する仕組みは？",
+          "hintChoices": [
+            "マイスター制度",
+            "作業標準化"
+          ]
+        },
+        {
+          "id": "map-70-cue-2",
+          "prompt": "若手・新規要員の加工技能を早期に高める。熟練者の技能を認定・指導役と結び付けて継承する仕組みは。",
+          "hintChoices": [
+            "マイスター制度",
+            "作業標準化"
+          ]
+        }
+      ]
     }
   ],
   "cards": [
@@ -2786,6 +4705,426 @@
       "kind": "contrast",
       "distractor": "SNSによる情報発信",
       "contrastExplanation": "情報を届ける活動と、要望を把握する活動を区別する。"
+    },
+    {
+      "id": "map-36-cue-1-recall",
+      "mappingId": "map-36",
+      "cueId": "map-36-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-36-cue-2-recall",
+      "mappingId": "map-36",
+      "cueId": "map-36-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-37-cue-1-recall",
+      "mappingId": "map-37",
+      "cueId": "map-37-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-37-cue-2-recall",
+      "mappingId": "map-37",
+      "cueId": "map-37-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-38-cue-1-recall",
+      "mappingId": "map-38",
+      "cueId": "map-38-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-38-cue-2-recall",
+      "mappingId": "map-38",
+      "cueId": "map-38-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-39-cue-1-recall",
+      "mappingId": "map-39",
+      "cueId": "map-39-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-39-cue-2-recall",
+      "mappingId": "map-39",
+      "cueId": "map-39-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-40-cue-1-recall",
+      "mappingId": "map-40",
+      "cueId": "map-40-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-40-cue-2-recall",
+      "mappingId": "map-40",
+      "cueId": "map-40-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-41-cue-1-recall",
+      "mappingId": "map-41",
+      "cueId": "map-41-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-41-cue-2-recall",
+      "mappingId": "map-41",
+      "cueId": "map-41-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-42-cue-1-recall",
+      "mappingId": "map-42",
+      "cueId": "map-42-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-42-cue-2-recall",
+      "mappingId": "map-42",
+      "cueId": "map-42-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-43-cue-1-recall",
+      "mappingId": "map-43",
+      "cueId": "map-43-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-43-cue-2-recall",
+      "mappingId": "map-43",
+      "cueId": "map-43-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-44-cue-1-recall",
+      "mappingId": "map-44",
+      "cueId": "map-44-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-44-cue-2-recall",
+      "mappingId": "map-44",
+      "cueId": "map-44-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-45-cue-1-recall",
+      "mappingId": "map-45",
+      "cueId": "map-45-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-45-cue-2-recall",
+      "mappingId": "map-45",
+      "cueId": "map-45-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-46-cue-1-recall",
+      "mappingId": "map-46",
+      "cueId": "map-46-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-46-cue-2-recall",
+      "mappingId": "map-46",
+      "cueId": "map-46-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-47-cue-1-recall",
+      "mappingId": "map-47",
+      "cueId": "map-47-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-47-cue-2-recall",
+      "mappingId": "map-47",
+      "cueId": "map-47-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-48-cue-1-recall",
+      "mappingId": "map-48",
+      "cueId": "map-48-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-48-cue-2-recall",
+      "mappingId": "map-48",
+      "cueId": "map-48-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-49-cue-1-recall",
+      "mappingId": "map-49",
+      "cueId": "map-49-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-49-cue-2-recall",
+      "mappingId": "map-49",
+      "cueId": "map-49-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-50-cue-1-recall",
+      "mappingId": "map-50",
+      "cueId": "map-50-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-50-cue-2-recall",
+      "mappingId": "map-50",
+      "cueId": "map-50-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-51-cue-1-recall",
+      "mappingId": "map-51",
+      "cueId": "map-51-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-51-cue-2-recall",
+      "mappingId": "map-51",
+      "cueId": "map-51-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-52-cue-1-recall",
+      "mappingId": "map-52",
+      "cueId": "map-52-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-52-cue-2-recall",
+      "mappingId": "map-52",
+      "cueId": "map-52-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-53-cue-1-recall",
+      "mappingId": "map-53",
+      "cueId": "map-53-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-53-cue-2-recall",
+      "mappingId": "map-53",
+      "cueId": "map-53-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-54-cue-1-recall",
+      "mappingId": "map-54",
+      "cueId": "map-54-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-54-cue-2-recall",
+      "mappingId": "map-54",
+      "cueId": "map-54-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-55-cue-1-recall",
+      "mappingId": "map-55",
+      "cueId": "map-55-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-55-cue-2-recall",
+      "mappingId": "map-55",
+      "cueId": "map-55-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-56-cue-1-recall",
+      "mappingId": "map-56",
+      "cueId": "map-56-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-56-cue-2-recall",
+      "mappingId": "map-56",
+      "cueId": "map-56-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-57-cue-1-recall",
+      "mappingId": "map-57",
+      "cueId": "map-57-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-57-cue-2-recall",
+      "mappingId": "map-57",
+      "cueId": "map-57-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-58-cue-1-recall",
+      "mappingId": "map-58",
+      "cueId": "map-58-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-58-cue-2-recall",
+      "mappingId": "map-58",
+      "cueId": "map-58-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-59-cue-1-recall",
+      "mappingId": "map-59",
+      "cueId": "map-59-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-59-cue-2-recall",
+      "mappingId": "map-59",
+      "cueId": "map-59-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-60-cue-1-recall",
+      "mappingId": "map-60",
+      "cueId": "map-60-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-60-cue-2-recall",
+      "mappingId": "map-60",
+      "cueId": "map-60-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-61-cue-1-recall",
+      "mappingId": "map-61",
+      "cueId": "map-61-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-61-cue-2-recall",
+      "mappingId": "map-61",
+      "cueId": "map-61-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-62-cue-1-recall",
+      "mappingId": "map-62",
+      "cueId": "map-62-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-62-cue-2-recall",
+      "mappingId": "map-62",
+      "cueId": "map-62-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-63-cue-1-recall",
+      "mappingId": "map-63",
+      "cueId": "map-63-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-63-cue-2-recall",
+      "mappingId": "map-63",
+      "cueId": "map-63-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-64-cue-1-recall",
+      "mappingId": "map-64",
+      "cueId": "map-64-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-64-cue-2-recall",
+      "mappingId": "map-64",
+      "cueId": "map-64-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-65-cue-1-recall",
+      "mappingId": "map-65",
+      "cueId": "map-65-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-65-cue-2-recall",
+      "mappingId": "map-65",
+      "cueId": "map-65-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-66-cue-1-recall",
+      "mappingId": "map-66",
+      "cueId": "map-66-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-66-cue-2-recall",
+      "mappingId": "map-66",
+      "cueId": "map-66-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-67-cue-1-recall",
+      "mappingId": "map-67",
+      "cueId": "map-67-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-67-cue-2-recall",
+      "mappingId": "map-67",
+      "cueId": "map-67-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-68-cue-1-recall",
+      "mappingId": "map-68",
+      "cueId": "map-68-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-68-cue-2-recall",
+      "mappingId": "map-68",
+      "cueId": "map-68-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-69-cue-1-recall",
+      "mappingId": "map-69",
+      "cueId": "map-69-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-69-cue-2-recall",
+      "mappingId": "map-69",
+      "cueId": "map-69-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-70-cue-1-recall",
+      "mappingId": "map-70",
+      "cueId": "map-70-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-70-cue-2-recall",
+      "mappingId": "map-70",
+      "cueId": "map-70-cue-2",
+      "kind": "recall"
     }
   ]
 }

@@ -424,6 +424,12 @@ try {
   await page
     .getByRole('link', { name: '旧ホーム・各練習', exact: true })
     .waitFor()
+  await page.locator('.micro-panel select').first().selectOption('stock')
+  await page
+    .getByText('専門知識を活用した提案販売力', { exact: false })
+    .first()
+    .waitFor()
+  record('教材辞典のA/B復習ストックに、新規小問化したB項目を表示')
   assert.equal(
     await page.evaluate(() => document.documentElement.scrollWidth > 360),
     false,

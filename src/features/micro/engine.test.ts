@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import seed from '../../../public/data/micro-content-v1.json'
+import { reviewFruitStock } from '../../data/reviewFruitStock'
 import type { Attempt, Content, Plan } from './domain'
 import {
   addDays,
@@ -45,11 +46,23 @@ const attempt = (changes: Partial<Attempt> = {}): Attempt => ({
   ...changes,
 })
 describe('教材と完全一致', () => {
-  it('31必須・35mapping・82card、出典とcue対応を検証する', () => {
+  it('31必須を保ち、Bストック22件を含む教材の出典とcue対応を検証する', () => {
     expect(validateContent(content)).toEqual([])
     expect(content.concepts.filter((c) => c.mandatory)).toHaveLength(31)
-    expect(content.mappings).toHaveLength(35)
-    expect(content.cards).toHaveLength(82)
+    expect(content.concepts).toHaveLength(61)
+    expect(content.mappings).toHaveLength(70)
+    expect(content.cards).toHaveLength(152)
+    const bStocks = reviewFruitStock.filter((stock) => stock.priority === 'B')
+    expect(bStocks).toHaveLength(22)
+    for (const stock of bStocks) {
+      const ref = `src/data/reviewFruitStock.ts#${stock.id}`
+      const answers = content.mappings
+        .filter((mapping) => mapping.source.refs.includes(ref))
+        .flatMap((mapping) =>
+          mapping.answerSlots.flatMap((slot) => slot.accepted),
+        )
+      for (const word of stock.fruitKeywords) expect(answers).toContain(word)
+    }
   })
   it('題意越境・部分一致・全体類義語を採用しない', () => {
     const education = content.mappings.find((m) => m.id === 'map-25')!
@@ -177,16 +190,14 @@ describe('暦日・予定・安定', () => {
 })
 describe('出題枠と再試行', () => {
   it('coverageは失敗多数でも未確認必須を選ぶ、通常上限は6、専用開始は上限・期を超える', () => {
-    const answered = content.mappings
-      .slice(0, 6)
-      .map((m, i) =>
-        attempt({
-          id: `s${i}:1`,
-          sessionId: `s${i}`,
-          mappingId: m.id,
-          grade: 'miss',
-        }),
-      )
+    const answered = content.mappings.slice(0, 6).map((m, i) =>
+      attempt({
+        id: `s${i}:1`,
+        sessionId: `s${i}`,
+        mappingId: m.id,
+        grade: 'miss',
+      }),
+    )
     const states = rebuildStates(answered)
     const now = '2026-10-04T01:01:00.000Z'
     expect(selectCard(content, states, answered, plan, now)).toBeNull()

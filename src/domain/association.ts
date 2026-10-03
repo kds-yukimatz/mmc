@@ -10,7 +10,9 @@ export interface AssociationRecord {
   shelf: string
   fruitKeywords: string[]
   source: string
-  sourceType: '本試3年' | '強化答練' | '演習メモ'
+  sourceType: '本試3年' | '強化答練' | '演習メモ' | '復習ストック'
+  priority?: 'A' | 'B'
+  studyNote?: string
   cause?: string
   purpose?: string
   weaknessTags?: string[]

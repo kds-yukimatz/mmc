@@ -303,6 +303,7 @@ button:focus-visible,input:focus-visible { outline:3px solid #4d9eef; outline-of
 .dark .association-source-chip,.dark .shelf-chip { color:#ffbd8c; }
 
 .association-filter-tabs { grid-template-columns:repeat(3,1fr); }
+.stock-study-note { padding:10px 12px; border-left:3px solid var(--orange); color:var(--muted); background:var(--orange-soft); font-size:12px; line-height:1.7; }
 .association-list-page .overview-dictionary-link { gap:5px; align-items:center; }
 .association-list-page .overview-dictionary-link svg { width:15px; }
 .association-table { display:grid; gap:10px; }

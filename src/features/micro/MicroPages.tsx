@@ -569,7 +569,12 @@ export function MicroMaterials() {
     (c) =>
       mappings.some((m) => m.conceptIds.includes(c.id)) &&
       (collection !== 'mandatory' || c.mandatory) &&
-      (collection !== 'stock' || c.priority) &&
+      (collection !== 'stock' ||
+        c.priority ||
+        mappings.some(
+          (m) =>
+            m.conceptIds.includes(c.id) && m.source.kind === 'review_stock',
+        )) &&
       JSON.stringify(c)
         .concat(
           JSON.stringify(mappings.filter((m) => m.conceptIds.includes(c.id))),
@@ -694,7 +699,14 @@ export function MicroMaterials() {
           <p>
             資料内{c.frequency.groups.length}問・{c.frequency.years.length}年 ／{' '}
             {c.mandatory ? '設計上の必須' : '非必須'} ／ ストック重要度{' '}
-            {c.priority ?? '未設定'}
+            {c.priority ??
+              (mappings.some(
+                (m) =>
+                  m.conceptIds.includes(c.id) &&
+                  m.source.kind === 'review_stock',
+              )
+                ? '復習ストック'
+                : '未設定')}
           </p>
           <p>採用理由：{c.selectionReason}</p>
           {mappings
@@ -743,7 +755,9 @@ export function MicroMaterials() {
           <NavLink to="/dictionary">既存の果辞典</NavLink>
           <NavLink to="/history">既存の履歴</NavLink>
         </div>
-        <p>B22件の追加小問化はP1。既存教材で閲覧・練習できる。</p>
+        <p>
+          Bランク22件も小問化済み。非必須の果として、必須範囲と分けて練習できる。
+        </p>
       </section>
     </div>
   )

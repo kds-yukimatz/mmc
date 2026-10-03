@@ -1,12 +1,14 @@
 {
-  "version": "micro-seed-1",
+  "version": "micro-seed-2",
   "answerUnits": 44,
   "groups": 32,
   "rawKeywords": 165,
-  "concepts": 35,
-  "mappings": 35,
-  "recallCards": 70,
+  "concepts": 61,
+  "mappings": 70,
+  "recallCards": 140,
   "contrastCards": 12,
   "mandatory": 31,
+  "bStocks": 22,
+  "bStockMappings": 35,
   "excluded": []
 }

@@ -3,6 +3,7 @@ import weaknessPractice from '../../../public/data/kahotore_weakness_practice_v1
 import type { AssociationRecord, TriggerDictionaryPayload } from '../../domain/association'
 import type { Question } from '../../domain/question'
 import { isEquivalent } from '../../services/synonymNormalizer'
+import { reviewFruitStock } from '../../data/reviewFruitStock'
 
 const dictionary = payload as TriggerDictionaryPayload
 
@@ -84,7 +85,7 @@ export function buildAssociationRecords(questions: Question[]): AssociationRecor
       sourceType: '本試3年',
     }]
   })
-  return [...reinforcementRecords, ...weaknessPracticeRecords, ...baseRecords]
+  return [...reinforcementRecords, ...weaknessPracticeRecords, ...reviewFruitStock, ...baseRecords]
 }
 
 export function gradeAssociation(expected: string[], actual: string[], useSynonyms = true) {

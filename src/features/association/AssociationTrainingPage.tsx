@@ -67,11 +67,12 @@ export function AssociationTrainingPage({ settings, profiles, results, onSaved }
   if (store.result) return <div className="page association-result-page">
     <div className="association-score"><p className="eyebrow">{store.mode === 'theme' ? '題意トレ' : store.mode === 'fruit' ? '果トレ' : store.mode === 'cause' ? '因→果' : '目的→施策'} RESULT</p><strong>{store.result.score}</strong><span>/ 100</span></div>
     <section className="association-answer-card">
-      <p className="association-source-chip">事例 {record.case}・{record.sourceType}</p>
+      <p className="association-source-chip">事例 {record.case}・{record.sourceType}{record.priority && `・${record.priority === 'A' ? 'A 必須' : 'B 推奨'}`}</p>
       <h1>{prompt}</h1>
       <div><p>あなたの回答</p><div className="tag-list static">{store.answers.length ? store.answers.map((answer) => <span key={answer}>{answer}</span>) : <small>入力なし</small>}</div></div>
       <div><p>{store.mode === 'cause' || store.mode === 'purpose' ? '妥当な候補（1つ以上で正解）' : '登録済みの正解'}</p><div className="tag-list static expected">{expected.map((answer) => <span className={store.result?.matched.includes(answer) ? 'match' : 'miss'} key={answer}>{store.result?.matched.includes(answer) ? '✓ ' : '— '}{answer}</span>)}</div></div>
       <dl><dt>トリガー</dt><dd>{record.trigger}</dd><dt>題意の棚</dt><dd>{record.shelf}</dd><dt>果キーワード</dt><dd>{record.fruitKeywords.join('／')}</dd><dt>出典</dt><dd>{record.source}</dd></dl>
+      {record.studyNote && <p className="stock-study-note">{record.studyNote}</p>}
     </section>
     <section className="rating"><h2>自分の手応え</h2><div className="rating-grid">{(['題意を外した', '領域は近い', '主要語が一部一致', '棚・主要語が一致'] as const).map((text, index) => <button className={rating === index ? 'active' : ''} key={text} onClick={() => setRating(index as 0 | 1 | 2 | 3)}><strong>{index}</strong><span>{text}</span></button>)}</div></section>
     <label className="review-toggle"><input type="checkbox" checked={review} onChange={(event) => setReview(event.target.checked)} /><RefreshCw /><span><strong>復習対象にする</strong><small>あとで要復習から選べます</small></span></label>
@@ -83,7 +84,7 @@ export function AssociationTrainingPage({ settings, profiles, results, onSaved }
     <div className="progress"><i style={{ width: `${((store.index + 1) / store.queue.length) * 100}%` }} /></div>
     <section className="association-prompt">
       <p className="eyebrow">{store.mode === 'theme' ? 'TRIGGER → SHELF' : store.mode === 'fruit' ? 'SHELF → FRUIT' : store.mode === 'cause' ? 'CAUSE → FRUIT' : 'PURPOSE → ACTION'}</p>
-      <p className="question-meta"><span>事例 {record.case}</span><span>{record.sourceType}</span></p>
+      <p className="question-meta"><span>事例 {record.case}</span><span>{record.sourceType}</span>{record.priority && <span>{record.priority === 'A' ? 'A 必須' : 'B 推奨'}</span>}</p>
       <p>{store.mode === 'theme' ? 'このトリガーで開く題意の棚は？' : store.mode === 'fruit' ? 'この棚から出したい果キーワードは？' : store.mode === 'cause' ? 'この兆候に対応する果候補は？' : 'この目的に使う施策候補は？'}</p>
       <h1>{prompt}</h1>
     </section>

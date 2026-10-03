@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react'
 import { BarChart3, BookOpenCheck, Search } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import type { CaseType, Question } from '../../domain/question'
 import { buildFruitKeywordDictionary, buildFruitKeywordRanking } from './keywordDictionary'
 
@@ -43,6 +44,7 @@ export function KeywordDictionaryPage({ questions }: { questions: Question[] }) 
       <p className="eyebrow">FRUIT KEYWORD LIBRARY</p>
       <h1>果キーワード辞典</h1>
       <p>過去3年の設問を横断し、同じ「果」がどこで使われたか確認します。</p>
+      <Link className="overview-dictionary-link" to="/overview/associations">追加した復習ストックは「題意・トリガー一覧」へ →</Link>
     </div>
 
     <div className="dictionary-tabs" role="tablist" aria-label="表示内容">

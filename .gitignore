@@ -10,3 +10,4 @@ work/
 .test_node_modules/
 private-data/
 public/data/private-*
+/.vite/

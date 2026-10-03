@@ -351,3 +351,30 @@ button:focus-visible,input:focus-visible { outline:3px solid #4d9eef; outline-of
 @media (min-width:640px) { .page { padding-left:36px; padding-right:36px; } .hero { padding-top:35px; } .action-grid { grid-template-columns:repeat(4,1fr); } .setup-footer { margin-left:-36px; margin-right:-36px; padding-left:36px; padding-right:36px; } .result-page,.association-result-page { max-width:620px; margin:auto; } .association-table-head { padding:0 13px; display:grid; grid-template-columns:1.35fr .75fr 1.25fr .75fr; gap:12px; color:var(--muted); font-size:10px; font-weight:900; } .association-table article { grid-template-columns:1.35fr .75fr 1.25fr .75fr; gap:12px; } .association-table article > div { display:block; } .association-table article > div::before { display:none; } }
 @media (max-width:420px) { .training-mode-grid { grid-template-columns:1fr; } .overview-dictionary-link + .overview-dictionary-link { margin-left:0; display:flex; } }
 @media (prefers-reduced-motion: reduce) { *,*::before,*::after { scroll-behavior:auto !important; transition:none !important; } }
+
+/* One-minute mode uses readable text and full-width controls on narrow screens. */
+.bottom-nav { grid-template-columns:repeat(3,1fr); }
+.nav-item { min-height:44px; font-size:14px; }
+.micro-page { font-size:16px; line-height:1.8; overflow-wrap:anywhere; }
+.micro-page h1 { font-size:28px; line-height:1.5; margin:12px 0; }
+.micro-page h2 { font-size:20px; margin:0 0 12px; }
+.micro-page p { margin:12px 0; }
+.micro-page .eyebrow { font-size:16px; letter-spacing:.04em; }
+.micro-page small { font-size:16px; }
+.micro-hero { padding:12px 0 24px; }
+.micro-start { width:100%; font-size:20px; margin-top:16px; }
+.micro-panel { padding:20px; margin:16px 0; background:var(--paper); border:1px solid var(--line); border-radius:18px; min-width:0; }
+.micro-statuses { display:flex; gap:8px 16px; flex-wrap:wrap; }
+.micro-actions, .micro-grades { display:grid; gap:12px; grid-template-columns:1fr; margin:20px 0; }
+.micro-page .btn { width:100%; min-height:50px; font-size:16px; white-space:normal; }
+.micro-page a, .micro-page summary { display:block; min-height:44px; padding:8px 0; color:var(--ink); }
+.micro-page summary { cursor:pointer; font-weight:700; }
+.micro-page label { display:block; margin:12px 0; }
+.micro-page input:not([type=checkbox]), .micro-page textarea, .micro-page select { display:block; width:100%; min-width:0; max-width:100%; min-height:48px; padding:8px; border:1px solid var(--line); border-radius:8px; font:inherit; color:var(--ink); background:var(--paper); }
+.micro-page textarea { min-height:100px; }
+.micro-page input[type=checkbox] { width:24px; height:24px; vertical-align:middle; margin-right:8px; }
+.micro-answer { font-size:24px; font-weight:800; }
+.micro-session-meta { display:flex; flex-wrap:wrap; gap:8px; justify-content:space-between; }
+.micro-update { margin:16px; padding:16px; border:1px solid var(--line); background:var(--paper); }
+:focus-visible { outline:3px solid #4d9eef; outline-offset:3px; }
+@media (max-width:380px) { .micro-page { padding:20px 16px 36px; } .micro-panel { padding:16px; } }

@@ -1,0 +1,2791 @@
+{
+  "metadata": {
+    "version": "micro-seed-1",
+    "createdAt": "2026-10-04",
+    "note": "汎用練習の教材種。因・問い・説明は設計者作成。MMC原文や原答案の引用ではない。出典は元語の根拠。頻度0は不重要を意味しない。",
+    "mandatoryConceptCount": 31,
+    "conceptCount": 35,
+    "mappingCount": 35,
+    "cardCount": 82,
+    "frequencyCorpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified",
+    "frequencyDefinition": "異なるgroup_id数。未設定の場合id。資料内の原語または承認済みalias完全一致。",
+    "adaptation": "実装ではSPECの型に合わせてfrequency.recordIdsを出典メタデータへ移してよい。数量と出典を保持する。"
+  },
+  "concepts": [
+    {
+      "id": "fruit-01",
+      "label": "適正配置",
+      "evidenceAliases": [
+        "適正配置"
+      ],
+      "mandatory": true,
+      "mandatoryMappingId": "map-01",
+      "selectionReason": "汎用性を重視した設計選定。資料内頻度とは別。",
+      "priority": null,
+      "frequency": {
+        "groups": [
+          "2023-I-Q3",
+          "2025-I-Q4"
+        ],
+        "years": [
+          2023,
+          2025
+        ],
+        "recordIds": [
+          "2023-I-Q3",
+          "2025-I-Q4"
+        ],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-02",
+      "label": "権限委譲",
+      "evidenceAliases": [
+        "権限委譲"
+      ],
+      "mandatory": true,
+      "mandatoryMappingId": "map-02",
+      "selectionReason": "汎用性を重視した設計選定。資料内頻度とは別。",
+      "priority": null,
+      "frequency": {
+        "groups": [
+          "2025-I-Q3"
+        ],
+        "years": [
+          2025
+        ],
+        "recordIds": [
+          "2025-I-Q3"
+        ],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-03",
+      "label": "計画的OJT",
+      "evidenceAliases": [
+        "計画的OJT"
+      ],
+      "mandatory": true,
+      "mandatoryMappingId": "map-03",
+      "selectionReason": "汎用性を重視した設計選定。資料内頻度とは別。",
+      "priority": null,
+      "frequency": {
+        "groups": [
+          "2025-III-Q2"
+        ],
+        "years": [
+          2025
+        ],
+        "recordIds": [
+          "2025-III-Q2-2"
+        ],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-04",
+      "label": "外部研修",
+      "evidenceAliases": [
+        "外部研修"
+      ],
+      "mandatory": true,
+      "mandatoryMappingId": "map-04",
+      "selectionReason": "汎用性を重視した設計選定。資料内頻度とは別。",
+      "priority": null,
+      "frequency": {
+        "groups": [
+          "2025-I-Q4"
+        ],
+        "years": [
+          2025
+        ],
+        "recordIds": [
+          "2025-I-Q4"
+        ],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-05",
+      "label": "事業部制",
+      "evidenceAliases": [
+        "事業部制"
+      ],
+      "mandatory": true,
+      "mandatoryMappingId": "map-05",
+      "selectionReason": "汎用性を重視した設計選定。資料内頻度とは別。",
+      "priority": null,
+      "frequency": {
+        "groups": [
+          "2025-I-Q3"
+        ],
+        "years": [
+          2025
+        ],
+        "recordIds": [
+          "2025-I-Q3"
+        ],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-06",
+      "label": "利益責任の明確化",
+      "evidenceAliases": [
+        "利益責任明確化"
+      ],
+      "mandatory": true,
+      "mandatoryMappingId": "map-06",
+      "selectionReason": "汎用性を重視した設計選定。資料内頻度とは別。",
+      "priority": null,
+      "frequency": {
+        "groups": [
+          "2025-I-Q3"
+        ],
+        "years": [
+          2025
+        ],
+        "recordIds": [
+          "2025-I-Q3"
+        ],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-07",
+      "label": "柔軟な勤務形態",
+      "evidenceAliases": [
+        "柔軟勤務"
+      ],
+      "mandatory": true,
+      "mandatoryMappingId": "map-07",
+      "selectionReason": "汎用性を重視した設計選定。資料内頻度とは別。",
+      "priority": null,
+      "frequency": {
+        "groups": [
+          "2023-I-Q3"
+        ],
+        "years": [
+          2023
+        ],
+        "recordIds": [
+          "2023-I-Q3"
+        ],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-08",
+      "label": "顧客ニーズ収集",
+      "evidenceAliases": [
+        "顧客ニーズ収集",
+        "SNSニーズ収集"
+      ],
+      "mandatory": true,
+      "mandatoryMappingId": "map-08",
+      "selectionReason": "汎用性を重視した設計選定。資料内頻度とは別。",
+      "priority": null,
+      "frequency": {
+        "groups": [
+          "2023-II-Q4",
+          "2023-III-Q4"
+        ],
+        "years": [
+          2023
+        ],
+        "recordIds": [
+          "2023-II-Q4",
+          "2023-III-Q4"
+        ],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-09",
+      "label": "SNSによる情報発信",
+      "evidenceAliases": [
+        "SNS情報発信"
+      ],
+      "mandatory": true,
+      "mandatoryMappingId": "map-09",
+      "selectionReason": "汎用性を重視した設計選定。資料内頻度とは別。",
+      "priority": null,
+      "frequency": {
+        "groups": [
+          "2025-I-Q2"
+        ],
+        "years": [
+          2025
+        ],
+        "recordIds": [
+          "2025-I-Q2"
+        ],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-10",
+      "label": "関係性強化",
+      "evidenceAliases": [
+        "関係性強化"
+      ],
+      "mandatory": true,
+      "mandatoryMappingId": "map-10",
+      "selectionReason": "汎用性を重視した設計選定。資料内頻度とは別。",
+      "priority": null,
+      "frequency": {
+        "groups": [
+          "2023-II-Q4"
+        ],
+        "years": [
+          2023
+        ],
+        "recordIds": [
+          "2023-II-Q4"
+        ],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-11",
+      "label": "ターゲット明確化",
+      "evidenceAliases": [
+        "ターゲット明確化"
+      ],
+      "mandatory": true,
+      "mandatoryMappingId": "map-11",
+      "selectionReason": "汎用性を重視した設計選定。資料内頻度とは別。",
+      "priority": null,
+      "frequency": {
+        "groups": [
+          "2025-I-Q2"
+        ],
+        "years": [
+          2025
+        ],
+        "recordIds": [
+          "2025-I-Q2"
+        ],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-12",
+      "label": "差別化",
+      "evidenceAliases": [
+        "差別化"
+      ],
+      "mandatory": true,
+      "mandatoryMappingId": "map-12",
+      "selectionReason": "汎用性を重視した設計選定。資料内頻度とは別。",
+      "priority": null,
+      "frequency": {
+        "groups": [
+          "2023-I-Q2",
+          "2023-I-Q4"
+        ],
+        "years": [
+          2023
+        ],
+        "recordIds": [
+          "2023-I-Q2",
+          "2023-I-Q4-2"
+        ],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-13",
+      "label": "新規顧客開拓",
+      "evidenceAliases": [
+        "新規顧客開拓"
+      ],
+      "mandatory": true,
+      "mandatoryMappingId": "map-13",
+      "selectionReason": "汎用性を重視した設計選定。資料内頻度とは別。",
+      "priority": null,
+      "frequency": {
+        "groups": [
+          "2025-II-Q4"
+        ],
+        "years": [
+          2025
+        ],
+        "recordIds": [
+          "2025-II-Q4"
+        ],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-14",
+      "label": "データ一元管理",
+      "evidenceAliases": [
+        "データ一元管理"
+      ],
+      "mandatory": true,
+      "mandatoryMappingId": "map-14",
+      "selectionReason": "汎用性を重視した設計選定。資料内頻度とは別。",
+      "priority": null,
+      "frequency": {
+        "groups": [
+          "2023-II-Q4"
+        ],
+        "years": [
+          2023
+        ],
+        "recordIds": [
+          "2023-II-Q4"
+        ],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-15",
+      "label": "製造指図書",
+      "evidenceAliases": [
+        "製造指図書"
+      ],
+      "mandatory": true,
+      "mandatoryMappingId": "map-15",
+      "selectionReason": "汎用性を重視した設計選定。資料内頻度とは別。",
+      "priority": null,
+      "frequency": {
+        "groups": [
+          "2023-III-Q2",
+          "2025-III-Q3"
+        ],
+        "years": [
+          2023,
+          2025
+        ],
+        "recordIds": [
+          "2023-III-Q2",
+          "2025-III-Q3"
+        ],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-16",
+      "label": "生産計画日次化",
+      "evidenceAliases": [
+        "生産計画日次化"
+      ],
+      "mandatory": true,
+      "mandatoryMappingId": "map-16",
+      "selectionReason": "汎用性を重視した設計選定。資料内頻度とは別。",
+      "priority": null,
+      "frequency": {
+        "groups": [
+          "2023-III-Q3",
+          "2023-III-Q5"
+        ],
+        "years": [
+          2023
+        ],
+        "recordIds": [
+          "2023-III-Q3",
+          "2023-III-Q5"
+        ],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-17",
+      "label": "作業標準化",
+      "evidenceAliases": [
+        "標準化"
+      ],
+      "mandatory": true,
+      "mandatoryMappingId": "map-17",
+      "selectionReason": "汎用性を重視した設計選定。資料内頻度とは別。",
+      "priority": null,
+      "frequency": {
+        "groups": [
+          "2023-III-Q2"
+        ],
+        "years": [
+          2023
+        ],
+        "recordIds": [
+          "2023-III-Q2"
+        ],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-18",
+      "label": "マニュアル化",
+      "evidenceAliases": [
+        "マニュアル化"
+      ],
+      "mandatory": true,
+      "mandatoryMappingId": "map-18",
+      "selectionReason": "汎用性を重視した設計選定。資料内頻度とは別。",
+      "priority": null,
+      "frequency": {
+        "groups": [
+          "2025-III-Q2"
+        ],
+        "years": [
+          2025
+        ],
+        "recordIds": [
+          "2025-III-Q2-1"
+        ],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-19",
+      "label": "技能承継",
+      "evidenceAliases": [
+        "技能承継"
+      ],
+      "mandatory": true,
+      "mandatoryMappingId": "map-19",
+      "selectionReason": "汎用性を重視した設計選定。資料内頻度とは別。",
+      "priority": null,
+      "frequency": {
+        "groups": [
+          "2025-III-Q2",
+          "2025-III-Q4"
+        ],
+        "years": [
+          2025
+        ],
+        "recordIds": [
+          "2025-III-Q2-2",
+          "2025-III-Q4"
+        ],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-20",
+      "label": "発注基準の明確化",
+      "evidenceAliases": [
+        "発注基準",
+        "発注基準明確化"
+      ],
+      "mandatory": true,
+      "mandatoryMappingId": "map-20",
+      "selectionReason": "汎用性を重視した設計選定。資料内頻度とは別。",
+      "priority": null,
+      "frequency": {
+        "groups": [
+          "2023-III-Q3",
+          "2025-III-Q3"
+        ],
+        "years": [
+          2023,
+          2025
+        ],
+        "recordIds": [
+          "2023-III-Q3",
+          "2025-III-Q3"
+        ],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-21",
+      "label": "新市場開拓",
+      "evidenceAliases": [
+        "新市場開拓"
+      ],
+      "mandatory": true,
+      "mandatoryMappingId": "map-21",
+      "selectionReason": "汎用性を重視した設計選定。資料内頻度とは別。",
+      "priority": null,
+      "frequency": {
+        "groups": [
+          "2023-I-Q4",
+          "2024-I-Q2"
+        ],
+        "years": [
+          2023,
+          2024
+        ],
+        "recordIds": [
+          "2023-I-Q4-2",
+          "2024-I-Q2"
+        ],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-22",
+      "label": "成果主義",
+      "evidenceAliases": [
+        "成果主義"
+      ],
+      "mandatory": true,
+      "mandatoryMappingId": "map-22",
+      "selectionReason": "汎用性を重視した設計選定。資料内頻度とは別。",
+      "priority": null,
+      "frequency": {
+        "groups": [
+          "2024-I-Q4"
+        ],
+        "years": [
+          2024
+        ],
+        "recordIds": [
+          "2024-I-Q4-1",
+          "2024-I-Q4-2"
+        ],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-23",
+      "label": "全社会議",
+      "evidenceAliases": [
+        "全社会議"
+      ],
+      "mandatory": true,
+      "mandatoryMappingId": "map-23",
+      "selectionReason": "汎用性を重視した設計選定。資料内頻度とは別。",
+      "priority": null,
+      "frequency": {
+        "groups": [
+          "2023-I-Q4",
+          "2024-I-Q4"
+        ],
+        "years": [
+          2023,
+          2024
+        ],
+        "recordIds": [
+          "2023-I-Q4-1",
+          "2024-I-Q4-2"
+        ],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-24",
+      "label": "事業部間連携",
+      "evidenceAliases": [
+        "事業部間連携"
+      ],
+      "mandatory": true,
+      "mandatoryMappingId": "map-24",
+      "selectionReason": "汎用性を重視した設計選定。資料内頻度とは別。",
+      "priority": null,
+      "frequency": {
+        "groups": [
+          "2024-I-Q4"
+        ],
+        "years": [
+          2024
+        ],
+        "recordIds": [
+          "2024-I-Q4-1",
+          "2024-I-Q4-2"
+        ],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-25",
+      "label": "教育制度の未整備",
+      "evidenceAliases": [],
+      "mandatory": true,
+      "mandatoryMappingId": "map-25",
+      "selectionReason": "既存A復習ストック",
+      "priority": "A",
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-26",
+      "label": "情報共有不足・連携不足",
+      "evidenceAliases": [],
+      "mandatory": true,
+      "mandatoryMappingId": "map-26",
+      "selectionReason": "既存A復習ストック",
+      "priority": "A",
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-27",
+      "label": "設備管理不足",
+      "evidenceAliases": [],
+      "mandatory": true,
+      "mandatoryMappingId": "map-27",
+      "selectionReason": "既存A復習ストック",
+      "priority": "A",
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-28",
+      "label": "在庫管理不足",
+      "evidenceAliases": [],
+      "mandatory": true,
+      "mandatoryMappingId": "map-28",
+      "selectionReason": "既存A復習ストック",
+      "priority": "A",
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-29",
+      "label": "部品の共通化",
+      "evidenceAliases": [],
+      "mandatory": true,
+      "mandatoryMappingId": "map-29",
+      "selectionReason": "既存A復習ストック",
+      "priority": "A",
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-30",
+      "label": "技能継承体制の充実",
+      "evidenceAliases": [],
+      "mandatory": true,
+      "mandatoryMappingId": "map-30",
+      "selectionReason": "既存A復習ストック",
+      "priority": "A",
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-31",
+      "label": "効率的な作業手配体制の構築",
+      "evidenceAliases": [],
+      "mandatory": true,
+      "mandatoryMappingId": "map-31",
+      "selectionReason": "既存A復習ストック",
+      "priority": "A",
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-32",
+      "label": "予防保全",
+      "evidenceAliases": [
+        "予防保全"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "使い分けの対照教材",
+      "priority": "B",
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-33",
+      "label": "OJT",
+      "evidenceAliases": [
+        "OJT"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "使い分けの対照教材",
+      "priority": "B",
+      "frequency": {
+        "groups": [
+          "2023-III-Q5"
+        ],
+        "years": [
+          2023
+        ],
+        "recordIds": [
+          "2023-III-Q5"
+        ],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-34",
+      "label": "客数向上",
+      "evidenceAliases": [
+        "客数向上"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "使い分けの対照教材",
+      "priority": "B",
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-35",
+      "label": "客単価向上",
+      "evidenceAliases": [
+        "客単価向上"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "使い分けの対照教材",
+      "priority": "B",
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    }
+  ],
+  "mappings": [
+    {
+      "id": "map-01",
+      "conceptIds": [
+        "fruit-01"
+      ],
+      "case": "I",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-01",
+          "accepted": [
+            "適正配置"
+          ]
+        }
+      ],
+      "explanation": "希望や適性に応じて業務へ配置する。",
+      "source": {
+        "kind": "designed_practice",
+        "refs": [
+          "2023-I-Q3",
+          "2025-I-Q4"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-01-cue-1",
+          "prompt": "希望・適性と担当業務が合っていない。配置面で確認したい果は？",
+          "hintChoices": [
+            "適正配置",
+            "成果主義"
+          ]
+        },
+        {
+          "id": "map-01-cue-2",
+          "prompt": "人員の適性を生かすため、担当業務との対応を見直す。配置の果は？",
+          "hintChoices": [
+            "適正配置",
+            "成果主義"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-02",
+      "conceptIds": [
+        "fruit-02"
+      ],
+      "case": "I",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-02",
+          "accepted": [
+            "権限委譲"
+          ]
+        }
+      ],
+      "explanation": "現場へ意思決定権限を委譲し機動性を高める。",
+      "source": {
+        "kind": "designed_practice",
+        "refs": [
+          "2025-I-Q3"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-02-cue-1",
+          "prompt": "意思決定が社長に集中し、現場判断が遅い。決定権についての施策は？",
+          "hintChoices": [
+            "権限委譲",
+            "全社会議"
+          ]
+        },
+        {
+          "id": "map-02-cue-2",
+          "prompt": "拠点が自ら判断できず承認待ちになる。現場へ何を進める？",
+          "hintChoices": [
+            "権限委譲",
+            "全社会議"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-03",
+      "conceptIds": [
+        "fruit-03"
+      ],
+      "case": "I",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-03",
+          "accepted": [
+            "計画的OJT"
+          ]
+        }
+      ],
+      "explanation": "指導内容と担当者・時期を決めたOJTを行う。",
+      "source": {
+        "kind": "designed_practice",
+        "refs": [
+          "2025-III-Q2-2"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-03-cue-1",
+          "prompt": "現場指導がその場任せで育成がばらつく。業務を通じた計画的な育成方法は？",
+          "hintChoices": [
+            "計画的OJT",
+            "教育制度の未整備"
+          ]
+        },
+        {
+          "id": "map-03-cue-2",
+          "prompt": "実務中の指導内容・担当・時期を決めて育てたい。育成方法の果は？",
+          "hintChoices": [
+            "計画的OJT",
+            "教育制度の未整備"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-04",
+      "conceptIds": [
+        "fruit-04"
+      ],
+      "case": "I",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-04",
+          "accepted": [
+            "外部研修"
+          ]
+        }
+      ],
+      "explanation": "不足する知識を外部の研修で補う。",
+      "source": {
+        "kind": "designed_practice",
+        "refs": [
+          "2025-I-Q4"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-04-cue-1",
+          "prompt": "社内では教えられない専門知識を身に付けさせたい。社外資源を使う育成方法は？",
+          "hintChoices": [
+            "外部研修",
+            "権限委譲"
+          ]
+        },
+        {
+          "id": "map-04-cue-2",
+          "prompt": "社内指導だけでは不足する知識を学ばせる。社外で受講する果は？",
+          "hintChoices": [
+            "外部研修",
+            "権限委譲"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-05",
+      "conceptIds": [
+        "fruit-05"
+      ],
+      "case": "I",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-05",
+          "accepted": [
+            "事業部制"
+          ]
+        }
+      ],
+      "explanation": "事業別の組織単位を設ける。機能別の組織と区別する。",
+      "source": {
+        "kind": "designed_practice",
+        "refs": [
+          "2025-I-Q3"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-05-cue-1",
+          "prompt": "異なる事業ごとに意思決定・利益管理を行いたい。組織形態は？",
+          "hintChoices": [
+            "事業部制",
+            "機能別組織"
+          ]
+        },
+        {
+          "id": "map-05-cue-2",
+          "prompt": "事業単位で権限と責任を持たせたい。採用する組織形態は？",
+          "hintChoices": [
+            "事業部制",
+            "機能別組織"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-06",
+      "conceptIds": [
+        "fruit-06"
+      ],
+      "case": "I",
+      "intent": "benefit",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-06",
+          "accepted": [
+            "利益責任の明確化",
+            "利益責任明確化"
+          ]
+        }
+      ],
+      "explanation": "各事業部が負う利益責任を明確にする。",
+      "source": {
+        "kind": "designed_practice",
+        "refs": [
+          "2025-I-Q3"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-06-cue-1",
+          "prompt": "事業部ごとに収益・費用を管理する。事業部制の利益管理上の利点は？",
+          "hintChoices": [
+            "利益責任の明確化",
+            "設備稼働率向上"
+          ]
+        },
+        {
+          "id": "map-06-cue-2",
+          "prompt": "各事業単位で利益を管理する体制にした。責任面の効果は？",
+          "hintChoices": [
+            "利益責任の明確化",
+            "設備稼働率向上"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-07",
+      "conceptIds": [
+        "fruit-07"
+      ],
+      "case": "I",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-07",
+          "accepted": [
+            "柔軟な勤務形態",
+            "柔軟勤務"
+          ]
+        }
+      ],
+      "explanation": "時間や勤務形態を柔軟にし継続就業を支える。",
+      "source": {
+        "kind": "designed_practice",
+        "refs": [
+          "2023-I-Q3"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-07-cue-1",
+          "prompt": "固定勤務で生活事情に対応できない。勤務制度面での施策は？",
+          "hintChoices": [
+            "柔軟な勤務形態",
+            "適正配置"
+          ]
+        },
+        {
+          "id": "map-07-cue-2",
+          "prompt": "生活事情が異なる人が働き続けられるようにしたい。勤務形態の果は？",
+          "hintChoices": [
+            "柔軟な勤務形態",
+            "適正配置"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-08",
+      "conceptIds": [
+        "fruit-08"
+      ],
+      "case": "II",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-08",
+          "accepted": [
+            "顧客ニーズ収集"
+          ]
+        }
+      ],
+      "explanation": "顧客の要望を収集し商品・サービスの改善に生かす。",
+      "source": {
+        "kind": "designed_practice",
+        "refs": [
+          "2023-II-Q4",
+          "2023-III-Q4"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-08-cue-1",
+          "prompt": "顧客の要望が把握できていない。SNSで要望を聞く活動の果は？",
+          "hintChoices": [
+            "顧客ニーズ収集",
+            "SNSによる情報発信"
+          ]
+        },
+        {
+          "id": "map-08-cue-2",
+          "prompt": "SNSで利用者の希望を聞き商品改善に生かす。情報を得る側の果は？",
+          "hintChoices": [
+            "顧客ニーズ収集",
+            "SNSによる情報発信"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-09",
+      "conceptIds": [
+        "fruit-09"
+      ],
+      "case": "II",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-09",
+          "accepted": [
+            "SNSによる情報発信",
+            "SNS情報発信"
+          ]
+        }
+      ],
+      "explanation": "SNSを使い商品の特徴や魅力を発信する。",
+      "source": {
+        "kind": "designed_practice",
+        "refs": [
+          "2025-I-Q2"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-09-cue-1",
+          "prompt": "商品を知らない見込客へ、SNSで特徴を伝えたい。媒体を含む施策は？",
+          "hintChoices": [
+            "SNSによる情報発信",
+            "顧客ニーズ収集"
+          ]
+        },
+        {
+          "id": "map-09-cue-2",
+          "prompt": "SNSで商品の魅力を見込客に知らせる。情報を届ける側の果は？",
+          "hintChoices": [
+            "SNSによる情報発信",
+            "顧客ニーズ収集"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-10",
+      "conceptIds": [
+        "fruit-10"
+      ],
+      "case": "II",
+      "intent": "benefit",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-10",
+          "accepted": [
+            "関係性強化"
+          ]
+        }
+      ],
+      "explanation": "継続接点を通じ顧客との関係性を強化する。",
+      "source": {
+        "kind": "designed_practice",
+        "refs": [
+          "2023-II-Q4"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-10-cue-1",
+          "prompt": "既存顧客と継続的に交流し信頼を深めた。顧客との関係の効果は？",
+          "hintChoices": [
+            "関係性強化",
+            "新市場開拓"
+          ]
+        },
+        {
+          "id": "map-10-cue-2",
+          "prompt": "購入後も交流を続けて信頼を高めたい。関係面の果は？",
+          "hintChoices": [
+            "関係性強化",
+            "新市場開拓"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-11",
+      "conceptIds": [
+        "fruit-11"
+      ],
+      "case": "II",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-11",
+          "accepted": [
+            "ターゲット明確化"
+          ]
+        }
+      ],
+      "explanation": "対象顧客を明確にしてニーズに合う訴求を行う。",
+      "source": {
+        "kind": "designed_practice",
+        "refs": [
+          "2025-I-Q2"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-11-cue-1",
+          "prompt": "誰向けの商品か曖昧で訴求が分散する。顧客対象についての施策は？",
+          "hintChoices": [
+            "ターゲット明確化",
+            "生産計画日次化"
+          ]
+        },
+        {
+          "id": "map-11-cue-2",
+          "prompt": "訴求対象が定まらない。まず狙う顧客層に関して何を行う？",
+          "hintChoices": [
+            "ターゲット明確化",
+            "生産計画日次化"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-12",
+      "conceptIds": [
+        "fruit-12"
+      ],
+      "case": "II",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-12",
+          "accepted": [
+            "差別化"
+          ]
+        }
+      ],
+      "explanation": "独自の価値を示し競合との差別化を図る。",
+      "source": {
+        "kind": "designed_practice",
+        "refs": [
+          "2023-I-Q2",
+          "2023-I-Q4-2"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-12-cue-1",
+          "prompt": "競合と同じ訴求で価格競争になる。独自価値を示す競争上の方向は？",
+          "hintChoices": [
+            "差別化",
+            "価格競争"
+          ]
+        },
+        {
+          "id": "map-12-cue-2",
+          "prompt": "価格以外の独自価値を競合との違いとして打ち出す。戦略の果は？",
+          "hintChoices": [
+            "差別化",
+            "価格競争"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-13",
+      "conceptIds": [
+        "fruit-13"
+      ],
+      "case": "II",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-13",
+          "accepted": [
+            "新規顧客開拓"
+          ]
+        }
+      ],
+      "explanation": "新規の顧客を開拓し顧客基盤を広げる。新市場への展開とは分ける。",
+      "source": {
+        "kind": "designed_practice",
+        "refs": [
+          "2025-II-Q4"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-13-cue-1",
+          "prompt": "既存客への依存が大きい。未取引の顧客を獲得する活動は？",
+          "hintChoices": [
+            "新規顧客開拓",
+            "新市場開拓"
+          ]
+        },
+        {
+          "id": "map-13-cue-2",
+          "prompt": "まだ利用していない人を来店へつなげたい。顧客獲得面の果は？",
+          "hintChoices": [
+            "新規顧客開拓",
+            "新市場開拓"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-14",
+      "conceptIds": [
+        "fruit-14"
+      ],
+      "case": "III",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-14",
+          "accepted": [
+            "データ一元管理"
+          ]
+        }
+      ],
+      "explanation": "データを一元管理し関係部署が参照できるようにする。",
+      "source": {
+        "kind": "designed_practice",
+        "refs": [
+          "2023-II-Q4"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-14-cue-1",
+          "prompt": "受注・在庫情報が別々に管理され参照しにくい。データ管理の施策は？",
+          "hintChoices": [
+            "データ一元管理",
+            "SNSによる情報発信"
+          ]
+        },
+        {
+          "id": "map-14-cue-2",
+          "prompt": "分散している受注・在庫データを一か所で扱う。管理方法の果は？",
+          "hintChoices": [
+            "データ一元管理",
+            "SNSによる情報発信"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-15",
+      "conceptIds": [
+        "fruit-15"
+      ],
+      "case": "III",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-15",
+          "accepted": [
+            "製造指図書"
+          ]
+        }
+      ],
+      "explanation": "製品・数量・納期などを製造指図書で明確に指示する。",
+      "source": {
+        "kind": "designed_practice",
+        "refs": [
+          "2023-III-Q2",
+          "2025-III-Q3"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-15-cue-1",
+          "prompt": "製品・数量・納期の指示が口頭で曖昧。文書で生産指示する手段は？",
+          "hintChoices": [
+            "製造指図書",
+            "入出庫記録"
+          ]
+        },
+        {
+          "id": "map-15-cue-2",
+          "prompt": "作るもの・数・期限を現場へ明確に伝える。生産指示に使う書類は？",
+          "hintChoices": [
+            "製造指図書",
+            "入出庫記録"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-16",
+      "conceptIds": [
+        "fruit-16"
+      ],
+      "case": "III",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-16",
+          "accepted": [
+            "生産計画日次化"
+          ]
+        }
+      ],
+      "explanation": "生産計画を日次化し短期の受注変動へ対応する。",
+      "source": {
+        "kind": "designed_practice",
+        "refs": [
+          "2023-III-Q3",
+          "2023-III-Q5"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-16-cue-1",
+          "prompt": "短期の受注変動が週単位の計画に反映されない。計画を日単位へ変える施策は？",
+          "hintChoices": [
+            "生産計画日次化",
+            "大ロット生産"
+          ]
+        },
+        {
+          "id": "map-16-cue-2",
+          "prompt": "毎日の需要変化に計画を合わせたい。計画周期を日単位にする果は？",
+          "hintChoices": [
+            "生産計画日次化",
+            "大ロット生産"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-17",
+      "conceptIds": [
+        "fruit-17"
+      ],
+      "case": "III",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-17",
+          "accepted": [
+            "作業標準化",
+            "作業の標準化"
+          ]
+        }
+      ],
+      "explanation": "作業手順を標準化し品質のばらつきを抑える。文書化は実現手段。",
+      "source": {
+        "kind": "designed_practice",
+        "refs": [
+          "2023-III-Q2"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-17-cue-1",
+          "prompt": "人によって作業方法が異なり品質がばらつく。作業方法を揃える施策は？",
+          "hintChoices": [
+            "作業標準化",
+            "設備増強"
+          ]
+        },
+        {
+          "id": "map-17-cue-2",
+          "prompt": "加工手順を統一して品質を安定させたい。方法を統一する果は？",
+          "hintChoices": [
+            "作業標準化",
+            "設備増強"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-18",
+      "conceptIds": [
+        "fruit-18"
+      ],
+      "case": "III",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-18",
+          "accepted": [
+            "マニュアル化"
+          ]
+        }
+      ],
+      "explanation": "手順・要点をマニュアル化して共有可能にする。",
+      "source": {
+        "kind": "designed_practice",
+        "refs": [
+          "2025-III-Q2-1"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-18-cue-1",
+          "prompt": "熟練者の手順が暗黙知で他者が参照できない。文書で残す施策は？",
+          "hintChoices": [
+            "マニュアル化",
+            "権限委譲"
+          ]
+        },
+        {
+          "id": "map-18-cue-2",
+          "prompt": "加工の要点を手順書として共有したい。文書化の果は？",
+          "hintChoices": [
+            "マニュアル化",
+            "権限委譲"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-19",
+      "conceptIds": [
+        "fruit-19"
+      ],
+      "case": "III",
+      "intent": "benefit",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-19",
+          "accepted": [
+            "技能承継"
+          ]
+        }
+      ],
+      "explanation": "熟練技能を若手へ承継し将来も維持する。",
+      "source": {
+        "kind": "designed_practice",
+        "refs": [
+          "2025-III-Q2-2",
+          "2025-III-Q4"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-19-cue-1",
+          "prompt": "熟練者が若手に技能を教える。技能を将来へ引き継ぐ効果は？",
+          "hintChoices": [
+            "技能承継",
+            "新規顧客開拓"
+          ]
+        },
+        {
+          "id": "map-19-cue-2",
+          "prompt": "若手へ加工技能を教え熟練者の退職後も維持する。技能面の果は？",
+          "hintChoices": [
+            "技能承継",
+            "新規顧客開拓"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-20",
+      "conceptIds": [
+        "fruit-20"
+      ],
+      "case": "III",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-20",
+          "accepted": [
+            "発注基準の明確化",
+            "発注基準明確化"
+          ]
+        }
+      ],
+      "explanation": "発注点や数量などの判断基準を明確にする。",
+      "source": {
+        "kind": "designed_practice",
+        "refs": [
+          "2023-III-Q3",
+          "2025-III-Q3"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-20-cue-1",
+          "prompt": "担当者の感覚で発注し過不足が起きる。判断基準についての施策は？",
+          "hintChoices": [
+            "発注基準の明確化",
+            "技能承継"
+          ]
+        },
+        {
+          "id": "map-20-cue-2",
+          "prompt": "いつ・いくつ発注するか曖昧。発注判断を揃える果は？",
+          "hintChoices": [
+            "発注基準の明確化",
+            "技能承継"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-21",
+      "conceptIds": [
+        "fruit-21"
+      ],
+      "case": "I",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-21",
+          "accepted": [
+            "新市場開拓"
+          ]
+        }
+      ],
+      "explanation": "未進出市場を開拓する。同じ市場で新規客を増やすことと区別する。",
+      "source": {
+        "kind": "designed_practice",
+        "refs": [
+          "2023-I-Q4-2",
+          "2024-I-Q2"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-21-cue-1",
+          "prompt": "既存市場への依存を減らし、未進出の市場へ事業を広げたい。市場面の施策は？",
+          "hintChoices": [
+            "新市場開拓",
+            "新規顧客開拓"
+          ]
+        },
+        {
+          "id": "map-21-cue-2",
+          "prompt": "今まで進出していない市場へ事業展開する。市場を対象とした果は？",
+          "hintChoices": [
+            "新市場開拓",
+            "新規顧客開拓"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-22",
+      "conceptIds": [
+        "fruit-22"
+      ],
+      "case": "I",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-22",
+          "accepted": [
+            "成果主義"
+          ]
+        }
+      ],
+      "explanation": "成果を重視する評価・報酬とする。公平性そのものとは同義にしない。",
+      "source": {
+        "kind": "designed_practice",
+        "refs": [
+          "2024-I-Q4-1",
+          "2024-I-Q4-2"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-22-cue-1",
+          "prompt": "勤続年数中心の評価から、仕事の成果を重視する評価へ変える。評価方針は？",
+          "hintChoices": [
+            "成果主義",
+            "年功序列"
+          ]
+        },
+        {
+          "id": "map-22-cue-2",
+          "prompt": "在籍期間よりも仕事の成果を評価・報酬へ反映したい。評価方針の果は？",
+          "hintChoices": [
+            "成果主義",
+            "年功序列"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-23",
+      "conceptIds": [
+        "fruit-23"
+      ],
+      "case": "I",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-23",
+          "accepted": [
+            "全社会議"
+          ]
+        }
+      ],
+      "explanation": "全社会議を開催し方針・課題を共有する。会議という手段と連携という効果を区別する。",
+      "source": {
+        "kind": "designed_practice",
+        "refs": [
+          "2023-I-Q4-1",
+          "2024-I-Q4-2"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-23-cue-1",
+          "prompt": "部署内の共有だけでは他部署の方針が伝わらない。全社で集まる会議の施策は？",
+          "hintChoices": [
+            "全社会議",
+            "事業部間連携"
+          ]
+        },
+        {
+          "id": "map-23-cue-2",
+          "prompt": "部署を越えて方針や課題を共有したい。全社で開催する会議は？",
+          "hintChoices": [
+            "全社会議",
+            "事業部間連携"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-24",
+      "conceptIds": [
+        "fruit-24"
+      ],
+      "case": "I",
+      "intent": "benefit",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-24",
+          "accepted": [
+            "事業部間連携"
+          ]
+        }
+      ],
+      "explanation": "事業部間の連携を高める。会議開催という手段だけで効果を代用しない。",
+      "source": {
+        "kind": "designed_practice",
+        "refs": [
+          "2024-I-Q4-1",
+          "2024-I-Q4-2"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-24-cue-1",
+          "prompt": "事業部同士が情報や資源を共有し協力する。部門関係の効果は？",
+          "hintChoices": [
+            "事業部間連携",
+            "全社会議"
+          ]
+        },
+        {
+          "id": "map-24-cue-2",
+          "prompt": "事業部の壁を越えて互いに協力するようになった。連携面の果は？",
+          "hintChoices": [
+            "事業部間連携",
+            "全社会議"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-25",
+      "conceptIds": [
+        "fruit-25"
+      ],
+      "case": "I",
+      "intent": "weakness",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-25",
+          "accepted": [
+            "教育制度の未整備"
+          ]
+        }
+      ],
+      "explanation": "教育のばらつきを制度の未整備としてまとめる。施策のOJTとは分ける。",
+      "source": {
+        "kind": "review_stock",
+        "refs": [
+          "src/data/reviewFruitStock.ts#stock-I-education-system"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-25-cue-1",
+          "prompt": "教育を拠点責任者に任せ、内容・水準が揃わない。制度面の弱みは？",
+          "hintChoices": [
+            "教育制度の未整備",
+            "計画的OJT"
+          ]
+        },
+        {
+          "id": "map-25-cue-2",
+          "prompt": "各拠点で教える内容が異なる。教育制度上の不足としてまとめると？",
+          "hintChoices": [
+            "教育制度の未整備",
+            "計画的OJT"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-26",
+      "conceptIds": [
+        "fruit-26"
+      ],
+      "case": "I",
+      "intent": "weakness",
+      "expectedCount": 2,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-26",
+          "accepted": [
+            "情報共有不足",
+            "情報共有の不足"
+          ]
+        },
+        {
+          "conceptId": "fruit-26",
+          "accepted": [
+            "連携不足",
+            "連携の不足"
+          ]
+        }
+      ],
+      "explanation": "情報共有不足と連携不足を示す。交流の乏しさという現象を弱みへまとめる。",
+      "source": {
+        "kind": "review_stock",
+        "refs": [
+          "src/data/reviewFruitStock.ts#stock-I-coordination-shortage"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-26-cue-1",
+          "prompt": "拠点間で販売・育成方法を共有する機会が乏しい。情報と連携の弱みを2つ。",
+          "hintChoices": [
+            "情報共有不足・連携不足",
+            "定期会議の開催"
+          ]
+        },
+        {
+          "id": "map-26-cue-2",
+          "prompt": "拠点同士の交流がなく、ノウハウが共有されない。情報・連携の不足を2つ。",
+          "hintChoices": [
+            "情報共有不足・連携不足",
+            "定期会議の開催"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-27",
+      "conceptIds": [
+        "fruit-27"
+      ],
+      "case": "III",
+      "intent": "weakness",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-27",
+          "accepted": [
+            "設備管理不足"
+          ]
+        }
+      ],
+      "explanation": "停止という現象の背景にある設備管理不足を示す。",
+      "source": {
+        "kind": "review_stock",
+        "refs": [
+          "src/data/reviewFruitStock.ts#stock-III-equipment-shortage"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-27-cue-1",
+          "prompt": "保守不足や取り付けミスで設備が繰り返し止まる。管理面の弱みは？",
+          "hintChoices": [
+            "設備管理不足",
+            "予防保全"
+          ]
+        },
+        {
+          "id": "map-27-cue-2",
+          "prompt": "設備停止が多く保守・取り付け管理が不十分。管理上の不足は？",
+          "hintChoices": [
+            "設備管理不足",
+            "予防保全"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-28",
+      "conceptIds": [
+        "fruit-28"
+      ],
+      "case": "III",
+      "intent": "weakness",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-28",
+          "accepted": [
+            "在庫管理不足"
+          ]
+        }
+      ],
+      "explanation": "在庫過大を管理面の弱みとしてまとめる。",
+      "source": {
+        "kind": "review_stock",
+        "refs": [
+          "src/data/reviewFruitStock.ts#stock-III-inventory-shortage"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-28-cue-1",
+          "prompt": "部品・仕掛品・製品が過大。管理面の弱みは？",
+          "hintChoices": [
+            "在庫管理不足",
+            "部品の共通化"
+          ]
+        },
+        {
+          "id": "map-28-cue-2",
+          "prompt": "各段階の在庫を持ち過ぎている。管理上の不足としてまとめると？",
+          "hintChoices": [
+            "在庫管理不足",
+            "部品の共通化"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-29",
+      "conceptIds": [
+        "fruit-29"
+      ],
+      "case": "III",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-29",
+          "accepted": [
+            "部品の共通化",
+            "部品共通化"
+          ]
+        }
+      ],
+      "explanation": "類似部品を共通化し部品種類数と在庫を減らす。DRという審査名だけで代用しない。",
+      "source": {
+        "kind": "review_stock",
+        "refs": [
+          "src/data/reviewFruitStock.ts#stock-III-parts-commonality"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-29-cue-1",
+          "prompt": "似た機能・形状の部品が多い。部品種類数を減らす施策は？",
+          "hintChoices": [
+            "部品の共通化",
+            "設計審査"
+          ]
+        },
+        {
+          "id": "map-29-cue-2",
+          "prompt": "機能が似ている部品を別々に使い在庫管理が複雑。共通部品へ置き換える施策は？",
+          "hintChoices": [
+            "部品の共通化",
+            "設計審査"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-30",
+      "conceptIds": [
+        "fruit-30"
+      ],
+      "case": "III",
+      "intent": "desired_state",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-30",
+          "accepted": [
+            "技能継承体制の充実"
+          ]
+        }
+      ],
+      "explanation": "OJTなどの手段ではなく技能を継承できる体制へ着地する。",
+      "source": {
+        "kind": "review_stock",
+        "refs": [
+          "src/data/reviewFruitStock.ts#stock-III-skill-system"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-30-cue-1",
+          "prompt": "熟練者への依存を減らし若手も技能を身に付ける。工場のあるべき姿は？",
+          "hintChoices": [
+            "技能継承体制の充実",
+            "OJT"
+          ]
+        },
+        {
+          "id": "map-30-cue-2",
+          "prompt": "加工技能を若手へ継続的に引き継げる工場にしたい。体制面の姿は？",
+          "hintChoices": [
+            "技能継承体制の充実",
+            "OJT"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-31",
+      "conceptIds": [
+        "fruit-31"
+      ],
+      "case": "III",
+      "intent": "desired_state",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-31",
+          "accepted": [
+            "効率的な作業手配体制の構築"
+          ]
+        }
+      ],
+      "explanation": "指図書などの手段から効率的な作業手配体制へ着地する。",
+      "source": {
+        "kind": "review_stock",
+        "refs": [
+          "src/data/reviewFruitStock.ts#stock-III-dispatch-system"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-31-cue-1",
+          "prompt": "口頭依存を減らし作業手配を迅速・明確にしたい。体制のあるべき姿は？",
+          "hintChoices": [
+            "効率的な作業手配体制の構築",
+            "製造指図書"
+          ]
+        },
+        {
+          "id": "map-31-cue-2",
+          "prompt": "指示が曖昧にならず迅速に手配できる工場にする。手配体制の果は？",
+          "hintChoices": [
+            "効率的な作業手配体制の構築",
+            "製造指図書"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-32",
+      "conceptIds": [
+        "fruit-32"
+      ],
+      "case": "III",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-32",
+          "accepted": [
+            "予防保全"
+          ]
+        }
+      ],
+      "explanation": "設備停止を未然に防ぐため予防保全を行う。TPM全体と同義にしない。",
+      "source": {
+        "kind": "review_stock",
+        "refs": [
+          "src/data/reviewFruitStock.ts#stock-III-preventive-maintenance"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-32-cue-1",
+          "prompt": "保守不足で停止・故障が起きる。故障前に点検する施策は？",
+          "hintChoices": [
+            "予防保全",
+            "設備管理不足"
+          ]
+        },
+        {
+          "id": "map-32-cue-2",
+          "prompt": "壊れてから直す保全から故障を防ぐ保全へ変えたい。果は？",
+          "hintChoices": [
+            "予防保全",
+            "設備管理不足"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-33",
+      "conceptIds": [
+        "fruit-33"
+      ],
+      "case": "III",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-33",
+          "accepted": [
+            "OJT",
+            "実務を通じた指導"
+          ]
+        }
+      ],
+      "explanation": "実務を通じて技能を指導する。あるべき姿の技能継承体制とは分ける。",
+      "source": {
+        "kind": "review_stock",
+        "refs": [
+          "2023-III-Q5",
+          "src/data/reviewFruitStock.ts#stock-III-skill-training"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-33-cue-1",
+          "prompt": "熟練者が若手へ実際の作業中に指導する。育成手段は？",
+          "hintChoices": [
+            "OJT",
+            "技能継承体制の充実"
+          ]
+        },
+        {
+          "id": "map-33-cue-2",
+          "prompt": "若手を実務の中で指導して加工技能を教える。研修手段の果は？",
+          "hintChoices": [
+            "OJT",
+            "技能継承体制の充実"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-34",
+      "conceptIds": [
+        "fruit-34"
+      ],
+      "case": "II",
+      "intent": "benefit",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-34",
+          "accepted": [
+            "客数向上"
+          ]
+        }
+      ],
+      "explanation": "来店人数が増えるため客数向上。購買単価とは区別する。",
+      "source": {
+        "kind": "review_stock",
+        "refs": [
+          "src/data/reviewFruitStock.ts#stock-II-promotion-customer-count"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-34-cue-1",
+          "prompt": "店外への発信で新規来店客を獲得した。人数面の効果は？",
+          "hintChoices": [
+            "客数向上",
+            "客単価向上"
+          ]
+        },
+        {
+          "id": "map-34-cue-2",
+          "prompt": "情報発信により店を訪れる人が増えた。売上要素のうち何が上がる？",
+          "hintChoices": [
+            "客数向上",
+            "客単価向上"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-35",
+      "conceptIds": [
+        "fruit-35"
+      ],
+      "case": "II",
+      "intent": "benefit",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-35",
+          "accepted": [
+            "客単価向上"
+          ]
+        }
+      ],
+      "explanation": "1人当たり購買額が高まるため客単価向上。",
+      "source": {
+        "kind": "review_stock",
+        "refs": [
+          "src/data/reviewFruitStock.ts#stock-II-promotion-unit-price"
+        ]
+      },
+      "cues": [
+        {
+          "id": "map-35-cue-1",
+          "prompt": "店内POPで価値が伝わり高価格品が売れた。1人当たり購買額の効果は？",
+          "hintChoices": [
+            "客単価向上",
+            "客数向上"
+          ]
+        },
+        {
+          "id": "map-35-cue-2",
+          "prompt": "接客による価値訴求で高価格品を購入した。購買額面の果は？",
+          "hintChoices": [
+            "客単価向上",
+            "客数向上"
+          ]
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "id": "map-01-cue-1-recall",
+      "mappingId": "map-01",
+      "cueId": "map-01-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-01-cue-2-recall",
+      "mappingId": "map-01",
+      "cueId": "map-01-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-02-cue-1-recall",
+      "mappingId": "map-02",
+      "cueId": "map-02-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-02-cue-2-recall",
+      "mappingId": "map-02",
+      "cueId": "map-02-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-03-cue-1-recall",
+      "mappingId": "map-03",
+      "cueId": "map-03-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-03-cue-2-recall",
+      "mappingId": "map-03",
+      "cueId": "map-03-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-04-cue-1-recall",
+      "mappingId": "map-04",
+      "cueId": "map-04-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-04-cue-2-recall",
+      "mappingId": "map-04",
+      "cueId": "map-04-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-05-cue-1-recall",
+      "mappingId": "map-05",
+      "cueId": "map-05-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-05-cue-2-recall",
+      "mappingId": "map-05",
+      "cueId": "map-05-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-06-cue-1-recall",
+      "mappingId": "map-06",
+      "cueId": "map-06-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-06-cue-2-recall",
+      "mappingId": "map-06",
+      "cueId": "map-06-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-07-cue-1-recall",
+      "mappingId": "map-07",
+      "cueId": "map-07-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-07-cue-2-recall",
+      "mappingId": "map-07",
+      "cueId": "map-07-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-08-cue-1-recall",
+      "mappingId": "map-08",
+      "cueId": "map-08-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-08-cue-2-recall",
+      "mappingId": "map-08",
+      "cueId": "map-08-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-09-cue-1-recall",
+      "mappingId": "map-09",
+      "cueId": "map-09-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-09-cue-2-recall",
+      "mappingId": "map-09",
+      "cueId": "map-09-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-10-cue-1-recall",
+      "mappingId": "map-10",
+      "cueId": "map-10-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-10-cue-2-recall",
+      "mappingId": "map-10",
+      "cueId": "map-10-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-11-cue-1-recall",
+      "mappingId": "map-11",
+      "cueId": "map-11-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-11-cue-2-recall",
+      "mappingId": "map-11",
+      "cueId": "map-11-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-12-cue-1-recall",
+      "mappingId": "map-12",
+      "cueId": "map-12-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-12-cue-2-recall",
+      "mappingId": "map-12",
+      "cueId": "map-12-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-13-cue-1-recall",
+      "mappingId": "map-13",
+      "cueId": "map-13-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-13-cue-2-recall",
+      "mappingId": "map-13",
+      "cueId": "map-13-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-14-cue-1-recall",
+      "mappingId": "map-14",
+      "cueId": "map-14-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-14-cue-2-recall",
+      "mappingId": "map-14",
+      "cueId": "map-14-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-15-cue-1-recall",
+      "mappingId": "map-15",
+      "cueId": "map-15-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-15-cue-2-recall",
+      "mappingId": "map-15",
+      "cueId": "map-15-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-16-cue-1-recall",
+      "mappingId": "map-16",
+      "cueId": "map-16-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-16-cue-2-recall",
+      "mappingId": "map-16",
+      "cueId": "map-16-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-17-cue-1-recall",
+      "mappingId": "map-17",
+      "cueId": "map-17-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-17-cue-2-recall",
+      "mappingId": "map-17",
+      "cueId": "map-17-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-18-cue-1-recall",
+      "mappingId": "map-18",
+      "cueId": "map-18-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-18-cue-2-recall",
+      "mappingId": "map-18",
+      "cueId": "map-18-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-19-cue-1-recall",
+      "mappingId": "map-19",
+      "cueId": "map-19-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-19-cue-2-recall",
+      "mappingId": "map-19",
+      "cueId": "map-19-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-20-cue-1-recall",
+      "mappingId": "map-20",
+      "cueId": "map-20-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-20-cue-2-recall",
+      "mappingId": "map-20",
+      "cueId": "map-20-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-21-cue-1-recall",
+      "mappingId": "map-21",
+      "cueId": "map-21-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-21-cue-2-recall",
+      "mappingId": "map-21",
+      "cueId": "map-21-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-22-cue-1-recall",
+      "mappingId": "map-22",
+      "cueId": "map-22-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-22-cue-2-recall",
+      "mappingId": "map-22",
+      "cueId": "map-22-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-23-cue-1-recall",
+      "mappingId": "map-23",
+      "cueId": "map-23-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-23-cue-2-recall",
+      "mappingId": "map-23",
+      "cueId": "map-23-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-24-cue-1-recall",
+      "mappingId": "map-24",
+      "cueId": "map-24-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-24-cue-2-recall",
+      "mappingId": "map-24",
+      "cueId": "map-24-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-25-cue-1-recall",
+      "mappingId": "map-25",
+      "cueId": "map-25-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-25-cue-2-recall",
+      "mappingId": "map-25",
+      "cueId": "map-25-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-26-cue-1-recall",
+      "mappingId": "map-26",
+      "cueId": "map-26-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-26-cue-2-recall",
+      "mappingId": "map-26",
+      "cueId": "map-26-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-27-cue-1-recall",
+      "mappingId": "map-27",
+      "cueId": "map-27-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-27-cue-2-recall",
+      "mappingId": "map-27",
+      "cueId": "map-27-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-28-cue-1-recall",
+      "mappingId": "map-28",
+      "cueId": "map-28-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-28-cue-2-recall",
+      "mappingId": "map-28",
+      "cueId": "map-28-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-29-cue-1-recall",
+      "mappingId": "map-29",
+      "cueId": "map-29-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-29-cue-2-recall",
+      "mappingId": "map-29",
+      "cueId": "map-29-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-30-cue-1-recall",
+      "mappingId": "map-30",
+      "cueId": "map-30-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-30-cue-2-recall",
+      "mappingId": "map-30",
+      "cueId": "map-30-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-31-cue-1-recall",
+      "mappingId": "map-31",
+      "cueId": "map-31-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-31-cue-2-recall",
+      "mappingId": "map-31",
+      "cueId": "map-31-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-32-cue-1-recall",
+      "mappingId": "map-32",
+      "cueId": "map-32-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-32-cue-2-recall",
+      "mappingId": "map-32",
+      "cueId": "map-32-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-33-cue-1-recall",
+      "mappingId": "map-33",
+      "cueId": "map-33-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-33-cue-2-recall",
+      "mappingId": "map-33",
+      "cueId": "map-33-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-34-cue-1-recall",
+      "mappingId": "map-34",
+      "cueId": "map-34-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-34-cue-2-recall",
+      "mappingId": "map-34",
+      "cueId": "map-34-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "map-35-cue-1-recall",
+      "mappingId": "map-35",
+      "cueId": "map-35-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "map-35-cue-2-recall",
+      "mappingId": "map-35",
+      "cueId": "map-35-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "contrast-01-1",
+      "mappingId": "map-25",
+      "cueId": "map-25-cue-2",
+      "kind": "contrast",
+      "distractor": "計画的OJT",
+      "contrastExplanation": "弱みを表す制度不足と、育成施策を区別する。"
+    },
+    {
+      "id": "contrast-01-2",
+      "mappingId": "map-03",
+      "cueId": "map-03-cue-2",
+      "kind": "contrast",
+      "distractor": "教育制度の未整備",
+      "contrastExplanation": "弱みを表す制度不足と、育成施策を区別する。"
+    },
+    {
+      "id": "contrast-02-1",
+      "mappingId": "map-28",
+      "cueId": "map-28-cue-2",
+      "kind": "contrast",
+      "distractor": "部品の共通化",
+      "contrastExplanation": "弱みの分析と、類似部品の種類数を減らす施策を区別する。"
+    },
+    {
+      "id": "contrast-02-2",
+      "mappingId": "map-29",
+      "cueId": "map-29-cue-2",
+      "kind": "contrast",
+      "distractor": "在庫管理不足",
+      "contrastExplanation": "弱みの分析と、類似部品の種類数を減らす施策を区別する。"
+    },
+    {
+      "id": "contrast-03-1",
+      "mappingId": "map-27",
+      "cueId": "map-27-cue-2",
+      "kind": "contrast",
+      "distractor": "予防保全",
+      "contrastExplanation": "管理上の弱みと、故障を未然に防ぐ施策を区別する。"
+    },
+    {
+      "id": "contrast-03-2",
+      "mappingId": "map-32",
+      "cueId": "map-32-cue-2",
+      "kind": "contrast",
+      "distractor": "設備管理不足",
+      "contrastExplanation": "管理上の弱みと、故障を未然に防ぐ施策を区別する。"
+    },
+    {
+      "id": "contrast-04-1",
+      "mappingId": "map-30",
+      "cueId": "map-30-cue-2",
+      "kind": "contrast",
+      "distractor": "OJT",
+      "contrastExplanation": "あるべき姿の体制と、実務を通じた指導手段を区別する。"
+    },
+    {
+      "id": "contrast-04-2",
+      "mappingId": "map-33",
+      "cueId": "map-33-cue-2",
+      "kind": "contrast",
+      "distractor": "技能継承体制の充実",
+      "contrastExplanation": "あるべき姿の体制と、実務を通じた指導手段を区別する。"
+    },
+    {
+      "id": "contrast-05-1",
+      "mappingId": "map-34",
+      "cueId": "map-34-cue-2",
+      "kind": "contrast",
+      "distractor": "客単価向上",
+      "contrastExplanation": "来店人数と、1人当たり購買額を区別する。"
+    },
+    {
+      "id": "contrast-05-2",
+      "mappingId": "map-35",
+      "cueId": "map-35-cue-2",
+      "kind": "contrast",
+      "distractor": "客数向上",
+      "contrastExplanation": "来店人数と、1人当たり購買額を区別する。"
+    },
+    {
+      "id": "contrast-06-1",
+      "mappingId": "map-09",
+      "cueId": "map-09-cue-2",
+      "kind": "contrast",
+      "distractor": "顧客ニーズ収集",
+      "contrastExplanation": "情報を届ける活動と、要望を把握する活動を区別する。"
+    },
+    {
+      "id": "contrast-06-2",
+      "mappingId": "map-08",
+      "cueId": "map-08-cue-2",
+      "kind": "contrast",
+      "distractor": "SNSによる情報発信",
+      "contrastExplanation": "情報を届ける活動と、要望を把握する活動を区別する。"
+    }
+  ]
+}

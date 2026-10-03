@@ -1,0 +1,2517 @@
+{
+  "metadata": {
+    "basis": "原語の完全一致。概念統合前の集計。頻出の断定や必須集合の自動選定には使わない。",
+    "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified",
+    "answerUnitCount": 44,
+    "questionGroupCount": 32,
+    "rawKeywordCount": 165
+  },
+  "records": [
+    {
+      "label": "EC販路拡大",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-I-Q2"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-I-Q2"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "HP充実",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-II-Q4"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-II-Q4"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "OJT",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-III-Q5"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-III-Q5"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "QCサークル",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-III-Q2"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-III-Q2-2"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "SNS",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-II-Q3"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-II-Q3"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "SNSニーズ収集",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-II-Q4"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-II-Q4"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "SNS情報発信",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-I-Q2"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-I-Q2"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "WEBサイト未活用",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-II-Q1"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-II-Q1"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "WEB販促力不足",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-II-Q1"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-II-Q1"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "アプリ提供",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-II-Q4"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-II-Q4"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "イベント出店",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-I-Q2"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-I-Q2"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "インタビュー動画",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-II-Q4"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-II-Q4"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "オペレーション改善",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-I-Q2"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-I-Q2"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "オリジナルメニュー",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-I-Q4"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-I-Q4-2"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "オンライン販促力不足",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2024-II-Q1"
+      ],
+      "years": [
+        2024
+      ],
+      "recordIds": [
+        "2024-II-Q1-W"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "クリエイター増加",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2024-II-Q1"
+      ],
+      "years": [
+        2024
+      ],
+      "recordIds": [
+        "2024-II-Q1-O"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "グルメアプリ",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-I-Q4"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-I-Q4-2"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "コミュニケーション力",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-II-Q1"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-II-Q1"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "コミュニケーション強化",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-I-Q4"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-I-Q4-1"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "コミュニティ支援",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-II-Q3"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-II-Q3"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "サブスクリプション",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-II-Q2"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-II-Q2"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "セグメント別価格",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-II-Q2"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-II-Q2"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "セルフケア動画",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-II-Q4"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-II-Q4"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "センス",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2024-II-Q1"
+      ],
+      "years": [
+        2024
+      ],
+      "recordIds": [
+        "2024-II-Q1-S"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "ターゲット明確化",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-I-Q2"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-I-Q2"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "ダイナミックプライシング",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-II-Q2"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-II-Q2"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "データベース",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-III-Q4"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-III-Q4"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "データ一元管理",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-II-Q4"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-II-Q4"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "ニーズ充足",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2024-II-Q3"
+      ],
+      "years": [
+        2024
+      ],
+      "recordIds": [
+        "2024-II-Q3"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "ノウハウ活用",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-III-Q5"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-III-Q5"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "ファン化",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2024-II-Q2"
+      ],
+      "years": [
+        2024
+      ],
+      "recordIds": [
+        "2024-II-Q2"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "ベテラン研修",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-III-Q4"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-III-Q4"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "マイスター制",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-III-Q4"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-III-Q4"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "マニュアル化",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-III-Q2"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-III-Q2-1"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "リーダーシップ",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-I-Q1"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-I-Q1-S"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "レシピライブラリー",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-III-Q4"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-III-Q4"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "レシピ書面化",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-III-Q2"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-III-Q2"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "レンタル",
+      "groupCount": 2,
+      "yearCount": 2,
+      "groups": [
+        "2023-II-Q2",
+        "2024-II-Q3"
+      ],
+      "years": [
+        2023,
+        2024
+      ],
+      "recordIds": [
+        "2023-II-Q2",
+        "2024-II-Q3"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "事業部制",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-I-Q3"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-I-Q3"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "事業部間連携",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2024-I-Q4"
+      ],
+      "years": [
+        2024
+      ],
+      "recordIds": [
+        "2024-I-Q4-1",
+        "2024-I-Q4-2"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "仕入力",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-II-Q1"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-II-Q1"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "仕入調達力不足",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-I-Q1"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-I-Q1-W"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "企画力",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2024-II-Q1"
+      ],
+      "years": [
+        2024
+      ],
+      "recordIds": [
+        "2024-II-Q1-S"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "企画開発力",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-III-Q4"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-III-Q4"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "体験価値",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2024-II-Q2"
+      ],
+      "years": [
+        2024
+      ],
+      "recordIds": [
+        "2024-II-Q2"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "作業指示",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-III-Q2"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-III-Q2"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "価格競争",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-II-Q1"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-II-Q1"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "保管サービス",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2024-II-Q3"
+      ],
+      "years": [
+        2024
+      ],
+      "recordIds": [
+        "2024-II-Q3"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "先入先出",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-III-Q3"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-III-Q3"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "入出庫記録",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-III-Q3"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-III-Q3"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "全社会議",
+      "groupCount": 2,
+      "yearCount": 2,
+      "groups": [
+        "2023-I-Q4",
+        "2024-I-Q4"
+      ],
+      "years": [
+        2023,
+        2024
+      ],
+      "recordIds": [
+        "2023-I-Q4-1",
+        "2024-I-Q4-2"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "公共案件不安定",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-I-Q1"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-I-Q1-T"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "利益責任明確化",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-I-Q3"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-I-Q3"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "加工技術",
+      "groupCount": 2,
+      "yearCount": 2,
+      "groups": [
+        "2023-II-Q1",
+        "2025-I-Q1"
+      ],
+      "years": [
+        2023,
+        2025
+      ],
+      "recordIds": [
+        "2023-II-Q1",
+        "2025-I-Q1-S"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "収益性の低下",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-I-Q1"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-I-Q1-W"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "取引関係",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-III-Q1"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-III-Q1-S"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "受注管理力不足",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2024-I-Q1"
+      ],
+      "years": [
+        2024
+      ],
+      "recordIds": [
+        "2024-I-Q1-W"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "受託生産",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-III-Q1"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-III-Q1"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "品質基準把握",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-III-Q4"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-III-Q4"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "品質維持",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-III-Q2"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-III-Q2-2"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "商品力",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-I-Q1"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-I-Q1-S"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "商品補充",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2024-I-Q3"
+      ],
+      "years": [
+        2024
+      ],
+      "recordIds": [
+        "2024-I-Q3"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "営業体制強化",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-III-Q4"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-III-Q4"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "在庫管理",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2024-I-Q3"
+      ],
+      "years": [
+        2024
+      ],
+      "recordIds": [
+        "2024-I-Q3"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "地元密着",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2024-I-Q3"
+      ],
+      "years": [
+        2024
+      ],
+      "recordIds": [
+        "2024-I-Q3"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "地元素材",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-I-Q4"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-I-Q4-2"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "外国人需要",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2024-II-Q1"
+      ],
+      "years": [
+        2024
+      ],
+      "recordIds": [
+        "2024-II-Q1-O"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "外段取り化",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-III-Q2"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-III-Q2-1"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "外部研修",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-I-Q4"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-I-Q4"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "多品種少量",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-III-Q1"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-III-Q1"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "大学共同研究",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-I-Q2"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-I-Q2"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "女子野球需要",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-II-Q1"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-II-Q1"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "子育て世代",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-I-Q1"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-I-Q1-O"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "安定調達",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-III-Q1"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-III-Q1-S"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "専門部署",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-I-Q4"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-I-Q4-1"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "差別化",
+      "groupCount": 2,
+      "yearCount": 1,
+      "groups": [
+        "2023-I-Q2",
+        "2023-I-Q4"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-I-Q2",
+        "2023-I-Q4-2"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "年功序列脱却",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2024-I-Q4"
+      ],
+      "years": [
+        2024
+      ],
+      "recordIds": [
+        "2024-I-Q4-1"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "店頭POP",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-II-Q3"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-II-Q3"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "後継者育成",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2024-I-Q2"
+      ],
+      "years": [
+        2024
+      ],
+      "recordIds": [
+        "2024-I-Q2"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "情報システム対応",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2024-I-Q4"
+      ],
+      "years": [
+        2024
+      ],
+      "recordIds": [
+        "2024-I-Q4-1"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "情報システム構築",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2024-I-Q3"
+      ],
+      "years": [
+        2024
+      ],
+      "recordIds": [
+        "2024-I-Q3"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "情報システム部",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2024-I-Q4"
+      ],
+      "years": [
+        2024
+      ],
+      "recordIds": [
+        "2024-I-Q4-2"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "情報収集",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-III-Q4"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-III-Q4"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "情報発信力不足",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2024-II-Q1"
+      ],
+      "years": [
+        2024
+      ],
+      "recordIds": [
+        "2024-II-Q1-W"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "感覚価値",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2024-II-Q2"
+      ],
+      "years": [
+        2024
+      ],
+      "recordIds": [
+        "2024-II-Q2"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "成果主義",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2024-I-Q4"
+      ],
+      "years": [
+        2024
+      ],
+      "recordIds": [
+        "2024-I-Q4-1",
+        "2024-I-Q4-2"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "技能承継",
+      "groupCount": 2,
+      "yearCount": 1,
+      "groups": [
+        "2025-III-Q2",
+        "2025-III-Q4"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-III-Q2-2",
+        "2025-III-Q4"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "技術承継体制の不足",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-III-Q1"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-III-Q1-W"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "採用強化",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-I-Q4"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-I-Q4"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "接客強化",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-I-Q2"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-I-Q2"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "提案力",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-II-Q1"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-II-Q1"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "教育訓練",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-I-Q3"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-I-Q3"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "新市場開拓",
+      "groupCount": 2,
+      "yearCount": 2,
+      "groups": [
+        "2023-I-Q4",
+        "2024-I-Q2"
+      ],
+      "years": [
+        2023,
+        2024
+      ],
+      "recordIds": [
+        "2023-I-Q4-2",
+        "2024-I-Q2"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "新規事業に消極的な組織体制",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-I-Q1"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-I-Q1-W"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "新規採用",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2024-I-Q4"
+      ],
+      "years": [
+        2024
+      ],
+      "recordIds": [
+        "2024-I-Q4-2"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "新規開拓力不足",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2024-I-Q1"
+      ],
+      "years": [
+        2024
+      ],
+      "recordIds": [
+        "2024-I-Q1-W"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "新規顧客開拓",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-II-Q4"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-II-Q4"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "方向性共有",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-I-Q4"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-I-Q4-1"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "木育需要",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-I-Q1"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-I-Q1-O"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "柔軟勤務",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-I-Q3"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-I-Q3"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "構想妥当",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-III-Q5"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-III-Q5"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "標準化",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-III-Q2"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-III-Q2"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "権限委譲",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-I-Q3"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-I-Q3"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "機動的組織",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2024-I-Q2"
+      ],
+      "years": [
+        2024
+      ],
+      "recordIds": [
+        "2024-I-Q2"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "次世代リーダー育成",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-I-Q3"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-I-Q3"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "流通加工力",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2024-I-Q1"
+      ],
+      "years": [
+        2024
+      ],
+      "recordIds": [
+        "2024-I-Q1-S"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "海外製品流入",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2024-II-Q1"
+      ],
+      "years": [
+        2024
+      ],
+      "recordIds": [
+        "2024-II-Q1-T"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "混雑緩和",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-II-Q2"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-II-Q2"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "温湿度管理",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2024-I-Q1"
+      ],
+      "years": [
+        2024
+      ],
+      "recordIds": [
+        "2024-I-Q1-S"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "理念浸透",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-I-Q4"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-I-Q4"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "生産体制強化",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-III-Q5"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-III-Q5"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "生産計画日次化",
+      "groupCount": 2,
+      "yearCount": 1,
+      "groups": [
+        "2023-III-Q3",
+        "2023-III-Q5"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-III-Q3",
+        "2023-III-Q5"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "発注基準",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-III-Q3"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-III-Q3"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "発注基準明確化",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-III-Q3"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-III-Q3"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "発注担当者設置",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-III-Q3"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-III-Q3"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "発注数量見直し",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-III-Q3"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-III-Q3"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "直接販売",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2024-II-Q1"
+      ],
+      "years": [
+        2024
+      ],
+      "recordIds": [
+        "2024-II-Q1-S"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "相談サービス",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-II-Q3"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-II-Q3"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "相談会",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-II-Q3"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-II-Q3"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "社内研修",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-III-Q4"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-III-Q4"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "社外イベント",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-I-Q4"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-I-Q4"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "空き時間解消",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-II-Q2"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-II-Q2"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "競争優位",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-I-Q2"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-I-Q2"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "競争激化",
+      "groupCount": 3,
+      "yearCount": 2,
+      "groups": [
+        "2024-II-Q1",
+        "2025-I-Q1",
+        "2025-II-Q1"
+      ],
+      "years": [
+        2024,
+        2025
+      ],
+      "recordIds": [
+        "2024-II-Q1-T",
+        "2025-I-Q1-T",
+        "2025-II-Q1"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "競技別情報",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-II-Q3"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-II-Q3"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "経営理念再定義",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-I-Q4"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-I-Q4"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "経営資源配分",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-I-Q3"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-I-Q3"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "経験活用",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2024-I-Q2"
+      ],
+      "years": [
+        2024
+      ],
+      "recordIds": [
+        "2024-I-Q2"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "自然素材需要",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-I-Q1"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-I-Q1-O"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "自社倉庫",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2024-I-Q1"
+      ],
+      "years": [
+        2024
+      ],
+      "recordIds": [
+        "2024-I-Q1-S"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "若者需要",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2024-II-Q1"
+      ],
+      "years": [
+        2024
+      ],
+      "recordIds": [
+        "2024-II-Q1-O"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "著名人メッセージ",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-II-Q4"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-II-Q4"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "行政PR",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-I-Q2"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-I-Q2"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "製造指図書",
+      "groupCount": 2,
+      "yearCount": 2,
+      "groups": [
+        "2023-III-Q2",
+        "2025-III-Q3"
+      ],
+      "years": [
+        2023,
+        2025
+      ],
+      "recordIds": [
+        "2023-III-Q2",
+        "2025-III-Q3"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "製造時間短縮",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-III-Q2"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-III-Q2-1"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "製造管理力不足",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-III-Q1"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-III-Q1-W"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "規格化",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-III-Q2"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-III-Q2"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "観念価値",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2024-II-Q2"
+      ],
+      "years": [
+        2024
+      ],
+      "recordIds": [
+        "2024-II-Q2"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "計画的OJT",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-III-Q2"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-III-Q2-2"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "計画短サイクル化",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-III-Q3"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-III-Q3"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "評価報酬制度",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-I-Q3"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-I-Q3"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "試着会",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-II-Q3"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-II-Q3"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "調理技術",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-III-Q1"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-III-Q1"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "調達ネットワーク",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-I-Q1"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-I-Q1-S"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "販促力不足",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-II-Q1"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-II-Q1"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "買い取り",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2024-II-Q3"
+      ],
+      "years": [
+        2024
+      ],
+      "recordIds": [
+        "2024-II-Q3"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "買替需要減少",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2024-II-Q1"
+      ],
+      "years": [
+        2024
+      ],
+      "recordIds": [
+        "2024-II-Q1-T"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "身体ケアサービス",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-II-Q3"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-II-Q3"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "輸送サービス",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2024-I-Q3"
+      ],
+      "years": [
+        2024
+      ],
+      "recordIds": [
+        "2024-I-Q3"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "返礼品",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2024-II-Q2"
+      ],
+      "years": [
+        2024
+      ],
+      "recordIds": [
+        "2024-II-Q2"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "適正配置",
+      "groupCount": 2,
+      "yearCount": 2,
+      "groups": [
+        "2023-I-Q3",
+        "2025-I-Q4"
+      ],
+      "years": [
+        2023,
+        2025
+      ],
+      "recordIds": [
+        "2023-I-Q3",
+        "2025-I-Q4"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "金銭負担軽減",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-II-Q2"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-II-Q2"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "関係性",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-I-Q1"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-I-Q1-S"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "関係性強化",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-II-Q4"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-II-Q4"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "関係性構築",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-II-Q3"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-II-Q3"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "集中戦略",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-I-Q2"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-I-Q2"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "離職防止",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-I-Q3"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-I-Q3"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "顧客ニーズ収集",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-III-Q4"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-III-Q4"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "顧客増加",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-II-Q1"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-II-Q1"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "顧客情報蓄積",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-II-Q3"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-II-Q3"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "顧客流出",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-II-Q1"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-II-Q1"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "顧客開拓力不足",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-I-Q1"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-I-Q1-W"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "高品質",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2023-I-Q2"
+      ],
+      "years": [
+        2023
+      ],
+      "recordIds": [
+        "2023-I-Q2"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "高品質製造技術",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-III-Q1"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-III-Q1-S"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    },
+    {
+      "label": "高度な施術力",
+      "groupCount": 1,
+      "yearCount": 1,
+      "groups": [
+        "2025-II-Q1"
+      ],
+      "years": [
+        2025
+      ],
+      "recordIds": [
+        "2025-II-Q1"
+      ],
+      "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+    }
+  ]
+}

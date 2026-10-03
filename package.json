@@ -5,10 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite --configLoader runner --host 0.0.0.0",
-    "build": "tsc -b && vite build --configLoader runner",
-    "preview": "vite preview",
+    "build": "node scripts/build-micro-content.mjs && tsc -b && vite build --configLoader runner",
+    "content:validate": "node scripts/build-micro-content.mjs",
+    "preview": "vite preview --configLoader runner",
     "test": "vitest run --config vitest.config.mjs --configLoader runner",
     "test:watch": "vitest --config vitest.config.mjs --configLoader runner",
+    "test:browser": "node scripts/verify-micro-browser.mjs",
     "lint": "eslint .",
     "format": "prettier --write ."
   },

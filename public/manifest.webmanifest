@@ -1,7 +1,7 @@
 {
   "name": "果トレ — MMC答案トレーニング",
   "short_name": "果トレ",
-  "description": "切り口と果キーワードを鍛える個人学習アプリ",
+  "description": "題意と因から果を思い出す、1分×好きなセット数の個人学習アプリ",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#f5f2ea",

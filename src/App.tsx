@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState, type FormEvent, type ReactNode } from 'react'
 import { NavLink, Route, Routes, useLocation, useNavigate } from 'react-router-dom'
-import { BookOpen, BrainCircuit, ChevronLeft, CircleCheck, Clock3, Download, History, Home, LibraryBig, List, Moon, RefreshCw, RotateCcw, Settings, Sparkles, Sun, Target, Upload } from 'lucide-react'
+import { BookOpen, BrainCircuit, ChevronLeft, CircleCheck, Clock3, Download, History, Home, LibraryBig, Moon, RefreshCw, RotateCcw, Settings, Sparkles, Sun, Target, Upload } from 'lucide-react'
 import type { AppSettings, TrainingResult, WeaknessProfile } from './domain/answer'
 import { isQuestionEligibleForTraining, type Question } from './domain/question'
 import { defaultSettings } from './db/indexedDb'
@@ -21,6 +21,8 @@ import { AssociationTrainingPage } from './features/association/AssociationTrain
 import { AssociationListPage } from './features/association/AssociationListPage'
 import { FeedbackPanel, type Feedback } from './features/weakness/FeedbackPanel'
 import { dashboard, isCorrect, matchesReview, nextStreak, presets, priorityScore, reviewDefaults, studyItems, suggestedTags, tagCatalog, type ReviewFilter } from './features/weakness/weaknessReview'
+import { MicroHome, MicroMaterials, MicroRecords, MicroSessionPage } from './features/micro/MicroPages'
+import { getData as getMicroData } from './features/micro/repository'
 
 type Filter = { years: number[]; cases: string[]; unanswered: boolean; review: boolean; count: number }
 const initialFilter: Filter = { years: [], cases: [], unanswered: false, review: false, count: 10 }
@@ -53,11 +55,15 @@ function App() {
   useEffect(() => { document.documentElement.classList.toggle('dark', settings.darkMode) }, [settings.darkMode])
 
   if (!ready) return <div className="splash"><div className="brand-mark">果</div><p>学習データを準備中…</p></div>
-  if (error) return <div className="splash"><p>{error}</p><button className="btn btn-primary" onClick={() => location.reload()}>再読み込み</button></div>
+  if (error) return <div className="splash"><p>{error}</p><button className="btn btn-primary" onClick={() => location.reload()}>再試行</button></div>
 
   return <AppShell settings={settings} setSettings={setSettings}>
     <Routes>
-      <Route path="/" element={<HomePage questions={questions} associations={associationRecords} profiles={profiles} results={results} />} />
+      <Route path="/" element={<MicroHome />} />
+      <Route path="/micro/session" element={<MicroSessionPage />} />
+      <Route path="/materials" element={<MicroMaterials />} />
+      <Route path="/records" element={<MicroRecords />} />
+      <Route path="/legacy" element={<HomePage questions={questions} associations={associationRecords} profiles={profiles} results={results} />} />
       <Route path="/setup" element={<SetupPage questions={questions} associations={associationRecords} profiles={profiles} results={results} />} />
       <Route path="/training" element={<TrainingPage settings={settings} profiles={profiles} results={results} onSaved={refresh} />} />
       <Route path="/association-training" element={<AssociationTrainingPage settings={settings} profiles={profiles} results={results} onSaved={refresh} />} />
@@ -72,11 +78,24 @@ function App() {
 
 function AppShell({ children, settings, setSettings }: { children: ReactNode; settings: AppSettings; setSettings: (s: AppSettings) => void }) {
   const location = useLocation()
-  const hideNav = location.pathname === '/training' || location.pathname === '/association-training'
+  const [updateReady, setUpdateReady] = useState(Boolean((window as Window & { kahotoreUpdateReady?: boolean }).kahotoreUpdateReady))
+  const [openMicro, setOpenMicro] = useState(false)
+  useEffect(() => {
+    const ready = () => setUpdateReady(true)
+    window.addEventListener('kahotore-update-ready', ready)
+    return () => window.removeEventListener('kahotore-update-ready', ready)
+  }, [])
+  useEffect(() => {
+    const check = () => { void getMicroData().then(data => setOpenMicro(Boolean(data.session))) }
+    check(); window.addEventListener('kahotore-session-changed', check)
+    return () => window.removeEventListener('kahotore-session-changed', check)
+  }, [location.pathname, updateReady])
+  const hideNav = location.pathname === '/training' || location.pathname === '/association-training' || location.pathname === '/micro/session'
   return <div className="app-shell">
-    <header className="topbar"><NavLink to="/" className="brand"><span className="brand-mark small">果</span><span>果トレ</span></NavLink><button className="icon-btn" aria-label="配色を切り替える" onClick={() => { const next = { ...settings, darkMode: !settings.darkMode }; setSettings(next); void progressRepository.saveSettings(next) }}>{settings.darkMode ? <Sun /> : <Moon />}</button></header>
+    <header className="topbar"><NavLink to="/" className="brand"><span className="brand-mark small">果</span><span>果トレ</span></NavLink><div style={{ display: 'flex' }}><NavLink className="icon-btn" to="/settings" aria-label="設定"><Settings /></NavLink><button className="icon-btn" aria-label="配色を切り替える" onClick={() => { const next = { ...settings, darkMode: !settings.darkMode }; setSettings(next); void progressRepository.saveSettings(next) }}>{settings.darkMode ? <Sun /> : <Moon />}</button></div></header>
     <main className={hideNav ? 'main training-main' : 'main'}>{children}</main>
-    {!hideNav && <nav className="bottom-nav" aria-label="メインナビゲーション"><NavItem to="/" icon={<Home />} label="ホーム" /><NavItem to="/setup" icon={<BrainCircuit />} label="演習" /><NavItem to="/overview" icon={<List />} label="一覧" /><NavItem to="/history" icon={<History />} label="履歴" /><NavItem to="/settings" icon={<Settings />} label="設定" /></nav>}
+    {updateReady && !openMicro && (!hideNav || location.pathname === '/micro/session') && <div className="micro-update" role="status">新しい教材・画面を準備できた。<button className="btn btn-ghost" onClick={() => window.dispatchEvent(new Event('kahotore-apply-update'))}>更新する</button></div>}
+    {!hideNav && <nav className="bottom-nav" aria-label="メインナビゲーション"><NavItem to="/" icon={<Home />} label="今日" /><NavItem to="/materials" icon={<BookOpen />} label="教材" /><NavItem to="/records" icon={<History />} label="記録" /></nav>}
   </div>
 }
 

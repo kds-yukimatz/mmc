@@ -61,9 +61,17 @@ export interface QuestionRepository {
 
 class DexieQuestionRepository implements QuestionRepository {
   async initialize() {
-    const response = await fetch('./data/kahotore_mmc_base_v2.json')
-    if (!response.ok) throw new Error('問題データを読み込めませんでした')
-    const data = (await response.json()) as QuestionData
+    let data: QuestionData
+    try {
+      const response = await fetch('./data/kahotore_mmc_base_v2.json')
+      if (!response.ok) throw new Error('教材データを読み込めませんでした')
+      data = (await response.json()) as QuestionData
+      if (!Array.isArray(data.records) || !data.records.length || data.records.some(r => !r.id || !Array.isArray(r.fruit_keywords))) throw new Error('教材形式が不正')
+    } catch {
+      const saved = await db.questions.toArray()
+      if (saved.some(q => !q.privateImport && q.id && Array.isArray(q.fruitKeywords) && Array.isArray(q.cuts))) return
+      throw new Error('最初にオンラインで教材を準備してね')
+    }
     const questions = data.records.map(mapQuestion)
     await db.transaction('rw', db.questions, db.trainingResults, async () => {
       const existingResults = await db.trainingResults.toArray()

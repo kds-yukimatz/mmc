@@ -4,14 +4,15 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
   base: './',
+  cacheDir: '.vite',
   plugins: [
     react(),
     VitePWA({
-      registerType: 'autoUpdate',
+      registerType: 'prompt',
       includeAssets: ['icons/icon-192.png', 'icons/icon-512.png'],
       manifest: false,
       workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,png,json}'],
+        globPatterns: ['**/*.{js,css,html,ico,png,json,webmanifest}'],
         runtimeCaching: [
           {
             urlPattern: /\/data\/kahotore_mmc_base_v2\.json$/,

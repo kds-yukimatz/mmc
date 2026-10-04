@@ -4,6 +4,7 @@ import { db } from '../../db/indexedDb'
 import type { Grade, Session } from './domain'
 import { intentLabels } from './domain'
 import { addDays, exactMatch, localDate, phase, stable } from './engine'
+import { rollingFruitStamps } from './gamification'
 import {
   confirm,
   content,
@@ -69,8 +70,26 @@ function Progress({
 export function MicroHome() {
   const { data, error } = useData(),
     navigate = useNavigate()
+  const [today, setToday] = useState(() => localDate())
   const [busy, setBusy] = useState(false),
     [failure, setFailure] = useState('')
+  useEffect(() => {
+    const nextMidnight =
+      new Date(`${addDays(localDate(), 1)}T00:00:00+09:00`).getTime() + 25
+    const refreshToday = () => setToday(localDate())
+    const timer = window.setTimeout(
+      refreshToday,
+      Math.max(0, nextMidnight - Date.now()),
+    )
+    const refreshWhenVisible = () => {
+      if (!document.hidden) refreshToday()
+    }
+    document.addEventListener('visibilitychange', refreshWhenVisible)
+    return () => {
+      window.clearTimeout(timer)
+      document.removeEventListener('visibilitychange', refreshWhenVisible)
+    }
+  }, [today])
   const begin = async (coverage = false) => {
     setBusy(true)
     try {
@@ -92,7 +111,7 @@ export function MicroHome() {
           c.mandatory && !data.states[c.mandatoryMappingId!]?.firstConfirmedAt,
       ).length
     : 0
-  const today = localDate(),
+  const stamps = data ? rollingFruitStamps(data.attempts, today) : [],
     due = data
       ? Object.values(data.states).filter(
           (s) => s.dueAt && s.dueAt <= new Date().toISOString(),
@@ -116,6 +135,45 @@ export function MicroHome() {
           {data?.session ? '続きから開く' : '1分はじめる'}
         </button>
       </section>
+      {data && (
+        <section className="micro-panel fruit-stamps" aria-labelledby="fruit-stamps-title">
+          <p className="eyebrow">果スタンプ</p>
+          <h2 id="fruit-stamps-title">
+            直近7日 {stamps.filter((day) => day.earned).length}/7日
+          </h2>
+          <ol aria-label="直近7日の果スタンプ">
+            {stamps.map((day) => {
+              const isToday = day.date === today
+              const label = new Intl.DateTimeFormat('ja-JP', {
+                timeZone: 'Asia/Tokyo',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+              }).format(new Date(`${day.date}T00:00:00+09:00`))
+              const dayStatus = day.earned ? '果を獲得' : '未獲得'
+              return (
+                <li
+                  key={day.date}
+                  aria-label={`${label}、${dayStatus}${isToday ? '、今日' : ''}`}
+                  className={day.earned ? 'earned' : ''}
+                >
+                  <span aria-hidden="true">{day.earned ? '果' : '・'}</span>
+                  <time dateTime={day.date} aria-hidden="true">
+                    {new Intl.DateTimeFormat('ja-JP', {
+                      timeZone: 'Asia/Tokyo',
+                      month: 'numeric',
+                      day: 'numeric',
+                    }).format(new Date(`${day.date}T00:00:00+09:00`))}
+                  </time>
+                </li>
+              )
+            })}
+          </ol>
+          <p role="status">
+            {stamps[6].earned ? '今日の果を獲得' : '1問確認すると今日の果がつく'}
+          </p>
+        </section>
+      )}
       <section className="micro-panel abstraction-entry">
         <p className="eyebrow">新しい練習</p><h2>与件を読む前の練習</h2>
         <p>題意から検索する棚と代表候補を置く。</p>

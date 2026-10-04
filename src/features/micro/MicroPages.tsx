@@ -118,7 +118,8 @@ export function MicroHome() {
         ).length
       : 0
   return (
-    <div className="page micro-page">
+    <div className="page micro-page micro-home-page">
+      <div className="micro-home-snapshot">
       <section className="micro-hero">
         <p className="eyebrow">1分 × 好きなセット数</p>
         <h1>
@@ -137,10 +138,12 @@ export function MicroHome() {
       </section>
       {data && (
         <section className="micro-panel fruit-stamps" aria-labelledby="fruit-stamps-title">
-          <p className="eyebrow">果スタンプ</p>
-          <h2 id="fruit-stamps-title">
-            直近7日 {stamps.filter((day) => day.earned).length}/7日
-          </h2>
+          <header className="fruit-stamps-heading">
+            <p className="eyebrow">果スタンプ</p>
+            <h2 id="fruit-stamps-title">
+              直近7日 {stamps.filter((day) => day.earned).length}/7日
+            </h2>
+          </header>
           <ol aria-label="直近7日の果スタンプ">
             {stamps.map((day) => {
               const isToday = day.date === today
@@ -174,6 +177,7 @@ export function MicroHome() {
           </p>
         </section>
       )}
+      </div>
       <section className="micro-panel abstraction-entry">
         <p className="eyebrow">新しい練習</p><h2>与件を読む前の練習</h2>
         <p>題意から検索する棚と代表候補を置く。</p>

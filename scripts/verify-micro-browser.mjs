@@ -365,10 +365,10 @@ try {
   await page.evaluate(() =>
     window.dispatchEvent(new Event('kahotore-update-ready')),
   )
-  assert.equal(
-    await page.getByRole('button', { name: '更新する', exact: true }).count(),
-    0,
-  )
+  await page.locator('.micro-update').getByText('セットを終了すると更新できます。').waitFor()
+  assert.equal(await page.locator('.micro-update-resume a').count(), 1)
+  assert.equal(await page.locator('.micro-update-resume a').getAttribute('href'), '#/micro/session')
+  assert.equal(await page.getByRole('button', { name: '更新する', exact: true }).isDisabled(), true)
   await page.evaluate(() => {
     Object.defineProperty(document, 'hidden', {
       configurable: true,
@@ -395,6 +395,7 @@ try {
   await page.getByRole('button', { name: '続きから', exact: true }).click()
   await enter(page, 'ここで終わる')
   await page.getByRole('button', { name: '更新する', exact: true }).waitFor()
+  assert.equal(await page.getByRole('button', { name: '更新する', exact: true }).isDisabled(), false)
   record('セット中の更新は保留し、終了後に更新操作を表示')
   const after = await page.evaluate(async () => {
     const { db } = await import('/src/db/indexedDb.ts')
@@ -410,10 +411,27 @@ try {
   await page.goto(origin)
   await page.getByRole('button', { name: '1分はじめる', exact: true }).waitFor()
   record('旧教材のネットワーク失敗時も有効なDB教材で起動')
-  assert.equal(
-    await page.evaluate(() => document.documentElement.scrollWidth > 360),
-    false,
-  )
+  for (const [width, height] of [[320, 568], [393, 667]]) {
+    await page.setViewportSize({ width, height })
+    await page.waitForTimeout(80)
+    const geometry = await page.evaluate(() => {
+      const nav = document.querySelector('.bottom-nav').getBoundingClientRect()
+      const stamps = document.querySelector('.fruit-stamps').getBoundingClientRect()
+      const start = document.querySelector('.micro-start').getBoundingClientRect()
+      return {
+        overflow: document.documentElement.scrollWidth > document.documentElement.clientWidth + 1,
+        dates: document.querySelectorAll('.fruit-stamps li').length,
+        stampsBottom: stamps.bottom,
+        navTop: nav.top,
+        startHeight: start.height,
+      }
+    })
+    assert.equal(geometry.overflow, false, `horizontal overflow at ${width}px`)
+    assert.equal(geometry.dates, 7, `seven stamp dates at ${width}px`)
+    assert.ok(geometry.stampsBottom <= geometry.navTop, `stamps above nav at ${width}x${height}`)
+    assert.ok(geometry.startHeight >= 50, `CTA at least 50px at ${width}px`)
+  }
+  record('ホームのCTAと7日分の果スタンプが320×568・393×667で固定ナビより上に表示')
   const controls = await page
     .locator('.micro-page button')
     .evaluateAll((elements) =>

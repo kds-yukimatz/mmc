@@ -383,6 +383,28 @@ button:focus-visible,input:focus-visible { outline:3px solid #4d9eef; outline-of
 .micro-answer { font-size:24px; font-weight:800; }
 .micro-session-meta { display:flex; flex-wrap:wrap; gap:8px; justify-content:space-between; }
 .micro-update { margin:16px; padding:16px; border:1px solid var(--line); background:var(--paper); }
+.micro-update { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:8px 16px; }
+.micro-update .btn { width:auto; min-height:44px; }
+.micro-update-resume { display:flex; flex-wrap:wrap; gap:8px 16px; }
+.micro-update-resume a { min-height:44px; display:flex; align-items:center; color:var(--ink); }
+
+/* Keep the home action and all seven stamps above the fixed phone navigation. */
+.micro-home-snapshot { padding-top:16px; }
+.micro-home-page { padding-top:0; }
+.micro-home-snapshot .micro-hero { padding:0 0 8px; }
+.micro-home-snapshot .micro-hero .eyebrow { margin-bottom:4px; }
+.micro-home-snapshot .micro-hero h1 { margin:0; font-size:26px; line-height:1.35; }
+.micro-home-snapshot .micro-hero > p:not(.eyebrow) { margin:4px 0 0; font-size:14px; line-height:1.5; }
+.micro-home-snapshot .micro-start { min-height:50px; margin-top:8px; }
+.micro-home-snapshot .fruit-stamps { margin:8px 0; padding:12px; }
+.fruit-stamps-heading { display:flex; flex-wrap:wrap; align-items:baseline; gap:0 10px; }
+.fruit-stamps-heading .eyebrow { margin:0; font-size:13px; }
+.micro-home-snapshot .fruit-stamps h2 { margin:0; font-size:16px; line-height:1.4; }
+.micro-home-snapshot .fruit-stamps ol { gap:4px; margin:8px 0; }
+.micro-home-snapshot .fruit-stamps li { padding:4px 1px; gap:2px; border-radius:9px; font-size:11px; }
+.micro-home-snapshot .fruit-stamps li > span { width:24px; max-width:24px; font-size:13px; }
+.micro-home-snapshot .fruit-stamps time { font-size:clamp(9px,2.8vw,11px); }
+.micro-home-snapshot .fruit-stamps p[role=status] { margin:0; font-size:13px; line-height:1.4; }
 :focus-visible { outline:3px solid #4d9eef; outline-offset:3px; }
 @media (max-width:380px) { .micro-page { padding:20px 16px 36px; } .micro-panel { padding:16px; } }
 

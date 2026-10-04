@@ -87,22 +87,44 @@ function AppShell({ children, settings, setSettings }: { children: ReactNode; se
   const location = useLocation()
   const [updateReady, setUpdateReady] = useState(Boolean((window as Window & { kahotoreUpdateReady?: boolean }).kahotoreUpdateReady))
   const [openMicro, setOpenMicro] = useState(false)
+  const [openAbstraction, setOpenAbstraction] = useState(false)
+  const [sessionStatusReady, setSessionStatusReady] = useState(false)
   useEffect(() => {
     const ready = () => setUpdateReady(true)
     window.addEventListener('kahotore-update-ready', ready)
     return () => window.removeEventListener('kahotore-update-ready', ready)
   }, [])
   useEffect(() => {
-    const check = () => { void Promise.all([getMicroData(), getOpenAbstractionSession()]).then(([micro, abstraction]) => setOpenMicro(Boolean(micro.session || abstraction))) }
+    const check = () => { void Promise.all([getMicroData(), getOpenAbstractionSession()]).then(([micro, abstraction]) => { setOpenMicro(Boolean(micro.session)); setOpenAbstraction(Boolean(abstraction)); setSessionStatusReady(true) }) }
     check(); window.addEventListener('kahotore-session-changed', check)
     const timer = window.setInterval(check, updateReady ? 1500 : 15000)
     return () => { window.clearInterval(timer); window.removeEventListener('kahotore-session-changed', check) }
   }, [location.pathname, updateReady])
   const hideNav = location.pathname === '/training' || location.pathname === '/association-training' || location.pathname === '/micro/session' || location.pathname === '/abstraction/training'
+  const applyUpdate = async () => {
+    try {
+      const [micro, abstraction] = await Promise.all([getMicroData(), getOpenAbstractionSession()])
+      setOpenMicro(Boolean(micro.session))
+      setOpenAbstraction(Boolean(abstraction))
+      setSessionStatusReady(true)
+      if (!micro.session && !abstraction) window.dispatchEvent(new Event('kahotore-apply-update'))
+    } catch {
+      setSessionStatusReady(false)
+    }
+  }
   return <div className="app-shell">
     <header className="topbar"><NavLink to="/" className="brand"><span className="brand-mark small">果</span><span>果トレ</span></NavLink><div style={{ display: 'flex' }}><NavLink className="icon-btn" to="/settings" aria-label="設定"><Settings /></NavLink><button className="icon-btn" aria-label="配色を切り替える" onClick={() => { const next = { ...settings, darkMode: !settings.darkMode }; setSettings(next); void progressRepository.saveSettings(next) }}>{settings.darkMode ? <Sun /> : <Moon />}</button></div></header>
+    {updateReady && <div className="micro-update" role="status">
+      {openMicro || openAbstraction ? <>
+        <span>セットを終了すると更新できます。</span>
+        <div className="micro-update-resume">
+          {openMicro && <NavLink to="/micro/session">1分セットを再開</NavLink>}
+          {openAbstraction && <NavLink to="/abstraction/training">題意セットを再開</NavLink>}
+        </div>
+      </> : <span>{sessionStatusReady ? '新しい教材・画面を準備できた。' : '更新できるセッションを確認中…'}</span>}
+      <button className="btn btn-ghost" disabled={!sessionStatusReady || openMicro || openAbstraction} onClick={() => void applyUpdate()}>更新する</button>
+    </div>}
     <main className={hideNav ? 'main training-main' : 'main'}>{children}</main>
-    {updateReady && !openMicro && (!hideNav || location.pathname === '/micro/session' || location.pathname === '/abstraction/training') && <div className="micro-update" role="status">新しい教材・画面を準備できた。<button className="btn btn-ghost" onClick={() => window.dispatchEvent(new Event('kahotore-apply-update'))}>更新する</button></div>}
     {!hideNav && <nav className="bottom-nav" aria-label="メインナビゲーション"><NavItem to="/" icon={<Home />} label="今日" /><NavItem to="/materials" icon={<BookOpen />} label="教材" /><NavItem to="/records" icon={<History />} label="記録" /></nav>}
   </div>
 }

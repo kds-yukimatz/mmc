@@ -1,0 +1,1282 @@
+{
+  "schema_version": 1,
+  "metadata": {
+    "version": "1.0.0",
+    "base_commit": "73eedad5b7124590242bb844f09b8af8dd353394",
+    "note": "与件を読む前の検索範囲・代表候補を練習する設計者作成教材。MMC原文・KM原本の転記ではない。"
+  },
+  "frameworks": [
+    {
+      "id": "fw-swot",
+      "label": "SWOT",
+      "synonyms": [
+        "SWOT分析"
+      ],
+      "rules": []
+    },
+    {
+      "id": "fw-3c",
+      "label": "3C",
+      "synonyms": [
+        "3C分析"
+      ],
+      "rules": []
+    },
+    {
+      "id": "fw-4p",
+      "label": "4P",
+      "synonyms": [
+        "4P分析"
+      ],
+      "rules": []
+    }
+  ],
+  "categories": [
+    {
+      "id": "cat-info",
+      "label": "情報活用",
+      "synonyms": [
+        "情報管理"
+      ],
+      "rules": [],
+      "cases": [
+        "I",
+        "II",
+        "III"
+      ]
+    },
+    {
+      "id": "cat-relationship",
+      "label": "関係性マーケティング",
+      "synonyms": [
+        "関係性",
+        "顧客関係"
+      ],
+      "rules": [],
+      "cases": [
+        "II"
+      ]
+    },
+    {
+      "id": "cat-hr",
+      "label": "人事",
+      "synonyms": [
+        "人的資源管理",
+        "人材育成"
+      ],
+      "rules": [],
+      "cases": [
+        "I",
+        "III"
+      ]
+    },
+    {
+      "id": "cat-org",
+      "label": "組織",
+      "synonyms": [
+        "組織構造",
+        "組織管理"
+      ],
+      "rules": [],
+      "cases": [
+        "I"
+      ]
+    },
+    {
+      "id": "cat-production",
+      "label": "生産管理",
+      "synonyms": [
+        "生産計画・生産実施"
+      ],
+      "rules": [],
+      "cases": [
+        "III"
+      ]
+    },
+    {
+      "id": "cat-procurement",
+      "label": "資材管理",
+      "synonyms": [
+        "調達・在庫管理"
+      ],
+      "rules": [],
+      "cases": [
+        "III"
+      ]
+    },
+    {
+      "id": "cat-quality",
+      "label": "品質管理",
+      "synonyms": [
+        "品質維持管理"
+      ],
+      "rules": [],
+      "cases": [
+        "III"
+      ]
+    },
+    {
+      "id": "cat-work",
+      "label": "作業改善",
+      "synonyms": [
+        "作業管理"
+      ],
+      "rules": [],
+      "cases": [
+        "III"
+      ]
+    },
+    {
+      "id": "cat-market-analysis",
+      "label": "市場・顧客分析",
+      "synonyms": [
+        "外部環境分析"
+      ],
+      "rules": [],
+      "cases": [
+        "I",
+        "II"
+      ]
+    },
+    {
+      "id": "cat-resource-analysis",
+      "label": "自社資源分析",
+      "synonyms": [
+        "内部環境分析"
+      ],
+      "rules": [],
+      "cases": [
+        "I",
+        "II",
+        "III"
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "kf-information-send",
+      "label": "情報発信",
+      "synonyms": [
+        "顧客への情報発信"
+      ],
+      "rules": [],
+      "category_ids": [
+        "cat-info"
+      ],
+      "micro_concept_ids": []
+    },
+    {
+      "id": "kf-information-collect",
+      "label": "情報収集",
+      "synonyms": [
+        "顧客ニーズ収集",
+        "顧客ニーズ把握"
+      ],
+      "rules": [],
+      "category_ids": [
+        "cat-info"
+      ],
+      "micro_concept_ids": [
+        "fruit-08"
+      ]
+    },
+    {
+      "id": "kf-customer-info",
+      "label": "顧客情報活用",
+      "synonyms": [
+        "顧客情報共有",
+        "顧客情報を共有",
+        "顧客情報の共有",
+        "顧客DBを共有",
+        "情報共有"
+      ],
+      "rules": [
+        {
+          "allOf": [
+            "顧客"
+          ],
+          "anyOf": [
+            "情報共有",
+            "情報を共有",
+            "情報の共有",
+            "DBを共有",
+            "部門間で活用"
+          ],
+          "noneOf": [
+            "未共有",
+            "共有不足",
+            "未活用",
+            "活用不足",
+            "流出",
+            "情報収集",
+            "情報発信"
+          ]
+        }
+      ],
+      "category_ids": [
+        "cat-info"
+      ],
+      "micro_concept_ids": []
+    },
+    {
+      "id": "kf-dialogue",
+      "label": "双方向コミュニケーション",
+      "synonyms": [
+        "顧客との対話",
+        "双方向の情報交換"
+      ],
+      "rules": [],
+      "category_ids": [
+        "cat-relationship"
+      ],
+      "micro_concept_ids": []
+    },
+    {
+      "id": "kf-relationship",
+      "label": "関係性構築",
+      "synonyms": [
+        "関係性強化",
+        "顧客関係強化"
+      ],
+      "rules": [],
+      "category_ids": [
+        "cat-relationship"
+      ],
+      "micro_concept_ids": [
+        "fruit-10"
+      ]
+    },
+    {
+      "id": "kf-customer-store",
+      "label": "顧客情報蓄積",
+      "synonyms": [
+        "顧客情報の蓄積"
+      ],
+      "rules": [],
+      "category_ids": [
+        "cat-info"
+      ],
+      "micro_concept_ids": []
+    },
+    {
+      "id": "kf-proposal",
+      "label": "個別提案",
+      "synonyms": [
+        "顧客別提案",
+        "個別サービス提案"
+      ],
+      "rules": [],
+      "category_ids": [
+        "cat-relationship"
+      ],
+      "micro_concept_ids": []
+    },
+    {
+      "id": "kf-placement",
+      "label": "適正配置",
+      "synonyms": [
+        "人員配置の最適化"
+      ],
+      "rules": [],
+      "category_ids": [
+        "cat-hr"
+      ],
+      "micro_concept_ids": [
+        "fruit-01"
+      ]
+    },
+    {
+      "id": "kf-evaluation",
+      "label": "評価報酬制度整備",
+      "synonyms": [
+        "評価報酬制度",
+        "人事評価制度整備"
+      ],
+      "rules": [],
+      "category_ids": [
+        "cat-hr"
+      ],
+      "micro_concept_ids": []
+    },
+    {
+      "id": "kf-development",
+      "label": "人材育成",
+      "synonyms": [
+        "教育訓練",
+        "能力開発"
+      ],
+      "rules": [],
+      "category_ids": [
+        "cat-hr"
+      ],
+      "micro_concept_ids": []
+    },
+    {
+      "id": "kf-retention",
+      "label": "定着促進",
+      "synonyms": [
+        "離職防止",
+        "人材定着"
+      ],
+      "rules": [],
+      "category_ids": [
+        "cat-hr"
+      ],
+      "micro_concept_ids": []
+    },
+    {
+      "id": "kf-flexible-work",
+      "label": "柔軟な勤務形態",
+      "synonyms": [
+        "柔軟勤務",
+        "働き方の柔軟化"
+      ],
+      "rules": [],
+      "category_ids": [
+        "cat-hr"
+      ],
+      "micro_concept_ids": [
+        "fruit-07"
+      ]
+    },
+    {
+      "id": "kf-org-dialogue",
+      "label": "社内コミュニケーション",
+      "synonyms": [
+        "コミュニケーション強化",
+        "部門間コミュニケーション"
+      ],
+      "rules": [],
+      "category_ids": [
+        "cat-org"
+      ],
+      "micro_concept_ids": []
+    },
+    {
+      "id": "kf-vision",
+      "label": "方針共有",
+      "synonyms": [
+        "方向性共有",
+        "ビジョン共有"
+      ],
+      "rules": [],
+      "category_ids": [
+        "cat-org"
+      ],
+      "micro_concept_ids": []
+    },
+    {
+      "id": "kf-collaboration",
+      "label": "部門間連携",
+      "synonyms": [
+        "事業部間連携",
+        "組織間連携"
+      ],
+      "rules": [],
+      "category_ids": [
+        "cat-org"
+      ],
+      "micro_concept_ids": [
+        "fruit-24"
+      ]
+    },
+    {
+      "id": "kf-plan",
+      "label": "生産計画見直し",
+      "synonyms": [
+        "生産計画の見直し",
+        "生産計画短サイクル化",
+        "計画短サイクル化"
+      ],
+      "rules": [],
+      "category_ids": [
+        "cat-production"
+      ],
+      "micro_concept_ids": []
+    },
+    {
+      "id": "kf-instruction",
+      "label": "作業指示明確化",
+      "synonyms": [
+        "作業指示の明確化",
+        "製造指示明確化"
+      ],
+      "rules": [],
+      "category_ids": [
+        "cat-production"
+      ],
+      "micro_concept_ids": []
+    },
+    {
+      "id": "kf-ordering",
+      "label": "発注管理適正化",
+      "synonyms": [
+        "発注基準明確化",
+        "発注管理の強化"
+      ],
+      "rules": [],
+      "category_ids": [
+        "cat-procurement"
+      ],
+      "micro_concept_ids": [
+        "fruit-20"
+      ]
+    },
+    {
+      "id": "kf-inventory",
+      "label": "在庫管理適正化",
+      "synonyms": [
+        "在庫管理の適正化"
+      ],
+      "rules": [],
+      "category_ids": [
+        "cat-procurement"
+      ],
+      "micro_concept_ids": []
+    },
+    {
+      "id": "kf-standardization",
+      "label": "作業標準化",
+      "synonyms": [
+        "標準化",
+        "作業の標準化"
+      ],
+      "rules": [],
+      "category_ids": [
+        "cat-work",
+        "cat-quality"
+      ],
+      "micro_concept_ids": [
+        "fruit-17"
+      ]
+    },
+    {
+      "id": "kf-skill",
+      "label": "技能承継",
+      "synonyms": [
+        "技術承継",
+        "技能継承"
+      ],
+      "rules": [],
+      "category_ids": [
+        "cat-hr"
+      ],
+      "micro_concept_ids": [
+        "fruit-19"
+      ]
+    },
+    {
+      "id": "kf-continuous-improvement",
+      "label": "継続的改善",
+      "synonyms": [
+        "継続的な改善",
+        "品質改善活動"
+      ],
+      "rules": [],
+      "category_ids": [
+        "cat-quality"
+      ],
+      "micro_concept_ids": []
+    },
+    {
+      "id": "kf-preventive-maintenance",
+      "label": "予防保全",
+      "synonyms": [
+        "予防的保全"
+      ],
+      "rules": [],
+      "category_ids": [
+        "cat-production"
+      ],
+      "micro_concept_ids": [
+        "fruit-32"
+      ]
+    }
+  ],
+  "records": [
+    {
+      "id": "aq-i-hr",
+      "case": "I",
+      "abstract_question": "経営統合後、従業員の意欲と継続的な就業を支える人材施策",
+      "variants": [
+        {
+          "id": "transfer-1",
+          "text": "異なる企業の従業員が一緒に働く状況で、納得感を高め、長く力を発揮してもらうための施策",
+          "role": "transfer"
+        },
+        {
+          "id": "transfer-2",
+          "text": "事業の統合を経て、人の意欲と働き続けやすさを支える運営上の施策",
+          "role": "transfer"
+        }
+      ],
+      "source_refs": [
+        {
+          "kind": "base_question",
+          "id": "2023-I-Q3"
+        }
+      ],
+      "framework_ids": [],
+      "cut_terms": [
+        {
+          "id": "cut-i-hr-1",
+          "label": "配置",
+          "synonyms": [],
+          "rules": []
+        },
+        {
+          "id": "cut-i-hr-2",
+          "label": "評価・報酬",
+          "synonyms": [],
+          "rules": []
+        },
+        {
+          "id": "cut-i-hr-3",
+          "label": "育成",
+          "synonyms": [],
+          "rules": []
+        },
+        {
+          "id": "cut-i-hr-4",
+          "label": "定着",
+          "synonyms": [],
+          "rules": []
+        }
+      ],
+      "fruit_categories": [
+        "cat-hr"
+      ],
+      "shelf_groups": [
+        {
+          "id": "shelf-hr",
+          "category_ids": [
+            "cat-hr"
+          ]
+        }
+      ],
+      "core_fruit_keywords": [
+        "kf-placement",
+        "kf-evaluation",
+        "kf-development",
+        "kf-retention"
+      ],
+      "acceptable_fruit_keywords": [
+        {
+          "concept_id": "kf-flexible-work",
+          "substitutes_core_id": "kf-retention"
+        }
+      ],
+      "context_dependent_keywords": [
+        {
+          "label": "シフト調整",
+          "synonyms": [],
+          "reason": "勤務条件は与件で選ぶ",
+          "implies_core_id": null
+        },
+        {
+          "label": "統合前企業水準の評価報酬",
+          "synonyms": [],
+          "reason": "比較する報酬水準は与件で選ぶ",
+          "implies_core_id": null
+        }
+      ],
+      "candidate_target": 3,
+      "modes": [
+        "abstract-shelf",
+        "abstract-fruit"
+      ],
+      "weakness_tags": [
+        "配置",
+        "評価報酬",
+        "教育訓練",
+        "定着"
+      ],
+      "editorial": {
+        "kind": "designed_practice",
+        "status": "reviewed",
+        "reviewer": "spec-design-review",
+        "reviewed_at": "2026-10-04T09:35:39.491Z",
+        "note": "設計者作成の汎用練習。元問題の題意・果を参照して抽象化。MMC原文・KM原本の転記ではない。元語は本試2023-I-Q3。抽象化と比較例は設計者作成。内容の設計レビュー日は2026-10-04、reviewed_atはJSON化時刻。人事から代表候補を仮置きし、具体策は与件で選ぶ。"
+      },
+      "content_revision": 1
+    },
+    {
+      "id": "aq-i-integration",
+      "case": "I",
+      "abstract_question": "経営統合後、従業員の不安を減らし、全社で同じ方向を目指すための組織施策",
+      "variants": [
+        {
+          "id": "transfer-1",
+          "text": "企業を統合した後、社員間の不安や隔たりを減らし、共通の目標へ向かうための施策",
+          "role": "transfer"
+        },
+        {
+          "id": "transfer-2",
+          "text": "別々に運営していた事業を一つにした企業で、一体感を持って働くための体制面の施策",
+          "role": "transfer"
+        }
+      ],
+      "source_refs": [
+        {
+          "kind": "base_question",
+          "id": "2023-I-Q4-1"
+        }
+      ],
+      "framework_ids": [],
+      "cut_terms": [
+        {
+          "id": "cut-i-integration-1",
+          "label": "対話",
+          "synonyms": [],
+          "rules": []
+        },
+        {
+          "id": "cut-i-integration-2",
+          "label": "方向性",
+          "synonyms": [],
+          "rules": []
+        },
+        {
+          "id": "cut-i-integration-3",
+          "label": "連携",
+          "synonyms": [],
+          "rules": []
+        }
+      ],
+      "fruit_categories": [
+        "cat-org"
+      ],
+      "shelf_groups": [
+        {
+          "id": "shelf-org",
+          "category_ids": [
+            "cat-org"
+          ]
+        }
+      ],
+      "core_fruit_keywords": [
+        "kf-org-dialogue",
+        "kf-vision",
+        "kf-collaboration"
+      ],
+      "acceptable_fruit_keywords": [],
+      "context_dependent_keywords": [
+        {
+          "label": "全社会議",
+          "synonyms": [],
+          "reason": "会議形式は統合状況で選ぶ",
+          "implies_core_id": "kf-org-dialogue"
+        },
+        {
+          "label": "専門部署設置",
+          "synonyms": [
+            "専門部署"
+          ],
+          "reason": "設置組織は統合状況で選ぶ",
+          "implies_core_id": null
+        }
+      ],
+      "candidate_target": 3,
+      "modes": [
+        "abstract-shelf",
+        "abstract-fruit"
+      ],
+      "weakness_tags": [
+        "組織構造",
+        "部門間連携"
+      ],
+      "editorial": {
+        "kind": "designed_practice",
+        "status": "reviewed",
+        "reviewer": "spec-design-review",
+        "reviewed_at": "2026-10-04T09:35:39.493Z",
+        "note": "設計者作成の汎用練習。元問題の題意・果を参照して抽象化。MMC原文・KM原本の転記ではない。元語は本試2023-I-Q4-1。抽象化と比較例は設計者作成。内容の設計レビュー日は2026-10-04、reviewed_atはJSON化時刻。組織から代表候補を仮置きし、具体策は与件で選ぶ。"
+      },
+      "content_revision": 1
+    },
+    {
+      "id": "aq-ii-communication",
+      "case": "II",
+      "abstract_question": "複数の顧客接点を活用し、顧客との関係性を強化するためのコミュニケーション施策",
+      "variants": [
+        {
+          "id": "transfer-1",
+          "text": "さまざまな接点を通じて顧客とやり取りし、長期的な結びつきを深める施策",
+          "role": "transfer"
+        },
+        {
+          "id": "transfer-2",
+          "text": "複数の窓口で顧客と接する企業が、継続的な付き合いを築くために行うコミュニケーション施策",
+          "role": "transfer"
+        }
+      ],
+      "source_refs": [
+        {
+          "kind": "base_question",
+          "id": "2023-II-Q4"
+        }
+      ],
+      "framework_ids": [],
+      "cut_terms": [
+        {
+          "id": "cut-ii-communication-1",
+          "label": "発信",
+          "synonyms": [],
+          "rules": []
+        },
+        {
+          "id": "cut-ii-communication-2",
+          "label": "収集",
+          "synonyms": [],
+          "rules": []
+        },
+        {
+          "id": "cut-ii-communication-3",
+          "label": "活用",
+          "synonyms": [],
+          "rules": []
+        }
+      ],
+      "fruit_categories": [
+        "cat-info",
+        "cat-relationship"
+      ],
+      "shelf_groups": [
+        {
+          "id": "shelf-info",
+          "category_ids": [
+            "cat-info"
+          ]
+        },
+        {
+          "id": "shelf-relationship",
+          "category_ids": [
+            "cat-relationship"
+          ]
+        }
+      ],
+      "core_fruit_keywords": [
+        "kf-information-send",
+        "kf-information-collect",
+        "kf-customer-info",
+        "kf-dialogue",
+        "kf-relationship"
+      ],
+      "acceptable_fruit_keywords": [],
+      "context_dependent_keywords": [
+        {
+          "label": "顧客情報一元管理",
+          "synonyms": [
+            "データ一元管理"
+          ],
+          "reason": "管理方式は与件で選ぶ",
+          "implies_core_id": "kf-customer-info"
+        },
+        {
+          "label": "レビュー収集",
+          "synonyms": [],
+          "reason": "具体的な接点・収集対象は与件で選ぶ",
+          "implies_core_id": null
+        },
+        {
+          "label": "EC送客",
+          "synonyms": [],
+          "reason": "販売経路の存在と役割は与件で確定する",
+          "implies_core_id": null
+        },
+        {
+          "label": "購入者への手入れ情報配信",
+          "synonyms": [],
+          "reason": "商品と顧客課題は与件に依存する",
+          "implies_core_id": "kf-information-send"
+        }
+      ],
+      "candidate_target": 3,
+      "modes": [
+        "abstract-shelf",
+        "abstract-fruit"
+      ],
+      "weakness_tags": [
+        "顧客ニーズ",
+        "関係性",
+        "題意判断"
+      ],
+      "editorial": {
+        "kind": "designed_practice",
+        "status": "reviewed",
+        "reviewer": "spec-design-review",
+        "reviewed_at": "2026-10-04T09:35:39.493Z",
+        "note": "設計者作成の汎用練習。元問題の題意・果を参照して抽象化。MMC原文・KM原本の転記ではない。元語は本試2023-II-Q4。抽象化と比較例は設計者作成。内容の設計レビュー日は2026-10-04、reviewed_atはJSON化時刻。情報活用・関係性マーケティングから代表候補を仮置きし、具体策は与件で選ぶ。"
+      },
+      "content_revision": 1
+    },
+    {
+      "id": "aq-ii-customer-use",
+      "case": "II",
+      "abstract_question": "顧客ごとの特徴を把握し、それぞれに合う対応を通じて長期的な取引につなげる施策",
+      "variants": [
+        {
+          "id": "transfer-1",
+          "text": "顧客一人ひとりの特徴に合わせた対応により、継続して選ばれるための施策",
+          "role": "transfer"
+        },
+        {
+          "id": "transfer-2",
+          "text": "利用者の違いを把握し、個々に合う提案を通じて長期的な取引を増やす施策",
+          "role": "transfer"
+        }
+      ],
+      "source_refs": [
+        {
+          "kind": "base_question",
+          "id": "2025-II-Q3"
+        }
+      ],
+      "framework_ids": [],
+      "cut_terms": [
+        {
+          "id": "cut-ii-customer-use-1",
+          "label": "蓄積",
+          "synonyms": [],
+          "rules": []
+        },
+        {
+          "id": "cut-ii-customer-use-2",
+          "label": "活用",
+          "synonyms": [],
+          "rules": []
+        },
+        {
+          "id": "cut-ii-customer-use-3",
+          "label": "対応",
+          "synonyms": [],
+          "rules": []
+        }
+      ],
+      "fruit_categories": [
+        "cat-info",
+        "cat-relationship"
+      ],
+      "shelf_groups": [
+        {
+          "id": "shelf-info",
+          "category_ids": [
+            "cat-info"
+          ]
+        },
+        {
+          "id": "shelf-relationship",
+          "category_ids": [
+            "cat-relationship"
+          ]
+        }
+      ],
+      "core_fruit_keywords": [
+        "kf-customer-store",
+        "kf-customer-info",
+        "kf-proposal",
+        "kf-relationship"
+      ],
+      "acceptable_fruit_keywords": [
+        {
+          "concept_id": "kf-dialogue",
+          "substitutes_core_id": "kf-proposal"
+        }
+      ],
+      "context_dependent_keywords": [
+        {
+          "label": "競技別情報",
+          "synonyms": [],
+          "reason": "業種と顧客課題で情報の中身を選ぶ",
+          "implies_core_id": "kf-customer-store"
+        },
+        {
+          "label": "相談サービス",
+          "synonyms": [],
+          "reason": "業種と顧客課題でサービスを選ぶ",
+          "implies_core_id": "kf-proposal"
+        },
+        {
+          "label": "身体ケアサービス",
+          "synonyms": [],
+          "reason": "業種と顧客課題でサービスを選ぶ",
+          "implies_core_id": "kf-proposal"
+        }
+      ],
+      "candidate_target": 3,
+      "modes": [
+        "abstract-shelf",
+        "abstract-fruit"
+      ],
+      "weakness_tags": [
+        "顧客ニーズ",
+        "サービス",
+        "関係性"
+      ],
+      "editorial": {
+        "kind": "designed_practice",
+        "status": "reviewed",
+        "reviewer": "spec-design-review",
+        "reviewed_at": "2026-10-04T09:35:39.493Z",
+        "note": "設計者作成の汎用練習。元問題の題意・果を参照して抽象化。MMC原文・KM原本の転記ではない。元語は本試2025-II-Q3。抽象化と比較例は設計者作成。内容の設計レビュー日は2026-10-04、reviewed_atはJSON化時刻。情報活用・関係性マーケティングから代表候補を仮置きし、具体策は与件で選ぶ。"
+      },
+      "content_revision": 1
+    },
+    {
+      "id": "aq-iii-plan-material",
+      "case": "III",
+      "abstract_question": "需要や受注の変化に対応しながら、必要な材料を確保して生産を円滑に進める管理施策",
+      "variants": [
+        {
+          "id": "transfer-1",
+          "text": "注文の変化にも対応し、材料不足を防ぎながら製造を滞りなく進めるための施策",
+          "role": "transfer"
+        },
+        {
+          "id": "transfer-2",
+          "text": "必要な資材を確保しつつ、受注状況に合わせて製造を円滑に行うための管理施策",
+          "role": "transfer"
+        }
+      ],
+      "source_refs": [
+        {
+          "kind": "base_question",
+          "id": "2025-III-Q3"
+        }
+      ],
+      "framework_ids": [],
+      "cut_terms": [
+        {
+          "id": "cut-iii-plan-material-1",
+          "label": "計画",
+          "synonyms": [],
+          "rules": []
+        },
+        {
+          "id": "cut-iii-plan-material-2",
+          "label": "指示",
+          "synonyms": [],
+          "rules": []
+        },
+        {
+          "id": "cut-iii-plan-material-3",
+          "label": "資材",
+          "synonyms": [],
+          "rules": []
+        }
+      ],
+      "fruit_categories": [
+        "cat-production",
+        "cat-procurement"
+      ],
+      "shelf_groups": [
+        {
+          "id": "shelf-production",
+          "category_ids": [
+            "cat-production"
+          ]
+        },
+        {
+          "id": "shelf-procurement",
+          "category_ids": [
+            "cat-procurement"
+          ]
+        }
+      ],
+      "core_fruit_keywords": [
+        "kf-plan",
+        "kf-instruction",
+        "kf-ordering"
+      ],
+      "acceptable_fruit_keywords": [
+        {
+          "concept_id": "kf-inventory",
+          "substitutes_core_id": null
+        }
+      ],
+      "context_dependent_keywords": [
+        {
+          "label": "生産計画日次化",
+          "synonyms": [],
+          "reason": "更新周期は与件条件で選ぶ",
+          "implies_core_id": "kf-plan"
+        },
+        {
+          "label": "製造指図書",
+          "synonyms": [],
+          "reason": "指示媒体は与件条件で選ぶ",
+          "implies_core_id": "kf-instruction"
+        },
+        {
+          "label": "発注担当者設置",
+          "synonyms": [],
+          "reason": "担当は与件条件で選ぶ",
+          "implies_core_id": "kf-ordering"
+        },
+        {
+          "label": "安全在庫",
+          "synonyms": [
+            "安全在庫設定"
+          ],
+          "reason": "在庫水準は与件条件で選ぶ",
+          "implies_core_id": null
+        }
+      ],
+      "candidate_target": 3,
+      "modes": [
+        "abstract-shelf",
+        "abstract-fruit"
+      ],
+      "weakness_tags": [
+        "生産計画",
+        "資材管理",
+        "納期管理"
+      ],
+      "editorial": {
+        "kind": "designed_practice",
+        "status": "reviewed",
+        "reviewer": "spec-design-review",
+        "reviewed_at": "2026-10-04T09:35:39.493Z",
+        "note": "設計者作成の汎用練習。元問題の題意・果を参照して抽象化。MMC原文・KM原本の転記ではない。元語は本試2025-III-Q3。抽象化と比較例は設計者作成。内容の設計レビュー日は2026-10-04、reviewed_atはJSON化時刻。生産管理・資材管理から代表候補を仮置きし、具体策は与件で選ぶ。"
+      },
+      "content_revision": 1
+    },
+    {
+      "id": "aq-iii-quality-skill",
+      "case": "III",
+      "abstract_question": "製造のばらつきを抑え、担当者が変わっても製品の良さを維持するための施策",
+      "variants": [
+        {
+          "id": "transfer-1",
+          "text": "人が交代しても製品の出来に差が出ないようにするための施策",
+          "role": "transfer"
+        },
+        {
+          "id": "transfer-2",
+          "text": "製造担当者によるばらつきを減らし、一定の製品水準を保つための施策",
+          "role": "transfer"
+        }
+      ],
+      "source_refs": [
+        {
+          "kind": "base_question",
+          "id": "2025-III-Q2-2"
+        }
+      ],
+      "framework_ids": [],
+      "cut_terms": [
+        {
+          "id": "cut-iii-quality-skill-1",
+          "label": "作業方法",
+          "synonyms": [],
+          "rules": []
+        },
+        {
+          "id": "cut-iii-quality-skill-2",
+          "label": "技能",
+          "synonyms": [],
+          "rules": []
+        },
+        {
+          "id": "cut-iii-quality-skill-3",
+          "label": "改善活動",
+          "synonyms": [],
+          "rules": []
+        }
+      ],
+      "fruit_categories": [
+        "cat-quality",
+        "cat-hr"
+      ],
+      "shelf_groups": [
+        {
+          "id": "shelf-quality",
+          "category_ids": [
+            "cat-quality"
+          ]
+        },
+        {
+          "id": "shelf-hr",
+          "category_ids": [
+            "cat-hr"
+          ]
+        }
+      ],
+      "core_fruit_keywords": [
+        "kf-standardization",
+        "kf-skill",
+        "kf-continuous-improvement"
+      ],
+      "acceptable_fruit_keywords": [
+        {
+          "concept_id": "kf-development",
+          "substitutes_core_id": "kf-skill"
+        }
+      ],
+      "context_dependent_keywords": [
+        {
+          "label": "計画的OJT",
+          "synonyms": [],
+          "reason": "指導方法は与件条件で選ぶ",
+          "implies_core_id": "kf-skill"
+        },
+        {
+          "label": "QCサークル",
+          "synonyms": [
+            "QCサークル活動"
+          ],
+          "reason": "改善活動の方式は与件条件で選ぶ",
+          "implies_core_id": "kf-continuous-improvement"
+        }
+      ],
+      "candidate_target": 3,
+      "modes": [
+        "abstract-shelf",
+        "abstract-fruit"
+      ],
+      "weakness_tags": [
+        "品質管理",
+        "技能承継"
+      ],
+      "editorial": {
+        "kind": "designed_practice",
+        "status": "reviewed",
+        "reviewer": "spec-design-review",
+        "reviewed_at": "2026-10-04T09:35:39.493Z",
+        "note": "設計者作成の汎用練習。元問題の題意・果を参照して抽象化。MMC原文・KM原本の転記ではない。元語は本試2025-III-Q2-2。抽象化と比較例は設計者作成。内容の設計レビュー日は2026-10-04、reviewed_atはJSON化時刻。品質管理・人事から代表候補を仮置きし、具体策は与件で選ぶ。"
+      },
+      "content_revision": 1
+    },
+    {
+      "id": "aq-ii-3c",
+      "case": "II",
+      "abstract_question": "顧客や競合の状況と自社の特徴を踏まえ、事業の立ち位置を整理するための分析",
+      "variants": [],
+      "source_refs": [
+        {
+          "kind": "base_question",
+          "id": "2023-II-Q1"
+        }
+      ],
+      "framework_ids": [
+        "fw-3c"
+      ],
+      "cut_terms": [
+        {
+          "id": "cut-ii-3c-1",
+          "label": "顧客",
+          "synonyms": [
+            "顧客分析"
+          ],
+          "rules": []
+        },
+        {
+          "id": "cut-ii-3c-2",
+          "label": "競合",
+          "synonyms": [
+            "競合分析"
+          ],
+          "rules": []
+        },
+        {
+          "id": "cut-ii-3c-3",
+          "label": "自社",
+          "synonyms": [
+            "自社分析"
+          ],
+          "rules": []
+        }
+      ],
+      "fruit_categories": [
+        "cat-market-analysis",
+        "cat-resource-analysis"
+      ],
+      "shelf_groups": [
+        {
+          "id": "shelf-market-analysis",
+          "category_ids": [
+            "cat-market-analysis"
+          ]
+        },
+        {
+          "id": "shelf-resource-analysis",
+          "category_ids": [
+            "cat-resource-analysis"
+          ]
+        }
+      ],
+      "core_fruit_keywords": [],
+      "acceptable_fruit_keywords": [],
+      "context_dependent_keywords": [],
+      "candidate_target": null,
+      "modes": [
+        "abstract-shelf"
+      ],
+      "weakness_tags": [
+        "題意判断"
+      ],
+      "editorial": {
+        "kind": "designed_practice",
+        "status": "reviewed",
+        "reviewer": "spec-design-review",
+        "reviewed_at": "2026-10-04T09:35:39.494Z",
+        "note": "設計者作成の汎用練習。元問題の題意・果を参照して抽象化。MMC原文・KM原本の転記ではない。内容の設計レビュー日は2026-10-04、reviewed_atはJSON化時刻。"
+      },
+      "content_revision": 1
+    },
+    {
+      "id": "aq-i-strength",
+      "case": "I",
+      "abstract_question": "新しい事業に取り組む際に、自社の内部資源のうち有利に働く要素を整理するための分析",
+      "variants": [],
+      "source_refs": [
+        {
+          "kind": "base_question",
+          "id": "2025-I-Q1-S"
+        }
+      ],
+      "framework_ids": [
+        "fw-swot"
+      ],
+      "cut_terms": [
+        {
+          "id": "cut-i-strength-1",
+          "label": "強み",
+          "synonyms": [
+            "内部の強み"
+          ],
+          "rules": []
+        }
+      ],
+      "fruit_categories": [
+        "cat-resource-analysis"
+      ],
+      "shelf_groups": [
+        {
+          "id": "shelf-resource-analysis",
+          "category_ids": [
+            "cat-resource-analysis"
+          ]
+        }
+      ],
+      "core_fruit_keywords": [],
+      "acceptable_fruit_keywords": [],
+      "context_dependent_keywords": [],
+      "candidate_target": null,
+      "modes": [
+        "abstract-shelf"
+      ],
+      "weakness_tags": [
+        "題意判断"
+      ],
+      "editorial": {
+        "kind": "designed_practice",
+        "status": "reviewed",
+        "reviewer": "spec-design-review",
+        "reviewed_at": "2026-10-04T09:35:39.494Z",
+        "note": "設計者作成の汎用練習。元問題の題意・果を参照して抽象化。MMC原文・KM原本の転記ではない。内容の設計レビュー日は2026-10-04、reviewed_atはJSON化時刻。"
+      },
+      "content_revision": 1
+    }
+  ]
+}

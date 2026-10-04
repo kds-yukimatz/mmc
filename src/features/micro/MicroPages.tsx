@@ -116,6 +116,11 @@ export function MicroHome() {
           {data?.session ? '続きから開く' : '1分はじめる'}
         </button>
       </section>
+      <section className="micro-panel abstraction-entry">
+        <p className="eyebrow">新しい練習</p><h2>与件を読む前の練習</h2>
+        <p>題意から検索する棚と代表候補を置く。</p>
+        <NavLink className="btn btn-ghost" to="/abstraction">題意 → 棚／果候補</NavLink>
+      </section>
       {(error || failure) && <p role="alert">{error || failure}</p>}
       {data && (
         <>
@@ -613,6 +618,7 @@ export function MicroMaterials() {
     <div className="page micro-page">
       <h1>教材</h1>
       <p>見るだけでは想起記録を更新しない。</p>
+      <section className="micro-panel abstraction-entry"><h2>与件を読む前の練習</h2><p>抽象題意から棚と果候補を想起する。</p><NavLink className="btn btn-ghost" to="/abstraction">練習と教材を開く</NavLink><NavLink to="/legacy">過去問再現（本試一問一答）</NavLink></section>
       <button
         className="btn btn-primary"
         disabled={!data || busy}
@@ -778,6 +784,7 @@ export function MicroRecords() {
   return (
     <div className="page micro-page">
       <h1>記録</h1>
+      <NavLink to="/abstraction/records">抽象題意の弱点復習・記録</NavLink>
       <Progress data={data} />
       <p>
         直近7日：迷い {recent.filter((a) => a.grade === 'hesitant').length}回 ／

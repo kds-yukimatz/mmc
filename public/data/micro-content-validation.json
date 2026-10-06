@@ -1,14 +1,25 @@
 {
-  "version": "micro-seed-2",
+  "version": "micro-seed-4",
   "answerUnits": 44,
   "groups": 32,
   "rawKeywords": 165,
-  "concepts": 61,
-  "mappings": 70,
-  "recallCards": 140,
+  "concepts": 134,
+  "mappings": 161,
+  "recallCards": 322,
   "contrastCards": 12,
   "mandatory": 31,
   "bStocks": 22,
   "bStockMappings": 35,
+  "mmcOriginalMappings": 91,
+  "mmcOriginalCards": 182,
+  "mmcOriginalConcepts": 73,
+  "mmcSourceFileCount": 21,
+  "mmcSeries": [
+    "CS3",
+    "CS4",
+    "CS5",
+    "ME2",
+    "ME3"
+  ],
   "excluded": []
 }

@@ -1,15 +1,157 @@
 {
   "metadata": {
-    "version": "micro-seed-2",
+    "version": "micro-seed-4",
     "createdAt": "2026-10-04",
-    "note": "汎用練習の教材種。因・問い・説明は設計者作成。MMC原文や原答案の引用ではない。出典は元語の根拠。頻度0は不重要を意味しない。",
+    "note": "既存練習は設計者作成の汎用練習。MMC独自短問は解説を根拠に再設計し、原問題・原答案を転載していない。独自問題は本試頻度に含めない。",
     "mandatoryConceptCount": 31,
-    "conceptCount": 61,
-    "mappingCount": 70,
-    "cardCount": 152,
+    "conceptCount": 134,
+    "mappingCount": 161,
+    "cardCount": 334,
     "frequencyCorpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified",
     "frequencyDefinition": "異なるgroup_id数。未設定の場合id。資料内の原語または承認済みalias完全一致。",
-    "adaptation": "実装ではSPECの型に合わせてfrequency.recordIdsを出典メタデータへ移してよい。数量と出典を保持する。"
+    "adaptation": "実装ではSPECの型に合わせてfrequency.recordIdsを出典メタデータへ移してよい。数量と出典を保持する。",
+    "mmcOriginal": {
+      "series": [
+        "CS3",
+        "CS4",
+        "CS5",
+        "ME2",
+        "ME3"
+      ],
+      "sourceFileCount": 21,
+      "mappingCount": 91,
+      "years": [
+        2026
+      ],
+      "sources": [
+        {
+          "filename": "ForGPT_mmc2026Cs311x03kaisetu.pdf",
+          "series": "CS3",
+          "documentYear": 2026,
+          "filenameYear": 2026
+        },
+        {
+          "filename": "ForGPT_mmc2026Cs321x03kaisetu.pdf",
+          "series": "CS3",
+          "documentYear": 2026,
+          "filenameYear": 2026
+        },
+        {
+          "filename": "ForGPT_mmc2026Cs331x03kaisetu.pdf",
+          "series": "CS3",
+          "documentYear": 2026,
+          "filenameYear": 2026
+        },
+        {
+          "filename": "mmc2026Cs411x03kaisetu_print.pdf",
+          "series": "CS4",
+          "documentYear": 2026,
+          "filenameYear": 2026
+        },
+        {
+          "filename": "mmc2026Cs412x03kaisetu_print.pdf",
+          "series": "CS4",
+          "documentYear": 2026,
+          "filenameYear": 2026
+        },
+        {
+          "filename": "mmc2026Cs421x03kaisetu_print.pdf",
+          "series": "CS4",
+          "documentYear": 2026,
+          "filenameYear": 2026
+        },
+        {
+          "filename": "mmc2026Cs422x03kaisetu_print.pdf",
+          "series": "CS4",
+          "documentYear": 2026,
+          "filenameYear": 2026
+        },
+        {
+          "filename": "mmc2026Cs431x03kaisetu_print.pdf",
+          "series": "CS4",
+          "documentYear": 2026,
+          "filenameYear": 2026
+        },
+        {
+          "filename": "mmc2026Cs432x03kaisetu_print.pdf",
+          "series": "CS4",
+          "documentYear": 2026,
+          "filenameYear": 2026
+        },
+        {
+          "filename": "mmc2025Cs532x03kaisetu.pdf",
+          "series": "CS5",
+          "documentYear": 2026,
+          "filenameYear": 2025
+        },
+        {
+          "filename": "mmc2026Cs511x03kaisetu.pdf",
+          "series": "CS5",
+          "documentYear": 2026,
+          "filenameYear": 2026
+        },
+        {
+          "filename": "mmc2026Cs512x03kaisetu.pdf",
+          "series": "CS5",
+          "documentYear": 2026,
+          "filenameYear": 2026
+        },
+        {
+          "filename": "mmc2026Cs521x03kaisetu.pdf",
+          "series": "CS5",
+          "documentYear": 2026,
+          "filenameYear": 2026
+        },
+        {
+          "filename": "mmc2026Cs522x03kaisetu.pdf",
+          "series": "CS5",
+          "documentYear": 2026,
+          "filenameYear": 2026
+        },
+        {
+          "filename": "mmc2026Cs531x03kaisetu.pdf",
+          "series": "CS5",
+          "documentYear": 2026,
+          "filenameYear": 2026
+        },
+        {
+          "filename": "mmc2026me211x03kaisetu.pdf",
+          "series": "ME2",
+          "documentYear": 2026,
+          "filenameYear": 2026
+        },
+        {
+          "filename": "mmc2026me221x03kaisetu.pdf",
+          "series": "ME2",
+          "documentYear": 2026,
+          "filenameYear": 2026
+        },
+        {
+          "filename": "mmc2026me231x03kaisetu.pdf",
+          "series": "ME2",
+          "documentYear": 2026,
+          "filenameYear": 2026
+        },
+        {
+          "filename": "mmc2026me311x03kaisetu.pdf",
+          "series": "ME3",
+          "documentYear": 2026,
+          "filenameYear": 2026
+        },
+        {
+          "filename": "mmc2026me321x03kaisetu.pdf",
+          "series": "ME3",
+          "documentYear": 2026,
+          "filenameYear": 2026
+        },
+        {
+          "filename": "mmc2026me331x03kaisetu.pdf",
+          "series": "ME3",
+          "documentYear": 2026,
+          "filenameYear": 2026
+        }
+      ]
+    }
   },
   "concepts": [
     {
@@ -1210,6 +1352,1365 @@
         "years": [],
         "recordIds": [],
         "corpus": "kahotore_mmc_base_v2.json 2023-2025 I-III verified"
+      }
+    },
+    {
+      "id": "fruit-mmc-cs311-01",
+      "label": "相乗効果",
+      "evidenceAliases": [
+        "相乗効果",
+        "シナジー",
+        "シナジー効果"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS3/CS4解説を根拠にした汎用短問。独自問題の出現は本試頻度に加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS3/CS4 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-cs311-02",
+      "label": "提案営業力",
+      "evidenceAliases": [
+        "提案営業力",
+        "提案型営業力"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS3/CS4解説を根拠にした汎用短問。独自問題の出現は本試頻度に加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS3/CS4 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-cs311-03",
+      "label": "ジョブローテーション",
+      "evidenceAliases": [
+        "ジョブローテーション",
+        "計画的ジョブローテーション"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS3/CS4解説を根拠にした汎用短問。独自問題の出現は本試頻度に加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS3/CS4 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-cs321-04",
+      "label": "品揃え力",
+      "evidenceAliases": [
+        "品揃え力",
+        "品揃え能力"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS3/CS4解説を根拠にした汎用短問。独自問題の出現は本試頻度に加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS3/CS4 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-cs321-05",
+      "label": "展示会の開催",
+      "evidenceAliases": [
+        "展示会の開催",
+        "展示会",
+        "文化的催しの開催"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS3/CS4解説を根拠にした汎用短問。独自問題の出現は本試頻度に加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS3/CS4 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-cs321-06",
+      "label": "コーディネート提案",
+      "evidenceAliases": [
+        "コーディネート提案",
+        "コーディネイト提案"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS3/CS4解説を根拠にした汎用短問。独自問題の出現は本試頻度に加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS3/CS4 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-cs321-07",
+      "label": "取り置きサービス",
+      "evidenceAliases": [
+        "取り置きサービス",
+        "取置きサービス",
+        "取り置き"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS3/CS4解説を根拠にした汎用短問。独自問題の出現は本試頻度に加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS3/CS4 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-cs321-08",
+      "label": "下取りサービス",
+      "evidenceAliases": [
+        "下取りサービス",
+        "下取り",
+        "下取サービス"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS3/CS4解説を根拠にした汎用短問。独自問題の出現は本試頻度に加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS3/CS4 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-cs321-09",
+      "label": "店内POP",
+      "evidenceAliases": [
+        "店内POP",
+        "POP",
+        "POP掲示",
+        "店内POP掲示"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS3/CS4解説を根拠にした汎用短問。独自問題の出現は本試頻度に加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS3/CS4 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-cs331-10",
+      "label": "VE",
+      "evidenceAliases": [
+        "VE",
+        "バリューエンジニアリング",
+        "価値工学"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS3/CS4解説を根拠にした汎用短問。独自問題の出現は本試頻度に加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS3/CS4 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-cs331-11",
+      "label": "DR",
+      "evidenceAliases": [
+        "DR",
+        "デザインレビュー",
+        "設計審査"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS3/CS4解説を根拠にした汎用短問。独自問題の出現は本試頻度に加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS3/CS4 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-cs331-12",
+      "label": "需要予測の精緻化",
+      "evidenceAliases": [
+        "需要予測の精緻化",
+        "需要予測精緻化",
+        "需要予測精度向上"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS3/CS4解説を根拠にした汎用短問。独自問題の出現は本試頻度に加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS3/CS4 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-cs331-13",
+      "label": "カムアップシステム",
+      "evidenceAliases": [
+        "カムアップシステム",
+        "カムアップ",
+        "フォローアップシステム"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS3/CS4解説を根拠にした汎用短問。独自問題の出現は本試頻度に加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS3/CS4 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-cs331-14",
+      "label": "外注指導",
+      "evidenceAliases": [
+        "外注指導",
+        "外注先指導",
+        "外注先への技術指導"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS3/CS4解説を根拠にした汎用短問。独自問題の出現は本試頻度に加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS3/CS4 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-cs331-15",
+      "label": "生産計画立案サイクルの短縮",
+      "evidenceAliases": [
+        "生産計画立案サイクルの短縮",
+        "生産計画サイクル短縮",
+        "計画サイクル短縮"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS3/CS4解説を根拠にした汎用短問。独自問題の出現は本試頻度に加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS3/CS4 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-cs411-01",
+      "label": "技術開発力",
+      "evidenceAliases": [
+        "技術開発力",
+        "技術開発能力"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS3/CS4解説を根拠にした汎用短問。独自問題の出現は本試頻度に加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS3/CS4 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-cs412-04",
+      "label": "情報収集力",
+      "evidenceAliases": [
+        "情報収集力",
+        "情報収集能力"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS3/CS4解説を根拠にした汎用短問。独自問題の出現は本試頻度に加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS3/CS4 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-cs412-05",
+      "label": "安定売上の確保",
+      "evidenceAliases": [
+        "安定売上の確保",
+        "安定売上",
+        "安定的売上の確保"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS3/CS4解説を根拠にした汎用短問。独自問題の出現は本試頻度に加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS3/CS4 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-cs421-08",
+      "label": "継続率向上",
+      "evidenceAliases": [
+        "継続率向上",
+        "受講継続率向上",
+        "継続率の向上"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS3/CS4解説を根拠にした汎用短問。独自問題の出現は本試頻度に加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS3/CS4 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-cs421-09",
+      "label": "ファン化",
+      "evidenceAliases": [
+        "ファン化",
+        "顧客のファン化"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS3/CS4解説を根拠にした汎用短問。独自問題の出現は本試頻度に加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS3/CS4 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-cs422-10",
+      "label": "品揃え不足",
+      "evidenceAliases": [
+        "品揃え不足",
+        "品揃えの不足"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS3/CS4解説を根拠にした汎用短問。独自問題の出現は本試頻度に加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS3/CS4 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-cs422-11",
+      "label": "用途別の情報発信",
+      "evidenceAliases": [
+        "用途別の情報発信",
+        "利用シーンの情報発信",
+        "用途や利用シーンの情報発信"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS3/CS4解説を根拠にした汎用短問。独自問題の出現は本試頻度に加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS3/CS4 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-cs422-12",
+      "label": "参加意識向上",
+      "evidenceAliases": [
+        "参加意識向上",
+        "参加意識の向上"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS3/CS4解説を根拠にした汎用短問。独自問題の出現は本試頻度に加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS3/CS4 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-cs431-13",
+      "label": "一貫生産体制",
+      "evidenceAliases": [
+        "一貫生産体制",
+        "一貫生産"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS3/CS4解説を根拠にした汎用短問。独自問題の出現は本試頻度に加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS3/CS4 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-cs431-14",
+      "label": "外段取り",
+      "evidenceAliases": [
+        "外段取り",
+        "外段取り化"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS3/CS4解説を根拠にした汎用短問。独自問題の出現は本試頻度に加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS3/CS4 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-cs431-15",
+      "label": "QCサークル",
+      "evidenceAliases": [
+        "QCサークル",
+        "QCサークル活動",
+        "小集団活動"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS3/CS4解説を根拠にした汎用短問。独自問題の出現は本試頻度に加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS3/CS4 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-cs432-16",
+      "label": "技術者同行営業",
+      "evidenceAliases": [
+        "技術者同行営業",
+        "技術者同行",
+        "技術者の同行"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS3/CS4解説を根拠にした汎用短問。独自問題の出現は本試頻度に加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS3/CS4 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-cs432-18",
+      "label": "多種少量生産",
+      "evidenceAliases": [
+        "多種少量生産",
+        "多品種少量生産"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS3/CS4解説を根拠にした汎用短問。独自問題の出現は本試頻度に加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS3/CS4 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-cs511-01",
+      "label": "社長への営業依存",
+      "evidenceAliases": [
+        "社長への営業依存",
+        "営業活動の社長依存",
+        "社長依存"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS5/ME2/ME3解説を根拠にした汎用短問。本試頻度へ独自問題の出現は加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS5/ME2/ME3 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-cs511-02",
+      "label": "共同受注",
+      "evidenceAliases": [
+        "共同受注",
+        "企業間共同受注"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS5/ME2/ME3解説を根拠にした汎用短問。本試頻度へ独自問題の出現は加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS5/ME2/ME3 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-cs511-03",
+      "label": "共同開発",
+      "evidenceAliases": [
+        "共同開発",
+        "企業間共同開発"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS5/ME2/ME3解説を根拠にした汎用短問。本試頻度へ独自問題の出現は加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS5/ME2/ME3 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-cs511-04",
+      "label": "人材育成部門の設置",
+      "evidenceAliases": [
+        "人材育成部門の設置",
+        "人材育成部署の設置",
+        "人材育成部門"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS5/ME2/ME3解説を根拠にした汎用短問。本試頻度へ独自問題の出現は加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS5/ME2/ME3 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-cs511-05",
+      "label": "中途採用",
+      "evidenceAliases": [
+        "中途採用",
+        "営業経験者の採用"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS5/ME2/ME3解説を根拠にした汎用短問。本試頻度へ独自問題の出現は加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS5/ME2/ME3 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-cs512-03",
+      "label": "商品選別力",
+      "evidenceAliases": [
+        "商品選別力",
+        "商品選別能力"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS5/ME2/ME3解説を根拠にした汎用短問。本試頻度へ独自問題の出現は加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS5/ME2/ME3 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-cs521-01",
+      "label": "レンタルサービス",
+      "evidenceAliases": [
+        "レンタルサービス",
+        "楽器レンタル",
+        "レンタル"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS5/ME2/ME3解説を根拠にした汎用短問。本試頻度へ独自問題の出現は加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS5/ME2/ME3 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-cs521-02",
+      "label": "レッスン録画サービス",
+      "evidenceAliases": [
+        "レッスン録画サービス",
+        "レッスン録画",
+        "録画サービス"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS5/ME2/ME3解説を根拠にした汎用短問。本試頻度へ独自問題の出現は加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS5/ME2/ME3 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-cs521-03",
+      "label": "学習ガイド情報の発信",
+      "evidenceAliases": [
+        "学習ガイド情報の発信",
+        "学習ガイドの発信",
+        "学習ガイド情報"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS5/ME2/ME3解説を根拠にした汎用短問。本試頻度へ独自問題の出現は加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS5/ME2/ME3 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-cs521-04",
+      "label": "無料体験会",
+      "evidenceAliases": [
+        "無料体験会",
+        "無料体験",
+        "無料体験会の開催"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS5/ME2/ME3解説を根拠にした汎用短問。本試頻度へ独自問題の出現は加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS5/ME2/ME3 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-cs521-05",
+      "label": "オンライン発表会",
+      "evidenceAliases": [
+        "オンライン発表会",
+        "オンライン定期発表会"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS5/ME2/ME3解説を根拠にした汎用短問。本試頻度へ独自問題の出現は加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS5/ME2/ME3 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-cs522-01",
+      "label": "メールマガジンの送信",
+      "evidenceAliases": [
+        "メールマガジンの送信",
+        "メルマガ送信",
+        "メルマガ",
+        "メールマガジン"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS5/ME2/ME3解説を根拠にした汎用短問。本試頻度へ独自問題の出現は加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS5/ME2/ME3 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-cs522-02",
+      "label": "パブリシティの活用",
+      "evidenceAliases": [
+        "パブリシティの活用",
+        "パブリシティ",
+        "パブリシティ活用"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS5/ME2/ME3解説を根拠にした汎用短問。本試頻度へ独自問題の出現は加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS5/ME2/ME3 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-cs522-03",
+      "label": "産地巡りツアー",
+      "evidenceAliases": [
+        "産地巡りツアー",
+        "産地巡り",
+        "産地ツアー"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS5/ME2/ME3解説を根拠にした汎用短問。本試頻度へ独自問題の出現は加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS5/ME2/ME3 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-cs531-01",
+      "label": "5S",
+      "evidenceAliases": [
+        "5S",
+        "5Sの徹底",
+        "５Ｓ"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS5/ME2/ME3解説を根拠にした汎用短問。本試頻度へ独自問題の出現は加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS5/ME2/ME3 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-cs531-02",
+      "label": "定位置化",
+      "evidenceAliases": [
+        "定位置化",
+        "定位置管理",
+        "金型や材料の定位置化"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS5/ME2/ME3解説を根拠にした汎用短問。本試頻度へ独自問題の出現は加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS5/ME2/ME3 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-cs531-03",
+      "label": "全工程を含めた生産計画",
+      "evidenceAliases": [
+        "全工程を含めた生産計画",
+        "全工程の生産計画",
+        "全工程生産計画"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS5/ME2/ME3解説を根拠にした汎用短問。本試頻度へ独自問題の出現は加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS5/ME2/ME3 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-cs531-04",
+      "label": "納期優先の加工順序決定",
+      "evidenceAliases": [
+        "納期優先の加工順序決定",
+        "納期を優先した加工順序決定",
+        "納期優先の加工順序"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS5/ME2/ME3解説を根拠にした汎用短問。本試頻度へ独自問題の出現は加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS5/ME2/ME3 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-cs532-01",
+      "label": "加工技術力",
+      "evidenceAliases": [
+        "加工技術力",
+        "加工技術能力"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS5/ME2/ME3解説を根拠にした汎用短問。本試頻度へ独自問題の出現は加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS5/ME2/ME3 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-cs532-02",
+      "label": "部品在庫削減",
+      "evidenceAliases": [
+        "部品在庫削減",
+        "部品在庫の削減"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS5/ME2/ME3解説を根拠にした汎用短問。本試頻度へ独自問題の出現は加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS5/ME2/ME3 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-cs532-03",
+      "label": "設備稼働率向上",
+      "evidenceAliases": [
+        "設備稼働率向上",
+        "設備稼働率の向上",
+        "稼働率向上"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS5/ME2/ME3解説を根拠にした汎用短問。本試頻度へ独自問題の出現は加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS5/ME2/ME3 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-me211-01",
+      "label": "従業員定着率向上",
+      "evidenceAliases": [
+        "従業員定着率向上",
+        "定着率向上",
+        "従業員の定着率向上"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS5/ME2/ME3解説を根拠にした汎用短問。本試頻度へ独自問題の出現は加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS5/ME2/ME3 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-me211-02",
+      "label": "採用コスト削減",
+      "evidenceAliases": [
+        "採用コスト削減",
+        "採用費用削減",
+        "採用コストの削減"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS5/ME2/ME3解説を根拠にした汎用短問。本試頻度へ独自問題の出現は加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS5/ME2/ME3 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-me211-03",
+      "label": "教育負担軽減",
+      "evidenceAliases": [
+        "教育負担軽減",
+        "教育負担の軽減"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS5/ME2/ME3解説を根拠にした汎用短問。本試頻度へ独自問題の出現は加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS5/ME2/ME3 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-me211-04",
+      "label": "来店頻度向上",
+      "evidenceAliases": [
+        "来店頻度向上",
+        "来店頻度の向上"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS5/ME2/ME3解説を根拠にした汎用短問。本試頻度へ独自問題の出現は加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS5/ME2/ME3 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-me211-05",
+      "label": "信頼性向上",
+      "evidenceAliases": [
+        "信頼性向上",
+        "信頼性の向上",
+        "顧客の信頼向上"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS5/ME2/ME3解説を根拠にした汎用短問。本試頻度へ独自問題の出現は加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS5/ME2/ME3 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-me221-01",
+      "label": "顧客満足度向上",
+      "evidenceAliases": [
+        "顧客満足度向上",
+        "顧客満足度の向上",
+        "顧客満足向上"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS5/ME2/ME3解説を根拠にした汎用短問。本試頻度へ独自問題の出現は加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS5/ME2/ME3 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-me221-02",
+      "label": "認知度向上",
+      "evidenceAliases": [
+        "認知度向上",
+        "認知度の向上"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS5/ME2/ME3解説を根拠にした汎用短問。本試頻度へ独自問題の出現は加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS5/ME2/ME3 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-me221-03",
+      "label": "口コミ促進",
+      "evidenceAliases": [
+        "口コミ促進",
+        "口コミの促進"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS5/ME2/ME3解説を根拠にした汎用短問。本試頻度へ独自問題の出現は加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS5/ME2/ME3 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-me311-01",
+      "label": "迅速な人材確保",
+      "evidenceAliases": [
+        "迅速な人材確保",
+        "迅速な人材の確保"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS5/ME2/ME3解説を根拠にした汎用短問。本試頻度へ独自問題の出現は加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS5/ME2/ME3 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-me311-02",
+      "label": "他社経験の活用",
+      "evidenceAliases": [
+        "他社経験の活用",
+        "他社技術経験の活用",
+        "他社経験活用"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS5/ME2/ME3解説を根拠にした汎用短問。本試頻度へ独自問題の出現は加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS5/ME2/ME3 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-me311-03",
+      "label": "ノウハウ流出",
+      "evidenceAliases": [
+        "ノウハウ流出",
+        "ノウハウの流出"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS5/ME2/ME3解説を根拠にした汎用短問。本試頻度へ独自問題の出現は加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS5/ME2/ME3 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-me311-04",
+      "label": "人件費構造の適正化",
+      "evidenceAliases": [
+        "人件費構造の適正化",
+        "人件費構造適正化"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS5/ME2/ME3解説を根拠にした汎用短問。本試頻度へ独自問題の出現は加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS5/ME2/ME3 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-me311-05",
+      "label": "プロジェクトチームの設置",
+      "evidenceAliases": [
+        "プロジェクトチームの設置",
+        "プロジェクトチーム設置",
+        "プロジェクトチーム"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS5/ME2/ME3解説を根拠にした汎用短問。本試頻度へ独自問題の出現は加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS5/ME2/ME3 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-me311-06",
+      "label": "モチベーション向上",
+      "evidenceAliases": [
+        "モチベーション向上",
+        "従業員の意欲向上",
+        "モチベーションの向上"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS5/ME2/ME3解説を根拠にした汎用短問。本試頻度へ独自問題の出現は加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS5/ME2/ME3 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-me321-01",
+      "label": "商品企画力",
+      "evidenceAliases": [
+        "商品企画力",
+        "商品企画能力"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS5/ME2/ME3解説を根拠にした汎用短問。本試頻度へ独自問題の出現は加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS5/ME2/ME3 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-me321-02",
+      "label": "新商品開発戦略",
+      "evidenceAliases": [
+        "新商品開発戦略",
+        "製品開発戦略"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS5/ME2/ME3解説を根拠にした汎用短問。本試頻度へ独自問題の出現は加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS5/ME2/ME3 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-me321-03",
+      "label": "市場浸透戦略",
+      "evidenceAliases": [
+        "市場浸透戦略",
+        "市場浸透"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS5/ME2/ME3解説を根拠にした汎用短問。本試頻度へ独自問題の出現は加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS5/ME2/ME3 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-me321-05",
+      "label": "ブランド価値向上",
+      "evidenceAliases": [
+        "ブランド価値向上",
+        "ブランド価値の向上"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS5/ME2/ME3解説を根拠にした汎用短問。本試頻度へ独自問題の出現は加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS5/ME2/ME3 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-me321-06",
+      "label": "関連商品の品揃え",
+      "evidenceAliases": [
+        "関連商品の品揃え",
+        "関連商品の追加",
+        "関連商品"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS5/ME2/ME3解説を根拠にした汎用短問。本試頻度へ独自問題の出現は加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS5/ME2/ME3 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-me331-01",
+      "label": "在庫維持費低減",
+      "evidenceAliases": [
+        "在庫維持費低減",
+        "在庫維持費の低減",
+        "在庫維持コスト削減"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS5/ME2/ME3解説を根拠にした汎用短問。本試頻度へ独自問題の出現は加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS5/ME2/ME3 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-me331-02",
+      "label": "管理事務増加",
+      "evidenceAliases": [
+        "管理事務増加",
+        "管理事務の増加",
+        "管理負担増加"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS5/ME2/ME3解説を根拠にした汎用短問。本試頻度へ独自問題の出現は加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS5/ME2/ME3 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-me331-03",
+      "label": "納期遅延防止",
+      "evidenceAliases": [
+        "納期遅延防止",
+        "納期遅延の防止",
+        "納期遅れ防止"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS5/ME2/ME3解説を根拠にした汎用短問。本試頻度へ独自問題の出現は加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS5/ME2/ME3 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-me331-04",
+      "label": "打合せ削減",
+      "evidenceAliases": [
+        "打合せ削減",
+        "打合せの削減",
+        "打ち合わせ削減"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS5/ME2/ME3解説を根拠にした汎用短問。本試頻度へ独自問題の出現は加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS5/ME2/ME3 original practice 2026 (outside official-exam frequency)"
+      }
+    },
+    {
+      "id": "fruit-mmc-me331-05",
+      "label": "生産計画精度向上",
+      "evidenceAliases": [
+        "生産計画精度向上",
+        "計画精度向上",
+        "生産計画精度の向上"
+      ],
+      "mandatory": false,
+      "mandatoryMappingId": null,
+      "selectionReason": "MMC CS5/ME2/ME3解説を根拠にした汎用短問。本試頻度へ独自問題の出現は加算しない。",
+      "priority": null,
+      "frequency": {
+        "groups": [],
+        "years": [],
+        "recordIds": [],
+        "corpus": "MMC CS5/ME2/ME3 original practice 2026 (outside official-exam frequency)"
       }
     }
   ],
@@ -4187,6 +5688,3974 @@
           ]
         }
       ]
+    },
+    {
+      "id": "mmc-cs311-01",
+      "conceptIds": [
+        "fruit-mmc-cs311-01"
+      ],
+      "case": "I",
+      "intent": "benefit",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs311-01",
+          "accepted": [
+            "相乗効果",
+            "シナジー",
+            "シナジー効果"
+          ]
+        }
+      ],
+      "explanation": "経営資源を組み合わせることで生まれる効果。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Google Drive:18TPL5PVJXYGtAyjYewKy2nF8B5uEnLBg:ForGPT_mmc2026Cs311x03kaisetu.pdf:p.2:第2問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs311-01-cue-1",
+          "prompt": "既存の技術・設備・販路と買収先を組み合わせて得る効果は？",
+          "hintChoices": [
+            "相乗効果",
+            "経営リスク分散"
+          ]
+        },
+        {
+          "id": "mmc-cs311-01-cue-2",
+          "prompt": "買収先との資源の補完によって、単独以上の成果を得ることは？",
+          "hintChoices": [
+            "相乗効果",
+            "経営リスク分散"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs311-02",
+      "conceptIds": [
+        "fruit-mmc-cs311-02"
+      ],
+      "case": "I",
+      "intent": "strength",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs311-02",
+          "accepted": [
+            "提案営業力",
+            "提案型営業力"
+          ]
+        }
+      ],
+      "explanation": "顧客の要望や課題に合わせて解決策を提案する能力。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Google Drive:18TPL5PVJXYGtAyjYewKy2nF8B5uEnLBg:ForGPT_mmc2026Cs311x03kaisetu.pdf:p.2:第3問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs311-02-cue-1",
+          "prompt": "顧客の特注要望を把握し、適した解決策を勧める営業上の能力は？",
+          "hintChoices": [
+            "提案営業力",
+            "加工技術力"
+          ]
+        },
+        {
+          "id": "mmc-cs311-02-cue-2",
+          "prompt": "取引先の課題を聞き出し、製品の使い方まで提案できる強みは？",
+          "hintChoices": [
+            "提案営業力",
+            "加工技術力"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs311-03",
+      "conceptIds": [
+        "fruit-mmc-cs311-03"
+      ],
+      "case": "I",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs311-03",
+          "accepted": [
+            "ジョブローテーション",
+            "計画的ジョブローテーション"
+          ]
+        }
+      ],
+      "explanation": "異なる業務の経験を通じて能力を開発する。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Google Drive:18TPL5PVJXYGtAyjYewKy2nF8B5uEnLBg:ForGPT_mmc2026Cs311x03kaisetu.pdf:p.3:第5問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs311-03-cue-1",
+          "prompt": "複数の部署を計画的に経験させ、従業員の能力を広げる施策は？",
+          "hintChoices": [
+            "ジョブローテーション",
+            "成果主義"
+          ]
+        },
+        {
+          "id": "mmc-cs311-03-cue-2",
+          "prompt": "担当業務を一定期間で変え、幅広い経験を積ませる育成施策は？",
+          "hintChoices": [
+            "ジョブローテーション",
+            "成果主義"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs321-04",
+      "conceptIds": [
+        "fruit-mmc-cs321-04"
+      ],
+      "case": "II",
+      "intent": "strength",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs321-04",
+          "accepted": [
+            "品揃え力",
+            "品揃え能力"
+          ]
+        }
+      ],
+      "explanation": "調達経路を生かし、顧客が求める商品をそろえる能力。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Google Drive:1fJXUL_oZdE5EK8F0GSRsX83C2j1PG7--:ForGPT_mmc2026Cs321x03kaisetu.pdf:p.2:第1問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs321-04-cue-1",
+          "prompt": "独自の仕入れ先から希少な商品を集められる店舗の強みは？",
+          "hintChoices": [
+            "品揃え力",
+            "接客力"
+          ]
+        },
+        {
+          "id": "mmc-cs321-04-cue-2",
+          "prompt": "他店には少ない商品を調達し、豊富にそろえられる能力は？",
+          "hintChoices": [
+            "品揃え力",
+            "接客力"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs321-05",
+      "conceptIds": [
+        "fruit-mmc-cs321-05"
+      ],
+      "case": "II",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs321-05",
+          "accepted": [
+            "展示会の開催",
+            "展示会",
+            "文化的催しの開催"
+          ]
+        }
+      ],
+      "explanation": "展示スペースを活用した催しで、顧客との接点を増やす。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Google Drive:1fJXUL_oZdE5EK8F0GSRsX83C2j1PG7--:ForGPT_mmc2026Cs321x03kaisetu.pdf:p.2:第2問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs321-05-cue-1",
+          "prompt": "空いているイベントスペースで作品を展示し、来店機会を作る施策は？",
+          "hintChoices": [
+            "展示会の開催",
+            "商品値下げ"
+          ]
+        },
+        {
+          "id": "mmc-cs321-05-cue-2",
+          "prompt": "地域の大学やサークルの作品を店内で見てもらい、集客する催しは？",
+          "hintChoices": [
+            "展示会の開催",
+            "商品値下げ"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs321-06",
+      "conceptIds": [
+        "fruit-mmc-cs321-06"
+      ],
+      "case": "II",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs321-06",
+          "accepted": [
+            "コーディネート提案",
+            "コーディネイト提案"
+          ]
+        }
+      ],
+      "explanation": "商品を組み合わせた使い方を提案し、購入を支援する。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Google Drive:1fJXUL_oZdE5EK8F0GSRsX83C2j1PG7--:ForGPT_mmc2026Cs321x03kaisetu.pdf:p.2:第3問設問1"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs321-06-cue-1",
+          "prompt": "商品の組み合わせ方を販売員が具体的に勧めるサービスは？",
+          "hintChoices": [
+            "コーディネート提案",
+            "下取りサービス"
+          ]
+        },
+        {
+          "id": "mmc-cs321-06-cue-2",
+          "prompt": "商品知識を生かし、顧客に似合う組み合わせを助言する販売施策は？",
+          "hintChoices": [
+            "コーディネート提案",
+            "下取りサービス"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs321-07",
+      "conceptIds": [
+        "fruit-mmc-cs321-07"
+      ],
+      "case": "II",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs321-07",
+          "accepted": [
+            "取り置きサービス",
+            "取置きサービス",
+            "取り置き"
+          ]
+        }
+      ],
+      "explanation": "来店時に希望商品を確認できるよう確保する。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Google Drive:1fJXUL_oZdE5EK8F0GSRsX83C2j1PG7--:ForGPT_mmc2026Cs321x03kaisetu.pdf:p.2:第3問設問1"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs321-07-cue-1",
+          "prompt": "ネットで問い合わせた商品を、来店まで確保しておくサービスは？",
+          "hintChoices": [
+            "取り置きサービス",
+            "下取りサービス"
+          ]
+        },
+        {
+          "id": "mmc-cs321-07-cue-2",
+          "prompt": "顧客が店頭で現物を確かめられるよう、希望商品を残しておく施策は？",
+          "hintChoices": [
+            "取り置きサービス",
+            "下取りサービス"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs321-08",
+      "conceptIds": [
+        "fruit-mmc-cs321-08"
+      ],
+      "case": "II",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs321-08",
+          "accepted": [
+            "下取りサービス",
+            "下取り",
+            "下取サービス"
+          ]
+        }
+      ],
+      "explanation": "不要品の処分を助けて買い替えを促す。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Google Drive:1fJXUL_oZdE5EK8F0GSRsX83C2j1PG7--:ForGPT_mmc2026Cs321x03kaisetu.pdf:p.2:第3問設問1"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs321-08-cue-1",
+          "prompt": "買い替え時に古い商品を引き取り、購入を促すサービスは？",
+          "hintChoices": [
+            "下取りサービス",
+            "取り置きサービス"
+          ]
+        },
+        {
+          "id": "mmc-cs321-08-cue-2",
+          "prompt": "不要になった品を引き受けることで、新商品の購入を支援する施策は？",
+          "hintChoices": [
+            "下取りサービス",
+            "取り置きサービス"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs321-09",
+      "conceptIds": [
+        "fruit-mmc-cs321-09"
+      ],
+      "case": "II",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs321-09",
+          "accepted": [
+            "店内POP",
+            "POP",
+            "POP掲示",
+            "店内POP掲示"
+          ]
+        }
+      ],
+      "explanation": "売場内の掲示で商品の特徴や利用方法を伝える。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Google Drive:1fJXUL_oZdE5EK8F0GSRsX83C2j1PG7--:ForGPT_mmc2026Cs321x03kaisetu.pdf:p.3:第3問設問2"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs321-09-cue-1",
+          "prompt": "商品の特徴や使い方を、売場の小さな掲示で伝える販促手段は？",
+          "hintChoices": [
+            "店内POP",
+            "展示会"
+          ]
+        },
+        {
+          "id": "mmc-cs321-09-cue-2",
+          "prompt": "商品の近くに説明札を置き、購入判断を助ける施策は？",
+          "hintChoices": [
+            "店内POP",
+            "展示会"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs331-10",
+      "conceptIds": [
+        "fruit-mmc-cs331-10"
+      ],
+      "case": "III",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs331-10",
+          "accepted": [
+            "VE",
+            "バリューエンジニアリング",
+            "価値工学"
+          ]
+        }
+      ],
+      "explanation": "機能とコストを検討し、製品の価値を高める。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Google Drive:11KiecGIPNc6svBINScYPyK5CelvASKuE:ForGPT_mmc2026Cs331x03kaisetu.pdf:p.2:第2問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs331-10-cue-1",
+          "prompt": "必要な機能とコストの両面から、過剰な製品設計を見直す手法は？",
+          "hintChoices": [
+            "VE",
+            "需要予測"
+          ]
+        },
+        {
+          "id": "mmc-cs331-10-cue-2",
+          "prompt": "製品の機能を保ちつつ、設計段階で費用を抑える検討手法は？",
+          "hintChoices": [
+            "VE",
+            "需要予測"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs331-11",
+      "conceptIds": [
+        "fruit-mmc-cs331-11"
+      ],
+      "case": "III",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs331-11",
+          "accepted": [
+            "DR",
+            "デザインレビュー",
+            "設計審査"
+          ]
+        }
+      ],
+      "explanation": "設計の妥当性を関係者が審査し、製造時の問題を防ぐ。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Google Drive:11KiecGIPNc6svBINScYPyK5CelvASKuE:ForGPT_mmc2026Cs331x03kaisetu.pdf:p.2:第2問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs331-11-cue-1",
+          "prompt": "設計段階で加工のしやすさなどを関係者が審査する活動は？",
+          "hintChoices": [
+            "DR",
+            "カムアップシステム"
+          ]
+        },
+        {
+          "id": "mmc-cs331-11-cue-2",
+          "prompt": "製造に入る前に、製品設計の問題を多部門で検討する手法は？",
+          "hintChoices": [
+            "DR",
+            "カムアップシステム"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs331-12",
+      "conceptIds": [
+        "fruit-mmc-cs331-12"
+      ],
+      "case": "III",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs331-12",
+          "accepted": [
+            "需要予測の精緻化",
+            "需要予測精緻化",
+            "需要予測精度向上"
+          ]
+        }
+      ],
+      "explanation": "販売実績などを使い、将来の必要量をより正確に見込む。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Google Drive:11KiecGIPNc6svBINScYPyK5CelvASKuE:ForGPT_mmc2026Cs331x03kaisetu.pdf:p.2:第2問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs331-12-cue-1",
+          "prompt": "得意先の販売実績を分析し、欠品と過剰在庫を抑えるために改善するものは？",
+          "hintChoices": [
+            "需要予測の精緻化",
+            "外注指導"
+          ]
+        },
+        {
+          "id": "mmc-cs331-12-cue-2",
+          "prompt": "過去の販売データを使い、必要な商品量の見込みを正確にする施策は？",
+          "hintChoices": [
+            "需要予測の精緻化",
+            "外注指導"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs331-13",
+      "conceptIds": [
+        "fruit-mmc-cs331-13"
+      ],
+      "case": "III",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs331-13",
+          "accepted": [
+            "カムアップシステム",
+            "カムアップ",
+            "フォローアップシステム"
+          ]
+        }
+      ],
+      "explanation": "外注作業の進捗を把握し、納期を守るよう督促する。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Google Drive:11KiecGIPNc6svBINScYPyK5CelvASKuE:ForGPT_mmc2026Cs331x03kaisetu.pdf:p.2:第3問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs331-13-cue-1",
+          "prompt": "外注先の納期遅延を防ぐため、進捗確認と督促を行う仕組みは？",
+          "hintChoices": [
+            "カムアップシステム",
+            "VE"
+          ]
+        },
+        {
+          "id": "mmc-cs331-13-cue-2",
+          "prompt": "外注品が期日に届くよう、進み具合を追跡して催促する管理方法は？",
+          "hintChoices": [
+            "カムアップシステム",
+            "VE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs331-14",
+      "conceptIds": [
+        "fruit-mmc-cs331-14"
+      ],
+      "case": "III",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs331-14",
+          "accepted": [
+            "外注指導",
+            "外注先指導",
+            "外注先への技術指導"
+          ]
+        }
+      ],
+      "explanation": "外注先へ技術や品質管理の方法を指導する。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Google Drive:11KiecGIPNc6svBINScYPyK5CelvASKuE:ForGPT_mmc2026Cs331x03kaisetu.pdf:p.2:第3問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs331-14-cue-1",
+          "prompt": "外注品の不良を減らすため、取引先に品質改善の方法を教える施策は？",
+          "hintChoices": [
+            "外注指導",
+            "カムアップシステム"
+          ]
+        },
+        {
+          "id": "mmc-cs331-14-cue-2",
+          "prompt": "外注先の品質を高めるため、加工や検査のやり方を支援することは？",
+          "hintChoices": [
+            "外注指導",
+            "カムアップシステム"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs331-15",
+      "conceptIds": [
+        "fruit-mmc-cs331-15"
+      ],
+      "case": "III",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs331-15",
+          "accepted": [
+            "生産計画立案サイクルの短縮",
+            "生産計画サイクル短縮",
+            "計画サイクル短縮"
+          ]
+        }
+      ],
+      "explanation": "計画を短い間隔で更新し、需要の変化に対応する。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Google Drive:11KiecGIPNc6svBINScYPyK5CelvASKuE:ForGPT_mmc2026Cs331x03kaisetu.pdf:p.2:第3問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs331-15-cue-1",
+          "prompt": "急な受注に対応できるよう、月次から週次へ計画を組む間隔を変える施策は？",
+          "hintChoices": [
+            "生産計画立案サイクルの短縮",
+            "生産ロットの適正化"
+          ]
+        },
+        {
+          "id": "mmc-cs331-15-cue-2",
+          "prompt": "受注の変化を早く計画に反映するため、計画の更新頻度を高めることは？",
+          "hintChoices": [
+            "生産計画立案サイクルの短縮",
+            "生産ロットの適正化"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs411-01",
+      "conceptIds": [
+        "fruit-mmc-cs411-01"
+      ],
+      "case": "I",
+      "intent": "strength",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs411-01",
+          "accepted": [
+            "技術開発力",
+            "技術開発能力"
+          ]
+        }
+      ],
+      "explanation": "技術を開発する能力を製品の価値向上に生かす。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Google Drive:1AeYz3mZLB7lozc7eVGfdQYiKGmq9oRAE:mmc2026Cs411x03kaisetu_print.pdf:p.2:第1問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs411-01-cue-1",
+          "prompt": "顧客が求める新しい製造技術を生み出せる企業の強みは？",
+          "hintChoices": [
+            "技術開発力",
+            "情報収集力"
+          ]
+        },
+        {
+          "id": "mmc-cs411-01-cue-2",
+          "prompt": "高付加価値製品のために、独自の技術を開発できる能力は？",
+          "hintChoices": [
+            "技術開発力",
+            "情報収集力"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs411-02",
+      "conceptIds": [
+        "fruit-22"
+      ],
+      "case": "I",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-22",
+          "accepted": [
+            "成果主義",
+            "成果主義報酬",
+            "成果主義的報酬制度"
+          ]
+        }
+      ],
+      "explanation": "実績を報酬へ反映して納得感や意欲を高める。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Google Drive:1AeYz3mZLB7lozc7eVGfdQYiKGmq9oRAE:mmc2026Cs411x03kaisetu_print.pdf:p.2:第2問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs411-02-cue-1",
+          "prompt": "年齢だけで給与が決まることへの不満を、実績に応じた報酬で改善する制度は？",
+          "hintChoices": [
+            "成果主義",
+            "ジョブローテーション"
+          ]
+        },
+        {
+          "id": "mmc-cs411-02-cue-2",
+          "prompt": "業績に貢献した従業員へ、成果に応じて報酬を配分する考え方は？",
+          "hintChoices": [
+            "成果主義",
+            "ジョブローテーション"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs411-03",
+      "conceptIds": [
+        "fruit-42"
+      ],
+      "case": "I",
+      "intent": "benefit",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-42",
+          "accepted": [
+            "経営リスク分散",
+            "リスク分散"
+          ]
+        }
+      ],
+      "explanation": "収益源の偏りを減らして経営上のリスクを分散する。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Google Drive:1AeYz3mZLB7lozc7eVGfdQYiKGmq9oRAE:mmc2026Cs411x03kaisetu_print.pdf:p.2:第3問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs411-03-cue-1",
+          "prompt": "買収によって顧客層を広げ、特定顧客への依存を減らす狙いは？",
+          "hintChoices": [
+            "経営リスク分散",
+            "相乗効果"
+          ]
+        },
+        {
+          "id": "mmc-cs411-03-cue-2",
+          "prompt": "売上を複数の顧客から得て、一社との取引減少の影響を抑える効果は？",
+          "hintChoices": [
+            "経営リスク分散",
+            "相乗効果"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs412-04",
+      "conceptIds": [
+        "fruit-mmc-cs412-04"
+      ],
+      "case": "I",
+      "intent": "strength",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs412-04",
+          "accepted": [
+            "情報収集力",
+            "情報収集能力"
+          ]
+        }
+      ],
+      "explanation": "市場や顧客に関する情報を集める能力。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Google Drive:1ITjq_wrNU0g3OF-3zoaBuqbIfNuWCb95:mmc2026Cs412x03kaisetu_print.pdf:p.2:第1問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs412-04-cue-1",
+          "prompt": "市場や顧客の動きを素早く把握し、事業判断に生かせる強みは？",
+          "hintChoices": [
+            "情報収集力",
+            "技術開発力"
+          ]
+        },
+        {
+          "id": "mmc-cs412-04-cue-2",
+          "prompt": "必要な市場情報を集めて把握できる企業の能力は？",
+          "hintChoices": [
+            "情報収集力",
+            "技術開発力"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs412-05",
+      "conceptIds": [
+        "fruit-mmc-cs412-05"
+      ],
+      "case": "I",
+      "intent": "benefit",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs412-05",
+          "accepted": [
+            "安定売上の確保",
+            "安定売上",
+            "安定的売上の確保"
+          ]
+        }
+      ],
+      "explanation": "継続取引によって一定の売上を確保しやすくなる。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Google Drive:1ITjq_wrNU0g3OF-3zoaBuqbIfNuWCb95:mmc2026Cs412x03kaisetu_print.pdf:p.2:第3問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs412-05-cue-1",
+          "prompt": "大口企業の下請として、継続した注文を受ける経営上の利点は？",
+          "hintChoices": [
+            "安定売上の確保",
+            "経営リスク分散"
+          ]
+        },
+        {
+          "id": "mmc-cs412-05-cue-2",
+          "prompt": "繰り返し受注できる下請取引が、売上面にもたらす効果は？",
+          "hintChoices": [
+            "安定売上の確保",
+            "経営リスク分散"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs412-06",
+      "conceptIds": [
+        "fruit-05"
+      ],
+      "case": "I",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-05",
+          "accepted": [
+            "事業部制",
+            "事業部制組織"
+          ]
+        }
+      ],
+      "explanation": "事業ごとに権限と責任を持たせて運営する。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Google Drive:1ITjq_wrNU0g3OF-3zoaBuqbIfNuWCb95:mmc2026Cs412x03kaisetu_print.pdf:p.2:第5問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs412-06-cue-1",
+          "prompt": "異なる事業ごとに判断と利益管理を担わせる組織形態は？",
+          "hintChoices": [
+            "事業部制",
+            "全社会議"
+          ]
+        },
+        {
+          "id": "mmc-cs412-06-cue-2",
+          "prompt": "新事業と従来事業を分け、各事業に責任を持たせる組織形態は？",
+          "hintChoices": [
+            "事業部制",
+            "全社会議"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs421-07",
+      "conceptIds": [
+        "fruit-35"
+      ],
+      "case": "II",
+      "intent": "benefit",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-35",
+          "accepted": [
+            "一人当たり売上増加",
+            "客単価向上",
+            "客単価増加",
+            "顧客単価向上"
+          ]
+        }
+      ],
+      "explanation": "既存顧客の追加利用によって顧客一人当たりの売上を増やす。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Google Drive:15inNopRZC-M1mgbMD-UetQRarYvDK-yW:mmc2026Cs421x03kaisetu_print.pdf:p.2:第2問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs421-07-cue-1",
+          "prompt": "空いている講座を既存受講者へ案内し、追加受講してもらう売上面の効果は？",
+          "hintChoices": [
+            "一人当たり売上増加",
+            "新規顧客開拓"
+          ]
+        },
+        {
+          "id": "mmc-cs421-07-cue-2",
+          "prompt": "同じ受講者に別の講座も申し込んでもらうと、顧客ごとの何が増える？",
+          "hintChoices": [
+            "一人当たり売上増加",
+            "新規顧客開拓"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs421-08",
+      "conceptIds": [
+        "fruit-mmc-cs421-08"
+      ],
+      "case": "II",
+      "intent": "benefit",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs421-08",
+          "accepted": [
+            "継続率向上",
+            "受講継続率向上",
+            "継続率の向上"
+          ]
+        }
+      ],
+      "explanation": "利用を続けやすくして顧客の離脱を抑える。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Google Drive:15inNopRZC-M1mgbMD-UetQRarYvDK-yW:mmc2026Cs421x03kaisetu_print.pdf:p.2:第3問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs421-08-cue-1",
+          "prompt": "授業外相談や振替対応で、受講をやめる人を減らす効果は？",
+          "hintChoices": [
+            "継続率向上",
+            "客単価向上"
+          ]
+        },
+        {
+          "id": "mmc-cs421-08-cue-2",
+          "prompt": "学習上の不安や欠席への支援により、翌期も受講する割合を上げる効果は？",
+          "hintChoices": [
+            "継続率向上",
+            "客単価向上"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs421-09",
+      "conceptIds": [
+        "fruit-mmc-cs421-09"
+      ],
+      "case": "II",
+      "intent": "benefit",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs421-09",
+          "accepted": [
+            "ファン化",
+            "顧客のファン化"
+          ]
+        }
+      ],
+      "explanation": "顧客の愛着や支持を高め、継続した関係につなげる。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Google Drive:15inNopRZC-M1mgbMD-UetQRarYvDK-yW:mmc2026Cs421x03kaisetu_print.pdf:p.2:第4問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs421-09-cue-1",
+          "prompt": "技術者との交流イベントで、顧客が企業を応援するようになる効果は？",
+          "hintChoices": [
+            "ファン化",
+            "需要予測"
+          ]
+        },
+        {
+          "id": "mmc-cs421-09-cue-2",
+          "prompt": "商品を作る人と直接交流し、顧客の愛着を深める狙いは？",
+          "hintChoices": [
+            "ファン化",
+            "需要予測"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs422-10",
+      "conceptIds": [
+        "fruit-mmc-cs422-10"
+      ],
+      "case": "II",
+      "intent": "weakness",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs422-10",
+          "accepted": [
+            "品揃え不足",
+            "品揃えの不足"
+          ]
+        }
+      ],
+      "explanation": "多様な顧客ニーズに対応する商品種類が不足している。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Google Drive:1cMxPGHH8H7OoGj9908wu69yAI7fqPm4J:mmc2026Cs422x03kaisetu_print.pdf:p.2:第1問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs422-10-cue-1",
+          "prompt": "顧客が選べる種類が少なく、多様な用途に応えられない店舗の弱みは？",
+          "hintChoices": [
+            "品揃え不足",
+            "情報発信不足"
+          ]
+        },
+        {
+          "id": "mmc-cs422-10-cue-2",
+          "prompt": "商品種類が限られ、好みに合う選択肢を出せない弱みは？",
+          "hintChoices": [
+            "品揃え不足",
+            "情報発信不足"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs422-11",
+      "conceptIds": [
+        "fruit-mmc-cs422-11"
+      ],
+      "case": "II",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs422-11",
+          "accepted": [
+            "用途別の情報発信",
+            "利用シーンの情報発信",
+            "用途や利用シーンの情報発信"
+          ]
+        }
+      ],
+      "explanation": "顧客が使用する場面を示し、商品の価値を伝える。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Google Drive:1cMxPGHH8H7OoGj9908wu69yAI7fqPm4J:mmc2026Cs422x03kaisetu_print.pdf:p.2:第2問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs422-11-cue-1",
+          "prompt": "ターゲットが商品を使う場面を具体的に示し、購入を促す情報提供は？",
+          "hintChoices": [
+            "用途別の情報発信",
+            "下取りサービス"
+          ]
+        },
+        {
+          "id": "mmc-cs422-11-cue-2",
+          "prompt": "商品の機能だけでなく、生活の中で役立つ場面を紹介する施策は？",
+          "hintChoices": [
+            "用途別の情報発信",
+            "下取りサービス"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs422-12",
+      "conceptIds": [
+        "fruit-mmc-cs422-12"
+      ],
+      "case": "II",
+      "intent": "benefit",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs422-12",
+          "accepted": [
+            "参加意識向上",
+            "参加意識の向上"
+          ]
+        }
+      ],
+      "explanation": "顧客が事業に関わる感覚を持つことで関係を深める。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Google Drive:1cMxPGHH8H7OoGj9908wu69yAI7fqPm4J:mmc2026Cs422x03kaisetu_print.pdf:p.3:第4問設問2"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs422-12-cue-1",
+          "prompt": "商品開発の座談会に顧客を招き、開発に関わったと感じてもらう効果は？",
+          "hintChoices": [
+            "参加意識向上",
+            "客単価向上"
+          ]
+        },
+        {
+          "id": "mmc-cs422-12-cue-2",
+          "prompt": "顧客の意見を商品開発へ取り入れ、一緒に作る感覚を高める効果は？",
+          "hintChoices": [
+            "参加意識向上",
+            "客単価向上"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs431-13",
+      "conceptIds": [
+        "fruit-mmc-cs431-13"
+      ],
+      "case": "III",
+      "intent": "strength",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs431-13",
+          "accepted": [
+            "一貫生産体制",
+            "一貫生産"
+          ]
+        }
+      ],
+      "explanation": "複数の工程を一社内でつなげて対応する。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Google Drive:1XrFYtCicI6HqjLwK96yikvywFsdA29qG:mmc2026Cs431x03kaisetu_print.pdf:p.2:第1問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs431-13-cue-1",
+          "prompt": "開発から製造までを社内でつなぎ、まとめて対応できる企業の強みは？",
+          "hintChoices": [
+            "一貫生産体制",
+            "外注先開拓"
+          ]
+        },
+        {
+          "id": "mmc-cs431-13-cue-2",
+          "prompt": "設計と加工を別企業へ分けず、一社で連続して担える体制は？",
+          "hintChoices": [
+            "一貫生産体制",
+            "外注先開拓"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs431-14",
+      "conceptIds": [
+        "fruit-mmc-cs431-14"
+      ],
+      "case": "III",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs431-14",
+          "accepted": [
+            "外段取り",
+            "外段取り化"
+          ]
+        }
+      ],
+      "explanation": "機械が動いている間に準備できる作業を進める。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Google Drive:1XrFYtCicI6HqjLwK96yikvywFsdA29qG:mmc2026Cs431x03kaisetu_print.pdf:p.2:第2問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs431-14-cue-1",
+          "prompt": "機械を止めずにできる準備を、停止前に済ませる段取り改善は？",
+          "hintChoices": [
+            "外段取り",
+            "内段取り"
+          ]
+        },
+        {
+          "id": "mmc-cs431-14-cue-2",
+          "prompt": "設備停止時間を短くするため、稼働中に準備作業を行うことは？",
+          "hintChoices": [
+            "外段取り",
+            "内段取り"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs431-15",
+      "conceptIds": [
+        "fruit-mmc-cs431-15"
+      ],
+      "case": "III",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs431-15",
+          "accepted": [
+            "QCサークル",
+            "QCサークル活動",
+            "小集団活動"
+          ]
+        }
+      ],
+      "explanation": "現場の小集団が自主的に品質改善を進める。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Google Drive:1XrFYtCicI6HqjLwK96yikvywFsdA29qG:mmc2026Cs431x03kaisetu_print.pdf:p.2:第2問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs431-15-cue-1",
+          "prompt": "現場の少人数グループが品質改善を話し合い、手戻りを減らす活動は？",
+          "hintChoices": [
+            "QCサークル",
+            "外注指導"
+          ]
+        },
+        {
+          "id": "mmc-cs431-15-cue-2",
+          "prompt": "作業者が小集団で品質上の問題を調べ、改善に取り組む活動は？",
+          "hintChoices": [
+            "QCサークル",
+            "外注指導"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs432-16",
+      "conceptIds": [
+        "fruit-mmc-cs432-16"
+      ],
+      "case": "III",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs432-16",
+          "accepted": [
+            "技術者同行営業",
+            "技術者同行",
+            "技術者の同行"
+          ]
+        }
+      ],
+      "explanation": "営業と技術者が連携し、技術的な提案を行う。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Google Drive:1SaOxTbKzSHNBhPKBG2Whpjo9w0iepMAG:mmc2026Cs432x03kaisetu_print.pdf:p.2:第3問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs432-16-cue-1",
+          "prompt": "顧客の技術的な相談へ詳しく答えるため、営業に専門担当者を同席させる施策は？",
+          "hintChoices": [
+            "技術者同行営業",
+            "外注指導"
+          ]
+        },
+        {
+          "id": "mmc-cs432-16-cue-2",
+          "prompt": "受け身の営業を変え、顧客へ技術面の提案を行うための同行施策は？",
+          "hintChoices": [
+            "技術者同行営業",
+            "外注指導"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs432-17",
+      "conceptIds": [
+        "fruit-58"
+      ],
+      "case": "III",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-58",
+          "accepted": [
+            "ポカヨケ",
+            "ポカヨケ導入",
+            "ポカヨケの導入"
+          ]
+        }
+      ],
+      "explanation": "人のうっかりミスを起こしにくくする仕組みを作る。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Google Drive:1SaOxTbKzSHNBhPKBG2Whpjo9w0iepMAG:mmc2026Cs432x03kaisetu_print.pdf:p.2:第4問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs432-17-cue-1",
+          "prompt": "締め付け忘れが起きないよう、ミスを防ぐ仕組みを工程に組み込む施策は？",
+          "hintChoices": [
+            "ポカヨケ",
+            "需要予測"
+          ]
+        },
+        {
+          "id": "mmc-cs432-17-cue-2",
+          "prompt": "うっかりした作業漏れを、治具や装置の工夫で防止する仕組みは？",
+          "hintChoices": [
+            "ポカヨケ",
+            "需要予測"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs432-18",
+      "conceptIds": [
+        "fruit-mmc-cs432-18"
+      ],
+      "case": "III",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs432-18",
+          "accepted": [
+            "多種少量生産",
+            "多品種少量生産"
+          ]
+        }
+      ],
+      "explanation": "多様な種類を少ない数量ずつ生産して需要に対応する。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Google Drive:1SaOxTbKzSHNBhPKBG2Whpjo9w0iepMAG:mmc2026Cs432x03kaisetu_print.pdf:p.3:第5問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs432-18-cue-1",
+          "prompt": "多様な顧客の要望へ、商品種類を増やし少ない数量で対応する生産方式は？",
+          "hintChoices": [
+            "多種少量生産",
+            "大量生産"
+          ]
+        },
+        {
+          "id": "mmc-cs432-18-cue-2",
+          "prompt": "同じ品の大量生産ではなく、さまざまな品を小口で作る方式は？",
+          "hintChoices": [
+            "多種少量生産",
+            "大量生産"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs511-01",
+      "conceptIds": [
+        "fruit-mmc-cs511-01"
+      ],
+      "case": "I",
+      "intent": "weakness",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs511-01",
+          "accepted": [
+            "社長への営業依存",
+            "営業活動の社長依存",
+            "社長依存"
+          ]
+        }
+      ],
+      "explanation": "営業活動が経営者個人へ集中し、組織として対応できていない。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026Cs511x03kaisetu.pdf:p.2:第1問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs511-01-cue-1",
+          "prompt": "営業案件の獲得を社長一人が担い、他の社員が引き継げない弱みは？",
+          "hintChoices": [
+            "社長への営業依存",
+            "顧客依存"
+          ]
+        },
+        {
+          "id": "mmc-cs511-01-cue-2",
+          "prompt": "社長が営業できなくなると、新しい注文の獲得が止まる体制上の弱みは？",
+          "hintChoices": [
+            "社長への営業依存",
+            "顧客依存"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs511-02",
+      "conceptIds": [
+        "fruit-mmc-cs511-02"
+      ],
+      "case": "I",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs511-02",
+          "accepted": [
+            "共同受注",
+            "企業間共同受注"
+          ]
+        }
+      ],
+      "explanation": "各社の能力を組み合わせて注文を引き受ける。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026Cs511x03kaisetu.pdf:p.2:第3問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs511-02-cue-1",
+          "prompt": "地域の企業が役割を分担し、一社だけでは難しい注文をまとめて引き受ける施策は？",
+          "hintChoices": [
+            "共同受注",
+            "共同開発"
+          ]
+        },
+        {
+          "id": "mmc-cs511-02-cue-2",
+          "prompt": "複数の企業が連携して、同じ顧客から一つの案件を請け負う取組は？",
+          "hintChoices": [
+            "共同受注",
+            "共同開発"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs511-03",
+      "conceptIds": [
+        "fruit-mmc-cs511-03"
+      ],
+      "case": "I",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs511-03",
+          "accepted": [
+            "共同開発",
+            "企業間共同開発"
+          ]
+        }
+      ],
+      "explanation": "複数企業の技術や知識を組み合わせて開発する。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026Cs511x03kaisetu.pdf:p.2:第3問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs511-03-cue-1",
+          "prompt": "地域の企業が互いの技術を持ち寄り、新しい製品を一緒に生み出す取組は？",
+          "hintChoices": [
+            "共同開発",
+            "共同受注"
+          ]
+        },
+        {
+          "id": "mmc-cs511-03-cue-2",
+          "prompt": "異分野の技術を組み合わせるため、複数社で設計や試作に取り組む施策は？",
+          "hintChoices": [
+            "共同開発",
+            "共同受注"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs511-04",
+      "conceptIds": [
+        "fruit-mmc-cs511-04"
+      ],
+      "case": "I",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs511-04",
+          "accepted": [
+            "人材育成部門の設置",
+            "人材育成部署の設置",
+            "人材育成部門"
+          ]
+        }
+      ],
+      "explanation": "育成を担当する部門を設け、提案営業の人材を計画的に育てる。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026Cs511x03kaisetu.pdf:p.3:第4問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs511-04-cue-1",
+          "prompt": "技術提案を担う営業社員を継続的に育てるため、組織面で設ける部署は？",
+          "hintChoices": [
+            "人材育成部門の設置",
+            "事業部制"
+          ]
+        },
+        {
+          "id": "mmc-cs511-04-cue-2",
+          "prompt": "営業人材の能力開発を専門に担当させる組織上の施策は？",
+          "hintChoices": [
+            "人材育成部門の設置",
+            "事業部制"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs511-05",
+      "conceptIds": [
+        "fruit-mmc-cs511-05"
+      ],
+      "case": "I",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs511-05",
+          "accepted": [
+            "中途採用",
+            "営業経験者の採用"
+          ]
+        }
+      ],
+      "explanation": "社外の経験者を採用して不足する能力を補う。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026Cs511x03kaisetu.pdf:p.3:第5問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs511-05-cue-1",
+          "prompt": "社内に営業経験が不足しているとき、経験のある人を社外から雇う施策は？",
+          "hintChoices": [
+            "中途採用",
+            "OJT"
+          ]
+        },
+        {
+          "id": "mmc-cs511-05-cue-2",
+          "prompt": "新規顧客への営業を強めるため、実務経験者を直接雇い入れる方法は？",
+          "hintChoices": [
+            "中途採用",
+            "OJT"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs512-01",
+      "conceptIds": [
+        "fruit-37"
+      ],
+      "case": "I",
+      "intent": "comparison",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-37",
+          "accepted": [
+            "継続型",
+            "継続型事業"
+          ]
+        }
+      ],
+      "explanation": "購入後も追加サービスなどの取引を継続する。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026Cs512x03kaisetu.pdf:p.2:第2問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs512-01-cue-1",
+          "prompt": "趣味の自転車を販売した後も、カスタムや整備で来店が続く事業の型は？",
+          "hintChoices": [
+            "継続型",
+            "売り切り型"
+          ]
+        },
+        {
+          "id": "mmc-cs512-01-cue-2",
+          "prompt": "初回販売だけでなく、その後のメンテナンスも取引になるビジネスの型は？",
+          "hintChoices": [
+            "継続型",
+            "売り切り型"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs512-02",
+      "conceptIds": [
+        "fruit-39"
+      ],
+      "case": "I",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-39",
+          "accepted": [
+            "公平・公正な評価",
+            "公平公正な評価",
+            "公正・公平な評価制度"
+          ]
+        }
+      ],
+      "explanation": "共通の客観的な基準を用いて、公平に評価する。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026Cs512x03kaisetu.pdf:p.2:第3問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs512-02-cue-1",
+          "prompt": "自転車店の社員評価で、顧客からの評価など共通の基準を用いる狙いに合う制度は？",
+          "hintChoices": [
+            "公平・公正な評価",
+            "年功評価"
+          ]
+        },
+        {
+          "id": "mmc-cs512-02-cue-2",
+          "prompt": "店舗ごとの印象で判断せず、共通基準で従業員の仕事を評価することは？",
+          "hintChoices": [
+            "公平・公正な評価",
+            "年功評価"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs512-03",
+      "conceptIds": [
+        "fruit-mmc-cs512-03"
+      ],
+      "case": "I",
+      "intent": "strength",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs512-03",
+          "accepted": [
+            "商品選別力",
+            "商品選別能力"
+          ]
+        }
+      ],
+      "explanation": "商品知識や経験を生かして適切な商品を選ぶ。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026Cs512x03kaisetu.pdf:p.2:第4問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs512-03-cue-1",
+          "prompt": "顧客に合う自転車を、豊富な商品知識から選び出せる社員の能力は？",
+          "hintChoices": [
+            "商品選別力",
+            "品揃え不足"
+          ]
+        },
+        {
+          "id": "mmc-cs512-03-cue-2",
+          "prompt": "多くの仕入候補の中から、販売に適した品を見極められる強みは？",
+          "hintChoices": [
+            "商品選別力",
+            "品揃え不足"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs512-04",
+      "conceptIds": [
+        "fruit-02"
+      ],
+      "case": "I",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-02",
+          "accepted": [
+            "権限委譲",
+            "権限の委譲"
+          ]
+        }
+      ],
+      "explanation": "現場が顧客に合わせて判断できるよう権限を移す。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026Cs512x03kaisetu.pdf:p.2:第5問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs512-04-cue-1",
+          "prompt": "各店舗の顧客事情に合わせて品揃えを決められるよう、店長へ判断を移す施策は？",
+          "hintChoices": [
+            "権限委譲",
+            "中途採用"
+          ]
+        },
+        {
+          "id": "mmc-cs512-04-cue-2",
+          "prompt": "本部の承認待ちを減らし、店長に商品選択の裁量を持たせる施策は？",
+          "hintChoices": [
+            "権限委譲",
+            "中途採用"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs521-01",
+      "conceptIds": [
+        "fruit-mmc-cs521-01"
+      ],
+      "case": "II",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs521-01",
+          "accepted": [
+            "レンタルサービス",
+            "楽器レンタル",
+            "レンタル"
+          ]
+        }
+      ],
+      "explanation": "利用者に合う楽器を貸し、学習や利用を支援する。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026Cs521x03kaisetu.pdf:p.2:第3問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs521-01-cue-1",
+          "prompt": "生徒の技能や好みに合う楽器を講師が選び、一定期間貸し出す施策は？",
+          "hintChoices": [
+            "レンタルサービス",
+            "下取りサービス"
+          ]
+        },
+        {
+          "id": "mmc-cs521-01-cue-2",
+          "prompt": "購入前に自分に合う楽器を使ってもらうため、貸し出すサービスは？",
+          "hintChoices": [
+            "レンタルサービス",
+            "下取りサービス"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs521-02",
+      "conceptIds": [
+        "fruit-mmc-cs521-02"
+      ],
+      "case": "II",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs521-02",
+          "accepted": [
+            "レッスン録画サービス",
+            "レッスン録画",
+            "録画サービス"
+          ]
+        }
+      ],
+      "explanation": "演奏を動画で振り返れるようにして復習を助ける。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026Cs521x03kaisetu.pdf:p.2:第3問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs521-02-cue-1",
+          "prompt": "講師の模範演奏と生徒の演奏を記録し、自宅で見直せるようにする施策は？",
+          "hintChoices": [
+            "レッスン録画サービス",
+            "無料体験会"
+          ]
+        },
+        {
+          "id": "mmc-cs521-02-cue-2",
+          "prompt": "授業中の演奏を動画に残し、復習時に比較できるサービスは？",
+          "hintChoices": [
+            "レッスン録画サービス",
+            "無料体験会"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs521-03",
+      "conceptIds": [
+        "fruit-mmc-cs521-03"
+      ],
+      "case": "II",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs521-03",
+          "accepted": [
+            "学習ガイド情報の発信",
+            "学習ガイドの発信",
+            "学習ガイド情報"
+          ]
+        }
+      ],
+      "explanation": "自宅学習の方法を伝え、授業外の学習を支える。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026Cs521x03kaisetu.pdf:p.2:第2問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs521-03-cue-1",
+          "prompt": "音楽教室が自宅での練習方法を知らせ、授業外の学習を支える情報発信は？",
+          "hintChoices": [
+            "学習ガイド情報の発信",
+            "展示会の開催"
+          ]
+        },
+        {
+          "id": "mmc-cs521-03-cue-2",
+          "prompt": "教室に来ない日も練習を進められるよう、家庭での学び方を伝える施策は？",
+          "hintChoices": [
+            "学習ガイド情報の発信",
+            "展示会の開催"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs521-04",
+      "conceptIds": [
+        "fruit-mmc-cs521-04"
+      ],
+      "case": "II",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs521-04",
+          "accepted": [
+            "無料体験会",
+            "無料体験",
+            "無料体験会の開催"
+          ]
+        }
+      ],
+      "explanation": "参加のハードルを下げ、授業や教室への理解を促す。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026Cs521x03kaisetu.pdf:p.2:第4問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs521-04-cue-1",
+          "prompt": "初めての人に費用をかけず授業を試してもらい、教室の魅力を知ってもらう催しは？",
+          "hintChoices": [
+            "無料体験会",
+            "レンタルサービス"
+          ]
+        },
+        {
+          "id": "mmc-cs521-04-cue-2",
+          "prompt": "入会を検討する人に、授業の雰囲気を無料で経験してもらう施策は？",
+          "hintChoices": [
+            "無料体験会",
+            "レンタルサービス"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs521-05",
+      "conceptIds": [
+        "fruit-mmc-cs521-05"
+      ],
+      "case": "II",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs521-05",
+          "accepted": [
+            "オンライン発表会",
+            "オンライン定期発表会"
+          ]
+        }
+      ],
+      "explanation": "オンラインで成果を披露し、教室の魅力を発信する。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026Cs521x03kaisetu.pdf:p.2:第4問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs521-05-cue-1",
+          "prompt": "生徒の演奏をネット上の催しで披露し、教室の活動を広く知らせる施策は？",
+          "hintChoices": [
+            "オンライン発表会",
+            "学習ガイド情報の発信"
+          ]
+        },
+        {
+          "id": "mmc-cs521-05-cue-2",
+          "prompt": "遠方の人も視聴できる場で、生徒の学習成果を定期的に発表する催しは？",
+          "hintChoices": [
+            "オンライン発表会",
+            "学習ガイド情報の発信"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs522-01",
+      "conceptIds": [
+        "fruit-mmc-cs522-01"
+      ],
+      "case": "II",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs522-01",
+          "accepted": [
+            "メールマガジンの送信",
+            "メルマガ送信",
+            "メルマガ",
+            "メールマガジン"
+          ]
+        }
+      ],
+      "explanation": "顧客へ定期的に情報を届けて接点を維持する。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026Cs522x03kaisetu.pdf:p.2:第2問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs522-01-cue-1",
+          "prompt": "発酵食品のレシピなどを、登録した顧客へメールで定期的に届ける施策は？",
+          "hintChoices": [
+            "メールマガジンの送信",
+            "店内POP"
+          ]
+        },
+        {
+          "id": "mmc-cs522-01-cue-2",
+          "prompt": "店の情報や商品の利用方法を、購読者へ継続してメール配信する施策は？",
+          "hintChoices": [
+            "メールマガジンの送信",
+            "店内POP"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs522-02",
+      "conceptIds": [
+        "fruit-mmc-cs522-02"
+      ],
+      "case": "II",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs522-02",
+          "accepted": [
+            "パブリシティの活用",
+            "パブリシティ",
+            "パブリシティ活用"
+          ]
+        }
+      ],
+      "explanation": "媒体への情報提供で紹介や報道を促し、店を知ってもらう。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026Cs522x03kaisetu.pdf:p.3:第4問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs522-02-cue-1",
+          "prompt": "グルメ媒体に情報を提供し、記事などで取り上げてもらう販促手段は？",
+          "hintChoices": [
+            "パブリシティの活用",
+            "メールマガジンの送信"
+          ]
+        },
+        {
+          "id": "mmc-cs522-02-cue-2",
+          "prompt": "第三者の媒体に店のこだわりを知らせ、紹介してもらう広報施策は？",
+          "hintChoices": [
+            "パブリシティの活用",
+            "メールマガジンの送信"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs522-03",
+      "conceptIds": [
+        "fruit-mmc-cs522-03"
+      ],
+      "case": "II",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs522-03",
+          "accepted": [
+            "産地巡りツアー",
+            "産地巡り",
+            "産地ツアー"
+          ]
+        }
+      ],
+      "explanation": "原材料の産地を訪れてもらい、商品の背景への理解を深める。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026Cs522x03kaisetu.pdf:p.3:第5問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs522-03-cue-1",
+          "prompt": "食品の材料が作られる地域へ顧客を案内し、こだわりへの理解を深める催しは？",
+          "hintChoices": [
+            "産地巡りツアー",
+            "店内POP"
+          ]
+        },
+        {
+          "id": "mmc-cs522-03-cue-2",
+          "prompt": "原材料の生産現場を巡ってもらい、商品背景を体験してもらう施策は？",
+          "hintChoices": [
+            "産地巡りツアー",
+            "店内POP"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs522-04",
+      "conceptIds": [
+        "fruit-35"
+      ],
+      "case": "II",
+      "intent": "benefit",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-35",
+          "accepted": [
+            "客単価向上",
+            "客単価の向上"
+          ]
+        }
+      ],
+      "explanation": "一回の購入金額を高めて、一人当たりの売上を増やす。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026Cs522x03kaisetu.pdf:p.3:第4問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs522-04-cue-1",
+          "prompt": "売場の掲示と接客で厳選食材の価値を伝え、より高価格な品を選んでもらう売上面の効果は？",
+          "hintChoices": [
+            "客単価向上",
+            "客数向上"
+          ]
+        },
+        {
+          "id": "mmc-cs522-04-cue-2",
+          "prompt": "来店した人数を変えず、こだわり商品の購入金額を高める効果は？",
+          "hintChoices": [
+            "客単価向上",
+            "客数向上"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs531-01",
+      "conceptIds": [
+        "fruit-mmc-cs531-01"
+      ],
+      "case": "III",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs531-01",
+          "accepted": [
+            "5S",
+            "5Sの徹底",
+            "５Ｓ"
+          ]
+        }
+      ],
+      "explanation": "作業場を整理して管理しやすい状態を維持する。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026Cs531x03kaisetu.pdf:p.2:第2問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs531-01-cue-1",
+          "prompt": "金型や材料を整理し、作業場を整えるために徹底する管理活動は？",
+          "hintChoices": [
+            "5S",
+            "QCサークル"
+          ]
+        },
+        {
+          "id": "mmc-cs531-01-cue-2",
+          "prompt": "整理・整頓・清掃・清潔・しつけを進め、作業場所を整える取組は？",
+          "hintChoices": [
+            "5S",
+            "QCサークル"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs531-02",
+      "conceptIds": [
+        "fruit-mmc-cs531-02"
+      ],
+      "case": "III",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs531-02",
+          "accepted": [
+            "定位置化",
+            "定位置管理",
+            "金型や材料の定位置化"
+          ]
+        }
+      ],
+      "explanation": "保管する場所を定め、探す時間や置き間違いを減らす。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026Cs531x03kaisetu.pdf:p.2:第2問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs531-02-cue-1",
+          "prompt": "金型や材料を探す時間を減らすため、保管場所を決めて戻す施策は？",
+          "hintChoices": [
+            "定位置化",
+            "外段取り"
+          ]
+        },
+        {
+          "id": "mmc-cs531-02-cue-2",
+          "prompt": "使った工具や材料を、あらかじめ決めた場所へ置く管理方法は？",
+          "hintChoices": [
+            "定位置化",
+            "外段取り"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs531-03",
+      "conceptIds": [
+        "fruit-mmc-cs531-03"
+      ],
+      "case": "III",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs531-03",
+          "accepted": [
+            "全工程を含めた生産計画",
+            "全工程の生産計画",
+            "全工程生産計画"
+          ]
+        }
+      ],
+      "explanation": "各工程をまとめた計画で工程間の流れを調整する。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026Cs531x03kaisetu.pdf:p.2:第3問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs531-03-cue-1",
+          "prompt": "工程ごとに別々に計画せず、工場全体の流れを合わせる計画上の施策は？",
+          "hintChoices": [
+            "全工程を含めた生産計画",
+            "外注指導"
+          ]
+        },
+        {
+          "id": "mmc-cs531-03-cue-2",
+          "prompt": "前工程と後工程の予定を一緒に組み、工場全体の進み方を調整する施策は？",
+          "hintChoices": [
+            "全工程を含めた生産計画",
+            "外注指導"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs531-04",
+      "conceptIds": [
+        "fruit-mmc-cs531-04"
+      ],
+      "case": "III",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs531-04",
+          "accepted": [
+            "納期優先の加工順序決定",
+            "納期を優先した加工順序決定",
+            "納期優先の加工順序"
+          ]
+        }
+      ],
+      "explanation": "期限を基準に加工順序を決め、納期を守る。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026Cs531x03kaisetu.pdf:p.2:第3問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs531-04-cue-1",
+          "prompt": "担当者の経験だけで加工順を決めず、約束した期限を基準に順番を決める施策は？",
+          "hintChoices": [
+            "納期優先の加工順序決定",
+            "需要予測の精緻化"
+          ]
+        },
+        {
+          "id": "mmc-cs531-04-cue-2",
+          "prompt": "複数の注文を加工するとき、納品期限を優先して作業を並べる施策は？",
+          "hintChoices": [
+            "納期優先の加工順序決定",
+            "需要予測の精緻化"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs532-01",
+      "conceptIds": [
+        "fruit-mmc-cs532-01"
+      ],
+      "case": "III",
+      "intent": "strength",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs532-01",
+          "accepted": [
+            "加工技術力",
+            "加工技術能力"
+          ]
+        }
+      ],
+      "explanation": "難しい材料や精度要求に対応する加工技術を持つ。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2025Cs532x03kaisetu.pdf:p.2:第1問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs532-01-cue-1",
+          "prompt": "加工が難しい特殊アルミを切削し、高機能製品に仕上げられる強みは？",
+          "hintChoices": [
+            "加工技術力",
+            "商品選別力"
+          ]
+        },
+        {
+          "id": "mmc-cs532-01-cue-2",
+          "prompt": "扱いにくい材料でも精度を保って加工できる製造上の能力は？",
+          "hintChoices": [
+            "加工技術力",
+            "商品選別力"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs532-02",
+      "conceptIds": [
+        "fruit-mmc-cs532-02"
+      ],
+      "case": "III",
+      "intent": "benefit",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs532-02",
+          "accepted": [
+            "部品在庫削減",
+            "部品在庫の削減"
+          ]
+        }
+      ],
+      "explanation": "部品の共通化で保管する種類や数量を減らす。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2025Cs532x03kaisetu.pdf:p.2:第2問設問1"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs532-02-cue-1",
+          "prompt": "似た部品を共通化し、種類ごとに余分な在庫を持たなくてよくなる効果は？",
+          "hintChoices": [
+            "部品在庫削減",
+            "設備稼働率向上"
+          ]
+        },
+        {
+          "id": "mmc-cs532-02-cue-2",
+          "prompt": "共通の部品を複数製品に使うことで、保管しておく部品量を減らす効果は？",
+          "hintChoices": [
+            "部品在庫削減",
+            "設備稼働率向上"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs532-03",
+      "conceptIds": [
+        "fruit-mmc-cs532-03"
+      ],
+      "case": "III",
+      "intent": "benefit",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs532-03",
+          "accepted": [
+            "設備稼働率向上",
+            "設備稼働率の向上",
+            "稼働率向上"
+          ]
+        }
+      ],
+      "explanation": "設備の停止を減らし、使用できる時間の割合を高める。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2025Cs532x03kaisetu.pdf:p.2:第2問設問2"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs532-03-cue-1",
+          "prompt": "予防保全やポカヨケで設備の停止時間を減らす、生産面の効果は？",
+          "hintChoices": [
+            "設備稼働率向上",
+            "部品在庫削減"
+          ]
+        },
+        {
+          "id": "mmc-cs532-03-cue-2",
+          "prompt": "故障や取付ミスを減らし、機械が動いている時間の割合を高める効果は？",
+          "hintChoices": [
+            "設備稼働率向上",
+            "部品在庫削減"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-cs532-04",
+      "conceptIds": [
+        "fruit-15"
+      ],
+      "case": "III",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-15",
+          "accepted": [
+            "製造指図書",
+            "製造指示書"
+          ]
+        }
+      ],
+      "explanation": "製造する内容や作業の指示を明示して伝える。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2025Cs532x03kaisetu.pdf:p.2:第3問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-cs532-04-cue-1",
+          "prompt": "加工内容や作業順序を紙面などで明示し、作業者へ正式に指示する書類は？",
+          "hintChoices": [
+            "製造指図書",
+            "学習ガイド情報の発信"
+          ]
+        },
+        {
+          "id": "mmc-cs532-04-cue-2",
+          "prompt": "効率よく作業を手配するため、製造する品と作業内容を記載して渡す指示書は？",
+          "hintChoices": [
+            "製造指図書",
+            "学習ガイド情報の発信"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-me211-01",
+      "conceptIds": [
+        "fruit-mmc-me211-01"
+      ],
+      "case": "I",
+      "intent": "benefit",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-me211-01",
+          "accepted": [
+            "従業員定着率向上",
+            "定着率向上",
+            "従業員の定着率向上"
+          ]
+        }
+      ],
+      "explanation": "働き続けやすい環境を整え、離職を抑える。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026me211x03kaisetu.pdf:p.2:第3問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-me211-01-cue-1",
+          "prompt": "能力に合う評価と働きやすい勤務制度で、社員が辞めにくくなる効果は？",
+          "hintChoices": [
+            "従業員定着率向上",
+            "来店頻度向上"
+          ]
+        },
+        {
+          "id": "mmc-me211-01-cue-2",
+          "prompt": "パン店の従業員が長く働き続ける割合を高める、人事面の効果は？",
+          "hintChoices": [
+            "従業員定着率向上",
+            "来店頻度向上"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-me211-02",
+      "conceptIds": [
+        "fruit-mmc-me211-02"
+      ],
+      "case": "I",
+      "intent": "benefit",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-me211-02",
+          "accepted": [
+            "採用コスト削減",
+            "採用費用削減",
+            "採用コストの削減"
+          ]
+        }
+      ],
+      "explanation": "離職が減ることで、新たな人を募集する費用を抑える。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026me211x03kaisetu.pdf:p.2:第3問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-me211-02-cue-1",
+          "prompt": "社員の離職を減らし、欠員補充の募集や選考にかかる費用を抑える効果は？",
+          "hintChoices": [
+            "採用コスト削減",
+            "教育負担軽減"
+          ]
+        },
+        {
+          "id": "mmc-me211-02-cue-2",
+          "prompt": "長く働く人が増えることで、求人広告などに使う支出を減らす効果は？",
+          "hintChoices": [
+            "採用コスト削減",
+            "教育負担軽減"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-me211-03",
+      "conceptIds": [
+        "fruit-mmc-me211-03"
+      ],
+      "case": "I",
+      "intent": "benefit",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-me211-03",
+          "accepted": [
+            "教育負担軽減",
+            "教育負担の軽減"
+          ]
+        }
+      ],
+      "explanation": "経験者の定着で、新人への指導負担を減らす。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026me211x03kaisetu.pdf:p.2:第3問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-me211-03-cue-1",
+          "prompt": "経験のある社員が定着し、新人へ基本から教え直す手間が減る効果は？",
+          "hintChoices": [
+            "教育負担軽減",
+            "採用コスト削減"
+          ]
+        },
+        {
+          "id": "mmc-me211-03-cue-2",
+          "prompt": "社員の入れ替わりを抑えることで、採用後の指導にかかる負担を軽くする効果は？",
+          "hintChoices": [
+            "教育負担軽減",
+            "採用コスト削減"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-me211-04",
+      "conceptIds": [
+        "fruit-mmc-me211-04"
+      ],
+      "case": "I",
+      "intent": "benefit",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-me211-04",
+          "accepted": [
+            "来店頻度向上",
+            "来店頻度の向上"
+          ]
+        }
+      ],
+      "explanation": "継続した商品開発で再来店の機会を増やす。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026me211x03kaisetu.pdf:p.3:第4問設問1"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-me211-04-cue-1",
+          "prompt": "パン店が季節ごとに新商品を開発し、同じ顧客に繰り返し店へ来てもらう効果は？",
+          "hintChoices": [
+            "来店頻度向上",
+            "客単価向上"
+          ]
+        },
+        {
+          "id": "mmc-me211-04-cue-2",
+          "prompt": "新しい商品を継続して出し、顧客が訪れる回数を増やす効果は？",
+          "hintChoices": [
+            "来店頻度向上",
+            "客単価向上"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-me211-05",
+      "conceptIds": [
+        "fruit-mmc-me211-05"
+      ],
+      "case": "I",
+      "intent": "benefit",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-me211-05",
+          "accepted": [
+            "信頼性向上",
+            "信頼性の向上",
+            "顧客の信頼向上"
+          ]
+        }
+      ],
+      "explanation": "判断に必要な情報を示して、店への安心感と信頼を高める。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026me211x03kaisetu.pdf:p.3:第4問設問1"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-me211-05-cue-1",
+          "prompt": "パンのアレルギー情報を分かりやすく示し、安心して選べるようにする効果は？",
+          "hintChoices": [
+            "信頼性向上",
+            "採用コスト削減"
+          ]
+        },
+        {
+          "id": "mmc-me211-05-cue-2",
+          "prompt": "食品の安全な選択に必要な情報を提供し、店を信用してもらう狙いは？",
+          "hintChoices": [
+            "信頼性向上",
+            "採用コスト削減"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-me211-06",
+      "conceptIds": [
+        "fruit-07"
+      ],
+      "case": "I",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-07",
+          "accepted": [
+            "柔軟な勤務形態",
+            "柔軟な勤務制度"
+          ]
+        }
+      ],
+      "explanation": "生活事情に合わせて働ける制度で継続勤務を支える。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026me211x03kaisetu.pdf:p.2:第3問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-me211-06-cue-1",
+          "prompt": "家庭の事情が違うパン店の社員に、働く時間を調整できる仕組みを設ける施策は？",
+          "hintChoices": [
+            "柔軟な勤務形態",
+            "成果主義"
+          ]
+        },
+        {
+          "id": "mmc-me211-06-cue-2",
+          "prompt": "長く働いてもらうため、従業員の生活事情に合わせて勤務を変えられる制度は？",
+          "hintChoices": [
+            "柔軟な勤務形態",
+            "成果主義"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-me221-01",
+      "conceptIds": [
+        "fruit-mmc-me221-01"
+      ],
+      "case": "II",
+      "intent": "benefit",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-me221-01",
+          "accepted": [
+            "顧客満足度向上",
+            "顧客満足度の向上",
+            "顧客満足向上"
+          ]
+        }
+      ],
+      "explanation": "顧客の課題に対応して、サービスへの満足を高める。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026me221x03kaisetu.pdf:p.2:第2問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-me221-01-cue-1",
+          "prompt": "犬の飼育相談と適切な情報提供で、飼い主がサービスに満足する度合いを高める効果は？",
+          "hintChoices": [
+            "顧客満足度向上",
+            "認知度向上"
+          ]
+        },
+        {
+          "id": "mmc-me221-01-cue-2",
+          "prompt": "愛犬についての悩みに答え、利用してよかったと感じてもらう効果は？",
+          "hintChoices": [
+            "顧客満足度向上",
+            "認知度向上"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-me221-02",
+      "conceptIds": [
+        "fruit-mmc-me221-02"
+      ],
+      "case": "II",
+      "intent": "benefit",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-me221-02",
+          "accepted": [
+            "認知度向上",
+            "認知度の向上"
+          ]
+        }
+      ],
+      "explanation": "多くの人に店の存在やサービスを知らせる。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026me221x03kaisetu.pdf:p.2:第3問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-me221-02-cue-1",
+          "prompt": "犬の情報を動画やSNSで発信し、店を知らなかった人に知ってもらう効果は？",
+          "hintChoices": [
+            "認知度向上",
+            "教育負担軽減"
+          ]
+        },
+        {
+          "id": "mmc-me221-02-cue-2",
+          "prompt": "動画を広く見てもらい、店の存在を知る人を増やす狙いは？",
+          "hintChoices": [
+            "認知度向上",
+            "教育負担軽減"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-me221-03",
+      "conceptIds": [
+        "fruit-mmc-me221-03"
+      ],
+      "case": "II",
+      "intent": "benefit",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-me221-03",
+          "accepted": [
+            "口コミ促進",
+            "口コミの促進"
+          ]
+        }
+      ],
+      "explanation": "顧客同士の紹介を通じて評判が広がることを促す。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026me221x03kaisetu.pdf:p.2:第4問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-me221-03-cue-1",
+          "prompt": "愛犬家が交流する場で、店のよさを他の飼い主へ紹介してもらう効果は？",
+          "hintChoices": [
+            "口コミ促進",
+            "来店頻度向上"
+          ]
+        },
+        {
+          "id": "mmc-me221-03-cue-2",
+          "prompt": "顧客同士の交流を通じ、利用経験が人づてに広がる狙いは？",
+          "hintChoices": [
+            "口コミ促進",
+            "来店頻度向上"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-me221-04",
+      "conceptIds": [
+        "fruit-10"
+      ],
+      "case": "II",
+      "intent": "benefit",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-10",
+          "accepted": [
+            "関係性強化",
+            "顧客との関係性強化"
+          ]
+        }
+      ],
+      "explanation": "継続して相談に対応し、顧客との長期的な関係を築く。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026me221x03kaisetu.pdf:p.2:第2問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-me221-04-cue-1",
+          "prompt": "購入後も犬の飼育相談に答え続け、飼い主との長期的な結びつきを深める効果は？",
+          "hintChoices": [
+            "関係性強化",
+            "共同受注"
+          ]
+        },
+        {
+          "id": "mmc-me221-04-cue-2",
+          "prompt": "一度の販売で終わらず、飼育に関する相談を継続して受ける狙いは？",
+          "hintChoices": [
+            "関係性強化",
+            "共同受注"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-me221-05",
+      "conceptIds": [
+        "fruit-13"
+      ],
+      "case": "II",
+      "intent": "benefit",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-13",
+          "accepted": [
+            "新規顧客開拓",
+            "新規顧客獲得",
+            "新規顧客の獲得"
+          ]
+        }
+      ],
+      "explanation": "顧客からの紹介などを通じて新しい利用者を増やす。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026me221x03kaisetu.pdf:p.2:第4問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-me221-05-cue-1",
+          "prompt": "愛犬家の紹介によって、まだ店を利用したことのない飼い主を増やす効果は？",
+          "hintChoices": [
+            "新規顧客開拓",
+            "客単価向上"
+          ]
+        },
+        {
+          "id": "mmc-me221-05-cue-2",
+          "prompt": "既存顧客の口コミから、初めて来店する客を獲得する狙いは？",
+          "hintChoices": [
+            "新規顧客開拓",
+            "客単価向上"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-me231-01",
+      "conceptIds": [
+        "fruit-mmc-cs331-13"
+      ],
+      "case": "III",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs331-13",
+          "accepted": [
+            "カムアップシステム",
+            "カムアップ",
+            "フォローアップシステム"
+          ]
+        }
+      ],
+      "explanation": "納入までの進捗を管理し、必要に応じて督促する。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026me231x03kaisetu.pdf:p.2:第2問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-me231-01-cue-1",
+          "prompt": "外注した部品の遅れを防ぐため、納入まで進捗を追い必要に応じて督促する仕組みは？",
+          "hintChoices": [
+            "カムアップシステム",
+            "外注指導"
+          ]
+        },
+        {
+          "id": "mmc-me231-01-cue-2",
+          "prompt": "外注品の納期を守るよう、進み具合の確認と催促を継続する管理方法は？",
+          "hintChoices": [
+            "カムアップシステム",
+            "外注指導"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-me231-02",
+      "conceptIds": [
+        "fruit-19"
+      ],
+      "case": "III",
+      "intent": "benefit",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-19",
+          "accepted": [
+            "技能承継",
+            "技術承継",
+            "技能継承"
+          ]
+        }
+      ],
+      "explanation": "熟練者の技術を若手に伝え、組織内で維持する。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026me231x03kaisetu.pdf:p.2:第2問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-me231-02-cue-1",
+          "prompt": "熟練者のOJTと作業マニュアルで、若手が同じ加工をできるようになる効果は？",
+          "hintChoices": [
+            "技能承継",
+            "新規顧客開拓"
+          ]
+        },
+        {
+          "id": "mmc-me231-02-cue-2",
+          "prompt": "仕上げや組立の技を熟練者から若手へ伝え、手直しを減らすために進めることは？",
+          "hintChoices": [
+            "技能承継",
+            "新規顧客開拓"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-me231-03",
+      "conceptIds": [
+        "fruit-14"
+      ],
+      "case": "III",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-14",
+          "accepted": [
+            "データ一元管理",
+            "情報一元管理",
+            "一元管理"
+          ]
+        }
+      ],
+      "explanation": "関連する情報を共通の管理先へ集約する。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026me231x03kaisetu.pdf:p.2:第3問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-me231-03-cue-1",
+          "prompt": "本社と工場の図面や在庫情報を、共有データベースへ集めて管理する施策は？",
+          "hintChoices": [
+            "データ一元管理",
+            "外段取り"
+          ]
+        },
+        {
+          "id": "mmc-me231-03-cue-2",
+          "prompt": "営業・設計・生産が別々に持つ情報を、共通のデータベースで扱う方法は？",
+          "hintChoices": [
+            "データ一元管理",
+            "外段取り"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-me231-04",
+      "conceptIds": [
+        "fruit-mmc-cs531-03"
+      ],
+      "case": "III",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs531-03",
+          "accepted": [
+            "全工程を含めた生産計画",
+            "全工程の生産計画",
+            "全工程生産計画"
+          ]
+        }
+      ],
+      "explanation": "すべての工程を含めて計画し、工程間の予定を調整する。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026me231x03kaisetu.pdf:p.2:第2問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-me231-04-cue-1",
+          "prompt": "製造の一部だけでなく、最初から仕上げまでの予定を組んで整合させる施策は？",
+          "hintChoices": [
+            "全工程を含めた生産計画",
+            "商品選別力"
+          ]
+        },
+        {
+          "id": "mmc-me231-04-cue-2",
+          "prompt": "製造段階すべての予定を一つの計画として組み、計画を精密にする施策は？",
+          "hintChoices": [
+            "全工程を含めた生産計画",
+            "商品選別力"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-me311-01",
+      "conceptIds": [
+        "fruit-mmc-me311-01"
+      ],
+      "case": "I",
+      "intent": "benefit",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-me311-01",
+          "accepted": [
+            "迅速な人材確保",
+            "迅速な人材の確保"
+          ]
+        }
+      ],
+      "explanation": "経験者を採用して、必要な人材を短期間で確保する。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026me311x03kaisetu.pdf:p.2:第2問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-me311-01-cue-1",
+          "prompt": "新卒社員を育つまで待たず、経験者採用で必要な担当者を早くそろえる利点は？",
+          "hintChoices": [
+            "迅速な人材確保",
+            "ノウハウ流出"
+          ]
+        },
+        {
+          "id": "mmc-me311-01-cue-2",
+          "prompt": "中途採用によって、即戦力を短い期間で獲得できる効果は？",
+          "hintChoices": [
+            "迅速な人材確保",
+            "ノウハウ流出"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-me311-02",
+      "conceptIds": [
+        "fruit-mmc-me311-02"
+      ],
+      "case": "I",
+      "intent": "benefit",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-me311-02",
+          "accepted": [
+            "他社経験の活用",
+            "他社技術経験の活用",
+            "他社経験活用"
+          ]
+        }
+      ],
+      "explanation": "採用者が持つ外部の経験や技術を自社で生かす。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026me311x03kaisetu.pdf:p.2:第2問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-me311-02-cue-1",
+          "prompt": "他社で仕事をしてきた人を採用し、そこで得た技術や経験を生かす利点は？",
+          "hintChoices": [
+            "他社経験の活用",
+            "採用費用増"
+          ]
+        },
+        {
+          "id": "mmc-me311-02-cue-2",
+          "prompt": "中途採用者が持つ別企業での知識や経験を、社内の仕事に取り込む効果は？",
+          "hintChoices": [
+            "他社経験の活用",
+            "採用費用増"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-me311-03",
+      "conceptIds": [
+        "fruit-mmc-me311-03"
+      ],
+      "case": "I",
+      "intent": "weakness",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-me311-03",
+          "accepted": [
+            "ノウハウ流出",
+            "ノウハウの流出"
+          ]
+        }
+      ],
+      "explanation": "人材の移動などによって、自社の知識や技術が外部に流れる。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026me311x03kaisetu.pdf:p.2:第2問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-me311-03-cue-1",
+          "prompt": "社員の入れ替わりにより、社内の技術や仕事の知識が社外へ持ち出される懸念は？",
+          "hintChoices": [
+            "ノウハウ流出",
+            "教育負担軽減"
+          ]
+        },
+        {
+          "id": "mmc-me311-03-cue-2",
+          "prompt": "人材が他社へ移ることで、独自の知識が外部へ伝わるリスクは？",
+          "hintChoices": [
+            "ノウハウ流出",
+            "教育負担軽減"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-me311-04",
+      "conceptIds": [
+        "fruit-mmc-me311-04"
+      ],
+      "case": "I",
+      "intent": "benefit",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-me311-04",
+          "accepted": [
+            "人件費構造の適正化",
+            "人件費構造適正化"
+          ]
+        }
+      ],
+      "explanation": "成果や貢献に合わせて報酬を配分し、人件費の構成を見直す。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026me311x03kaisetu.pdf:p.2:第3問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-me311-04-cue-1",
+          "prompt": "年齢だけで増える給与を成果に応じた報酬へ変え、人件費の配分を見直す効果は？",
+          "hintChoices": [
+            "人件費構造の適正化",
+            "客単価向上"
+          ]
+        },
+        {
+          "id": "mmc-me311-04-cue-2",
+          "prompt": "従業員の貢献に合わせた評価で、人件費の構成を適切にする狙いは？",
+          "hintChoices": [
+            "人件費構造の適正化",
+            "客単価向上"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-me311-05",
+      "conceptIds": [
+        "fruit-mmc-me311-05"
+      ],
+      "case": "I",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-me311-05",
+          "accepted": [
+            "プロジェクトチームの設置",
+            "プロジェクトチーム設置",
+            "プロジェクトチーム"
+          ]
+        }
+      ],
+      "explanation": "特定の課題を担うために、必要な人材を集めてチームを組む。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026me311x03kaisetu.pdf:p.3:第5問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-me311-05-cue-1",
+          "prompt": "新しい仕事に必要な専門人材を集め、特定の課題に取り組むチームを作る施策は？",
+          "hintChoices": [
+            "プロジェクトチームの設置",
+            "事業部制"
+          ]
+        },
+        {
+          "id": "mmc-me311-05-cue-2",
+          "prompt": "部門の枠を越えて人を集め、一つの事業課題を担当する組織を作ることは？",
+          "hintChoices": [
+            "プロジェクトチームの設置",
+            "事業部制"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-me311-06",
+      "conceptIds": [
+        "fruit-mmc-me311-06"
+      ],
+      "case": "I",
+      "intent": "benefit",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-me311-06",
+          "accepted": [
+            "モチベーション向上",
+            "従業員の意欲向上",
+            "モチベーションの向上"
+          ]
+        }
+      ],
+      "explanation": "成果を評価することで働く意欲を高める。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026me311x03kaisetu.pdf:p.2:第3問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-me311-06-cue-1",
+          "prompt": "実績を公正に評価して報酬へ反映し、社員が仕事に取り組む意欲を高める効果は？",
+          "hintChoices": [
+            "モチベーション向上",
+            "ノウハウ流出"
+          ]
+        },
+        {
+          "id": "mmc-me311-06-cue-2",
+          "prompt": "貢献が評価される仕組みによって、社員のやる気が高まる効果は？",
+          "hintChoices": [
+            "モチベーション向上",
+            "ノウハウ流出"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-me321-01",
+      "conceptIds": [
+        "fruit-mmc-me321-01"
+      ],
+      "case": "II",
+      "intent": "strength",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-me321-01",
+          "accepted": [
+            "商品企画力",
+            "商品企画能力"
+          ]
+        }
+      ],
+      "explanation": "顧客のニーズを商品案へまとめる能力。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026me321x03kaisetu.pdf:p.2:第1問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-me321-01-cue-1",
+          "prompt": "顧客の好みを捉え、売れる商品案を具体的に作り出せる企業の強みは？",
+          "hintChoices": [
+            "商品企画力",
+            "加工技術力"
+          ]
+        },
+        {
+          "id": "mmc-me321-01-cue-2",
+          "prompt": "製造する前に、ニーズに合った商品の内容を構想できる能力は？",
+          "hintChoices": [
+            "商品企画力",
+            "加工技術力"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-me321-02",
+      "conceptIds": [
+        "fruit-mmc-me321-02"
+      ],
+      "case": "II",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-me321-02",
+          "accepted": [
+            "新商品開発戦略",
+            "製品開発戦略"
+          ]
+        }
+      ],
+      "explanation": "既存市場に新製品を投入して成長を図る。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026me321x03kaisetu.pdf:p.2:第2問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-me321-02-cue-1",
+          "prompt": "既存の顧客や市場に向け、加工技術を生かした新製品を投入する成長戦略は？",
+          "hintChoices": [
+            "新商品開発戦略",
+            "市場浸透戦略"
+          ]
+        },
+        {
+          "id": "mmc-me321-02-cue-2",
+          "prompt": "売る市場を変えず、独自の新しい商品を開発して広げる戦略は？",
+          "hintChoices": [
+            "新商品開発戦略",
+            "市場浸透戦略"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-me321-03",
+      "conceptIds": [
+        "fruit-mmc-me321-03"
+      ],
+      "case": "II",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-me321-03",
+          "accepted": [
+            "市場浸透戦略",
+            "市場浸透"
+          ]
+        }
+      ],
+      "explanation": "既存製品を既存市場でさらに販売して成長を図る。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026me321x03kaisetu.pdf:p.2:第2問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-me321-03-cue-1",
+          "prompt": "現在の市場で、既存製品の提案を強めて販売を増やす成長戦略は？",
+          "hintChoices": [
+            "市場浸透戦略",
+            "新商品開発戦略"
+          ]
+        },
+        {
+          "id": "mmc-me321-03-cue-2",
+          "prompt": "新しい市場や商品へ進まず、今ある商品を今の市場でより多く売る戦略は？",
+          "hintChoices": [
+            "市場浸透戦略",
+            "新商品開発戦略"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-me321-04",
+      "conceptIds": [
+        "fruit-mmc-cs511-03"
+      ],
+      "case": "II",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-cs511-03",
+          "accepted": [
+            "共同開発",
+            "共同商品開発"
+          ]
+        }
+      ],
+      "explanation": "連携相手の強みを生かして共同で商品を開発する。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026me321x03kaisetu.pdf:p.3:第5問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-me321-04-cue-1",
+          "prompt": "他企業と商品アイデアや技術を持ち寄り、双方の強みを生かした商品を作る施策は？",
+          "hintChoices": [
+            "共同開発",
+            "共同受注"
+          ]
+        },
+        {
+          "id": "mmc-me321-04-cue-2",
+          "prompt": "連携企業と一緒に新商品の仕様や試作を進める取組は？",
+          "hintChoices": [
+            "共同開発",
+            "共同受注"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-me321-05",
+      "conceptIds": [
+        "fruit-mmc-me321-05"
+      ],
+      "case": "II",
+      "intent": "benefit",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-me321-05",
+          "accepted": [
+            "ブランド価値向上",
+            "ブランド価値の向上"
+          ]
+        }
+      ],
+      "explanation": "企画や連携を通じて、ブランドへの評価を高める。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026me321x03kaisetu.pdf:p.3:第5問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-me321-05-cue-1",
+          "prompt": "他企業との共同イベントで、商品だけでなく企業名への評価も高める効果は？",
+          "hintChoices": [
+            "ブランド価値向上",
+            "採用コスト削減"
+          ]
+        },
+        {
+          "id": "mmc-me321-05-cue-2",
+          "prompt": "連携企画によって、顧客がそのブランドに感じる価値を高める狙いは？",
+          "hintChoices": [
+            "ブランド価値向上",
+            "採用コスト削減"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-me321-06",
+      "conceptIds": [
+        "fruit-mmc-me321-06"
+      ],
+      "case": "II",
+      "intent": "action",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-me321-06",
+          "accepted": [
+            "関連商品の品揃え",
+            "関連商品の追加",
+            "関連商品"
+          ]
+        }
+      ],
+      "explanation": "一緒に使う商品をそろえ、顧客の利用を支援する。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026me321x03kaisetu.pdf:p.2:第3問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-me321-06-cue-1",
+          "prompt": "主力商品と一緒に使う品もそろえ、顧客がまとめて買えるようにする施策は？",
+          "hintChoices": [
+            "関連商品の品揃え",
+            "外注指導"
+          ]
+        },
+        {
+          "id": "mmc-me321-06-cue-2",
+          "prompt": "中心となる商品だけでなく、用途がつながる品を追加する品揃え施策は？",
+          "hintChoices": [
+            "関連商品の品揃え",
+            "外注指導"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-me331-01",
+      "conceptIds": [
+        "fruit-mmc-me331-01"
+      ],
+      "case": "III",
+      "intent": "benefit",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-me331-01",
+          "accepted": [
+            "在庫維持費低減",
+            "在庫維持費の低減",
+            "在庫維持コスト削減"
+          ]
+        }
+      ],
+      "explanation": "作り置きの在庫を減らし、保管にかかる費用を抑える。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026me331x03kaisetu.pdf:p.2:第2問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-me331-01-cue-1",
+          "prompt": "注文後に生産する方式で、作り置き商品の保管費用を抑えられる利点は？",
+          "hintChoices": [
+            "在庫維持費低減",
+            "管理事務増加"
+          ]
+        },
+        {
+          "id": "mmc-me331-01-cue-2",
+          "prompt": "受注してから製造し、完成品を倉庫に持つ費用を減らす効果は？",
+          "hintChoices": [
+            "在庫維持費低減",
+            "管理事務増加"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-me331-02",
+      "conceptIds": [
+        "fruit-mmc-me331-02"
+      ],
+      "case": "III",
+      "intent": "weakness",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-me331-02",
+          "accepted": [
+            "管理事務増加",
+            "管理事務の増加",
+            "管理負担増加"
+          ]
+        }
+      ],
+      "explanation": "注文ごとの管理や手配に必要な事務作業が増える。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026me331x03kaisetu.pdf:p.2:第2問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-me331-02-cue-1",
+          "prompt": "注文ごとに異なる仕様へ対応し、受注や手配を管理する作業が増える受注生産の欠点は？",
+          "hintChoices": [
+            "管理事務増加",
+            "在庫維持費低減"
+          ]
+        },
+        {
+          "id": "mmc-me331-02-cue-2",
+          "prompt": "特注品ごとに確認や事務処理が必要になり、担当者の負担が増える問題は？",
+          "hintChoices": [
+            "管理事務増加",
+            "在庫維持費低減"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-me331-03",
+      "conceptIds": [
+        "fruit-mmc-me331-03"
+      ],
+      "case": "III",
+      "intent": "benefit",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-me331-03",
+          "accepted": [
+            "納期遅延防止",
+            "納期遅延の防止",
+            "納期遅れ防止"
+          ]
+        }
+      ],
+      "explanation": "外注管理を改善して、期日に納入できるようにする。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026me331x03kaisetu.pdf:p.3:第4問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-me331-03-cue-1",
+          "prompt": "外注先への進捗確認と指導で、約束した日より納入が遅れることを防ぐ効果は？",
+          "hintChoices": [
+            "納期遅延防止",
+            "部品在庫削減"
+          ]
+        },
+        {
+          "id": "mmc-me331-03-cue-2",
+          "prompt": "発注の基準を明確にし、外注品が必要な期日に届くようにする狙いは？",
+          "hintChoices": [
+            "納期遅延防止",
+            "部品在庫削減"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-me331-04",
+      "conceptIds": [
+        "fruit-mmc-me331-04"
+      ],
+      "case": "III",
+      "intent": "benefit",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-me331-04",
+          "accepted": [
+            "打合せ削減",
+            "打合せの削減",
+            "打ち合わせ削減"
+          ]
+        }
+      ],
+      "explanation": "共通情報を直接確認できるようにし、確認のための打合せを減らす。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026me331x03kaisetu.pdf:p.3:第5問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-me331-04-cue-1",
+          "prompt": "営業と工場が最新情報を同じデータベースで確認でき、確認会議の回数が減る効果は？",
+          "hintChoices": [
+            "打合せ削減",
+            "ブランド価値向上"
+          ]
+        },
+        {
+          "id": "mmc-me331-04-cue-2",
+          "prompt": "リアルタイムに情報を共有して、状況を聞くための会合を減らす効果は？",
+          "hintChoices": [
+            "打合せ削減",
+            "ブランド価値向上"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mmc-me331-05",
+      "conceptIds": [
+        "fruit-mmc-me331-05"
+      ],
+      "case": "III",
+      "intent": "benefit",
+      "expectedCount": 1,
+      "answerSlots": [
+        {
+          "conceptId": "fruit-mmc-me331-05",
+          "accepted": [
+            "生産計画精度向上",
+            "計画精度向上",
+            "生産計画精度の向上"
+          ]
+        }
+      ],
+      "explanation": "最新情報を反映して、実態に合った計画を立てる。",
+      "source": {
+        "kind": "mmc_original",
+        "refs": [
+          "Local PDF:mmc2026me331x03kaisetu.pdf:p.3:第5問"
+        ]
+      },
+      "cues": [
+        {
+          "id": "mmc-me331-05-cue-1",
+          "prompt": "最新の受注や進捗をすぐに共有し、実態に合った生産予定を組めるようになる効果は？",
+          "hintChoices": [
+            "生産計画精度向上",
+            "口コミ促進"
+          ]
+        },
+        {
+          "id": "mmc-me331-05-cue-2",
+          "prompt": "共通データベースの最新情報で、計画と現場のずれを小さくする効果は？",
+          "hintChoices": [
+            "生産計画精度向上",
+            "口コミ促進"
+          ]
+        }
+      ]
     }
   ],
   "cards": [
@@ -5124,6 +10593,1098 @@
       "id": "map-70-cue-2-recall",
       "mappingId": "map-70",
       "cueId": "map-70-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs311-01-recall-1",
+      "mappingId": "mmc-cs311-01",
+      "cueId": "mmc-cs311-01-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs311-01-recall-2",
+      "mappingId": "mmc-cs311-01",
+      "cueId": "mmc-cs311-01-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs311-02-recall-1",
+      "mappingId": "mmc-cs311-02",
+      "cueId": "mmc-cs311-02-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs311-02-recall-2",
+      "mappingId": "mmc-cs311-02",
+      "cueId": "mmc-cs311-02-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs311-03-recall-1",
+      "mappingId": "mmc-cs311-03",
+      "cueId": "mmc-cs311-03-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs311-03-recall-2",
+      "mappingId": "mmc-cs311-03",
+      "cueId": "mmc-cs311-03-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs321-04-recall-1",
+      "mappingId": "mmc-cs321-04",
+      "cueId": "mmc-cs321-04-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs321-04-recall-2",
+      "mappingId": "mmc-cs321-04",
+      "cueId": "mmc-cs321-04-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs321-05-recall-1",
+      "mappingId": "mmc-cs321-05",
+      "cueId": "mmc-cs321-05-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs321-05-recall-2",
+      "mappingId": "mmc-cs321-05",
+      "cueId": "mmc-cs321-05-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs321-06-recall-1",
+      "mappingId": "mmc-cs321-06",
+      "cueId": "mmc-cs321-06-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs321-06-recall-2",
+      "mappingId": "mmc-cs321-06",
+      "cueId": "mmc-cs321-06-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs321-07-recall-1",
+      "mappingId": "mmc-cs321-07",
+      "cueId": "mmc-cs321-07-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs321-07-recall-2",
+      "mappingId": "mmc-cs321-07",
+      "cueId": "mmc-cs321-07-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs321-08-recall-1",
+      "mappingId": "mmc-cs321-08",
+      "cueId": "mmc-cs321-08-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs321-08-recall-2",
+      "mappingId": "mmc-cs321-08",
+      "cueId": "mmc-cs321-08-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs321-09-recall-1",
+      "mappingId": "mmc-cs321-09",
+      "cueId": "mmc-cs321-09-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs321-09-recall-2",
+      "mappingId": "mmc-cs321-09",
+      "cueId": "mmc-cs321-09-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs331-10-recall-1",
+      "mappingId": "mmc-cs331-10",
+      "cueId": "mmc-cs331-10-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs331-10-recall-2",
+      "mappingId": "mmc-cs331-10",
+      "cueId": "mmc-cs331-10-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs331-11-recall-1",
+      "mappingId": "mmc-cs331-11",
+      "cueId": "mmc-cs331-11-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs331-11-recall-2",
+      "mappingId": "mmc-cs331-11",
+      "cueId": "mmc-cs331-11-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs331-12-recall-1",
+      "mappingId": "mmc-cs331-12",
+      "cueId": "mmc-cs331-12-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs331-12-recall-2",
+      "mappingId": "mmc-cs331-12",
+      "cueId": "mmc-cs331-12-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs331-13-recall-1",
+      "mappingId": "mmc-cs331-13",
+      "cueId": "mmc-cs331-13-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs331-13-recall-2",
+      "mappingId": "mmc-cs331-13",
+      "cueId": "mmc-cs331-13-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs331-14-recall-1",
+      "mappingId": "mmc-cs331-14",
+      "cueId": "mmc-cs331-14-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs331-14-recall-2",
+      "mappingId": "mmc-cs331-14",
+      "cueId": "mmc-cs331-14-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs331-15-recall-1",
+      "mappingId": "mmc-cs331-15",
+      "cueId": "mmc-cs331-15-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs331-15-recall-2",
+      "mappingId": "mmc-cs331-15",
+      "cueId": "mmc-cs331-15-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs411-01-recall-1",
+      "mappingId": "mmc-cs411-01",
+      "cueId": "mmc-cs411-01-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs411-01-recall-2",
+      "mappingId": "mmc-cs411-01",
+      "cueId": "mmc-cs411-01-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs411-02-recall-1",
+      "mappingId": "mmc-cs411-02",
+      "cueId": "mmc-cs411-02-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs411-02-recall-2",
+      "mappingId": "mmc-cs411-02",
+      "cueId": "mmc-cs411-02-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs411-03-recall-1",
+      "mappingId": "mmc-cs411-03",
+      "cueId": "mmc-cs411-03-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs411-03-recall-2",
+      "mappingId": "mmc-cs411-03",
+      "cueId": "mmc-cs411-03-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs412-04-recall-1",
+      "mappingId": "mmc-cs412-04",
+      "cueId": "mmc-cs412-04-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs412-04-recall-2",
+      "mappingId": "mmc-cs412-04",
+      "cueId": "mmc-cs412-04-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs412-05-recall-1",
+      "mappingId": "mmc-cs412-05",
+      "cueId": "mmc-cs412-05-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs412-05-recall-2",
+      "mappingId": "mmc-cs412-05",
+      "cueId": "mmc-cs412-05-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs412-06-recall-1",
+      "mappingId": "mmc-cs412-06",
+      "cueId": "mmc-cs412-06-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs412-06-recall-2",
+      "mappingId": "mmc-cs412-06",
+      "cueId": "mmc-cs412-06-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs421-07-recall-1",
+      "mappingId": "mmc-cs421-07",
+      "cueId": "mmc-cs421-07-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs421-07-recall-2",
+      "mappingId": "mmc-cs421-07",
+      "cueId": "mmc-cs421-07-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs421-08-recall-1",
+      "mappingId": "mmc-cs421-08",
+      "cueId": "mmc-cs421-08-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs421-08-recall-2",
+      "mappingId": "mmc-cs421-08",
+      "cueId": "mmc-cs421-08-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs421-09-recall-1",
+      "mappingId": "mmc-cs421-09",
+      "cueId": "mmc-cs421-09-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs421-09-recall-2",
+      "mappingId": "mmc-cs421-09",
+      "cueId": "mmc-cs421-09-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs422-10-recall-1",
+      "mappingId": "mmc-cs422-10",
+      "cueId": "mmc-cs422-10-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs422-10-recall-2",
+      "mappingId": "mmc-cs422-10",
+      "cueId": "mmc-cs422-10-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs422-11-recall-1",
+      "mappingId": "mmc-cs422-11",
+      "cueId": "mmc-cs422-11-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs422-11-recall-2",
+      "mappingId": "mmc-cs422-11",
+      "cueId": "mmc-cs422-11-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs422-12-recall-1",
+      "mappingId": "mmc-cs422-12",
+      "cueId": "mmc-cs422-12-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs422-12-recall-2",
+      "mappingId": "mmc-cs422-12",
+      "cueId": "mmc-cs422-12-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs431-13-recall-1",
+      "mappingId": "mmc-cs431-13",
+      "cueId": "mmc-cs431-13-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs431-13-recall-2",
+      "mappingId": "mmc-cs431-13",
+      "cueId": "mmc-cs431-13-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs431-14-recall-1",
+      "mappingId": "mmc-cs431-14",
+      "cueId": "mmc-cs431-14-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs431-14-recall-2",
+      "mappingId": "mmc-cs431-14",
+      "cueId": "mmc-cs431-14-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs431-15-recall-1",
+      "mappingId": "mmc-cs431-15",
+      "cueId": "mmc-cs431-15-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs431-15-recall-2",
+      "mappingId": "mmc-cs431-15",
+      "cueId": "mmc-cs431-15-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs432-16-recall-1",
+      "mappingId": "mmc-cs432-16",
+      "cueId": "mmc-cs432-16-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs432-16-recall-2",
+      "mappingId": "mmc-cs432-16",
+      "cueId": "mmc-cs432-16-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs432-17-recall-1",
+      "mappingId": "mmc-cs432-17",
+      "cueId": "mmc-cs432-17-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs432-17-recall-2",
+      "mappingId": "mmc-cs432-17",
+      "cueId": "mmc-cs432-17-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs432-18-recall-1",
+      "mappingId": "mmc-cs432-18",
+      "cueId": "mmc-cs432-18-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs432-18-recall-2",
+      "mappingId": "mmc-cs432-18",
+      "cueId": "mmc-cs432-18-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs511-01-recall-1",
+      "mappingId": "mmc-cs511-01",
+      "cueId": "mmc-cs511-01-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs511-01-recall-2",
+      "mappingId": "mmc-cs511-01",
+      "cueId": "mmc-cs511-01-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs511-02-recall-1",
+      "mappingId": "mmc-cs511-02",
+      "cueId": "mmc-cs511-02-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs511-02-recall-2",
+      "mappingId": "mmc-cs511-02",
+      "cueId": "mmc-cs511-02-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs511-03-recall-1",
+      "mappingId": "mmc-cs511-03",
+      "cueId": "mmc-cs511-03-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs511-03-recall-2",
+      "mappingId": "mmc-cs511-03",
+      "cueId": "mmc-cs511-03-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs511-04-recall-1",
+      "mappingId": "mmc-cs511-04",
+      "cueId": "mmc-cs511-04-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs511-04-recall-2",
+      "mappingId": "mmc-cs511-04",
+      "cueId": "mmc-cs511-04-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs511-05-recall-1",
+      "mappingId": "mmc-cs511-05",
+      "cueId": "mmc-cs511-05-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs511-05-recall-2",
+      "mappingId": "mmc-cs511-05",
+      "cueId": "mmc-cs511-05-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs512-01-recall-1",
+      "mappingId": "mmc-cs512-01",
+      "cueId": "mmc-cs512-01-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs512-01-recall-2",
+      "mappingId": "mmc-cs512-01",
+      "cueId": "mmc-cs512-01-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs512-02-recall-1",
+      "mappingId": "mmc-cs512-02",
+      "cueId": "mmc-cs512-02-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs512-02-recall-2",
+      "mappingId": "mmc-cs512-02",
+      "cueId": "mmc-cs512-02-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs512-03-recall-1",
+      "mappingId": "mmc-cs512-03",
+      "cueId": "mmc-cs512-03-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs512-03-recall-2",
+      "mappingId": "mmc-cs512-03",
+      "cueId": "mmc-cs512-03-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs512-04-recall-1",
+      "mappingId": "mmc-cs512-04",
+      "cueId": "mmc-cs512-04-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs512-04-recall-2",
+      "mappingId": "mmc-cs512-04",
+      "cueId": "mmc-cs512-04-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs521-01-recall-1",
+      "mappingId": "mmc-cs521-01",
+      "cueId": "mmc-cs521-01-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs521-01-recall-2",
+      "mappingId": "mmc-cs521-01",
+      "cueId": "mmc-cs521-01-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs521-02-recall-1",
+      "mappingId": "mmc-cs521-02",
+      "cueId": "mmc-cs521-02-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs521-02-recall-2",
+      "mappingId": "mmc-cs521-02",
+      "cueId": "mmc-cs521-02-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs521-03-recall-1",
+      "mappingId": "mmc-cs521-03",
+      "cueId": "mmc-cs521-03-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs521-03-recall-2",
+      "mappingId": "mmc-cs521-03",
+      "cueId": "mmc-cs521-03-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs521-04-recall-1",
+      "mappingId": "mmc-cs521-04",
+      "cueId": "mmc-cs521-04-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs521-04-recall-2",
+      "mappingId": "mmc-cs521-04",
+      "cueId": "mmc-cs521-04-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs521-05-recall-1",
+      "mappingId": "mmc-cs521-05",
+      "cueId": "mmc-cs521-05-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs521-05-recall-2",
+      "mappingId": "mmc-cs521-05",
+      "cueId": "mmc-cs521-05-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs522-01-recall-1",
+      "mappingId": "mmc-cs522-01",
+      "cueId": "mmc-cs522-01-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs522-01-recall-2",
+      "mappingId": "mmc-cs522-01",
+      "cueId": "mmc-cs522-01-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs522-02-recall-1",
+      "mappingId": "mmc-cs522-02",
+      "cueId": "mmc-cs522-02-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs522-02-recall-2",
+      "mappingId": "mmc-cs522-02",
+      "cueId": "mmc-cs522-02-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs522-03-recall-1",
+      "mappingId": "mmc-cs522-03",
+      "cueId": "mmc-cs522-03-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs522-03-recall-2",
+      "mappingId": "mmc-cs522-03",
+      "cueId": "mmc-cs522-03-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs522-04-recall-1",
+      "mappingId": "mmc-cs522-04",
+      "cueId": "mmc-cs522-04-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs522-04-recall-2",
+      "mappingId": "mmc-cs522-04",
+      "cueId": "mmc-cs522-04-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs531-01-recall-1",
+      "mappingId": "mmc-cs531-01",
+      "cueId": "mmc-cs531-01-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs531-01-recall-2",
+      "mappingId": "mmc-cs531-01",
+      "cueId": "mmc-cs531-01-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs531-02-recall-1",
+      "mappingId": "mmc-cs531-02",
+      "cueId": "mmc-cs531-02-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs531-02-recall-2",
+      "mappingId": "mmc-cs531-02",
+      "cueId": "mmc-cs531-02-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs531-03-recall-1",
+      "mappingId": "mmc-cs531-03",
+      "cueId": "mmc-cs531-03-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs531-03-recall-2",
+      "mappingId": "mmc-cs531-03",
+      "cueId": "mmc-cs531-03-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs531-04-recall-1",
+      "mappingId": "mmc-cs531-04",
+      "cueId": "mmc-cs531-04-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs531-04-recall-2",
+      "mappingId": "mmc-cs531-04",
+      "cueId": "mmc-cs531-04-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs532-01-recall-1",
+      "mappingId": "mmc-cs532-01",
+      "cueId": "mmc-cs532-01-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs532-01-recall-2",
+      "mappingId": "mmc-cs532-01",
+      "cueId": "mmc-cs532-01-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs532-02-recall-1",
+      "mappingId": "mmc-cs532-02",
+      "cueId": "mmc-cs532-02-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs532-02-recall-2",
+      "mappingId": "mmc-cs532-02",
+      "cueId": "mmc-cs532-02-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs532-03-recall-1",
+      "mappingId": "mmc-cs532-03",
+      "cueId": "mmc-cs532-03-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs532-03-recall-2",
+      "mappingId": "mmc-cs532-03",
+      "cueId": "mmc-cs532-03-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs532-04-recall-1",
+      "mappingId": "mmc-cs532-04",
+      "cueId": "mmc-cs532-04-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-cs532-04-recall-2",
+      "mappingId": "mmc-cs532-04",
+      "cueId": "mmc-cs532-04-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me211-01-recall-1",
+      "mappingId": "mmc-me211-01",
+      "cueId": "mmc-me211-01-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me211-01-recall-2",
+      "mappingId": "mmc-me211-01",
+      "cueId": "mmc-me211-01-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me211-02-recall-1",
+      "mappingId": "mmc-me211-02",
+      "cueId": "mmc-me211-02-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me211-02-recall-2",
+      "mappingId": "mmc-me211-02",
+      "cueId": "mmc-me211-02-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me211-03-recall-1",
+      "mappingId": "mmc-me211-03",
+      "cueId": "mmc-me211-03-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me211-03-recall-2",
+      "mappingId": "mmc-me211-03",
+      "cueId": "mmc-me211-03-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me211-04-recall-1",
+      "mappingId": "mmc-me211-04",
+      "cueId": "mmc-me211-04-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me211-04-recall-2",
+      "mappingId": "mmc-me211-04",
+      "cueId": "mmc-me211-04-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me211-05-recall-1",
+      "mappingId": "mmc-me211-05",
+      "cueId": "mmc-me211-05-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me211-05-recall-2",
+      "mappingId": "mmc-me211-05",
+      "cueId": "mmc-me211-05-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me211-06-recall-1",
+      "mappingId": "mmc-me211-06",
+      "cueId": "mmc-me211-06-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me211-06-recall-2",
+      "mappingId": "mmc-me211-06",
+      "cueId": "mmc-me211-06-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me221-01-recall-1",
+      "mappingId": "mmc-me221-01",
+      "cueId": "mmc-me221-01-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me221-01-recall-2",
+      "mappingId": "mmc-me221-01",
+      "cueId": "mmc-me221-01-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me221-02-recall-1",
+      "mappingId": "mmc-me221-02",
+      "cueId": "mmc-me221-02-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me221-02-recall-2",
+      "mappingId": "mmc-me221-02",
+      "cueId": "mmc-me221-02-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me221-03-recall-1",
+      "mappingId": "mmc-me221-03",
+      "cueId": "mmc-me221-03-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me221-03-recall-2",
+      "mappingId": "mmc-me221-03",
+      "cueId": "mmc-me221-03-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me221-04-recall-1",
+      "mappingId": "mmc-me221-04",
+      "cueId": "mmc-me221-04-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me221-04-recall-2",
+      "mappingId": "mmc-me221-04",
+      "cueId": "mmc-me221-04-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me221-05-recall-1",
+      "mappingId": "mmc-me221-05",
+      "cueId": "mmc-me221-05-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me221-05-recall-2",
+      "mappingId": "mmc-me221-05",
+      "cueId": "mmc-me221-05-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me231-01-recall-1",
+      "mappingId": "mmc-me231-01",
+      "cueId": "mmc-me231-01-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me231-01-recall-2",
+      "mappingId": "mmc-me231-01",
+      "cueId": "mmc-me231-01-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me231-02-recall-1",
+      "mappingId": "mmc-me231-02",
+      "cueId": "mmc-me231-02-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me231-02-recall-2",
+      "mappingId": "mmc-me231-02",
+      "cueId": "mmc-me231-02-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me231-03-recall-1",
+      "mappingId": "mmc-me231-03",
+      "cueId": "mmc-me231-03-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me231-03-recall-2",
+      "mappingId": "mmc-me231-03",
+      "cueId": "mmc-me231-03-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me231-04-recall-1",
+      "mappingId": "mmc-me231-04",
+      "cueId": "mmc-me231-04-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me231-04-recall-2",
+      "mappingId": "mmc-me231-04",
+      "cueId": "mmc-me231-04-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me311-01-recall-1",
+      "mappingId": "mmc-me311-01",
+      "cueId": "mmc-me311-01-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me311-01-recall-2",
+      "mappingId": "mmc-me311-01",
+      "cueId": "mmc-me311-01-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me311-02-recall-1",
+      "mappingId": "mmc-me311-02",
+      "cueId": "mmc-me311-02-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me311-02-recall-2",
+      "mappingId": "mmc-me311-02",
+      "cueId": "mmc-me311-02-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me311-03-recall-1",
+      "mappingId": "mmc-me311-03",
+      "cueId": "mmc-me311-03-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me311-03-recall-2",
+      "mappingId": "mmc-me311-03",
+      "cueId": "mmc-me311-03-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me311-04-recall-1",
+      "mappingId": "mmc-me311-04",
+      "cueId": "mmc-me311-04-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me311-04-recall-2",
+      "mappingId": "mmc-me311-04",
+      "cueId": "mmc-me311-04-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me311-05-recall-1",
+      "mappingId": "mmc-me311-05",
+      "cueId": "mmc-me311-05-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me311-05-recall-2",
+      "mappingId": "mmc-me311-05",
+      "cueId": "mmc-me311-05-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me311-06-recall-1",
+      "mappingId": "mmc-me311-06",
+      "cueId": "mmc-me311-06-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me311-06-recall-2",
+      "mappingId": "mmc-me311-06",
+      "cueId": "mmc-me311-06-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me321-01-recall-1",
+      "mappingId": "mmc-me321-01",
+      "cueId": "mmc-me321-01-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me321-01-recall-2",
+      "mappingId": "mmc-me321-01",
+      "cueId": "mmc-me321-01-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me321-02-recall-1",
+      "mappingId": "mmc-me321-02",
+      "cueId": "mmc-me321-02-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me321-02-recall-2",
+      "mappingId": "mmc-me321-02",
+      "cueId": "mmc-me321-02-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me321-03-recall-1",
+      "mappingId": "mmc-me321-03",
+      "cueId": "mmc-me321-03-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me321-03-recall-2",
+      "mappingId": "mmc-me321-03",
+      "cueId": "mmc-me321-03-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me321-04-recall-1",
+      "mappingId": "mmc-me321-04",
+      "cueId": "mmc-me321-04-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me321-04-recall-2",
+      "mappingId": "mmc-me321-04",
+      "cueId": "mmc-me321-04-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me321-05-recall-1",
+      "mappingId": "mmc-me321-05",
+      "cueId": "mmc-me321-05-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me321-05-recall-2",
+      "mappingId": "mmc-me321-05",
+      "cueId": "mmc-me321-05-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me321-06-recall-1",
+      "mappingId": "mmc-me321-06",
+      "cueId": "mmc-me321-06-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me321-06-recall-2",
+      "mappingId": "mmc-me321-06",
+      "cueId": "mmc-me321-06-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me331-01-recall-1",
+      "mappingId": "mmc-me331-01",
+      "cueId": "mmc-me331-01-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me331-01-recall-2",
+      "mappingId": "mmc-me331-01",
+      "cueId": "mmc-me331-01-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me331-02-recall-1",
+      "mappingId": "mmc-me331-02",
+      "cueId": "mmc-me331-02-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me331-02-recall-2",
+      "mappingId": "mmc-me331-02",
+      "cueId": "mmc-me331-02-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me331-03-recall-1",
+      "mappingId": "mmc-me331-03",
+      "cueId": "mmc-me331-03-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me331-03-recall-2",
+      "mappingId": "mmc-me331-03",
+      "cueId": "mmc-me331-03-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me331-04-recall-1",
+      "mappingId": "mmc-me331-04",
+      "cueId": "mmc-me331-04-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me331-04-recall-2",
+      "mappingId": "mmc-me331-04",
+      "cueId": "mmc-me331-04-cue-2",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me331-05-recall-1",
+      "mappingId": "mmc-me331-05",
+      "cueId": "mmc-me331-05-cue-1",
+      "kind": "recall"
+    },
+    {
+      "id": "mmc-me331-05-recall-2",
+      "mappingId": "mmc-me331-05",
+      "cueId": "mmc-me331-05-cue-2",
       "kind": "recall"
     }
   ]

@@ -62,6 +62,7 @@ export async function updatePlan(
 export async function startSession(
   coverageOnly = false,
   now = new Date().toISOString(),
+  practiceScope: 'all' | 'mmc' = 'all',
 ): Promise<Session> {
   return db.transaction('rw', stores, async () => {
     const open = (await db.microSessions.toArray()).find(
@@ -86,6 +87,7 @@ export async function startSession(
       now,
       [],
       coverageOnly,
+      practiceScope,
     )
     const session: Session = {
       id: createLocalId(),
@@ -99,6 +101,7 @@ export async function startSession(
       hintUsed: false,
       confirmedAttemptIds: [],
       coverageOnly,
+      practiceScope,
       cardStartedMs: 0,
       activeRevealMs: 0,
       input: [],
@@ -253,6 +256,7 @@ export async function confirm(
               attempt.mappingId,
             ],
             stored.coverageOnly,
+            stored.practiceScope ?? 'all',
           )
         : null
     const next: Session = {

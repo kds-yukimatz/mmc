@@ -6,6 +6,10 @@ const read = (path) =>
   JSON.parse(readFileSync(new URL('../' + path, import.meta.url), 'utf8'))
 const seed = read('scripts/micro-inputs/starter-content.json')
 const baseMappingCount = seed.mappings.length
+const mmcPracticeSets = [
+  read('scripts/micro-inputs/mmc-original-practice.json'),
+  read('scripts/micro-inputs/mmc-cs5-me23-practice.json'),
+]
 const inventory = read('scripts/micro-inputs/frequency-inventory.json')
 const base = read('public/data/kahotore_mmc_base_v2.json')
 const normalize = (v) => v.normalize('NFKC').replace(/\s/g, '')
@@ -325,8 +329,181 @@ for (const stock of bStocks) {
     if (!accepted.includes(answerKey(word)))
       errors.push(`Bストック未小問化: ${stock.id}/${word}`)
 }
+const mmcConceptIds = new Set(seed.concepts.map((c) => c.id))
+const mmcMappingIds = new Set(seed.mappings.map((m) => m.id))
+const mmcCardIds = new Set(seed.cards.map((c) => c.id))
+for (const dataset of mmcPracticeSets) {
+  const reusedConceptIds = new Set(dataset.metadata.reuseConceptIds)
+  const provenance = new Map(
+    dataset.provenance.map((item) => [item.mappingId, item]),
+  )
+  const fallbackManifest = [
+    ...new Map(
+      dataset.provenance.map((item) => [
+        item.filename,
+        {
+          filename: item.filename,
+          filenameYear:
+            Number(item.filename.match(/mmc(20\d{2})/i)?.[1]) || null,
+          series: item.series,
+          status: 'adopted',
+        },
+      ]),
+    ).values(),
+  ]
+  const manifest = new Map(
+    (dataset.manifest ?? fallbackManifest).map((item) => [item.filename, item]),
+  )
+  if (
+    dataset.mappings.length !== dataset.metadata.addedMappingCount ||
+    dataset.cards.length !== dataset.metadata.addedCardCount ||
+    dataset.concepts.length !== dataset.metadata.addedConceptCount
+  )
+    errors.push(
+      `MMC独自問題の登録件数が設計メタデータと不一致: ${dataset.metadata.version}`,
+    )
+  if (
+    [...manifest.values()].filter((item) => item.status === 'adopted')
+      .length !== dataset.metadata.adoptedPdfCount
+  )
+    errors.push(`MMC採用PDF件数が不一致: ${dataset.metadata.version}`)
+  for (const concept of dataset.concepts) {
+    if (
+      reusedConceptIds.has(concept.id) &&
+      seed.concepts.some((existing) => existing.id === concept.id)
+    )
+      continue
+    if (mmcConceptIds.has(concept.id))
+      errors.push(`MMC概念ID重複: ${concept.id}`)
+    mmcConceptIds.add(concept.id)
+    seed.concepts.push(concept)
+  }
+  for (const update of dataset.conceptUpdates ?? []) {
+    const concept = seed.concepts.find((item) => item.id === update.id)
+    if (!concept) {
+      errors.push(`MMC概念訂正の対象がない: ${update.id}`)
+      continue
+    }
+    const previousAliases = concept.evidenceAliases
+    concept.label = update.label
+    concept.evidenceAliases = update.evidenceAliases
+    dataset._previousAliases ??= {}
+    dataset._previousAliases[update.id] = previousAliases
+  }
+  for (const correction of dataset.correctionNotes ?? []) {
+    const mapping = seed.mappings.find(
+      (item) => item.id === correction.mappingId,
+    )
+    if (
+      !mapping ||
+      !seed.concepts.some((item) => item.id === correction.conceptId)
+    ) {
+      errors.push(`MMC訂正の対象問題がない: ${correction.mappingId}`)
+      continue
+    }
+    for (const slot of mapping.answerSlots)
+      if (slot.conceptId === correction.conceptId)
+        slot.accepted = correction.accepted
+    const correctedAliases = [
+      ...(dataset._previousAliases?.[correction.conceptId] ?? []),
+      ...correction.accepted,
+    ]
+    for (const existingMapping of seed.mappings)
+      for (const cue of existingMapping.cues)
+        cue.hintChoices = cue.hintChoices.map((choice) =>
+          correctedAliases.some(
+            (accepted) => answerKey(accepted) === answerKey(choice),
+          )
+            ? correction.canonical
+            : choice,
+        )
+  }
+  for (const mapping of dataset.mappings) {
+    if (mmcMappingIds.has(mapping.id))
+      errors.push(`MMC問題ID重複: ${mapping.id}`)
+    mmcMappingIds.add(mapping.id)
+    const source = provenance.get(mapping.id)
+    const file = source && manifest.get(source.filename)
+    if (
+      mapping.source.kind !== 'mmc_original' ||
+      !mapping.source.refs.length ||
+      !source ||
+      !file ||
+      file.status !== 'adopted' ||
+      !mapping.source.refs.some((ref) => ref.includes(source.filename))
+    )
+      errors.push(`MMC問題の出典不足または不一致: ${mapping.id}`)
+    if (mapping.conceptIds.some((id) => !mmcConceptIds.has(id)))
+      errors.push(`MMC問題の概念不足: ${mapping.id}`)
+    seed.mappings.push(mapping)
+  }
+  for (const card of dataset.cards) {
+    if (mmcCardIds.has(card.id)) errors.push(`MMCカードID重複: ${card.id}`)
+    mmcCardIds.add(card.id)
+    seed.cards.push(card)
+  }
+}
 if (bStocks.length !== 22) errors.push(`Bストック件数不一致: ${bStocks.length}`)
-seed.metadata.version = 'micro-seed-2'
+const adoptedSourceFiles = mmcPracticeSets.flatMap((dataset) =>
+  (
+    dataset.manifest ?? [
+      ...new Map(
+        dataset.provenance.map((source) => {
+          const filenameYear =
+            Number(source.filename.match(/mmc(20\d{2})/i)?.[1]) || null
+          return [
+            source.filename,
+            {
+              ...source,
+              filenameYear,
+              documentYear: source.documentYear ?? filenameYear,
+              status: 'adopted',
+            },
+          ]
+        }),
+      ).values(),
+    ]
+  ).filter((source) => source.status === 'adopted'),
+)
+const uniqueSourceFiles = [
+  ...new Map(
+    adoptedSourceFiles.map((source) => [
+      source.filename,
+      {
+        ...source,
+        documentYear:
+          source.documentYear ??
+          Number(source.filename.match(/mmc(20\d{2})/i)?.[1]) ??
+          null,
+      },
+    ]),
+  ).values(),
+]
+const mmcOriginalSummary = {
+  series: [...new Set(uniqueSourceFiles.map((source) => source.series))].sort(),
+  sourceFileCount: uniqueSourceFiles.length,
+  mappingCount: mmcPracticeSets.reduce(
+    (count, dataset) => count + dataset.mappings.length,
+    0,
+  ),
+  years: [
+    ...new Set(
+      uniqueSourceFiles
+        .map((source) => source.documentYear ?? source.filenameYear)
+        .filter(Boolean),
+    ),
+  ].sort(),
+  sources: uniqueSourceFiles.map((source) => ({
+    filename: source.filename,
+    series: source.series,
+    documentYear: source.documentYear ?? source.filenameYear ?? null,
+    filenameYear: source.filenameYear ?? null,
+  })),
+}
+seed.metadata.version = 'micro-seed-4'
+seed.metadata.note =
+  '既存練習は設計者作成の汎用練習。MMC独自短問は解説を根拠に再設計し、原問題・原答案を転載していない。独自問題は本試頻度に含めない。'
+seed.metadata.mmcOriginal = mmcOriginalSummary
 seed.metadata.conceptCount = seed.concepts.length
 seed.metadata.mappingCount = seed.mappings.length
 seed.metadata.cardCount = seed.cards.length
@@ -342,6 +519,17 @@ const report = {
   mandatory: seed.concepts.filter((c) => c.mandatory).length,
   bStocks: bStocks.length,
   bStockMappings: additions.length,
+  mmcOriginalMappings: mmcOriginalSummary.mappingCount,
+  mmcOriginalCards: mmcPracticeSets.reduce(
+    (count, dataset) => count + dataset.cards.length,
+    0,
+  ),
+  mmcOriginalConcepts: mmcPracticeSets.reduce(
+    (count, dataset) => count + dataset.concepts.length,
+    0,
+  ),
+  mmcSourceFileCount: mmcOriginalSummary.sourceFileCount,
+  mmcSeries: mmcOriginalSummary.series,
   excluded: errors,
 }
 writeFileSync(

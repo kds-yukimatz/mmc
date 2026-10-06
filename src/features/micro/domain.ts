@@ -31,7 +31,10 @@ export type Mapping = {
   expectedCount: 1 | 2
   answerSlots: { conceptId: string; accepted: string[] }[]
   explanation: string
-  source: { kind: 'designed_practice' | 'review_stock'; refs: string[] }
+  source: {
+    kind: 'designed_practice' | 'review_stock' | 'mmc_original'
+    refs: string[]
+  }
   cues: Cue[]
 }
 export type Card = {
@@ -43,7 +46,26 @@ export type Card = {
   contrastExplanation?: string
 }
 export type Content = {
-  metadata: { version: string; note: string }
+  metadata: {
+    version: string
+    note: string
+    mandatoryConceptCount: number
+    conceptCount: number
+    mappingCount: number
+    cardCount: number
+    mmcOriginal?: {
+      series: string[]
+      sourceFileCount: number
+      mappingCount: number
+      years: number[]
+      sources: {
+        filename: string
+        series: string
+        documentYear: number | null
+        filenameYear: number | null
+      }[]
+    }
+  }
   concepts: Concept[]
   mappings: Mapping[]
   cards: Card[]
@@ -95,6 +117,7 @@ export type Session = {
   hintUsed: boolean
   confirmedAttemptIds: string[]
   coverageOnly: boolean
+  practiceScope?: 'all' | 'mmc'
   cardStartedMs: number
   activeRevealMs: number
   input: string[]

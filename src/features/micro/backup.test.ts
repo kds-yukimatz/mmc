@@ -51,4 +51,46 @@ describe('バックアップの書込み前検証', () => {
     expect(sameContent({ a: 1, b: undefined }, { a: 1 })).toBe(true)
     expect(sameContent({ a: 1, b: 2 }, { b: 2, a: 1 })).toBe(true)
   })
+  it('MMC scopeを保存し、旧sessionのscope省略を許し、不正scopeを拒否', () => {
+    const session = (id: string, practiceScope?: string) => ({
+      id,
+      status: 'completed',
+      inputMode: 'mental',
+      contentVersion: 'micro-seed-3',
+      startedAt: '2026-10-06T09:00:00.000Z',
+      ordinal: 1,
+      activeMs: 0,
+      confirmedAttemptIds: [],
+      input: [],
+      hintUsed: false,
+      revealed: false,
+      coverageOnly: false,
+      override: false,
+      cardStartedMs: 0,
+      activeRevealMs: 0,
+      ...(practiceScope === undefined ? {} : { practiceScope }),
+      cardSnapshot: null,
+    })
+    const scoped = parseBackup(
+      JSON.stringify({
+        ...minimal,
+        microSessions: [session('mmc', 'mmc')],
+      }),
+    )
+    expect(scoped.microSessions[0].practiceScope).toBe('mmc')
+
+    const legacy = parseBackup(
+      JSON.stringify({ ...minimal, microSessions: [session('legacy')] }),
+    )
+    expect(legacy.microSessions[0]).not.toHaveProperty('practiceScope')
+
+    expect(() =>
+      parseBackup(
+        JSON.stringify({
+          ...minimal,
+          microSessions: [session('invalid', 'unknown')],
+        }),
+      ),
+    ).toThrow()
+  })
 })

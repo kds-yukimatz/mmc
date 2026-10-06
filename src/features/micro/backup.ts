@@ -497,6 +497,8 @@ export function parseBackup(text: string): Backup {
               r.status as string,
             ) ||
             !['mental', 'typed'].includes(r.inputMode as string) ||
+            (r.practiceScope !== undefined &&
+              !['all', 'mmc'].includes(r.practiceScope as string)) ||
             typeof r.contentVersion !== 'string' ||
             !date(r.startedAt) ||
             ![1, 2].includes(r.ordinal as number) ||

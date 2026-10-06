@@ -182,6 +182,7 @@ export function selectCard(
   now: string,
   excluded: string[] = [],
   coverageOnly = false,
+  practiceScope: 'all' | 'mmc' = 'all',
 ): Snapshot | null {
   const today = localDate(now),
     settings = phase(plan, today)
@@ -263,20 +264,25 @@ export function selectCard(
     Number(recentCases.includes(a.case)) -
       Number(recentCases.includes(b.case)) ||
     a.id.localeCompare(b.id)
-  const slots = coverageOnly
-    ? (['coverage', 'due'] as Slot[])
-    : [
-        ...new Set([
-          desired,
-          'due',
-          'coverage',
-          'contrast',
-          'maintenance',
-        ] as Slot[]),
-      ]
+  const slots =
+    practiceScope === 'mmc'
+      ? (['coverage', 'due'] as Slot[])
+      : coverageOnly
+        ? (['coverage', 'due'] as Slot[])
+        : [
+            ...new Set([
+              desired,
+              'due',
+              'coverage',
+              'contrast',
+              'maintenance',
+            ] as Slot[]),
+          ]
   for (const slot of slots) {
     const candidates = content.mappings
       .filter((m) => {
+        if (practiceScope === 'mmc' && m.source.kind !== 'mmc_original')
+          return false
         if (!eligible(m)) return false
         const state = states[m.id],
           known = Boolean(state?.firstConfirmedAt)
@@ -295,7 +301,8 @@ export function selectCard(
         if (slot === 'coverage')
           return (
             !known &&
-            (coverageOnly ? mandatory(m) : newCount < settings.newLimit)
+            (practiceScope === 'mmc' ||
+              (coverageOnly ? mandatory(m) : newCount < settings.newLimit))
           )
         if (!known) return false
         if (slot === 'due')
@@ -365,7 +372,9 @@ export function validateContent(content: Content): string[] {
       !['I', 'II', 'III'].includes(m.case) ||
       !m.explanation ||
       !m.source.refs.length ||
-      !['designed_practice', 'review_stock'].includes(m.source.kind) ||
+      !['designed_practice', 'review_stock', 'mmc_original'].includes(
+        m.source.kind,
+      ) ||
       m.answerSlots.length !== m.expectedCount ||
       ![1, 2].includes(m.expectedCount) ||
       m.cues.length < 2 ||

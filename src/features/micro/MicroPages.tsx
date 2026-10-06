@@ -37,6 +37,15 @@ const status = (
       : state.lastGrade === 'miss' || state.lastGrade === 'hesitant'
         ? '要再確認'
         : '確認中'
+const sourceCitation = (ref: string) => {
+  const match = ref.match(/(?:^|:)([^:]+\.pdf)(:.*)$/i)
+  if (!match) return ref
+  const [, filename, location] = match
+  const source = content.metadata.mmcOriginal?.sources.find(
+    (item) => item.filename === filename,
+  )
+  return `${source?.documentYear ? `${source.documentYear}年 ` : ''}${filename}${location}`
+}
 function Progress({
   data,
 }: {
@@ -620,9 +629,7 @@ export function MicroSessionPage() {
               <p>{content.metadata.note}</p>
               <p>
                 元語の根拠：
-                {snap.mapping.source.refs
-                  .map((ref) => ref.replace(/^Google Drive:[^:]+:/, ''))
-                  .join('、')}
+                {snap.mapping.source.refs.map(sourceCitation).join('、')}
               </p>
               <NavLink to="/overview">既存の問題を見る</NavLink>
             </details>
@@ -731,10 +738,18 @@ export function MicroMaterials() {
         </NavLink>
         <NavLink to="/legacy">過去問再現（本試一問一答）</NavLink>
       </section>
-      <p>
-        設計上の必須31項目に加え、MMC
-        CS3/CS4の解説9本をもとにした独自短問33問を収録（全103小問）。
-      </p>
+      {content.metadata.mmcOriginal && (
+        <p>
+          設計上の必須
+          {content.concepts.filter((concept) => concept.mandatory).length}
+          項目に加え、MMC {content.metadata.mmcOriginal.series.join('・')}
+          の解説{content.metadata.mmcOriginal.sourceFileCount}
+          本をもとにした独自短問
+          {content.metadata.mmcOriginal.mappingCount}問を収録（全
+          {content.mappings.length}小問、
+          {content.metadata.mmcOriginal.years.join('・')}年の資料）。
+        </p>
+      )}
       <button
         className="btn btn-primary"
         disabled={!data || busy}
@@ -872,9 +887,7 @@ export function MicroMaterials() {
                       ? 'MMC独自問題の解説をもとに設計した練習'
                       : '設計者作成の汎用練習'}
                   。元語の根拠：
-                  {m.source.refs
-                    .map((ref) => ref.replace(/^Google Drive:[^:]+:/, ''))
-                    .join('、')}
+                  {m.source.refs.map(sourceCitation).join('、')}
                 </small>
               </div>
             ))}

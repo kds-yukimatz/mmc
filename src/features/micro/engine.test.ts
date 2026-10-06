@@ -49,20 +49,50 @@ describe('教材と完全一致', () => {
   it('31必須を保ち、Bストック22件を含む教材の出典とcue対応を検証する', () => {
     expect(validateContent(content)).toEqual([])
     expect(content.concepts.filter((c) => c.mandatory)).toHaveLength(31)
-    expect(content.concepts).toHaveLength(89)
-    expect(content.mappings).toHaveLength(103)
-    expect(content.cards).toHaveLength(218)
+    expect(content.concepts).toHaveLength(content.metadata.conceptCount)
+    expect(content.mappings).toHaveLength(content.metadata.mappingCount)
+    expect(content.cards).toHaveLength(content.metadata.cardCount)
     const mmcMappings = content.mappings.filter(
       (mapping) => mapping.source.kind === 'mmc_original',
     )
-    expect(mmcMappings).toHaveLength(33)
+    expect(mmcMappings).toHaveLength(content.metadata.mmcOriginal!.mappingCount)
     expect(
       content.cards.filter(
         (card) =>
           content.mappings.find((mapping) => mapping.id === card.mappingId)
             ?.source.kind === 'mmc_original' && card.kind === 'recall',
       ),
-    ).toHaveLength(66)
+    ).toHaveLength(content.metadata.mmcOriginal!.mappingCount * 2)
+    expect(
+      new Set(
+        content.metadata.mmcOriginal!.sources.map((source) => source.filename),
+      ),
+    ).toHaveProperty('size', content.metadata.mmcOriginal!.sourceFileCount)
+    const cs532 = content.metadata.mmcOriginal!.sources.find(
+      (source) => source.filename === 'mmc2025Cs532x03kaisetu.pdf',
+    )!
+    expect(cs532).toMatchObject({ documentYear: 2026, filenameYear: 2025 })
+    expect(
+      content.metadata.mmcOriginal!.sources.every(
+        (source) =>
+          !source.filename.includes('\\') && !source.filename.includes('/'),
+      ),
+    ).toBe(true)
+    const correctedConcept = content.concepts.find(
+      (concept) => concept.id === 'fruit-mmc-cs331-13',
+    )!
+    const correctedMapping = content.mappings.find(
+      (mapping) => mapping.id === 'mmc-cs331-13',
+    )!
+    expect(correctedConcept.label).toBe('カムアップシステム')
+    expect(correctedMapping.answerSlots[0].accepted).not.toContain(
+      'ムアアップシステム',
+    )
+    expect(
+      content.mappings.flatMap((mapping) =>
+        mapping.cues.flatMap((cue) => cue.hintChoices),
+      ),
+    ).not.toContain('ムアアップシステム')
     const bStocks = reviewFruitStock.filter((stock) => stock.priority === 'B')
     expect(bStocks).toHaveLength(22)
     for (const stock of bStocks) {

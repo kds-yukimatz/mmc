@@ -46,7 +46,26 @@ export type Card = {
   contrastExplanation?: string
 }
 export type Content = {
-  metadata: { version: string; note: string }
+  metadata: {
+    version: string
+    note: string
+    mandatoryConceptCount: number
+    conceptCount: number
+    mappingCount: number
+    cardCount: number
+    mmcOriginal?: {
+      series: string[]
+      sourceFileCount: number
+      mappingCount: number
+      years: number[]
+      sources: {
+        filename: string
+        series: string
+        documentYear: number | null
+        filenameYear: number | null
+      }[]
+    }
+  }
   concepts: Concept[]
   mappings: Mapping[]
   cards: Card[]

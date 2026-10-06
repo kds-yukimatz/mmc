@@ -6,6 +6,7 @@ const read = (path) =>
   JSON.parse(readFileSync(new URL('../' + path, import.meta.url), 'utf8'))
 const seed = read('scripts/micro-inputs/starter-content.json')
 const baseMappingCount = seed.mappings.length
+const mmcPractice = read('scripts/micro-inputs/mmc-original-practice.json')
 const inventory = read('scripts/micro-inputs/frequency-inventory.json')
 const base = read('public/data/kahotore_mmc_base_v2.json')
 const normalize = (v) => v.normalize('NFKC').replace(/\s/g, '')
@@ -325,8 +326,44 @@ for (const stock of bStocks) {
     if (!accepted.includes(answerKey(word)))
       errors.push(`Bストック未小問化: ${stock.id}/${word}`)
 }
+const mmcConceptIds = new Set(seed.concepts.map((c) => c.id))
+const mmcMappingIds = new Set(seed.mappings.map((m) => m.id))
+const mmcCardIds = new Set(seed.cards.map((c) => c.id))
+const reusedConceptIds = new Set(mmcPractice.metadata.reuseConceptIds)
+for (const concept of mmcPractice.concepts) {
+  if (reusedConceptIds.has(concept.id)) {
+    if (!seed.concepts.some((existing) => existing.id === concept.id))
+      errors.push(`MMC再利用概念が既存教材にない: ${concept.id}`)
+    continue
+  }
+  if (mmcConceptIds.has(concept.id)) errors.push(`MMC概念ID重複: ${concept.id}`)
+  mmcConceptIds.add(concept.id)
+  seed.concepts.push(concept)
+}
+for (const mapping of mmcPractice.mappings) {
+  if (mmcMappingIds.has(mapping.id)) errors.push(`MMC問題ID重複: ${mapping.id}`)
+  mmcMappingIds.add(mapping.id)
+  if (mapping.source.kind !== 'mmc_original' || !mapping.source.refs.length)
+    errors.push(`MMC問題の出典不足: ${mapping.id}`)
+  if (mapping.conceptIds.some((id) => !mmcConceptIds.has(id)))
+    errors.push(`MMC問題の概念不足: ${mapping.id}`)
+  seed.mappings.push(mapping)
+}
+for (const card of mmcPractice.cards) {
+  if (mmcCardIds.has(card.id)) errors.push(`MMCカードID重複: ${card.id}`)
+  mmcCardIds.add(card.id)
+  seed.cards.push(card)
+}
+if (
+  mmcPractice.mappings.length !== mmcPractice.metadata.addedMappingCount ||
+  mmcPractice.cards.length !== mmcPractice.metadata.addedCardCount ||
+  mmcPractice.concepts.length !== mmcPractice.metadata.addedConceptCount
+)
+  errors.push('MMC独自問題の登録件数が設計メタデータと不一致')
 if (bStocks.length !== 22) errors.push(`Bストック件数不一致: ${bStocks.length}`)
-seed.metadata.version = 'micro-seed-2'
+seed.metadata.version = 'micro-seed-3'
+seed.metadata.note =
+  '既存練習は設計者作成の汎用練習。MMC CS3/CS4の独自短問は解説を根拠に再設計し、原問題・原答案を転載していない。独自問題は本試頻度に含めない。'
 seed.metadata.conceptCount = seed.concepts.length
 seed.metadata.mappingCount = seed.mappings.length
 seed.metadata.cardCount = seed.cards.length
@@ -342,6 +379,9 @@ const report = {
   mandatory: seed.concepts.filter((c) => c.mandatory).length,
   bStocks: bStocks.length,
   bStockMappings: additions.length,
+  mmcOriginalMappings: mmcPractice.mappings.length,
+  mmcOriginalCards: mmcPractice.cards.length,
+  mmcOriginalConcepts: mmcPractice.metadata.addedConceptCount,
   excluded: errors,
 }
 writeFileSync(

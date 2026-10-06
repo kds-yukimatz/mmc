@@ -31,7 +31,10 @@ export type Mapping = {
   expectedCount: 1 | 2
   answerSlots: { conceptId: string; accepted: string[] }[]
   explanation: string
-  source: { kind: 'designed_practice' | 'review_stock'; refs: string[] }
+  source: {
+    kind: 'designed_practice' | 'review_stock' | 'mmc_original'
+    refs: string[]
+  }
   cues: Cue[]
 }
 export type Card = {
@@ -95,6 +98,7 @@ export type Session = {
   hintUsed: boolean
   confirmedAttemptIds: string[]
   coverageOnly: boolean
+  practiceScope?: 'all' | 'mmc'
   cardStartedMs: number
   activeRevealMs: number
   input: string[]

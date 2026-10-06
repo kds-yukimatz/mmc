@@ -49,9 +49,20 @@ describe('教材と完全一致', () => {
   it('31必須を保ち、Bストック22件を含む教材の出典とcue対応を検証する', () => {
     expect(validateContent(content)).toEqual([])
     expect(content.concepts.filter((c) => c.mandatory)).toHaveLength(31)
-    expect(content.concepts).toHaveLength(61)
-    expect(content.mappings).toHaveLength(70)
-    expect(content.cards).toHaveLength(152)
+    expect(content.concepts).toHaveLength(89)
+    expect(content.mappings).toHaveLength(103)
+    expect(content.cards).toHaveLength(218)
+    const mmcMappings = content.mappings.filter(
+      (mapping) => mapping.source.kind === 'mmc_original',
+    )
+    expect(mmcMappings).toHaveLength(33)
+    expect(
+      content.cards.filter(
+        (card) =>
+          content.mappings.find((mapping) => mapping.id === card.mappingId)
+            ?.source.kind === 'mmc_original' && card.kind === 'recall',
+      ),
+    ).toHaveLength(66)
     const bStocks = reviewFruitStock.filter((stock) => stock.priority === 'B')
     expect(bStocks).toHaveLength(22)
     for (const stock of bStocks) {
@@ -63,6 +74,40 @@ describe('教材と完全一致', () => {
         )
       for (const word of stock.fruitKeywords) expect(answers).toContain(word)
     }
+  })
+  it('MMC独自問題を試験期の新規上限に関係なく練習し、範囲を継続する', () => {
+    const finalPhase = '2026-10-24T01:00:00.000Z'
+    const first = selectCard(
+      content,
+      {},
+      [],
+      plan,
+      finalPhase,
+      [],
+      false,
+      'mmc',
+    )!
+    expect(first.mapping.source.kind).toBe('mmc_original')
+    expect(first.slot).toBe('coverage')
+    const firstAttempt = attempt({
+      mappingId: first.mapping.id,
+      cardId: first.card.id,
+      cueId: first.cue.id,
+      answeredAt: finalPhase,
+      localDate: '2026-10-24',
+    })
+    const second = selectCard(
+      content,
+      rebuildStates([firstAttempt]),
+      [firstAttempt],
+      plan,
+      finalPhase,
+      [first.mapping.id],
+      false,
+      'mmc',
+    )!
+    expect(second.mapping.source.kind).toBe('mmc_original')
+    expect(second.mapping.id).not.toBe(first.mapping.id)
   })
   it('題意越境・部分一致・全体類義語を採用しない', () => {
     const education = content.mappings.find((m) => m.id === 'map-25')!

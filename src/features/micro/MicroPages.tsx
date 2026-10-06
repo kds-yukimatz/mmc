@@ -120,68 +120,76 @@ export function MicroHome() {
   return (
     <div className="page micro-page micro-home-page">
       <div className="micro-home-snapshot">
-      <section className="micro-hero">
-        <p className="eyebrow">1分 × 好きなセット数</p>
-        <h1>
-          題意と因から、
-          <br />
-          果を思い出す
-        </h1>
-        <p>頭の中で答えて、確認。1問で終わっても大丈夫。</p>
-        <button
-          className="btn btn-primary micro-start"
-          disabled={busy || !data}
-          onClick={() => void begin()}
-        >
-          {data?.session ? '続きから開く' : '1分はじめる'}
-        </button>
-      </section>
-      {data && (
-        <section className="micro-panel fruit-stamps" aria-labelledby="fruit-stamps-title">
-          <header className="fruit-stamps-heading">
-            <p className="eyebrow">果スタンプ</p>
-            <h2 id="fruit-stamps-title">
-              直近7日 {stamps.filter((day) => day.earned).length}/7日
-            </h2>
-          </header>
-          <ol aria-label="直近7日の果スタンプ">
-            {stamps.map((day) => {
-              const isToday = day.date === today
-              const label = new Intl.DateTimeFormat('ja-JP', {
-                timeZone: 'Asia/Tokyo',
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric',
-              }).format(new Date(`${day.date}T00:00:00+09:00`))
-              const dayStatus = day.earned ? '果を獲得' : '未獲得'
-              return (
-                <li
-                  key={day.date}
-                  aria-label={`${label}、${dayStatus}${isToday ? '、今日' : ''}`}
-                  className={day.earned ? 'earned' : ''}
-                >
-                  <span aria-hidden="true">{day.earned ? '果' : '・'}</span>
-                  <time dateTime={day.date} aria-hidden="true">
-                    {new Intl.DateTimeFormat('ja-JP', {
-                      timeZone: 'Asia/Tokyo',
-                      month: 'numeric',
-                      day: 'numeric',
-                    }).format(new Date(`${day.date}T00:00:00+09:00`))}
-                  </time>
-                </li>
-              )
-            })}
-          </ol>
-          <p role="status">
-            {stamps[6].earned ? '今日の果を獲得' : '1問確認すると今日の果がつく'}
-          </p>
+        <section className="micro-hero">
+          <p className="eyebrow">1分 × 好きなセット数</p>
+          <h1>
+            題意と因から、
+            <br />
+            果を思い出す
+          </h1>
+          <p>頭の中で答えて、確認。1問で終わっても大丈夫。</p>
+          <button
+            className="btn btn-primary micro-start"
+            disabled={busy || !data}
+            onClick={() => void begin()}
+          >
+            {data?.session ? '続きから開く' : '1分はじめる'}
+          </button>
         </section>
-      )}
+        {data && (
+          <section
+            className="micro-panel fruit-stamps"
+            aria-labelledby="fruit-stamps-title"
+          >
+            <header className="fruit-stamps-heading">
+              <p className="eyebrow">果スタンプ</p>
+              <h2 id="fruit-stamps-title">
+                直近7日 {stamps.filter((day) => day.earned).length}/7日
+              </h2>
+            </header>
+            <ol aria-label="直近7日の果スタンプ">
+              {stamps.map((day) => {
+                const isToday = day.date === today
+                const label = new Intl.DateTimeFormat('ja-JP', {
+                  timeZone: 'Asia/Tokyo',
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric',
+                }).format(new Date(`${day.date}T00:00:00+09:00`))
+                const dayStatus = day.earned ? '果を獲得' : '未獲得'
+                return (
+                  <li
+                    key={day.date}
+                    aria-label={`${label}、${dayStatus}${isToday ? '、今日' : ''}`}
+                    className={day.earned ? 'earned' : ''}
+                  >
+                    <span aria-hidden="true">{day.earned ? '果' : '・'}</span>
+                    <time dateTime={day.date} aria-hidden="true">
+                      {new Intl.DateTimeFormat('ja-JP', {
+                        timeZone: 'Asia/Tokyo',
+                        month: 'numeric',
+                        day: 'numeric',
+                      }).format(new Date(`${day.date}T00:00:00+09:00`))}
+                    </time>
+                  </li>
+                )
+              })}
+            </ol>
+            <p role="status">
+              {stamps[6].earned
+                ? '今日の果を獲得'
+                : '1問確認すると今日の果がつく'}
+            </p>
+          </section>
+        )}
       </div>
       <section className="micro-panel abstraction-entry">
-        <p className="eyebrow">新しい練習</p><h2>与件を読む前の練習</h2>
+        <p className="eyebrow">新しい練習</p>
+        <h2>与件を読む前の練習</h2>
         <p>題意から検索する棚と代表候補を置く。</p>
-        <NavLink className="btn btn-ghost" to="/abstraction">題意 → 棚／果候補</NavLink>
+        <NavLink className="btn btn-ghost" to="/abstraction">
+          題意 → 棚／果候補
+        </NavLink>
       </section>
       {(error || failure) && <p role="alert">{error || failure}</p>}
       {data && (
@@ -390,7 +398,9 @@ export function MicroSessionPage() {
         </p>
         {!answers.length && (
           <p>
-            今日の予定は確認できた、または未回答で終了した。待機中の果は日を空けて確認しよう。
+            {session.practiceScope === 'mmc'
+              ? '今すぐ出せるMMC独自問題がない。未確認の問題か、復習日が来た問題があるときにまた練習できる。'
+              : '今日の予定は確認できた、または未回答で終了した。待機中の果は日を空けて確認しよう。'}
           </p>
         )}
         {data && <Progress data={data} />}
@@ -402,7 +412,11 @@ export function MicroSessionPage() {
               void (async () => {
                 setBusy(true)
                 try {
-                  const next = await startSession()
+                  const next = await startSession(
+                    false,
+                    new Date().toISOString(),
+                    session.practiceScope ?? 'all',
+                  )
                   adopt(next)
                   setData(await getData())
                 } catch {
@@ -475,7 +489,11 @@ export function MicroSessionPage() {
           {session.revealed ? '今回確認する果' : '果を思い出そう'}
         </h1>
         <p className="micro-prompt">{snap.cue.prompt}</p>
-        <small>練習用の因・目的条件（設計者作成）</small>
+        <small>
+          {snap.mapping.source.kind === 'mmc_original'
+            ? 'MMC独自問題の解説をもとに作成した練習問題'
+            : '練習用の因・目的条件（設計者作成）'}
+        </small>
         {session.hintUsed && <p>ヒント：{snap.cue.hintChoices.join(' ／ ')}</p>}
         {!session.revealed ? (
           <>
@@ -600,7 +618,12 @@ export function MicroSessionPage() {
             <details>
               <summary>詳しく・出典</summary>
               <p>{content.metadata.note}</p>
-              <p>元語の根拠：{snap.mapping.source.refs.join('、')}</p>
+              <p>
+                元語の根拠：
+                {snap.mapping.source.refs
+                  .map((ref) => ref.replace(/^Google Drive:[^:]+:/, ''))
+                  .join('、')}
+              </p>
               <NavLink to="/overview">既存の問題を見る</NavLink>
             </details>
           </div>
@@ -636,6 +659,11 @@ export function MicroMaterials() {
     (c) =>
       mappings.some((m) => m.conceptIds.includes(c.id)) &&
       (collection !== 'mandatory' || c.mandatory) &&
+      (collection !== 'mmc' ||
+        mappings.some(
+          (m) =>
+            m.conceptIds.includes(c.id) && m.source.kind === 'mmc_original',
+        )) &&
       (collection !== 'stock' ||
         c.priority ||
         mappings.some(
@@ -676,17 +704,50 @@ export function MicroMaterials() {
       setBusy(false)
     }
   }
+  const beginMmcPractice = async () => {
+    setBusy(true)
+    try {
+      const s = await startSession(false, new Date().toISOString(), 'mmc')
+      navigate('/micro/session', {
+        state:
+          s.status === 'active'
+            ? { newSessionId: s.id, navigationOrigin: performance.timeOrigin }
+            : null,
+      })
+    } catch {
+      setNotice('保存できなかった。再試行してね')
+      setBusy(false)
+    }
+  }
   return (
     <div className="page micro-page">
       <h1>教材</h1>
       <p>見るだけでは想起記録を更新しない。</p>
-      <section className="micro-panel abstraction-entry"><h2>与件を読む前の練習</h2><p>抽象題意から棚と果候補を想起する。</p><NavLink className="btn btn-ghost" to="/abstraction">練習と教材を開く</NavLink><NavLink to="/legacy">過去問再現（本試一問一答）</NavLink></section>
+      <section className="micro-panel abstraction-entry">
+        <h2>与件を読む前の練習</h2>
+        <p>抽象題意から棚と果候補を想起する。</p>
+        <NavLink className="btn btn-ghost" to="/abstraction">
+          練習と教材を開く
+        </NavLink>
+        <NavLink to="/legacy">過去問再現（本試一問一答）</NavLink>
+      </section>
+      <p>
+        設計上の必須31項目に加え、MMC
+        CS3/CS4の解説9本をもとにした独自短問33問を収録（全103小問）。
+      </p>
       <button
         className="btn btn-primary"
         disabled={!data || busy}
         onClick={() => void check()}
       >
         覚え漏れ確認
+      </button>
+      <button
+        className="btn btn-ghost"
+        disabled={!data || busy}
+        onClick={() => void beginMmcPractice()}
+      >
+        {data?.session ? '途中の1分セットを再開' : 'MMC独自問題から1セット'}
       </button>
       {(notice || error) && <p role="status">{notice || error}</p>}
       <section className="micro-panel">
@@ -698,6 +759,7 @@ export function MicroMaterials() {
           >
             <option value="mandatory">必須の果</option>
             <option value="stock">A/B復習ストック</option>
+            <option value="mmc">MMC独自問題</option>
             <option value="all">すべての果</option>
           </select>
         </label>
@@ -765,8 +827,10 @@ export function MicroMaterials() {
               : '未確認'}
           </summary>
           <p>
-            資料内{c.frequency.groups.length}問・{c.frequency.years.length}年 ／{' '}
-            {c.mandatory ? '設計上の必須' : '非必須'} ／ ストック重要度{' '}
+            {c.frequency.corpus.startsWith('kahotore_mmc_base_v2')
+              ? `本試資料内${c.frequency.groups.length}問・${c.frequency.years.length}年`
+              : '本試頻度対象外'}{' '}
+            ／ {c.mandatory ? '設計上の必須' : '非必須'} ／ ストック重要度{' '}
             {c.priority ??
               (mappings.some(
                 (m) =>
@@ -804,8 +868,13 @@ export function MicroMaterials() {
                   出典区分：
                   {m.source.kind === 'review_stock'
                     ? '復習ストックから設計した汎用練習'
-                    : '設計者作成の汎用練習'}
-                  。元語の根拠：{m.source.refs.join('、')}
+                    : m.source.kind === 'mmc_original'
+                      ? 'MMC独自問題の解説をもとに設計した練習'
+                      : '設計者作成の汎用練習'}
+                  。元語の根拠：
+                  {m.source.refs
+                    .map((ref) => ref.replace(/^Google Drive:[^:]+:/, ''))
+                    .join('、')}
                 </small>
               </div>
             ))}

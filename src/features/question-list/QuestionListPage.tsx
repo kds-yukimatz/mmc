@@ -3,6 +3,7 @@ import { BookOpenCheck, ChevronDown, Eye, EyeOff } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { QuestionDetails } from '../../components/QuestionDetails'
 import type { CaseType, Question } from '../../domain/question'
+import { getQuestionMaterial, getQuestionMaterials, pastExamMaterial } from '../../domain/questionMaterials'
 import { caseOrder, formatLearningPeriod, getOverviewQuestions } from './questionList'
 import { getNextLearningTarget, resolveLearningTarget } from './learningSequence'
 import { QuestionListFooterNavigation } from './QuestionListFooterNavigation'
@@ -12,6 +13,7 @@ const selectionKey = 'kahotore-overview-selection'
 interface SavedSelection {
   year?: number
   caseType?: CaseType
+  material?: string
 }
 
 function readSelection(): SavedSelection {
@@ -23,20 +25,23 @@ function readSelection(): SavedSelection {
 }
 
 export function QuestionListPage({ questions }: { questions: Question[] }) {
-  const years = useMemo(() => [...new Set(questions.map((question) => question.year))].sort((a, b) => b - a), [questions])
   const saved = useMemo(readSelection, [])
+  const materials = useMemo(() => getQuestionMaterials(questions), [questions])
+  const [material, setMaterial] = useState(() => saved.material && materials.includes(saved.material) ? saved.material : materials[0])
+  const scopedQuestions = useMemo(() => questions.filter((question) => getQuestionMaterial(question) === material), [questions, material])
+  const years = useMemo(() => [...new Set(scopedQuestions.map((question) => question.year))].sort((a, b) => b - a), [scopedQuestions])
   const [year, setYear] = useState(() => years.includes(saved.year ?? 0) ? saved.year! : (years[0] ?? 0))
   const [caseType, setCaseType] = useState<CaseType>(() => caseOrder.includes(saved.caseType as CaseType) ? saved.caseType! : 'I')
   const [revealedKeywords, setRevealedKeywords] = useState<Set<string>>(() => new Set())
   const [revealedAnswers, setRevealedAnswers] = useState<Set<string>>(() => new Set())
   const [shouldScrollToList, setShouldScrollToList] = useState(false)
   const listTopRef = useRef<HTMLDivElement>(null)
-  const visibleQuestions = useMemo(() => getOverviewQuestions(questions, year, caseType), [questions, year, caseType])
-  const nextTarget = useMemo(() => getNextLearningTarget(questions, { year, caseType }), [questions, year, caseType])
+  const visibleQuestions = useMemo(() => getOverviewQuestions(scopedQuestions, year, caseType), [scopedQuestions, year, caseType])
+  const nextTarget = useMemo(() => getNextLearningTarget(scopedQuestions, { year, caseType }), [scopedQuestions, year, caseType])
 
   useEffect(() => {
-    localStorage.setItem(selectionKey, JSON.stringify({ year, caseType }))
-  }, [year, caseType])
+    localStorage.setItem(selectionKey, JSON.stringify({ year, caseType, material }))
+  }, [year, caseType, material])
 
   useEffect(() => {
     if (!shouldScrollToList) return
@@ -49,14 +54,27 @@ export function QuestionListPage({ questions }: { questions: Question[] }) {
   }, [year, caseType, shouldScrollToList])
 
   const handleSelectionChange = useCallback((requested: { year?: number; caseType?: CaseType }) => {
-    const target = resolveLearningTarget(questions, { year: requested.year ?? year, caseType: requested.caseType ?? caseType })
+    const target = resolveLearningTarget(scopedQuestions, { year: requested.year ?? year, caseType: requested.caseType ?? caseType })
     if (!target || (target.year === year && target.caseType === caseType)) return
     setRevealedKeywords(new Set())
     setRevealedAnswers(new Set())
     setYear(target.year)
     setCaseType(target.caseType)
     setShouldScrollToList(true)
-  }, [questions, year, caseType])
+  }, [scopedQuestions, year, caseType])
+
+  const handleMaterialChange = (nextMaterial: string) => {
+    const nextQuestions = questions.filter((question) => getQuestionMaterial(question) === nextMaterial)
+    const nextYears = [...new Set(nextQuestions.map((question) => question.year))].sort((a, b) => b - a)
+    const target = resolveLearningTarget(nextQuestions, { year: nextYears.includes(year) ? year : nextYears[0], caseType })
+    if (!target) return
+    setMaterial(nextMaterial)
+    setYear(target.year)
+    setCaseType(target.caseType)
+    setRevealedKeywords(new Set())
+    setRevealedAnswers(new Set())
+    setShouldScrollToList(true)
+  }
 
   const toggleKeywords = (id: string) => {
     setRevealedKeywords((current) => {
@@ -104,8 +122,9 @@ export function QuestionListPage({ questions }: { questions: Question[] }) {
     </div>
 
     <section className="overview-controls" aria-label="表示する年度と事例">
-      <label><span>年度</span><select value={year} onChange={(event) => handleSelectionChange({ year: Number(event.target.value) })}>{years.map((item) => <option key={item} value={item}>{formatLearningPeriod(item)}</option>)}</select></label>
-      <label><span>事例</span><select value={caseType} onChange={(event) => handleSelectionChange({ caseType: event.target.value as CaseType })}>{caseOrder.map((item) => <option key={item} value={item}>事例 {item}</option>)}</select></label>
+      {materials.length > 1 && <label><span>教材</span><select aria-label="教材" value={material} onChange={(event) => handleMaterialChange(event.target.value)}>{materials.map((item) => <option key={item} value={item}>{item}</option>)}</select></label>}
+      <label><span>年度</span><select aria-label="年度" value={year} onChange={(event) => handleSelectionChange({ year: Number(event.target.value) })}>{years.map((item) => <option key={item} value={item}>{material !== pastExamMaterial && material !== '個人用教材' ? `${item}年度` : formatLearningPeriod(item)}</option>)}</select></label>
+      <label><span>事例</span><select aria-label="事例" value={caseType} onChange={(event) => handleSelectionChange({ caseType: event.target.value as CaseType })}>{caseOrder.filter((item) => scopedQuestions.some((question) => question.year === year && question.case === item)).map((item) => <option key={item} value={item}>事例 {item}</option>)}</select></label>
     </section>
 
     <div className="overview-toolbar">

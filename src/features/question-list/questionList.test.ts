@@ -28,6 +28,13 @@ describe('年度別一覧の並び順', () => {
     expect(result.map((item) => item.id)).toEqual(['2025-I-Q2-1', '2025-I-Q2-2', '2025-I-Q2-10'])
   })
 
+  it('答練の英字枝問を大問の順番に置き、設問一覧と出題順をそろえる', () => {
+    const result = getOverviewQuestions([
+      question('2026-CS512-Q2', 2026), question('2026-CS512-Q1-b', 2026), question('2026-CS512-Q1-a', 2026),
+    ], 2026, 'I')
+    expect(result.map((item) => item.id)).toEqual(['2026-CS512-Q1-a', '2026-CS512-Q1-b', '2026-CS512-Q2'])
+  })
+
   it('事例優先・年度降順の学習順をデータから生成する', () => {
     const questions = [
       question('2025-I-Q1'), question('2024-I-Q1', 2024), question('2023-I-Q1', 2023),

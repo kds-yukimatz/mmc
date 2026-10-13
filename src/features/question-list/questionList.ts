@@ -10,10 +10,10 @@ export function formatLearningPeriod(year: number, compact = false) {
 const swotOrder: Record<string, number> = { S: 1, W: 2, O: 3, T: 4 }
 
 function questionOrder(question: Question) {
-  const match = question.id.match(/-Q(\d+)(?:-([SWOT]|\d+))?(?:-(\d+))?$/)
+  const match = question.id.match(/-Q(\d+)(?:-([SWOTa-z]|\d+))?(?:-(\d+))?$/)
   if (!match) return [Number.MAX_SAFE_INTEGER, Number.MAX_SAFE_INTEGER, Number.MAX_SAFE_INTEGER]
   const [, main, part, detail] = match
-  const partOrder = part ? (swotOrder[part] ?? Number(part)) : 0
+  const partOrder = part ? (swotOrder[part] ?? (/^[a-z]$/.test(part) ? part.charCodeAt(0) - 96 : Number(part))) : 0
   return [Number(main), partOrder, detail ? Number(detail) : 0]
 }
 

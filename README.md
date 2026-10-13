@@ -140,6 +140,12 @@ npm run dev
 
 ## 確認とビルド
 
+2026年度の応用答練、強化答練①②、直前答練①②、第2～4回模擬試験、直前スパーリング①②を「教材→既存の練習」の出題条件、設問一覧、果キーワード辞典で選択できます。事例Ⅰ～Ⅲの30事例・175回答単位を追加し、既存の本試51件と合わせて226件です。教材未選択の設問演習は全教材から出題します。辞典・ランキングの初期表示は本試験過去問で、答練・模試の頻度は教材ごとに表示します。
+
+追加データは `public/data/kahotore_mmc_sparring_2026_v1.json` と `public/data/kahotore_mmc_training_2026_v1.json` です。既存の基礎データと合わせて読み込み、IDの重複や件数不整合を拒否してからIndexedDBを更新します。設問・模範解答・キーワードの出典は個別に保持し、出典ページはPDF先頭からの番号です。配点と字数制限は追加データ内の `points`、`points_scope`、`max_characters` に記録しています。枝問配点が明記されていない場合は大問全体の点数と `points_scope=question_group` を保持しています。
+
+`npm run test:sparring-browser` は既存ブラウザ検証と同じPlaywright設定で実行できます。devを4173、previewを4174で起動して、全追加教材の一覧、採点、履歴・私的教材の保持、復習、バックアップ、本番PWAのオフライン表示を検証します。[実装報告](outputs/sparring-implementation-report.md)と[原文照合記録](outputs/mmc-source-audit-2026.md)に設問別件数、資料内の差異、未取得教材を記録しています。
+
 ```bash
 npm run test
 npm run lint
@@ -161,7 +167,7 @@ npm run build
 
 ## 問題データの更新
 
-アプリが読む正本は `public/data/kahotore_mmc_base_v2.json` です。更新時は同じ構造のJSONを作成し、`metadata.version` を上げます。アプリは起動時に問題データを更新し、`trainingResults` と `settings` は保持します。PWAは問題JSONをネットワーク優先で確認し、オフライン時は前回のキャッシュを利用します。
+アプリは `public/data/kahotore_mmc_base_v2.json`、`kahotore_mmc_sparring_2026_v1.json`、`kahotore_mmc_training_2026_v1.json` を合わせて読み込みます。更新時は同じ構造のJSONを作成し、`metadata.version` を上げます。アプリは起動時に問題データを更新し、`trainingResults` と `settings` は保持します。PWAは問題JSONを事前キャッシュし、オフラインでも利用できます。
 
 題意トリガー辞書は `public/data/kahotore_trigger_dictionary_v1.json` です。強化答練の追加時は、`trigger`、`shelf`、`fruit_keywords`、`source`、`source_type` を原資料と照合して追加し、辞書の `metadata.version` を更新してください。
 

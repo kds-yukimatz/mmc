@@ -4,6 +4,28 @@ import type { Question, RawQuestion } from '../domain/question'
 
 interface QuestionData { metadata: { record_count: number }; records: RawQuestion[] }
 
+export const questionDataFiles = [
+  './data/kahotore_mmc_base_v2.json',
+  './data/kahotore_mmc_sparring_2026_v1.json',
+  './data/kahotore_mmc_training_2026_v1.json',
+] as const
+
+/** Merge every public dataset before the single DB update and obsolete-ID cleanup. */
+export function mergeQuestionData(datasets: QuestionData[]): RawQuestion[] {
+  const records: RawQuestion[] = []
+  const ids = new Set<string>()
+  for (const data of datasets) {
+    if (!Array.isArray(data.records) || !data.records.length || data.metadata?.record_count !== data.records.length) throw new Error('教材形式が不正')
+    for (const record of data.records) {
+      if (!record.id || !Array.isArray(record.fruit_keywords) || !Array.isArray(record.cuts)) throw new Error('教材形式が不正')
+      if (ids.has(record.id)) throw new Error(`教材IDが重複しています：${record.id}`)
+      ids.add(record.id)
+      records.push(record)
+    }
+  }
+  return records
+}
+
 export const questionIdMigration = {
   '2025-IV-Q1': { kind: 'split', groupId: '2025-IV-Q1' },
   '2025-IV-Q4': { kind: 'split', groupId: '2025-IV-Q4' },
@@ -61,18 +83,20 @@ export interface QuestionRepository {
 
 class DexieQuestionRepository implements QuestionRepository {
   async initialize() {
-    let data: QuestionData
+    let records: RawQuestion[]
     try {
-      const response = await fetch('./data/kahotore_mmc_base_v2.json')
-      if (!response.ok) throw new Error('教材データを読み込めませんでした')
-      data = (await response.json()) as QuestionData
-      if (!Array.isArray(data.records) || !data.records.length || data.records.some(r => !r.id || !Array.isArray(r.fruit_keywords))) throw new Error('教材形式が不正')
+      const datasets = await Promise.all(questionDataFiles.map(async (file) => {
+        const response = await fetch(file)
+        if (!response.ok) throw new Error('教材データを読み込めませんでした')
+        return (await response.json()) as QuestionData
+      }))
+      records = mergeQuestionData(datasets)
     } catch {
       const saved = await db.questions.toArray()
       if (saved.some(q => !q.privateImport && q.id && Array.isArray(q.fruitKeywords) && Array.isArray(q.cuts))) return
       throw new Error('最初にオンラインで教材を準備してね')
     }
-    const questions = data.records.map(mapQuestion)
+    const questions = records.map(mapQuestion)
     await db.transaction('rw', db.questions, db.trainingResults, async () => {
       const existingResults = await db.trainingResults.toArray()
       const migratedResults = existingResults.map(migrateTrainingResult)

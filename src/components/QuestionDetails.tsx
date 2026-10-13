@@ -13,6 +13,7 @@ export function QuestionDetails({ question, compact = false, promptOnly = false 
   const unverified = themes[0] === 'MMC題意未確認'
 
   return <section className={`question-details${compact ? ' compact' : ''}${promptOnly ? ' prompt-only' : ''}`}>
+    {question.materialLabel && <p className="detail-label">{question.materialLabel}・{question.materialCode}</p>}
     {question.businessContext && <div className="business-context"><p className="detail-label">業種・事業概要</p><p>{question.businessContext}</p></div>}
     <div className="summary-section"><p className="detail-label">題意</p><strong>{question.questionSummary}</strong>{question.framework && <small>フレームワーク：{question.framework}</small>}</div>
     {!promptOnly && <>
@@ -26,7 +27,7 @@ export function QuestionDetails({ question, compact = false, promptOnly = false 
       ) : (
         <p className="unverified-text">設問文未確認</p>
       )}
-      {question.questionSourcePages && <small>本試験問題：{question.questionSourcePages}</small>}
+      {question.questionSourcePages && <small>設問出典：{question.questionSourcePages}</small>}
       </div>
       {question.answerUnitLabel && (
       <p className="answer-target"><span>今回の回答対象：</span><strong>{question.answerUnitLabel}</strong></p>

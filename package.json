@@ -13,6 +13,7 @@
     "test:watch": "vitest --config vitest.config.mjs --configLoader runner",
     "test:browser": "node scripts/verify-micro-browser.mjs",
     "test:abstraction-browser": "node scripts/verify-abstraction-browser.mjs",
+    "test:sparring-browser": "node scripts/verify-sparring-browser.mjs",
     "lint": "eslint .",
     "format": "prettier --write ."
   },

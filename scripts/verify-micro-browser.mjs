@@ -131,13 +131,13 @@ try {
       micro: await db.microStates.count(),
     }
   })
-  assert.equal(migration.version, 4)
+  assert.equal(migration.version, 5)
   assert.equal(migration.history.totalScore, 100)
   assert.equal(migration.private.privateImport, true)
   assert.equal(migration.settings.darkMode, true)
   assert.equal(migration.profiles, 1)
   assert.equal(migration.micro, 0)
-  record('Dexie v3→v4: 旧100点履歴・私的教材・設定・タグ保持、新習熟は未確認')
+  record('Dexie v3→v5: 旧100点履歴・私的教材・設定・タグ保持、新習熟は未確認')
   await enter(page, '1分はじめる')
   await page.getByRole('button', { name: '答えを確認', exact: true }).waitFor()
   assert.equal(
@@ -395,6 +395,7 @@ try {
   await page.getByRole('button', { name: '続きから', exact: true }).click()
   await enter(page, 'ここで終わる')
   await page.getByRole('button', { name: '更新する', exact: true }).waitFor()
+  await page.waitForFunction(() => [...document.querySelectorAll('button')].some((button) => button.innerText.trim() === '更新する' && !button.disabled))
   assert.equal(await page.getByRole('button', { name: '更新する', exact: true }).isDisabled(), false)
   record('セット中の更新は保留し、終了後に更新操作を表示')
   const after = await page.evaluate(async () => {
@@ -432,6 +433,7 @@ try {
     assert.ok(geometry.startHeight >= 50, `CTA at least 50px at ${width}px`)
   }
   record('ホームのCTAと7日分の果スタンプが320×568・393×667で固定ナビより上に表示')
+  await page.setViewportSize({ width: 360, height: 780 })
   const controls = await page
     .locator('.micro-page button')
     .evaluateAll((elements) =>

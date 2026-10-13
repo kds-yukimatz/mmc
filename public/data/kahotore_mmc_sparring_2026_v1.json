@@ -1,0 +1,719 @@
+{
+  "metadata": {
+    "title": "MMC 2026年度 直前スパーリング①",
+    "year": 2026,
+    "material_category": "直前スパーリング",
+    "material_round": 1,
+    "record_count": 15,
+    "version": "sparring-1.0",
+    "audited_at": "2026-10-13",
+    "sources": [
+      {
+        "filename": "mmc2026Sp111x01jirei.pdf",
+        "sha256": "5796c5737b5d26c34fd2d51f224100d42ac29a7db5938530f67a8a7921e2ca62",
+        "pages": 8
+      },
+      {
+        "filename": "mmc2026Sp111x03kaisetu.pdf",
+        "sha256": "ef7de38d61fd50237d9fcd54ca6dde2291667a5fc51dea6f02fb212901cfb629",
+        "pages": 8
+      },
+      {
+        "filename": "mmc2026Sp111x04memo.pdf",
+        "sha256": "6cf06cf7778c971b198f397ca158745f6006065af51bc062f6d5674f8d2771fb",
+        "pages": 8
+      },
+      {
+        "filename": "mmc2026Sp121x01jirei.pdf",
+        "sha256": "76e46657acd85764af9a71116ef4d3d5c2d29a7cfdc6d8f9c26cb0717ec0f707",
+        "pages": 8
+      },
+      {
+        "filename": "mmc2026Sp121x03kaisetu.pdf",
+        "sha256": "34f52e67578ebae37a364aca274e5304c66290eded8c226b7df92f2f05d31a80",
+        "pages": 8
+      },
+      {
+        "filename": "mmc2026Sp121x04memo.pdf",
+        "sha256": "1f90f9c86bbb2f8ad031e7c53ac2a51566af69479418349abe88acf44a4a83af",
+        "pages": 8
+      },
+      {
+        "filename": "mmc2026Sp131x01jirei.pdf",
+        "sha256": "8a8702bf3aa57b5b1098b1e91c417ea3825734908f5d6b3ef5cd36e5697cfcf2",
+        "pages": 8
+      },
+      {
+        "filename": "mmc2026Sp131x03kaisetu.pdf",
+        "sha256": "b22d54dbd9e6e646ba8ba9da670598db69e5e0444dde5b80a65d9e1e3e54d42f",
+        "pages": 8
+      },
+      {
+        "filename": "mmc2026Sp131x04memo.pdf",
+        "sha256": "7cac58823d384a79fd58d1aa70a318b39bb94b39e9ffa228a88e0335c8b162a9",
+        "pages": 8
+      }
+    ],
+    "notes": [
+      "事例Ⅰ5問、事例Ⅱ4大問5回答単位、事例Ⅲ4大問5回答単位。事例Ⅳと本人答案は対象外。",
+      "模範解答は解答解説PDFの模範解答欄を正本とし、解答メモの文章化欄で置き換えない。",
+      "OCRを下読みとして使用し、設問・模範解答をPDFページ画像と照合。改行・字間空白・英数字の全半角・括弧を表示用に正規化。",
+      "出典ページはPDFファイルの先頭から数えたページ番号。冊子の印刷ページ番号とは異なる。",
+      "事例Ⅱ第3問は大問全体40点。枝問の個別配点は明記されていないためpoints_scope=question_groupとし、20点ずつ等の推測はしない。",
+      "事例Ⅲ第4問は解答解説p3で各枝問20点を確認。解答解説p3のヘッダに25-Sp131とあるが、表紙・与件・解答メモは2026年／26-Sp131。資料内の表記差として記録する。",
+      "本試験データと出現頻度は変更しない。題意の名称は解答メモの設問要求事項を基に整理した。"
+    ]
+  },
+  "records": [
+    {
+      "id": "2026-SP1-I-Q1",
+      "year": 2026,
+      "case": "I",
+      "question_no": "第1問",
+      "group_id": "2026-SP1-I-Q1",
+      "answer_unit_label": "事業展開（理由＝環境分析）",
+      "question_text": "第1問（配点20点）\n以前に比べ文具業界は環境が大きく変化している。そのような中で、A社が新たな事業を展開した理由について、文具商品の特性を考慮して120字以内で述べよ。",
+      "question_summary": "事業展開（理由＝環境分析）",
+      "business_context": "首都圏で文具店を営む企業。店舗販売と法人向けの外商・インターネット通販を行う。",
+      "mmc_theme": [
+        "事業展開（理由＝環境分析）"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "mmc2026Sp111x04memo.pdf p3",
+      "question_status": "verified",
+      "question_source_pages": "mmc2026Sp111x01jirei.pdf p6",
+      "model_answer": "文具は、機能重視の定番品とデザイン重視の趣味的な商品に二極化している特性がある。新事業展開の理由は、①趣味的な文具の需要増加や、②洒落た文具や雑貨に関する知識・ノウハウを持つ社員、③集客や情報発信が可能な好立地の店舗などがあるためである。",
+      "fruit_keywords": [
+        "二極化",
+        "需要増加",
+        "知識・ノウハウ",
+        "好立地"
+      ],
+      "cuts": [
+        "特性",
+        "機会",
+        "強み"
+      ],
+      "status": "verified",
+      "answer_status": "verified",
+      "answer_source": "MMC 2026年度 直前スパーリング① 解答・解説集",
+      "answer_source_pages": "mmc2026Sp111x03kaisetu.pdf p2",
+      "source_pages": "mmc2026Sp111x03kaisetu.pdf p2",
+      "keyword_source_pages": "mmc2026Sp111x04memo.pdf p3／mmc2026Sp111x03kaisetu.pdf p2",
+      "material_code": "SP111",
+      "material_label": "直前スパーリング①",
+      "material_category": "直前スパーリング",
+      "material_round": 1,
+      "points": 20,
+      "points_scope": "answer_unit",
+      "max_characters": 120,
+      "version": "sparring-1.0"
+    },
+    {
+      "id": "2026-SP1-I-Q2",
+      "year": 2026,
+      "case": "I",
+      "question_no": "第2問",
+      "group_id": "2026-SP1-I-Q2",
+      "answer_unit_label": "組織構造（狙い＝現状分析）",
+      "question_text": "第2問（配点15点）\nA社は、新たな事業を展開するにあたり事業部制組織を採用した。その最大の狙いについて、80字以内で述べよ。",
+      "question_summary": "組織構造（狙い＝現状分析）",
+      "business_context": "首都圏で文具店を営む企業。店舗販売と法人向けの外商・インターネット通販を行う。",
+      "mmc_theme": [
+        "組織構造（狙い＝現状分析）"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "mmc2026Sp111x04memo.pdf p4",
+      "question_status": "verified",
+      "question_source_pages": "mmc2026Sp111x01jirei.pdf p6",
+      "model_answer": "A社は、各店舗の独立採算性を高めて業績に責任を持たせるとともに、顧客の特性に合わせた独自の品揃えを促進することで、「各店舗の業績を改善すること」を狙った。",
+      "fruit_keywords": [
+        "業績に責任を持たせる",
+        "独自の品揃えを促進",
+        "業績の改善"
+      ],
+      "cuts": [
+        "事業部制組織の目的",
+        "最大の狙い"
+      ],
+      "status": "verified",
+      "answer_status": "verified",
+      "answer_source": "MMC 2026年度 直前スパーリング① 解答・解説集",
+      "answer_source_pages": "mmc2026Sp111x03kaisetu.pdf p2",
+      "source_pages": "mmc2026Sp111x03kaisetu.pdf p2",
+      "keyword_source_pages": "mmc2026Sp111x04memo.pdf p4／mmc2026Sp111x03kaisetu.pdf p2",
+      "material_code": "SP111",
+      "material_label": "直前スパーリング①",
+      "material_category": "直前スパーリング",
+      "material_round": 1,
+      "points": 15,
+      "points_scope": "answer_unit",
+      "max_characters": 80,
+      "version": "sparring-1.0"
+    },
+    {
+      "id": "2026-SP1-I-Q3",
+      "year": 2026,
+      "case": "I",
+      "question_no": "第3問",
+      "group_id": "2026-SP1-I-Q3",
+      "answer_unit_label": "組織構造（施策）",
+      "question_text": "第3問（配点20点）\nA社は、事業部制組織を採用したものの、その効果は限定的なものだった。現在の体制を効果的に機能させるために必要な施策を、部門構造以外の視点から80字以内で述べよ。",
+      "question_summary": "組織構造（施策）",
+      "business_context": "首都圏で文具店を営む企業。店舗販売と法人向けの外商・インターネット通販を行う。",
+      "mmc_theme": [
+        "組織構造（施策）"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "mmc2026Sp111x04memo.pdf p5",
+      "question_status": "verified",
+      "question_source_pages": "mmc2026Sp111x01jirei.pdf p6",
+      "model_answer": "A社は、①各店長に対し、品揃えや販促等の更なる権限委譲を行うと共に、②店舗間で、商品知識や販促に関する定期的な情報交換会を行うなどコミュニケーションを強化する。",
+      "fruit_keywords": [
+        "権限委譲",
+        "定期的な情報交換会",
+        "コミュニケーションの強化"
+      ],
+      "cuts": [
+        "権限",
+        "コミュニケーション"
+      ],
+      "status": "verified",
+      "answer_status": "verified",
+      "answer_source": "MMC 2026年度 直前スパーリング① 解答・解説集",
+      "answer_source_pages": "mmc2026Sp111x03kaisetu.pdf p2",
+      "source_pages": "mmc2026Sp111x03kaisetu.pdf p2",
+      "keyword_source_pages": "mmc2026Sp111x04memo.pdf p5／mmc2026Sp111x03kaisetu.pdf p2",
+      "material_code": "SP111",
+      "material_label": "直前スパーリング①",
+      "material_category": "直前スパーリング",
+      "material_round": 1,
+      "points": 20,
+      "points_scope": "answer_unit",
+      "max_characters": 80,
+      "version": "sparring-1.0"
+    },
+    {
+      "id": "2026-SP1-I-Q4",
+      "year": 2026,
+      "case": "I",
+      "question_no": "第4問",
+      "group_id": "2026-SP1-I-Q4",
+      "answer_unit_label": "人的資源管理（理由＝現状分析）",
+      "question_text": "第4問（配点25点）\nA社は近年、異業種からの中途採用を増やしている。その理由について、120字以内で述べよ。",
+      "question_summary": "人的資源管理（理由＝現状分析）",
+      "business_context": "首都圏で文具店を営む企業。店舗販売と法人向けの外商・インターネット通販を行う。",
+      "mmc_theme": [
+        "人的資源管理（理由＝現状分析）"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "mmc2026Sp111x04memo.pdf p6",
+      "question_status": "verified",
+      "question_source_pages": "mmc2026Sp111x01jirei.pdf p6",
+      "model_answer": "理由は、①異業種の経験から生まれる多様な発想を商品や販売促進に反映し、②飲食やアパレルの専門知識を今後の新たな事業展開に活用するとともに、③人材交流がない中で形成された保守的な組織風土を活性化させる等で、ビジョン達成を図るためである。",
+      "fruit_keywords": [
+        "多様な発想を商品や販売促進に反映",
+        "専門知識を新たな事業展開に活用",
+        "組織風土の活性化"
+      ],
+      "cuts": [
+        "中途採用のメリット"
+      ],
+      "status": "verified",
+      "answer_status": "verified",
+      "answer_source": "MMC 2026年度 直前スパーリング① 解答・解説集",
+      "answer_source_pages": "mmc2026Sp111x03kaisetu.pdf p2",
+      "source_pages": "mmc2026Sp111x03kaisetu.pdf p2",
+      "keyword_source_pages": "mmc2026Sp111x04memo.pdf p6／mmc2026Sp111x03kaisetu.pdf p2",
+      "material_code": "SP111",
+      "material_label": "直前スパーリング①",
+      "material_category": "直前スパーリング",
+      "material_round": 1,
+      "points": 25,
+      "points_scope": "answer_unit",
+      "max_characters": 120,
+      "version": "sparring-1.0"
+    },
+    {
+      "id": "2026-SP1-I-Q5",
+      "year": 2026,
+      "case": "I",
+      "question_no": "第5問",
+      "group_id": "2026-SP1-I-Q5",
+      "answer_unit_label": "人的資源管理",
+      "question_text": "第5問（配点20点）\nA社は、5年後に売上高8億円、売上高営業利益率4％の経営ビジョンを掲げている。その実現に向けて必要な制度を120字以内で述べよ。",
+      "question_summary": "人的資源管理",
+      "business_context": "首都圏で文具店を営む企業。店舗販売と法人向けの外商・インターネット通販を行う。",
+      "mmc_theme": [
+        "人的資源管理"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "mmc2026Sp111x04memo.pdf p7",
+      "question_status": "verified",
+      "question_source_pages": "mmc2026Sp111x01jirei.pdf p6",
+      "model_answer": "A社は、①配置面で、能力や希望に応じた適材適所の配置を行い、②評価・報酬面で、各店舗や個人の業績に連動した成果主義制度を採用する。また、③能力開発面で、商品知識や接客等の研修制度や、商品企画に関する提案制度を導入し、ビジョン達成を図る。",
+      "fruit_keywords": [
+        "適材適所の配置",
+        "成果主義制度",
+        "研修制度",
+        "提案制度"
+      ],
+      "cuts": [
+        "採用・配置",
+        "評価・報酬",
+        "能力開発"
+      ],
+      "status": "verified",
+      "answer_status": "verified",
+      "answer_source": "MMC 2026年度 直前スパーリング① 解答・解説集",
+      "answer_source_pages": "mmc2026Sp111x03kaisetu.pdf p3",
+      "source_pages": "mmc2026Sp111x03kaisetu.pdf p3",
+      "keyword_source_pages": "mmc2026Sp111x04memo.pdf p7／mmc2026Sp111x03kaisetu.pdf p3",
+      "material_code": "SP111",
+      "material_label": "直前スパーリング①",
+      "material_category": "直前スパーリング",
+      "material_round": 1,
+      "points": 20,
+      "points_scope": "answer_unit",
+      "max_characters": 120,
+      "version": "sparring-1.0"
+    },
+    {
+      "id": "2026-SP1-II-Q1",
+      "year": 2026,
+      "case": "II",
+      "question_no": "第1問",
+      "group_id": "2026-SP1-II-Q1",
+      "answer_unit_label": "マーケティング戦略",
+      "question_text": "第1問（配点20点）\nB社は、長年にわたって顧客に支持されきた。B社のこれまでのマーケティング戦略は、どのような戦略か。100字以内で説明せよ。",
+      "question_summary": "マーケティング戦略",
+      "business_context": "コーヒー豆を焙煎し販売する小売業。都内で本店と直営店を展開する。",
+      "mmc_theme": [
+        "マーケティング戦略"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "mmc2026Sp121x04memo.pdf p3",
+      "question_status": "verified",
+      "question_source_pages": "mmc2026Sp121x01jirei.pdf p6",
+      "model_answer": "B社は、休憩やひとりの時間を大切にする地域の住民を対象に、①商品面で焙煎技術を活かした美味しいコーヒー、②サービス面で落ち着きのある店舗での安らぎを感じられる接客サービス、等を提供する戦略を採ってきた。",
+      "fruit_keywords": [
+        "美味しいコーヒー",
+        "安らぎを感じられる接客サービス"
+      ],
+      "cuts": [
+        "ターゲット",
+        "品揃え",
+        "サービス"
+      ],
+      "status": "verified",
+      "answer_status": "verified",
+      "answer_source": "MMC 2026年度 直前スパーリング① 解答・解説集",
+      "answer_source_pages": "mmc2026Sp121x03kaisetu.pdf p2",
+      "source_pages": "mmc2026Sp121x03kaisetu.pdf p2",
+      "keyword_source_pages": "mmc2026Sp121x04memo.pdf p3／mmc2026Sp121x03kaisetu.pdf p2",
+      "material_code": "SP121",
+      "material_label": "直前スパーリング①",
+      "material_category": "直前スパーリング",
+      "material_round": 1,
+      "points": 20,
+      "points_scope": "answer_unit",
+      "max_characters": 100,
+      "version": "sparring-1.0"
+    },
+    {
+      "id": "2026-SP1-II-Q2",
+      "year": 2026,
+      "case": "II",
+      "question_no": "第2問",
+      "group_id": "2026-SP1-II-Q2",
+      "answer_unit_label": "品揃え戦略",
+      "question_text": "第2問（配点20点）\nB社の小売店は、今後の需要拡大のために、どのような商品を提供していくべきか。B社の経営資源を踏まえターゲットとなる顧客層を明確にした上で、具体的に120字以内で説明せよ。",
+      "question_summary": "品揃え戦略",
+      "business_context": "コーヒー豆を焙煎し販売する小売業。都内で本店と直営店を展開する。",
+      "mmc_theme": [
+        "品揃え戦略"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "mmc2026Sp121x04memo.pdf p4",
+      "question_status": "verified",
+      "question_source_pages": "mmc2026Sp121x01jirei.pdf p6",
+      "model_answer": "B社は、産地情報の収集力や商品調達力等の経営資源を活かし、①安全志向を持つ顧客層に、無農薬栽培などの健康性のある高品質なコーヒー豆、②社会貢献意識の高い層に、産地の雇用健全化を実現するなどフェアトレード性のあるコーヒー豆、等の商品を提供する。",
+      "fruit_keywords": [
+        "高品質なコーヒー豆",
+        "フェアトレード性のあるコーヒー豆"
+      ],
+      "cuts": [
+        "経営資源",
+        "ターゲット",
+        "品揃え"
+      ],
+      "status": "verified",
+      "answer_status": "verified",
+      "answer_source": "MMC 2026年度 直前スパーリング① 解答・解説集",
+      "answer_source_pages": "mmc2026Sp121x03kaisetu.pdf p2",
+      "source_pages": "mmc2026Sp121x03kaisetu.pdf p2",
+      "keyword_source_pages": "mmc2026Sp121x04memo.pdf p4／mmc2026Sp121x03kaisetu.pdf p2",
+      "material_code": "SP121",
+      "material_label": "直前スパーリング①",
+      "material_category": "直前スパーリング",
+      "material_round": 1,
+      "points": 20,
+      "points_scope": "answer_unit",
+      "max_characters": 120,
+      "version": "sparring-1.0"
+    },
+    {
+      "id": "2026-SP1-II-Q3-1",
+      "year": 2026,
+      "case": "II",
+      "question_no": "第3問",
+      "group_id": "2026-SP1-II-Q3",
+      "answer_unit_label": "プロモーション・イベント",
+      "question_text": "第3問（配点40点）\nB社は、今後、小売店のプロモーションやイベント・サービスの強化、インターネットの積極的な活用で、既存顧客の来店促進や新規顧客の取り込みを考えている。既存顧客の来店促進や新規顧客の取り込みを図る戦略について、以下の設問に答えよ。\n\n（設問1）\nB社の既存顧客の来店を促すためのプロモーションやイベントとして、どのようなことが考えられるか。100字以内で述べよ。\n\n（設問2）\nB社の新規顧客を取り込むためのサービスやインターネットの活用策について、どのようなことが考えられるか。100字以内で述べよ。",
+      "question_summary": "プロモーション・イベント",
+      "business_context": "コーヒー豆を焙煎し販売する小売業。都内で本店と直営店を展開する。",
+      "mmc_theme": [
+        "プロモーション・イベント"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "mmc2026Sp121x04memo.pdf p5",
+      "question_status": "verified",
+      "question_source_pages": "mmc2026Sp121x01jirei.pdf p6",
+      "model_answer": "既存顧客に対し、①産地や味などの商品情報を提供するため、店頭POPの設置や提案販売、②野外でのコーヒーの楽しみ方を提案するため、野点の会など定期的な交流会の実施等で、顧客満足度を高め、愛顧客化を図る。",
+      "fruit_keywords": [
+        "店頭POP",
+        "提案販売",
+        "定期的な交流会",
+        "顧客満足度向上",
+        "愛顧客化"
+      ],
+      "cuts": [
+        "プロモーション",
+        "イベント"
+      ],
+      "status": "verified",
+      "answer_status": "verified",
+      "answer_source": "MMC 2026年度 直前スパーリング① 解答・解説集",
+      "answer_source_pages": "mmc2026Sp121x03kaisetu.pdf p2",
+      "source_pages": "mmc2026Sp121x03kaisetu.pdf p2",
+      "keyword_source_pages": "mmc2026Sp121x04memo.pdf p5／mmc2026Sp121x03kaisetu.pdf p2",
+      "material_code": "SP121",
+      "material_label": "直前スパーリング①",
+      "material_category": "直前スパーリング",
+      "material_round": 1,
+      "points": 40,
+      "points_scope": "question_group",
+      "max_characters": 100,
+      "version": "sparring-1.0",
+      "sub_question_no": "設問1"
+    },
+    {
+      "id": "2026-SP1-II-Q3-2",
+      "year": 2026,
+      "case": "II",
+      "question_no": "第3問",
+      "group_id": "2026-SP1-II-Q3",
+      "answer_unit_label": "サービス・情報販促",
+      "question_text": "第3問（配点40点）\nB社は、今後、小売店のプロモーションやイベント・サービスの強化、インターネットの積極的な活用で、既存顧客の来店促進や新規顧客の取り込みを考えている。既存顧客の来店促進や新規顧客の取り込みを図る戦略について、以下の設問に答えよ。\n\n（設問1）\nB社の既存顧客の来店を促すためのプロモーションやイベントとして、どのようなことが考えられるか。100字以内で述べよ。\n\n（設問2）\nB社の新規顧客を取り込むためのサービスやインターネットの活用策について、どのようなことが考えられるか。100字以内で述べよ。",
+      "question_summary": "サービス・情報販促",
+      "business_context": "コーヒー豆を焙煎し販売する小売業。都内で本店と直営店を展開する。",
+      "mmc_theme": [
+        "サービス・情報販促"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "mmc2026Sp121x04memo.pdf p6",
+      "question_status": "verified",
+      "question_source_pages": "mmc2026Sp121x01jirei.pdf p6",
+      "model_answer": "新規顧客に対し、①無農薬栽培コーヒー等の体験機会を提供するため、店前での試飲サービス、②フェアトレード等の専門情報を提供するため、ホームページ・SNSの拡充、等で安心感や専門性を訴求し来店を促す。",
+      "fruit_keywords": [
+        "試飲サービス",
+        "ホームページ・SNSの拡充",
+        "来店促進"
+      ],
+      "cuts": [
+        "サービス",
+        "インターネット"
+      ],
+      "status": "verified",
+      "answer_status": "verified",
+      "answer_source": "MMC 2026年度 直前スパーリング① 解答・解説集",
+      "answer_source_pages": "mmc2026Sp121x03kaisetu.pdf p2",
+      "source_pages": "mmc2026Sp121x03kaisetu.pdf p2",
+      "keyword_source_pages": "mmc2026Sp121x04memo.pdf p6／mmc2026Sp121x03kaisetu.pdf p2",
+      "material_code": "SP121",
+      "material_label": "直前スパーリング①",
+      "material_category": "直前スパーリング",
+      "material_round": 1,
+      "points": 40,
+      "points_scope": "question_group",
+      "max_characters": 100,
+      "version": "sparring-1.0",
+      "sub_question_no": "設問2"
+    },
+    {
+      "id": "2026-SP1-II-Q4",
+      "year": 2026,
+      "case": "II",
+      "question_no": "第4問",
+      "group_id": "2026-SP1-II-Q4",
+      "answer_unit_label": "メリット・デメリット",
+      "question_text": "第4問（配点20点）\nオフィスのデスクで昼食を済ませる傾向が高まっている。B社の直営店でも軽食は扱っているが、より本格的なテイクアウトのランチを扱ってはどうかとの声が社内で出ている。新たにテイクアウトのランチを扱うことのメリットとデメリットを100字以内で説明せよ。",
+      "question_summary": "メリット・デメリット",
+      "business_context": "コーヒー豆を焙煎し販売する小売業。都内で本店と直営店を展開する。",
+      "mmc_theme": [
+        "メリット・デメリット"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "mmc2026Sp121x04memo.pdf p7",
+      "question_status": "verified",
+      "question_source_pages": "mmc2026Sp121x01jirei.pdf p7",
+      "model_answer": "ランチの提供は、①既存顧客へのランチ販売による売上拡大、②ランチ需要を起点とした新規顧客獲得、等のメリットがあるが、①コーヒー専門店の店舗イメージの希薄化、②店舗の運用効率の低下、等のデメリットもある。",
+      "fruit_keywords": [
+        "売上拡大",
+        "新規顧客獲得",
+        "店舗イメージの希薄化",
+        "運用効率の低下"
+      ],
+      "cuts": [
+        "メリット",
+        "デメリット"
+      ],
+      "status": "verified",
+      "answer_status": "verified",
+      "answer_source": "MMC 2026年度 直前スパーリング① 解答・解説集",
+      "answer_source_pages": "mmc2026Sp121x03kaisetu.pdf p3",
+      "source_pages": "mmc2026Sp121x03kaisetu.pdf p3",
+      "keyword_source_pages": "mmc2026Sp121x04memo.pdf p7／mmc2026Sp121x03kaisetu.pdf p3",
+      "material_code": "SP121",
+      "material_label": "直前スパーリング①",
+      "material_category": "直前スパーリング",
+      "material_round": 1,
+      "points": 20,
+      "points_scope": "answer_unit",
+      "max_characters": 100,
+      "version": "sparring-1.0"
+    },
+    {
+      "id": "2026-SP1-III-Q1",
+      "year": 2026,
+      "case": "III",
+      "question_no": "第1問",
+      "group_id": "2026-SP1-III-Q1",
+      "answer_unit_label": "SWOT分析",
+      "question_text": "第1問（配点15点）\n石鹸業界において、C社は順調な成長を見せている。このC社の成長要因は何か。またC社の成長が弱まるとすれば、そのマイナス要因は何か、140字以内で述べよ。",
+      "question_summary": "SWOT分析",
+      "business_context": "石鹸の製造・販売を行う企業。本社、工場、直営店を持ち、OEM生産も行う。",
+      "mmc_theme": [
+        "SWOT分析"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "mmc2026Sp131x04memo.pdf p3",
+      "question_status": "verified",
+      "question_source_pages": "mmc2026Sp131x01jirei.pdf p6",
+      "model_answer": "成長要因は、①生産・技術面で、開発から製品化までの一貫生産体制や、製法・設備の開発力、②営業面で、営業訪問や直営店で行っている提案販売力がある。またマイナス要因は、①生産面で、OEM製品等へのコスト対応力の不足、②作業面で、作業員の技能継承の遅れによる作業能力の低下がある。",
+      "fruit_keywords": [
+        "一貫生産体制",
+        "製法・設備の開発力",
+        "提案販売力",
+        "コスト対応力の不足",
+        "作業能力の低下"
+      ],
+      "cuts": [
+        "強み",
+        "弱み"
+      ],
+      "status": "verified",
+      "answer_status": "verified",
+      "answer_source": "MMC 2026年度 直前スパーリング① 解答・解説集",
+      "answer_source_pages": "mmc2026Sp131x03kaisetu.pdf p2",
+      "source_pages": "mmc2026Sp131x03kaisetu.pdf p2",
+      "keyword_source_pages": "mmc2026Sp131x04memo.pdf p3／mmc2026Sp131x03kaisetu.pdf p2",
+      "material_code": "SP131",
+      "material_label": "直前スパーリング①",
+      "material_category": "直前スパーリング",
+      "material_round": 1,
+      "points": 15,
+      "points_scope": "answer_unit",
+      "max_characters": 140,
+      "version": "sparring-1.0"
+    },
+    {
+      "id": "2026-SP1-III-Q2",
+      "year": 2026,
+      "case": "III",
+      "question_no": "第2問",
+      "group_id": "2026-SP1-III-Q2",
+      "answer_unit_label": "コスト（材料・設備）",
+      "question_text": "第2問（配点20点）\n大手洗剤メーカーからC社に対して、OEM製品のコスト削減の要請があった。この要請に対応するため、材料や設備の視点から考えられる課題と、その対策について100字以内で説明せよ。",
+      "question_summary": "コスト（材料・設備）",
+      "business_context": "石鹸の製造・販売を行う企業。本社、工場、直営店を持ち、OEM生産も行う。",
+      "mmc_theme": [
+        "コスト（材料・設備）"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "mmc2026Sp131x04memo.pdf p4",
+      "question_status": "verified",
+      "question_source_pages": "mmc2026Sp131x01jirei.pdf p6",
+      "model_answer": "コスト削減のための課題は、①材料コストの見直しと、②設備故障の防止である。対策は、①VEによる低価格な原材料の使用やDRによる代替材料の検討・発掘、②予防保全・改良保全等の保全活動やTPM等である。",
+      "fruit_keywords": [
+        "VEによる低価格な原材料の使用",
+        "DRによる代替材料の検討・発掘",
+        "予防保全",
+        "改良保全",
+        "TPM"
+      ],
+      "cuts": [
+        "材料",
+        "設備"
+      ],
+      "status": "verified",
+      "answer_status": "verified",
+      "answer_source": "MMC 2026年度 直前スパーリング① 解答・解説集",
+      "answer_source_pages": "mmc2026Sp131x03kaisetu.pdf p2",
+      "source_pages": "mmc2026Sp131x03kaisetu.pdf p2",
+      "keyword_source_pages": "mmc2026Sp131x04memo.pdf p4／mmc2026Sp131x03kaisetu.pdf p2",
+      "material_code": "SP131",
+      "material_label": "直前スパーリング①",
+      "material_category": "直前スパーリング",
+      "material_round": 1,
+      "points": 20,
+      "points_scope": "answer_unit",
+      "max_characters": 100,
+      "version": "sparring-1.0"
+    },
+    {
+      "id": "2026-SP1-III-Q3",
+      "year": 2026,
+      "case": "III",
+      "question_no": "第3問",
+      "group_id": "2026-SP1-III-Q3",
+      "answer_unit_label": "コスト（生産）",
+      "question_text": "第3問（配点25点）\nC社の生産現場では、作業コストを増加させる問題が発生している。その原因と改善策を、140字以内で述べよ。",
+      "question_summary": "コスト（生産）",
+      "business_context": "石鹸の製造・販売を行う企業。本社、工場、直営店を持ち、OEM生産も行う。",
+      "mmc_theme": [
+        "コスト（生産）"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "mmc2026Sp131x04memo.pdf p5",
+      "question_status": "verified",
+      "question_source_pages": "mmc2026Sp131x01jirei.pdf p6",
+      "model_answer": "作業コストの増加原因は、①作業者任せの品質管理と不統一な作業手順、②若手作業者への技能承継の取り組み不足である。改善策は、①製造指図書や手順書の作成、品質基準の明確化と検査の徹底、②熟練作業者の技能の標準化・マニュアル化、マイスター制度による技能伝承等を行い、作業コストを削減する。",
+      "fruit_keywords": [
+        "製造指図書",
+        "手順書",
+        "品質基準の明確化",
+        "検査の徹底",
+        "技能の標準化・マニュアル化",
+        "マイスター制度による技能伝承"
+      ],
+      "cuts": [
+        "作業管理",
+        "品質管理",
+        "技能承継"
+      ],
+      "status": "verified",
+      "answer_status": "verified",
+      "answer_source": "MMC 2026年度 直前スパーリング① 解答・解説集",
+      "answer_source_pages": "mmc2026Sp131x03kaisetu.pdf p2",
+      "source_pages": "mmc2026Sp131x03kaisetu.pdf p2",
+      "keyword_source_pages": "mmc2026Sp131x04memo.pdf p5／mmc2026Sp131x03kaisetu.pdf p2",
+      "material_code": "SP131",
+      "material_label": "直前スパーリング①",
+      "material_category": "直前スパーリング",
+      "material_round": 1,
+      "points": 25,
+      "points_scope": "answer_unit",
+      "max_characters": 140,
+      "version": "sparring-1.0"
+    },
+    {
+      "id": "2026-SP1-III-Q4-1",
+      "year": 2026,
+      "case": "III",
+      "question_no": "第4問",
+      "group_id": "2026-SP1-III-Q4",
+      "answer_unit_label": "戦略（体制強化）",
+      "question_text": "第4問（配点40点）\nC社は今後、新製品の開発を積極的に進めていこうと考えている。これに関して以下の設問に答えよ。\n\n（設問1）\n新製品開発に際して、C社では、どのような体制を社内で強化していく必要があるか、120字以内で述べよ。\n\n（設問2）\n新製品開発を円滑に進めていくためには、C社ではどのような情報を収集していく必要があるか、120字以内で述べよ。",
+      "question_summary": "戦略（体制強化）",
+      "business_context": "石鹸の製造・販売を行う企業。本社、工場、直営店を持ち、OEM生産も行う。",
+      "mmc_theme": [
+        "戦略（体制強化）"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "mmc2026Sp131x04memo.pdf p6",
+      "question_status": "verified",
+      "question_source_pages": "mmc2026Sp131x01jirei.pdf p6",
+      "model_answer": "C社は、①営業部では、店頭での積極的な顧客からの情報収集体制の強化、②設計部では、オーガニック素材を活用した製品など要望に対応した製品開発体制の強化、③製造部では、原材料の見直しと、作業員や設備の能力向上による低コスト生産体制の強化を図る。",
+      "fruit_keywords": [
+        "情報収集体制の強化",
+        "製品開発体制の強化",
+        "低コスト生産体制の強化"
+      ],
+      "cuts": [
+        "営業部",
+        "設計部",
+        "製造部"
+      ],
+      "status": "verified",
+      "answer_status": "verified",
+      "answer_source": "MMC 2026年度 直前スパーリング① 解答・解説集",
+      "answer_source_pages": "mmc2026Sp131x03kaisetu.pdf p3",
+      "source_pages": "mmc2026Sp131x03kaisetu.pdf p3",
+      "keyword_source_pages": "mmc2026Sp131x04memo.pdf p6／mmc2026Sp131x03kaisetu.pdf p3",
+      "material_code": "SP131",
+      "material_label": "直前スパーリング①",
+      "material_category": "直前スパーリング",
+      "material_round": 1,
+      "points": 20,
+      "points_scope": "answer_unit",
+      "max_characters": 120,
+      "version": "sparring-1.0",
+      "sub_question_no": "設問1"
+    },
+    {
+      "id": "2026-SP1-III-Q4-2",
+      "year": 2026,
+      "case": "III",
+      "question_no": "第4問",
+      "group_id": "2026-SP1-III-Q4",
+      "answer_unit_label": "情報（項目）",
+      "question_text": "第4問（配点40点）\nC社は今後、新製品の開発を積極的に進めていこうと考えている。これに関して以下の設問に答えよ。\n\n（設問1）\n新製品開発に際して、C社では、どのような体制を社内で強化していく必要があるか、120字以内で述べよ。\n\n（設問2）\n新製品開発を円滑に進めていくためには、C社ではどのような情報を収集していく必要があるか、120字以内で述べよ。",
+      "question_summary": "情報（項目）",
+      "business_context": "石鹸の製造・販売を行う企業。本社、工場、直営店を持ち、OEM生産も行う。",
+      "mmc_theme": [
+        "情報（項目）"
+      ],
+      "theme_status": "verified",
+      "theme_source_pages": "mmc2026Sp131x04memo.pdf p7",
+      "question_status": "verified",
+      "question_source_pages": "mmc2026Sp131x01jirei.pdf p6",
+      "model_answer": "C社は、①営業面で、アイデア、要望、希望価格帯、天然素材等の顧客ニーズ関連の情報、②開発面で、オーガニック素材等の成分・効能・新製法等の新製品開発関連の情報、③製造面で、原材料やコスト、作業員や設備の生産能力等の生産関連の情報の収集を行う。",
+      "fruit_keywords": [
+        "顧客ニーズ関連の情報",
+        "新製品開発関連の情報",
+        "生産関連の情報"
+      ],
+      "cuts": [
+        "営業",
+        "開発",
+        "製造"
+      ],
+      "status": "verified",
+      "answer_status": "verified",
+      "answer_source": "MMC 2026年度 直前スパーリング① 解答・解説集",
+      "answer_source_pages": "mmc2026Sp131x03kaisetu.pdf p3",
+      "source_pages": "mmc2026Sp131x03kaisetu.pdf p3",
+      "keyword_source_pages": "mmc2026Sp131x04memo.pdf p7／mmc2026Sp131x03kaisetu.pdf p3",
+      "material_code": "SP131",
+      "material_label": "直前スパーリング①",
+      "material_category": "直前スパーリング",
+      "material_round": 1,
+      "points": 20,
+      "points_scope": "answer_unit",
+      "max_characters": 120,
+      "version": "sparring-1.0",
+      "sub_question_no": "設問2"
+    }
+  ]
+}

@@ -82,7 +82,7 @@ export function buildAssociationRecords(questions: Question[]): AssociationRecor
       shelf,
       fruitKeywords: question.fruitKeywords,
       source: `${question.answerSourcePages ?? question.sourcePages ?? '出典ページ未記録'}${question.answerSource ? `（${question.answerSource}）` : ''}`,
-      sourceType: '本試3年',
+      sourceType: question.materialLabel ? '答練・模試' : '本試3年',
     }]
   })
   return [...reinforcementRecords, ...weaknessPracticeRecords, ...reviewFruitStock, ...baseRecords]

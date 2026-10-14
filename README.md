@@ -243,4 +243,4 @@ AI照合は結果画面で利用者が明示して押したときだけ行いま
 4. `worker/src/index.mjs` の許可Originが公開サイトのOriginと一致することを確認して `npx wrangler deploy` します。Worker URLはCloudflareが表示します。
 5. 現在のWorker URLは `https://mmc-ai-grading.mmc-kds-yukimatz.workers.dev` です。`.env.production` の `VITE_AI_GRADING_URL` に設定済みです。公開URLは秘密値ではありません。GitHub Actionsのrepository variable設定は現在利用できないため、このファイルで公開ビルドに渡します。共有認証トークンは絶対に記載しません。URL未設定なら既存の同期採点のみで動きます。
 
-Workerのローカルテストは `cd worker && npm test`、動作確認は `cd worker && npx wrangler dev` で行えます。現在Workerはデプロイ済みですが、実行環境からWorkerへの認証リクエストは接続許可設定を確認後に検証します。実AIのモデル品質とPages公開も別途確認が必要です。
+Workerのローカルテストは `cd worker && npm test`、動作確認は `cd worker && npx wrangler dev` で行えます。WorkerとPagesは公開済みで、Case 2023-II-Q2の実UIではAI照合・得点更新・履歴provenanceの保存まで確認しました。AIが同義表現を見逃す場合があるため、登録済み解答と照らして正誤を判断してください。全語句の精度は保証しません。

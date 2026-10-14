@@ -9,6 +9,7 @@ import { getQuestionMaterial, getQuestionMaterials } from './domain/questionMate
 import { importPrivateQuestions, removePrivateQuestions } from './repositories/privateQuestionImportRepository'
 import { exportProgress, importProgress, progressRepository } from './repositories/progressRepository'
 import { gradingService } from './services/keywordGrader'
+import { aiGradingEndpoint, hasAiCandidates, isCurrentAiRequest, mergeAiMatches, requestAiMatches, toAiMatchRequest, type AiMatchingMetadata, type AiMergedGrading } from './services/aiGrading'
 import { createLocalId } from './services/id'
 import { useTrainingStore } from './features/training/trainingStore'
 import { QuestionDetails } from './components/QuestionDetails'
@@ -214,7 +215,7 @@ function TrainingPage({ settings, profiles, results, onSaved }: { settings: AppS
   if (!question) return <div className="empty-state"><CircleCheck /><h1>{store.queue.length ? 'セッション完了' : '出題がありません'}</h1><p>{store.queue.length ? `${store.queue.length}問、おつかれさまでした。` : 'ホームから演習を開始してください。'}</p><button className="btn btn-primary" onClick={() => navigate('/')}>ホームへ戻る</button></div>
   const submitTag = (event: FormEvent, type: 'cut' | 'keyword') => { event.preventDefault(); if (type === 'cut') { store.addCut(cut); setCut('') } else { store.addKeyword(keyword); setKeyword('') } }
   const grade = () => { if (keyword.trim()) { store.addKeyword(keyword); setKeyword('') } const answer = useTrainingStore.getState(); setGradedAt(Date.now()); store.setResult(gradingService.grade({ expectedKeywords: question.fruitKeywords, expectedCuts: question.cuts, actualKeywords: answer.inputKeywords, actualCuts: answer.inputCuts, useSynonyms: settings.synonymsEnabled })) }
-  const saveAndNext = async (feedback: Feedback) => { if (!store.result) return; const correct = Boolean(feedback.correct); const item: TrainingResult = { id: createLocalId(), questionId: question.id, answeredAt: new Date(gradedAt).toISOString(), inputCuts: store.inputCuts, inputFruitKeywords: store.inputKeywords, keywordScore: store.result.keywordScore, cutScore: store.result.cutScore, effectScore: store.result.effectScore, totalScore: store.result.totalScore, selfRating: rating, elapsedSeconds: Math.round((gradedAt - store.startedAt) / 1000), needsReview: Boolean(feedback.needsReview) || rating < 2, correct, struggleReasons: feedback.struggleReasons, weaknessTags: feedback.weaknessTags, streak: nextStreak(question.id, correct, results) }; await progressRepository.saveProfile({ id: question.id, tags: feedback.weaknessTags ?? [] }); await progressRepository.saveResult(item); await onSaved(); setCut(''); setKeyword(''); setReview(false); setRating(2); store.next() }
+  const saveAndNext = async (feedback: Feedback, ai?: AiMergedGrading) => { if (!store.result) return; const correct = Boolean(feedback.correct); const score = ai?.result ?? store.result; const item: TrainingResult = { id: createLocalId(), questionId: question.id, answeredAt: new Date(gradedAt).toISOString(), inputCuts: store.inputCuts, inputFruitKeywords: store.inputKeywords, keywordScore: score.keywordScore, cutScore: score.cutScore, effectScore: score.effectScore, totalScore: score.totalScore, selfRating: rating, elapsedSeconds: Math.round((gradedAt - store.startedAt) / 1000), needsReview: Boolean(feedback.needsReview) || rating < 2, correct, struggleReasons: feedback.struggleReasons, weaknessTags: feedback.weaknessTags, streak: nextStreak(question.id, correct, results), ...(ai?.metadata ? { aiMatching: ai.metadata } : {}) }; await progressRepository.saveProfile({ id: question.id, tags: feedback.weaknessTags ?? [] }); await progressRepository.saveResult(item); await onSaved(); setCut(''); setKeyword(''); setReview(false); setRating(2); store.next() }
   const secondsLeft = Math.max(0, settings.timerSeconds - Math.floor((now - store.startedAt) / 1000))
   if (store.result) return <ResultView question={question} profile={profiles.find((profile) => profile.id === question.id)} elapsedSeconds={Math.round((gradedAt - store.startedAt) / 1000)} rating={rating} setRating={setRating} review={review} setReview={setReview} onNext={saveAndNext} />
   return <div className="training-page"><div className="training-header"><button className="icon-btn" aria-label="演習を終了" onClick={() => navigate('/')}><ChevronLeft /></button><span>{store.index + 1} / {store.queue.length}</span>{settings.timerEnabled ? <span className={secondsLeft < 30 ? 'timer danger' : 'timer'}><Clock3 /> {Math.floor(secondsLeft / 60)}:{String(secondsLeft % 60).padStart(2, '0')}</span> : <span />}</div><div className="progress"><i style={{ width: `${((store.index + 1) / store.queue.length) * 100}%` }} /></div>
@@ -237,19 +238,82 @@ function TrainingPage({ settings, profiles, results, onSaved }: { settings: AppS
 
 function TagInput({ label, placeholder, value, setValue, tags, onSubmit, onRemove }: { label: string; placeholder: string; value: string; setValue: (v: string) => void; tags: string[]; onSubmit: (e: FormEvent) => void; onRemove: (v: string) => void }) { return <div className="tag-field"><label>{label}</label><div className="tag-list">{tags.map((tag) => <button key={tag} onClick={() => onRemove(tag)}>{tag}<span>×</span></button>)}</div><form onSubmit={onSubmit}><input value={value} onChange={(e) => setValue(e.target.value)} placeholder={placeholder} /><button type="submit" aria-label={`${label}を追加`}>＋</button></form></div> }
 
-function ResultView({ question, profile, elapsedSeconds, rating, setRating, review, setReview, onNext }: { question: Question; profile?: WeaknessProfile; elapsedSeconds: number; rating: 0 | 1 | 2 | 3; setRating: (v: 0 | 1 | 2 | 3) => void; review: boolean; setReview: (v: boolean) => void; onNext: (feedback: Feedback) => Promise<void> }) {
-  const { inputCuts, inputKeywords, result, index, queue } = useTrainingStore(); if (!result) return null
-  return <div className="page result-page"><div className="score-hero"><p className="eyebrow">RESULT</p><div className="score"><strong>{result.totalScore}</strong><span>/ 100</span></div><p>{result.totalScore >= 70 ? 'いい型です。再現できる形にしましょう。' : '伸びしろを、次の一問につなげよう。'}</p><div className="score-bars"><ScoreBar label="果" value={result.keywordScore} max={60} /><ScoreBar label="切り口" value={result.cutScore} max={25} /><ScoreBar label="効果" value={result.effectScore} max={15} /></div></div>
+function ResultView({ question, profile, elapsedSeconds, rating, setRating, review, setReview, onNext }: { question: Question; profile?: WeaknessProfile; elapsedSeconds: number; rating: 0 | 1 | 2 | 3; setRating: (v: 0 | 1 | 2 | 3) => void; review: boolean; setReview: (v: boolean) => void; onNext: (feedback: Feedback, ai?: AiMergedGrading) => Promise<void> }) {
+  const { inputCuts, inputKeywords, result, index, queue } = useTrainingStore()
+  const [token, setToken] = useState(() => sessionStorage.getItem('ai-grading-access-token') ?? '')
+  const [aiApplied, setAiApplied] = useState<AiMergedGrading>()
+  const [aiState, setAiState] = useState<'idle' | 'loading' | 'error'>('idle')
+  const [aiError, setAiError] = useState('')
+  const controller = useRef<AbortController | undefined>(undefined)
+  const generation = useRef(0)
+  const endpoint = aiGradingEndpoint()
+  const hasCandidates = hasAiCandidates(question.cuts, question.fruitKeywords, inputCuts, inputKeywords)
+  useEffect(() => {
+    controller.current?.abort()
+    controller.current = undefined
+    generation.current += 1
+    setAiApplied(undefined)
+    setAiState('idle')
+    setAiError('')
+    return () => controller.current?.abort()
+  }, [question.id, index])
+  if (!result) return null
+  const requestAiMatchesForQuestion = async () => {
+    if (aiState === 'loading') return
+    const base = result
+    const expectedCuts = [...question.cuts], expectedFruits = [...question.fruitKeywords], actualCuts = [...inputCuts], actualFruits = [...inputKeywords]
+    if (!hasCandidates) {
+      const local = mergeAiMatches({ response: { version: 1, pairs: { cuts: [], fruits: [] }, model: '@cf/qwen/qwen3-30b-a3b-fp8', evaluatedAt: new Date().toISOString() }, expectedCuts, expectedFruits, actualCuts, actualFruits, base })
+      if (local) setAiApplied({ result: local.result, metadata: { version: 1, model: 'local-exact', evaluatedAt: new Date().toISOString(), baseScore: { keywordScore: base.keywordScore, cutScore: base.cutScore, effectScore: base.effectScore, totalScore: base.totalScore }, cuts: [], fruits: [] } })
+      return
+    }
+    if (!endpoint || !token.trim()) return
+    controller.current?.abort()
+    const currentController = new AbortController()
+    controller.current = currentController
+    const requestGeneration = ++generation.current
+    const requestIndex = index
+    const snapshot = { questionId: question.id, queueIndex: requestIndex, generation: requestGeneration, inputCuts: actualCuts, inputFruitKeywords: actualFruits }
+    const timeout = window.setTimeout(() => currentController.abort(), 18000)
+    setAiState('loading')
+    setAiError('')
+    try {
+      const response = await requestAiMatches(toAiMatchRequest(question, expectedCuts, expectedFruits, actualCuts, actualFruits), token.trim(), currentController.signal)
+      const current = useTrainingStore.getState()
+      if (currentController.signal.aborted || controller.current !== currentController || !isCurrentAiRequest(snapshot, { questionId: current.queue[current.index]?.id ?? '', queueIndex: current.index, generation: generation.current, inputCuts: current.inputCuts, inputFruitKeywords: current.inputKeywords })) return
+      const merged = mergeAiMatches({ response, expectedCuts, expectedFruits, actualCuts, actualFruits, base })
+      if (!merged) throw new Error('invalid_model_response')
+      setAiApplied(merged)
+      setAiState('idle')
+    } catch (error) {
+      if (controller.current === currentController) {
+        if (currentController.signal.aborted) setAiError('時間切れです。通信状態を確認して再度お試しください。')
+        else setAiError(error instanceof Error ? ({ unauthorized: '認証トークンを確認してください。', quota_exhausted: '無料枠を使い切りました。時間をおいてください。', rate_limited: '短時間の利用上限です。少し待ってください。', invalid_model_response: '一致候補を安全に検証できませんでした。', timeout: 'AI照合が時間切れになりました。', model_unavailable: 'AIサービスを利用できません。', service_unavailable: 'AIサービスURLが設定されていません。' }[error.message] ?? '通信に失敗しました。オンライン状態を確認してください。') : '通信に失敗しました。')
+        setAiState('error')
+      }
+    } finally {
+      window.clearTimeout(timeout)
+    }
+  }
+  const saveThenNext = async (feedback: Feedback) => {
+    controller.current?.abort()
+    controller.current = undefined
+    generation.current += 1
+    await onNext(feedback, aiApplied)
+  }
+  const displayed = aiApplied?.result ?? result
+  return <div className="page result-page"><div className="score-hero"><p className="eyebrow">RESULT</p><div className="score"><strong>{displayed.totalScore}</strong><span>/ 100</span></div><p>{displayed.totalScore >= 70 ? 'いい型です。再現できる形にしましょう。' : '伸びしろを、次の一問につなげよう。'}</p><div className="score-bars"><ScoreBar label="果" value={displayed.keywordScore} max={60} /><ScoreBar label="切り口" value={displayed.cutScore} max={25} /><ScoreBar label="効果" value={displayed.effectScore} max={15} /></div>{aiApplied?.metadata?.model === 'local-exact' && <small>完全一致を1対1で反映しました（AI通信なし）</small>}{aiApplied?.metadata && aiApplied.metadata.model !== 'local-exact' && <small>AI語句照合を得点へ反映しました</small>}</div>
     <section className="result-question"><p className="question-meta"><span>{question.year}年度</span><span>事例 {question.case}</span><span>{question.questionNo}</span>{question.subQuestionNo && <span>{question.subQuestionNo}</span>}</p><QuestionDetails question={question} compact /></section>
-    <Compare title="切り口" mine={inputCuts} expected={question.cuts} matched={result.matchedCuts.map((m) => m.expected)} /><Compare title="果キーワード" note="登録済みの一般的な果も正解です。未登録の妥当解は自己評価で補えます。" mine={inputKeywords} expected={question.fruitKeywords} matched={result.matchedKeywords.map((m) => m.expected)} />
+    <Compare title="切り口" mine={inputCuts} expected={question.cuts} matched={displayed.matchedCuts.map((m) => m.expected)} aiPairs={aiApplied?.metadata?.cuts} /><Compare title="果キーワード" note="AIは語句の意味の同等性を照合します。与件適合や因果の根拠は確認しません。" mine={inputKeywords} expected={question.fruitKeywords} matched={displayed.matchedKeywords.map((m) => m.expected)} aiPairs={aiApplied?.metadata?.fruits} />
     <section className="model-answer"><p className="eyebrow">MMC 模範解答</p><p>{question.modelAnswer}</p>{question.sourcePages && <small>出典：{question.sourcePages}{question.answerSource ? `（${question.answerSource}）` : ''}</small>}</section>
+    <section className="ai-feedback-card" aria-live="polite"><h2>AIで語句の一致を確認（任意）</h2><p>登録済み切り口・果と入力語の意味の同等性だけを照合します。AIは意味が同じ表現を見逃すことがあります。登録済み解答と照らして正誤を判断してください。与件への適合や因果の根拠は確認しません。入力語と設問・参照情報を外部サービスへ送信します。</p>{question.privateImport && <p>この個人用教材の内容も外部AIへ送信されます。</p>}{hasCandidates && endpoint ? <><label>Worker共有トークン<input type="password" autoComplete="off" value={token} onChange={(event) => { setToken(event.target.value); sessionStorage.setItem('ai-grading-access-token', event.target.value) }} placeholder="Worker用トークン" /></label><button className="btn btn-ghost" disabled={!token.trim() || aiState === 'loading' || Boolean(aiApplied)} onClick={() => void requestAiMatchesForQuestion()}>{aiState === 'loading' ? '一致候補を照合中…' : aiApplied?.metadata ? 'AI照合済み' : 'AIで語句の一致を確認'}</button></> : hasCandidates ? <small>AIサービスURLが未設定のため利用できません。</small> : <button className="btn btn-ghost" disabled={aiState === 'loading' || Boolean(aiApplied)} onClick={() => void requestAiMatchesForQuestion()}>{aiApplied ? '完全一致を反映済み（AI通信なし）' : '完全一致を1対1で反映（AI通信なし）'}</button>}{aiError && <p role="alert">AI照合に失敗しました。従来の採点で続けられます。{aiError}</p>}</section>
     <section className="rating"><h2>自分の手応え</h2><div className="rating-grid">{(['題意を外した', '領域は近い', '主な果が一部一致', '題意・主要果が一致'] as const).map((label, i) => <button key={label} className={rating === i ? 'active' : ''} onClick={() => setRating(i as 0 | 1 | 2 | 3)}><strong>{i}</strong><span>{label}</span></button>)}</div></section>
     <label className="review-toggle"><input type="checkbox" checked={review} onChange={(e) => setReview(e.target.checked)} /><RefreshCw /><span><strong>復習対象にする</strong><small>あとで「要復習」から取り組めます</small></span></label>
-    <FeedbackPanel key={question.id} caseName={question.case} profile={profile} suggestions={suggestedTags(question)} score={result.totalScore} elapsedSeconds={elapsedSeconds} fruitMissing={!inputKeywords.some((value) => value !== 'わからない')} review={review} onComplete={onNext} nextLabel={index + 1 < queue.length ? '次の問題へ' : 'セッションを終了'} />
+    <FeedbackPanel key={question.id} caseName={question.case} profile={profile} suggestions={suggestedTags(question)} score={displayed.totalScore} followScore elapsedSeconds={elapsedSeconds} fruitMissing={!inputKeywords.some((value) => value !== 'わからない')} review={review} onComplete={saveThenNext} nextLabel={index + 1 < queue.length ? '次の問題へ' : 'セッションを終了'} />
   </div>
 }
 function ScoreBar({ label, value, max }: { label: string; value: number; max: number }) { return <div><span>{label}</span><i><b style={{ width: `${(value / max) * 100}%` }} /></i><strong>{value}/{max}</strong></div> }
-function Compare({ title, note, mine, expected, matched }: { title: string; note?: string; mine: string[]; expected: string[]; matched: string[] }) { return <section className="compare"><h2>{title}</h2>{note && <p>{note}</p>}<div><p>あなたの回答</p><div className="tag-list static">{mine.length ? mine.map((v) => <span key={v}>{v}</span>) : <small>入力なし</small>}</div></div><div><p>登録済みの正解</p><div className="tag-list static expected">{expected.map((v) => <span key={v} className={matched.includes(v) ? 'match' : 'miss'}>{matched.includes(v) ? '✓ ' : '— '}{v}</span>)}</div></div></section> }
+function Compare({ title, note, mine, expected, matched, aiPairs = [] }: { title: string; note?: string; mine: string[]; expected: string[]; matched: string[]; aiPairs?: AiMatchingMetadata['cuts'] }) { const remaining = new Map<string, number>(); matched.forEach((value) => remaining.set(value, (remaining.get(value) ?? 0) + 1)); return <section className="compare"><h2>{title}</h2>{note && <p>{note}</p>}<div><p>あなたの回答</p><div className="tag-list static">{mine.length ? mine.map((v, index) => <span key={`${v}-${index}`}>{v}</span>) : <small>入力なし</small>}</div></div><div><p>登録済みの正解</p><div className="tag-list static expected">{expected.map((v, index) => { const count = remaining.get(v) ?? 0; const isMatched = count > 0; if (isMatched) remaining.set(v, count - 1); const pair = aiPairs.find((item) => item.expectedIndex === index); return <span key={`${v}-${index}`} className={isMatched ? 'match' : 'miss'}>{isMatched ? '✓ ' : '— '}{v}{pair && <small className="ai-match-reason">AI一致：{pair.reason}</small>}</span> })}</div></div></section> }
 
 function HistoryPage({ questions, associations, results }: { questions: Question[]; associations: AssociationRecord[]; results: TrainingResult[] }) {
   const [caseFilter, setCaseFilter] = useState('all'); const [historyResults, setHistoryResults] = useState(results); useEffect(() => { void progressRepository.getResults().then(setHistoryResults) }, []); const questionMap = useMemo(() => new Map(questions.map((q) => [q.id, q])), [questions])
@@ -258,7 +322,7 @@ function HistoryPage({ questions, associations, results }: { questions: Question
   )), [associations])
   const visible = historyResults.filter((result) => caseFilter === 'all' || result.abstraction?.case === caseFilter || questionMap.get(result.questionId)?.case === caseFilter || associationCaseMap.get(result.questionId) === caseFilter || result.legacyGroupId?.split('-')[1] === caseFilter)
   return <div className="page"><div className="page-heading"><p className="eyebrow">LEARNING LOG</p><h1>学習履歴</h1><p>{historyResults.length}回の答案思考を記録しています。</p></div><div className="chips compact"><Chip active={caseFilter === 'all'} onClick={() => setCaseFilter('all')}>すべて</Chip>{['I', 'II', 'III', 'IV'].map((c) => <Chip key={c} active={caseFilter === c} onClick={() => setCaseFilter(c)}>事例 {c}</Chip>)}</div>
-    <div className="history-list">{visible.length ? visible.map((result) => { const q = questionMap.get(result.questionId); const legacy = result.isLegacy ? '（旧記録）' : ''; const associationLabel = result.trainingMode === 'theme' ? '題意トレ' : result.trainingMode === 'fruit' ? '果トレ' : result.trainingMode === 'cause' ? '因→果' : result.trainingMode === 'purpose' ? '目的→施策' : result.trainingMode === 'abstract-shelf' ? '題意 → 棚' : result.trainingMode === 'abstract-fruit' ? '題意 → 果候補' : ''; return <article key={result.id}><div className="history-date">{new Date(result.answeredAt).toLocaleDateString('ja-JP', { month: 'short', day: 'numeric' })}<small>{new Date(result.answeredAt).toLocaleTimeString('ja-JP', { hour: '2-digit', minute: '2-digit' })}</small></div><div><p>{associationLabel || (result.abstraction ? `事例${result.abstraction.case}・${result.abstraction.recordId}${legacy}` : q ? `${q.materialLabel ? `${q.materialLabel} ` : ''}${q.year} 事例${q.case} ${q.questionNo}${q.subQuestionNo ? ` ${q.subQuestionNo}` : ''}` : `${result.legacyGroupId ?? result.questionId}${legacy}`)}</p><strong>{result.abstraction?.abstractQuestion ?? result.promptLabel ?? q?.questionSummary ?? (result.isLegacy ? '分割前の学習記録' : '問題')}</strong><small>{isCorrect(result) ? '正解' : '不正解'}・{result.elapsedSeconds ?? '—'}秒・連続正解{result.streak ?? 0}回 {result.needsReview && '・要復習'}</small>{Boolean(result.struggleReasons?.length) && <small>{result.struggleReasons?.map((reason) => reason === 'slow' ? '時間がかかった' : reason === 'fruit-missing' ? '果が出なかった' : '題意で迷った').join('／')}</small>}{Boolean(result.weaknessTags?.length) && <small>{result.weaknessTags?.join('・')}</small>}</div><div className={isCorrect(result) ? 'history-score good' : 'history-score'}>{result.totalScore}<small>点</small></div></article> }) : <div className="empty-inline"><History /><p>条件に合う履歴はありません</p></div>}</div>
+    <div className="history-list">{visible.length ? visible.map((result) => { const q = questionMap.get(result.questionId); const legacy = result.isLegacy ? '（旧記録）' : ''; const associationLabel = result.trainingMode === 'theme' ? '題意トレ' : result.trainingMode === 'fruit' ? '果トレ' : result.trainingMode === 'cause' ? '因→果' : result.trainingMode === 'purpose' ? '目的→施策' : result.trainingMode === 'abstract-shelf' ? '題意 → 棚' : result.trainingMode === 'abstract-fruit' ? '題意 → 果候補' : ''; const ai = result.aiMatching; return <article key={result.id}><div className="history-date">{new Date(result.answeredAt).toLocaleDateString('ja-JP', { month: 'short', day: 'numeric' })}<small>{new Date(result.answeredAt).toLocaleTimeString('ja-JP', { hour: '2-digit', minute: '2-digit' })}</small></div><div><p>{associationLabel || (result.abstraction ? `事例${result.abstraction.case}・${result.abstraction.recordId}${legacy}` : q ? `${q.materialLabel ? `${q.materialLabel} ` : ''}${q.year} 事例${q.case} ${q.questionNo}${q.subQuestionNo ? ` ${q.subQuestionNo}` : ''}` : `${result.legacyGroupId ?? result.questionId}${legacy}`)}</p><strong>{result.abstraction?.abstractQuestion ?? result.promptLabel ?? q?.questionSummary ?? (result.isLegacy ? '分割前の学習記録' : '問題')}</strong><small>{isCorrect(result) ? '正解' : '不正解'}・{result.elapsedSeconds ?? '—'}秒・連続正解{result.streak ?? 0}回 {result.needsReview && '・要復習'}</small>{Boolean(result.struggleReasons?.length) && <small>{result.struggleReasons?.map((reason) => reason === 'slow' ? '時間がかかった' : reason === 'fruit-missing' ? '果が出なかった' : '題意で迷った').join('／')}</small>}{Boolean(result.weaknessTags?.length) && <small>{result.weaknessTags?.join('・')}</small>}{ai && <details><summary>{ai.model === 'local-exact' ? '完全一致の1対1補正' : 'AI語句照合'}</summary><small>同期採点: {ai.baseScore.totalScore}点</small>{ai.cuts.map((pair) => <small key={`hc-${pair.expectedIndex}-${pair.actualIndex}`}>切り口「{pair.actual}」＝「{pair.expected}」：{pair.reason}</small>)}{ai.fruits.map((pair) => <small key={`hf-${pair.expectedIndex}-${pair.actualIndex}`}>果「{pair.actual}」＝「{pair.expected}」：{pair.reason}</small>)}<small>{ai.model}・{new Date(ai.evaluatedAt).toLocaleString('ja-JP')}</small></details>}</div><div className={isCorrect(result) ? 'history-score good' : 'history-score'}>{result.totalScore}<small>点</small>{ai && <small>{ai.model === 'local-exact' ? '一致補正' : 'AI照合'}</small>}</div></article> }) : <div className="empty-inline"><History /><p>条件に合う履歴はありません</p></div>}</div>
   </div>
 }
 

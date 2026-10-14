@@ -420,3 +420,12 @@ button:focus-visible,input:focus-visible { outline:3px solid #4d9eef; outline-of
 .abstraction-result p { overflow-wrap:anywhere; }
 .abstraction-page .rating button.active { border:2px solid var(--orange); background:var(--orange-soft); }
 @media (max-width:420px) { .abstraction-page { padding-left:16px; padding-right:16px; } .abstraction-meta { font-size:13px; } }
+
+.ai-feedback-card { margin:16px 0; padding:16px; border:1px solid var(--line); border-radius:14px; background:var(--paper); }
+.ai-feedback-card h2 { margin:0 0 8px; font-size:18px; }
+.ai-feedback-card p, .ai-feedback-card small { display:block; line-height:1.6; }
+.ai-feedback-card label { display:block; margin:12px 0; }
+.ai-feedback-card input { display:block; width:100%; margin-top:6px; padding:10px; border:1px solid var(--line); border-radius:8px; color:var(--ink); background:var(--paper); font:inherit; }
+.ai-feedback-card button { min-height:44px; }
+.history-list details { margin-top:8px; }
+.history-list details summary { cursor:pointer; }

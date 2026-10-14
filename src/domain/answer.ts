@@ -22,6 +22,7 @@ export interface TrainingResult {
   struggleReasons?: Array<'slow' | 'fruit-missing' | 'theme-uncertain'>
   weaknessTags?: string[]
   streak?: number
+  aiMatching?: import('../services/aiGrading').AiMatchingMetadata
 }
 
 

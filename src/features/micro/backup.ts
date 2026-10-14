@@ -12,6 +12,7 @@ import type { AbstractionSnapshot } from '../../domain/abstraction'
 import { gradeAbstraction } from '../../services/abstractionGrader'
 import { migrateTrainingResult } from '../../repositories/questionRepository'
 import { localDate, rebuildStates, validateContent } from './engine'
+import { validateAiMatchingMetadata } from '../../services/aiGrading'
 
 type Backup = {
   schemaVersion: 2 | 3 | 4
@@ -401,6 +402,7 @@ export function parseBackup(text: string): Backup {
       date(r.answeredAt) &&
       strings(r.inputCuts) &&
       strings(r.inputFruitKeywords) &&
+      (r.aiMatching === undefined || validateAiMatchingMetadata(r.aiMatching)) &&
       [0, 1, 2, 3].includes(r.selfRating as number) &&
       ['keywordScore', 'cutScore', 'effectScore', 'totalScore'].every((k) =>
         nonnegative(r[k]),

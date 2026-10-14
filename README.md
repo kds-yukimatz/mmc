@@ -204,7 +204,7 @@ JSONではsnake_case、アプリ内部ではcamelCaseへ変換します。問題
 - `features/keyword-dictionary/`: 果キーワード辞典・頻出ランキングの生成と表示
 - `db/`: Dexie / IndexedDB
 
-採点は `GradingService`、問題取得と履歴保存はRepositoryインターフェースを介します。AI意味採点やクラウド同期へ移行するときは、画面を大きく変えず実装を差し替えられます。
+採点は `GradingService`、問題取得と履歴保存はRepositoryインターフェースを介します。任意AI照合は未一致語句の意味同等性だけを確認し、採点式と履歴保存はアプリ側で管理します。
 
 ## 現在の採点
 
@@ -216,7 +216,7 @@ JSONではsnake_case、アプリ内部ではcamelCaseへ変換します。問題
 
 ## 未実装・拡張候補
 
-- AIによる意味採点と採点理由
+- 自由記述の答案全体に対するAI評価・講評
 - SM-2等を使った間隔反復と「今日の復習」スケジュール
 - 因キーワード、複数模範解答
 - 分野別の弱点分析、CSV出力
@@ -229,3 +229,18 @@ JSONではsnake_case、アプリ内部ではcamelCaseへ変換します。問題
 設問文は2023〜2025年度の中小企業診断士第2次試験問題PDFと正誤表を参照し、設問番号・条件・字数制約を目視確認しています。`mmc_theme` は提供された「MMC本試3年解答帖（組織・流通・生産・財務）」の記載を使用し、推測や言い換えはしていません。`question_summary` は従来どおり題意要約として残しています。
 
 全件の監査内容は `outputs/audit_report.md`、分割・移行方針は `outputs/split_records.md` と `outputs/migration_map.json`、未確認項目は `outputs/unverified_records.md` に記録しています。
+
+
+## 任意AI語句一致判定（Cloudflare Workers AI）
+
+AI照合は結果画面で利用者が明示して押したときだけ行います。AIは入力した切り口・果キーワードと登録済み語句の意味同等性だけを照合し、AI自身は点数や正誤を返しません。アプリ側で検証した一致ペアを既存配点へ反映します。AIは意味が同じ表現を見逃すことがあります。登録済み解答と照らして正誤を判断してください。AIが失敗した場合は同期採点の点数で続けられます。設問と参照情報、入力語を外部サービスへ送ります。全与件本文・個人識別子は送りません。与件への適合や因果の根拠は評価しません。
+
+無料利用を前提にする場合は、CloudflareアカウントをWorkers Freeに保ち、Workers Paidへ切り替えないでください。Workers AIの無料枠を超えるとこの機能はエラーになります。有料モデルや他社APIへ自動で切り替える処理はありません。アカウントがすでにPaidの場合、追加請求が発生しない条件はアカウント側で確認してください。
+
+1. CloudflareでWorkers FreeとWorkers AIを使えるアカウントを用意します。
+2. `worker/` で `npm install` を実行し、`wrangler.toml` のRate Limiting namespace IDがアカウント内の他Workerと重複しないことを確認します。
+3. `worker/` で `npx wrangler secret put AI_GRADING_ACCESS_TOKEN` を実行し、十分に長いランダムな共有トークンを登録します。この値はCloudflare管理APIトークンではありません。利用者はアプリ画面で入力し、タブのセッション中だけ使います。
+4. `worker/src/index.mjs` の許可Originが公開サイトのOriginと一致することを確認して `npx wrangler deploy` します。Worker URLはCloudflareが表示します。
+5. 現在のWorker URLは `https://mmc-ai-grading.mmc-kds-yukimatz.workers.dev` です。`.env.production` の `VITE_AI_GRADING_URL` に設定済みです。公開URLは秘密値ではありません。GitHub Actionsのrepository variable設定は現在利用できないため、このファイルで公開ビルドに渡します。共有認証トークンは絶対に記載しません。URL未設定なら既存の同期採点のみで動きます。
+
+Workerのローカルテストは `cd worker && npm test`、動作確認は `cd worker && npx wrangler dev` で行えます。現在Workerはデプロイ済みですが、実行環境からWorkerへの認証リクエストは接続許可設定を確認後に検証します。実AIのモデル品質とPages公開も別途確認が必要です。

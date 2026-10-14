@@ -1,0 +1,16 @@
+name = "mmc-ai-grading"
+main = "src/index.mjs"
+compatibility_date = "2026-10-13"
+workers_dev = true
+
+[ai]
+binding = "AI"
+
+[[ratelimits]]
+name = "AI_GRADING_LIMITER"
+namespace_id = "1001"
+simple = { limit = 5, period = 60 }
+
+[vars]
+# Add the GitHub Pages URL to the Worker CORS allowlist in src/index.mjs.
+# Set AI_GRADING_ACCESS_TOKEN with: npx wrangler secret put AI_GRADING_ACCESS_TOKEN

@@ -162,8 +162,11 @@ describe('暦日・予定・安定', () => {
     expect(addDays('2026-12-31', 1)).toBe('2027-01-01')
     expect(phase(plan, '2026-10-04').newLimit).toBe(6)
     expect(phase(plan, '2026-10-11').newLimit).toBe(3)
-    expect(phase(plan, '2026-10-18').newLimit).toBe(0)
-    expect(phase(plan, '2026-10-24').newLimit).toBe(0)
+    expect(phase(plan, '2026-10-18').newLimit).toBe(1)
+    expect(phase(plan, '2026-10-24').newLimit).toBe(1)
+    expect(phase(plan, '2026-10-17').newLimit).toBe(3)
+    expect(phase(plan, '2026-10-25').newLimit).toBe(0)
+    expect(phase(plan, '2026-10-26').newLimit).toBe(6)
   })
   it('初回・同日成功は安定せず、24hを空けた2成功と2cueで安定', () => {
     const first = reduceState(initialState('map-01'), attempt())
@@ -264,6 +267,149 @@ describe('暦日・予定・安定', () => {
   })
 })
 describe('出題枠と再試行', () => {
+  it('新規1問/日でも必須・B・MMC・その他へ巡回し、試験後もcoverageを出す', () => {
+    const chosen: string[] = []
+    const history: Attempt[] = []
+    for (let i = 0; i < 6; i++) {
+      const date = addDays('2026-10-18', i)
+      const previousDate = addDays(date, -1)
+      const selected = selectCard(
+        content,
+        rebuildStates(history),
+        history,
+        {
+          ...plan,
+          slotLocalDate: previousDate,
+          slotCursor: 2,
+          examDate: '2026-10-25',
+        },
+        `${date}T01:00:00.000Z`,
+        chosen,
+      )!
+      chosen.push(selected.mapping.id)
+      history.push(
+        attempt({
+          id: `new-${i}`,
+          mappingId: selected.mapping.id,
+          cardId: selected.card.id,
+          cueId: selected.cue.id,
+          answeredAt: `${date}T01:00:00.000Z`,
+          localDate: date,
+        }),
+      )
+      if (i === 0) {
+        const states = rebuildStates(history)
+        const secondSameDay = selectCard(
+          content,
+          states,
+          history,
+          {
+            ...plan,
+            slotLocalDate: date,
+            slotCursor: 1,
+            examDate: '2026-10-25',
+          },
+          `${date}T01:01:00.000Z`,
+        )
+        expect(
+          !secondSameDay ||
+            Boolean(states[secondSameDay.mapping.id]?.firstConfirmedAt),
+        ).toBe(true)
+        expect(
+          selectCard(
+            content,
+            states,
+            history,
+            {
+              ...plan,
+              slotLocalDate: date,
+              slotCursor: 2,
+              examDate: '2026-10-25',
+            },
+            `${date}T01:01:00.000Z`,
+            [],
+            true,
+          )?.slot,
+        ).toBe('coverage')
+      }
+    }
+    const groups = chosen.map((id) => {
+      const mapping = content.mappings.find((m) => m.id === id)!
+      if (
+        content.concepts.some((c) => c.mandatory && c.mandatoryMappingId === id)
+      )
+        return 'required'
+      if (
+        mapping.source.kind === 'review_stock' &&
+        content.concepts.some(
+          (c) => mapping.conceptIds.includes(c.id) && c.priority === 'B',
+        )
+      )
+        return 'B'
+      if (mapping.source.kind === 'mmc_original') return 'MMC'
+      return 'other'
+    })
+    expect(groups).toEqual([
+      'required',
+      'B',
+      'required',
+      'MMC',
+      'required',
+      'other',
+    ])
+    for (const slotCursor of [0, 2])
+      expect(
+        selectCard(
+          content,
+          {},
+          [],
+          { ...plan, slotLocalDate: '2026-10-26', slotCursor },
+          '2026-10-26T01:00:00.000Z',
+        )?.slot,
+      ).toBe('coverage')
+  })
+  it('新規1問/日でも累積確認数で循環し、古い期限超過を先に選ぶ', () => {
+    const getMapping = (group: 'required' | 'other') =>
+      content.mappings.find((mapping) =>
+        group === 'required'
+          ? content.concepts.some(
+              (c) => c.mandatory && c.mandatoryMappingId === mapping.id,
+            )
+          : mapping.source.kind === 'mmc_original',
+      )!
+    const required = getMapping('required'),
+      other = getMapping('other')
+    const baseline = content.mappings.slice(0, 3).map((m, i) =>
+      attempt({
+        id: `2026-10-0${i + 1}`,
+        mappingId: m.id,
+        wasNew: false,
+        grade: 'miss',
+      }),
+    )
+    const states = {
+      ...rebuildStates(baseline),
+      [required.id]: {
+        ...initialState(required.id),
+        firstConfirmedAt: '2026-10-01T01:00:00Z',
+        dueAt: '2026-10-03T00:00:00Z',
+      },
+      [other.id]: {
+        ...initialState(other.id),
+        firstConfirmedAt: '2026-10-01T01:00:00Z',
+        dueAt: '2026-10-01T00:00:00Z',
+      },
+    }
+    const duePlan = { ...plan, examDate: '2026-10-25', slotCursor: 1 }
+    const choice = selectCard(
+      content,
+      states,
+      baseline,
+      duePlan,
+      '2026-10-04T01:00:00.000Z',
+    )!
+    expect(choice.mapping.id).toBe(other.id)
+  })
   it('coverageは失敗多数でも未確認必須を選ぶ、通常上限は6、専用開始は上限・期を超える', () => {
     const answered = content.mappings.slice(0, 6).map((m, i) =>
       attempt({
@@ -271,6 +417,7 @@ describe('出題枠と再試行', () => {
         sessionId: `s${i}`,
         mappingId: m.id,
         grade: 'miss',
+        localDate: '2026-10-04',
       }),
     )
     const states = rebuildStates(answered)
@@ -280,8 +427,8 @@ describe('出題枠と再試行', () => {
     expect(special.slot).toBe('coverage')
     expect(states[special.mapping.id]).toBeUndefined()
     expect(
-      selectCard(content, {}, [], plan, '2026-10-18T01:00:00.000Z'),
-    ).toBeNull()
+      selectCard(content, {}, [], plan, '2026-10-18T01:00:00.000Z')?.slot,
+    ).toBe('coverage')
     expect(
       selectCard(content, {}, [], plan, '2026-10-18T01:00:00.000Z', [], true)
         ?.slot,

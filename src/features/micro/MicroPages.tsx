@@ -208,20 +208,19 @@ export function MicroHome() {
             <p>今日の要再確認：{due}項目</p>
             <p>
               {data.plan.examDate
-                ? `試験日 ${data.plan.examDate}`
-                : '試験日未設定の21日プラン'}{' '}
-              ／{' '}
-              {phase(data.plan, today).days <= 0
-                ? '維持モード'
-                : `第${phase(data.plan, today).period}期`}
+                ? `試験日 ${data.plan.examDate} ／ ${phase(data.plan, today).days === 0 ? '試験当日' : phase(data.plan, today).days < 0 ? '継続学習' : `第${phase(data.plan, today).period}期`}`
+                : `試験日未設定の21日プラン ／ ${phase(data.plan, today).days < 0 ? '継続学習' : `第${phase(data.plan, today).period}期`}`}
             </p>
             <p>通常開始の新規：1日{phase(data.plan, today).newLimit}項目まで</p>
+            <p>
+              通常練習は必須に加え、Bストック・MMC独自問題など全教材から出題します。
+            </p>
             <button
               className="btn btn-ghost"
               disabled={busy}
               onClick={() => void begin(true)}
             >
-              未確認から1セット
+              必須の未確認から1セット
             </button>
             <p>
               未確認{unconfirmed}項目。初回確認だけなら最低
@@ -654,7 +653,7 @@ export function MicroMaterials() {
   const [search, setSearch] = useState(''),
     [caseFilter, setCaseFilter] = useState(''),
     [intent, setIntent] = useState(''),
-    [collection, setCollection] = useState('mandatory')
+    [collection, setCollection] = useState('all')
   const [notice, setNotice] = useState(''),
     [busy, setBusy] = useState(false)
   const mappings = content.mappings.filter(
@@ -750,12 +749,15 @@ export function MicroMaterials() {
           {content.metadata.mmcOriginal.years.join('・')}年の資料）。
         </p>
       )}
+      <p>
+        通常練習は必須に加え、Bストック・MMC独自問題など全教材から出題します。
+      </p>
       <button
         className="btn btn-primary"
         disabled={!data || busy}
         onClick={() => void check()}
       >
-        覚え漏れ確認
+        必須の覚え漏れ確認
       </button>
       <button
         className="btn btn-ghost"
@@ -943,7 +945,7 @@ export function MicroRecords() {
           ))}
         </ul>
         {!missing.length && <p>全部初回確認できている。</p>}
-        <NavLink to="/materials">教材と覚え漏れ確認</NavLink>
+        <NavLink to="/materials">教材と必須の覚え漏れ確認</NavLink>
       </section>
       <section className="micro-panel">
         <h2>21日プラン</h2>

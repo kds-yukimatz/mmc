@@ -494,6 +494,7 @@ try {
   if (await prod.getByRole('button', { name: '続きから', exact: true }).count())
     await prod.getByRole('button', { name: '続きから', exact: true }).click()
   await prod.getByRole('button', { name: '答えを確認', exact: true }).click()
+  await prod.getByText('今回確認する果', { exact: true }).waitFor()
   await prod.reload()
   await prod.getByRole('button', { name: '続きから', exact: true }).click()
   await prod.getByRole('button', { name: 'すぐ出た', exact: true }).click()

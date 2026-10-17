@@ -151,7 +151,8 @@ export function phase(plan: Plan, today: string) {
   return {
     days,
     period: days >= 15 ? 1 : days >= 8 ? 2 : 3,
-    newLimit: days >= 15 ? 6 : days >= 8 ? 3 : 0,
+    newLimit:
+      days >= 15 ? 6 : days >= 8 ? 3 : days >= 1 ? 1 : days === 0 ? 0 : 6,
   }
 }
 export function exactMatch(mapping: Mapping, inputs: string[]) {
@@ -190,12 +191,15 @@ export function selectCard(
   const newCount = new Set(
     todays.filter((a) => a.wasNew).map((a) => a.mappingId),
   ).size
+  const confirmedCount = content.mappings.filter(
+    (mapping) => states[mapping.id]?.firstConfirmedAt,
+  ).length
   const cycles: Slot[] =
-    settings.period === 1
+    settings.period === 1 || settings.days < 0
       ? ['coverage', 'due', 'coverage', 'contrast']
       : settings.period === 2
         ? ['coverage', 'contrast', 'due', 'due']
-        : ['due', 'contrast', 'due', 'maintenance']
+        : ['coverage', 'due', 'contrast', 'due']
   const cursor = plan.slotLocalDate === today ? plan.slotCursor : 0
   const desired = coverageOnly ? 'coverage' : cycles[cursor % 4]
   const eligible = (m: Mapping) => {
@@ -228,6 +232,18 @@ export function selectCard(
           )
         ? 1
         : 2
+  const coverageGroup = (m: Mapping) => {
+    if (mandatory(m)) return 0
+    if (
+      m.source.kind === 'review_stock' &&
+      content.concepts.some(
+        (c) => m.conceptIds.includes(c.id) && c.priority === 'B',
+      )
+    )
+      return 1
+    if (m.source.kind === 'mmc_original') return 2
+    return 3
+  }
   const frequency = (m: Mapping) =>
     new Set(
       content.concepts
@@ -252,9 +268,20 @@ export function selectCard(
     states[m.id]?.dueAt
       ? Math.max(0, Date.parse(now) - Date.parse(states[m.id].dueAt!))
       : -Infinity
-  const compare = (a: Mapping, b: Mapping) =>
-    priority(a) - priority(b) ||
-    (overdue(a) === overdue(b) ? 0 : overdue(a) > overdue(b) ? -1 : 1) ||
+  const compare = (a: Mapping, b: Mapping, slot: Slot) =>
+    (slot === 'coverage' ? priority(a) - priority(b) : 0) ||
+    (slot === 'due' && overdue(a) !== overdue(b)
+      ? overdue(a) > overdue(b)
+        ? -1
+        : 1
+      : 0) ||
+    ((slot === 'contrast' || slot === 'maintenance') &&
+    states[a.id]?.lastAttemptAt !== states[b.id]?.lastAttemptAt
+      ? (states[a.id]?.lastAttemptAt ?? '').localeCompare(
+          states[b.id]?.lastAttemptAt ?? '',
+        )
+      : 0) ||
+    (slot === 'due' ? priority(a) - priority(b) : 0) ||
     (lastFailure(a) === lastFailure(b)
       ? 0
       : lastFailure(a) > lastFailure(b)
@@ -316,7 +343,21 @@ export function selectCard(
           )
         return !answeredToday && (!coverageOnly || !stable(state))
       })
-      .sort(compare)
+      .sort((a, b) => compare(a, b, slot))
+    if (slot === 'coverage' && !coverageOnly && practiceScope === 'all') {
+      const schedule = [0, 1, 0, 2, 0, 3]
+      const start = confirmedCount % schedule.length
+      candidates.sort((a, b) => {
+        const rank = (mapping: Mapping) => {
+          for (let offset = 0; offset < schedule.length; offset++) {
+            const group = schedule[(start + offset) % schedule.length]
+            if (coverageGroup(mapping) === group) return offset
+          }
+          return schedule.length
+        }
+        return rank(a) - rank(b) || compare(a, b, slot)
+      })
+    }
     for (const mapping of candidates) {
       const lastCue = orderedAttempts
         .filter((a) => a.mappingId === mapping.id)

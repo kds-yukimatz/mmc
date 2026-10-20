@@ -60,6 +60,15 @@ function Progress({
         初回確認 {states.filter((s) => s?.firstConfirmedAt).length}/
         {required.length} 安定 {states.filter(stable).length}/{required.length}
       </p>
+      <p>
+        全教材の初回確認{' '}
+        {
+          content.mappings.filter(
+            (mapping) => data.states[mapping.id]?.firstConfirmedAt,
+          ).length
+        }
+        /{content.mappings.length}小問
+      </p>
       <div className="micro-statuses">
         {['未確認', '要再確認', '確認中', '安定'].map((label) => (
           <span key={label}>
@@ -211,9 +220,9 @@ export function MicroHome() {
                 ? `試験日 ${data.plan.examDate} ／ ${phase(data.plan, today).days === 0 ? '試験当日' : phase(data.plan, today).days < 0 ? '継続学習' : `第${phase(data.plan, today).period}期`}`
                 : `試験日未設定の21日プラン ／ ${phase(data.plan, today).days < 0 ? '継続学習' : `第${phase(data.plan, today).period}期`}`}
             </p>
-            <p>通常開始の新規：1日{phase(data.plan, today).newLimit}項目まで</p>
             <p>
-              通常練習は必須に加え、Bストック・MMC独自問題など全教材から出題します。
+              通常開始は全{content.mappings.length}
+              小問から、未出題や最近出ていない問題を中心に出題します。1日の新規上限はありません。
             </p>
             <button
               className="btn btn-ghost"
